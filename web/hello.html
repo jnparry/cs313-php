@@ -1,22 +1,45 @@
 <!DOCTYPE html>
+<!-- DESIGN SOURCE: https://stackoverflow.com/questions/14039723/change-body-bgcolor-on-hovering-a-div-using-css-only-->
+
 <html lang="en-US">
   <head>
   	<title>Hello Dear World</title>
 
   	<style>
-  		p {
-  			text-align: center;
-  			color: floralwhite;
-  			font-size: 40px;
-  		}
+        body {
+            height: 100%;
+        }
 
-  		body {
-  			background-color: darkslategray;
-  		}
+        #ufo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: darkslategray;
+        }
+
+        #text {
+            color: floralwhite;
+  			font-size: 40px;
+            position: absolute;
+            width: auto;
+            align-self: center;
+            z-index: 2;
+        }
+
+        #text:hover ~ #ufo {
+            background-image: url(http://icons.iconarchive.com/icons/flat-icons.com/flat/512/Ufo-icon.png);
+            background-size: auto;
+        }
   	</style>
   </head>
 
   <body>
-  	<p>Hello World! We come in peace.</p>
+  	<div id="text">Hello World! We come in peace.</div>
+    <div id="ufo"></div>
   </body>
 </html>
