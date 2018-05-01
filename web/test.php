@@ -17,6 +17,10 @@
         <?php
             $x = 4 + "cat";
             echo "<p>$x</p>";
+            
+            for ($i = 0; $i < 10; $i++) {
+                echo "<div id=\"div$i\"></div>";
+            }
         ?>
     </body>
 </html>
