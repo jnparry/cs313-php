@@ -20,10 +20,10 @@
             
             for ($i = 1; $i < 11; $i++) {
                 if (($i % 2) == 0) {
-                    echo "<div id=\"div$i\" color=\"red\"></div>";
+                    echo "<div id=\"div$i\" color=\"red\">$i</div>";
                 }
                 else {
-                    echo "<div id=\"div$i\"></div>";
+                    echo "<div id=\"div$i\">$i</div>";
                 }
             }
         ?>
