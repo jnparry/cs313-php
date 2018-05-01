@@ -18,8 +18,13 @@
             $x = 4 + "cat";
             echo "<p>$x</p>";
             
-            for ($i = 0; $i < 10; $i++) {
-                echo "<div id=\"div($i + 1)\"></div>";
+            for ($i = 1; $i < 11; $i++) {
+                if (($i % 2) == 0) {
+                    echo "<div id=\"div$i\" color=\"red\"></div>";
+                }
+                else {
+                    echo "<div id=\"div$i\"></div>";
+                }
             }
         ?>
     </body>
