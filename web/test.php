@@ -19,7 +19,7 @@
             echo "<p>$x</p>";
             
             for ($i = 0; $i < 10; $i++) {
-                echo "<div id=\"div$i\"></div>";
+                echo "<div id=\"div($i + 1)\"></div>";
             }
         ?>
     </body>
