@@ -8,7 +8,7 @@
     
     <body>
         <?php require "navbar.php"?>
-        <h1>Buy Planets</h1>
+        <h2>Buy Planets</h2>
         <p>Here at [insertcompanyname] we pride ourselves in selling planets! Established in 1981, we have been providing the wonderful opportunity to purchase planets for decades.</p>
     </body>
 </html>

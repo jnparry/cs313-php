@@ -8,6 +8,6 @@
     
     <body>
         <?php require "navbar.php"?>
-        <h1>Welcome! You are not logged in.</h1>
+        <h2>Welcome! You are not logged in.</h2>
     </body>
 </html>
