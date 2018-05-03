@@ -8,6 +8,6 @@
 
 <nav>
     <a href="home.php" <?php if ($uri == "/ta02/home.php") { echo "class='active'";} ?>>Home</a>
-    <a href="about-us.php">About Us</a>
-    <a href="login.php">Login</a>
+    <a href="about-us.php" <?php if ($uri == "/ta02/about-us.php") { echo "class='active'";} ?>>About Us</a>
+    <a href="login.php" <?php if ($uri == "/ta02/login.php") { echo "class='active'";} ?>>Login</a>
 </nav>
