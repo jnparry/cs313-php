@@ -8,7 +8,7 @@
     
     <body>
         <?php require "navbar.php"?>
-        <a href="">Log in as Admin</a>
-        <a href="">Log in as Tester</a>
+        <p><a href="admin.php">Log in as Admin</a></p>
+        <p><a href="tester.php">Log in as Tester</a></p>
     </body>
 </html>
