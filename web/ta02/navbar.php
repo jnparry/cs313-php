@@ -8,4 +8,4 @@
     <a href="login.php">Login</a>
 </nav>
 
-<? php echo basename($_SERVER['PHP_SELF']); ?>
+<!--<? php echo basename($_SERVER['PHP_SELF']); ?>-->
