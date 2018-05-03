@@ -1,0 +1,68 @@
+/* CSS for homepage */
+/* 
+background - #1D5257
+
+*/
+body {
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #1D5257;
+    height: auto;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: -28px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #001E20;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #060002;
+}
+
+li a:hover.active {
+    background-color: #4D0820;
+}
+
+.active {
+    background-color: #611530;
+}
+
+img {
+    width: 60%;
+    margin: 50px;
+}
+
+div {
+    background-color: #032E32;
+    width: 500px; 
+    margin: auto; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    font-family: 'Poiret One', 'Century Gothic', 'Avant Garde', sans-serif; 
+    padding-bottom: 10px; 
+    border-style:double; 
+    border-width: 10px; 
+    font-size: 100%;
+}
