@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="index.css">
+
 <nav>
     <a href="home.php">Home</a>
     <a href="about-us.php">About Us</a>
