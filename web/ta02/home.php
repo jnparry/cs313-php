@@ -7,6 +7,7 @@
     </head>
     
     <body>
-        <p>Hello</p>
+        <?php require "navbar.php"?>
+        <h1>Welcome! You are not logged in.</h1>
     </body>
 </html>
