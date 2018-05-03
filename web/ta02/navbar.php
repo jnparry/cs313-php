@@ -7,5 +7,3 @@
     <a href="about-us.php">About Us</a>
     <a href="login.php">Login</a>
 </nav>
-
-<!--<? php echo basename($_SERVER['PHP_SELF']); ?>-->
