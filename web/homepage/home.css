@@ -13,15 +13,9 @@ body {
 }
 
 nav {
-    list-style-type: none;
-    margin: 0;
-    margin-left: -28px;
-    padding: 0;
-    overflow: hidden;
     background-color: #001E20;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    margin: auto;
+    padding: 5px;
 }
 /*
 
