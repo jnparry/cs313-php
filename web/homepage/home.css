@@ -44,6 +44,7 @@ a:hover.active {
 
 .active {
     background-color: #611530;
+    background-color: red;
 }
 
 img {
