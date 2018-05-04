@@ -52,6 +52,7 @@ img {
 }
 
 div {
+/*
     background-color: #032E32;
     width: 500px; 
     margin: auto; 
@@ -63,4 +64,5 @@ div {
     border-style:double; 
     border-width: 10px; 
     font-size: 100%;
+*/
 }
