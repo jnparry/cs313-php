@@ -12,10 +12,10 @@
 
     <body>
         <ul>
-            <li><a class="active" href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="assign.html">Assignments</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="home.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="assign.php">Assignments</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
         
         <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/22196364_1531234120303010_5342914097511881599_n.jpg?_nc_cat=0&oh=6294f300d8cbce483acf9510b3fc4cf9&oe=5B5649E6" alt="Jordan Parry Homepage Image - Sunflowers">
