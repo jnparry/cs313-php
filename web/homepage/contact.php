@@ -7,12 +7,8 @@
     </head>
     
     <body>
-        <ul>
-            <li><a href="home.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="assign.php">Assignments</a></li>
-            <li><a class="active" href="contact.php">Contact</a></li>
-        </ul>
+        <?php require "nav.php" ?>
+        
         <p>Contact</p>
     </body>
 </html>

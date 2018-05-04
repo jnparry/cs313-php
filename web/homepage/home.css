@@ -12,7 +12,7 @@ body {
     text-align: center;
 }
 
-ul {
+nav {
     list-style-type: none;
     margin: 0;
     margin-left: -28px;
@@ -23,12 +23,14 @@ ul {
     top: 0;
     width: 100%;
 }
+/*
 
 li {
     float: left;
 }
+*/
 
-li a {
+a {
     display: block;
     color: white;
     text-align: center;
@@ -36,11 +38,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+a:hover:not(.active) {
     background-color: #060002;
 }
 
-li a:hover.active {
+a:hover.active {
     background-color: #4D0820;
 }
 

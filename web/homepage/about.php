@@ -7,13 +7,8 @@
     </head>
     
     <body>
-        <ul>
-            <li><a href="home.php">Home</a></li>
-            <li><a class="active" href="about.php">About</a></li>
-            <li><a href="assign.php">Assignments</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
-              
+        <?php require "nav.php" ?>
+        
         <div>
             <h2 style="text-align: center;">About Me</h2>
             <p><span>Name</span>: Jordan Parry</p>
