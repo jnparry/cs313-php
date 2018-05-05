@@ -69,13 +69,13 @@ h2 {
     margin-left: 20%;
 }
 
-span > a:hover {
-    background-color: transparent;
+.contact:hover {
+    background-color: red;
 }
 
 span {
     display: block;
-    margin-left: 15px;
+    margin-left: 15%;
     margin: auto;
     padding: 5px;
 }
