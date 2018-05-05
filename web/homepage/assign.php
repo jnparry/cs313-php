@@ -11,16 +11,16 @@
         
         <h2>Assignments</h2>
         <div>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
-            <a href="">Coming soon...</a>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
+            <span><a href="">Coming soon...</a></span>
         </div>
     </body>
 </html>
