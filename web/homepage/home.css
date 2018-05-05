@@ -26,7 +26,7 @@ a {
     padding: 10px;
 }
 
-a:hover:not(.active) {
+a:hover:not(.active):not(span) > a {
     background-color: #060002;
 }
 
@@ -67,3 +67,4 @@ h2 {
 span {
     display: block;
 }
+
