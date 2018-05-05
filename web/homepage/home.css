@@ -58,6 +58,7 @@ blockquote {
 
 p {
     padding: 20px;
+    line-height: 20px;
 }
 
 .contact {
@@ -71,5 +72,6 @@ h2 {
 span {
     display: block;
     margin: auto;
+    padding: 5px;
 }
 
