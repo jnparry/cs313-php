@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    width: 100vh;
+    width: 100%;
     background-color: #002124;
     padding: 10px;
     margin-left: -10px;
@@ -39,7 +39,7 @@ a:hover.active {
 }
 
 img {
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: block;
