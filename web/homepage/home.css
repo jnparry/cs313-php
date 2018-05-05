@@ -1,25 +1,29 @@
 body {
+    width: 100%;
     color: white;
-    background-color: #1D5257;
-    text-align: center;
+    background-color: #1D4D51;
 }
 
 nav {
-    background-color: #001E20;
-    margin: 20px;
-    padding: 5px;
+    width: 100vh;
+    background-color: #002124;
+    padding: 10px;
+    margin-left: -10px;
+    margin-top: -10px;
 }
 
 div {
     background-color: #611530;
     width: 80%;
+    margin: auto;
+    margin-top: 20px;
 }
 
 a {
-/*    display: block;*/
     color: white;
     text-align: center;
     text-decoration: none;
+    padding: 10px;
 }
 
 a:hover:not(.active) {
@@ -27,7 +31,7 @@ a:hover:not(.active) {
 }
 
 a:hover.active {
-    background-color: #4D0820;
+    background-color: #48031C;
 }
 
 .active {
@@ -35,6 +39,16 @@ a:hover.active {
 }
 
 img {
-    width: 60%;
-    margin: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+blockquote {
+    background-color: #0f3f44;
+    padding: 20px;
+    color: darkgray;
+    text-align: center;
+    border: double;
 }
