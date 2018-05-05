@@ -56,12 +56,12 @@ blockquote {
     border: double;
 }
 
-p {
+p:not(.contact) {
     padding: 20px;
 }
 
 .contact {
-    padding: 0px;
+   
 }
 
 h2 {
