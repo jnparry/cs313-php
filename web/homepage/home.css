@@ -14,13 +14,13 @@ nav {
 
 div {
     background-color: #0f3f44;
-    width: 80%;
+    width: 65%;
     margin: auto;
     margin-top: 20px;
 }
 
 a {
-    color: white;
+    color: darkgray;
     text-align: center;
     text-decoration: none;
     padding: 10px;
