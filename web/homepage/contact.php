@@ -9,6 +9,11 @@
     <body>
         <?php require "nav.php" ?>
         
-        <p>Contact</p>
+        <div>
+            <h2>Contact</h2>
+            <p>Email: par16042@byui.edu</p>
+            <p>Phone: (208)496-1411</p>
+            <p>Address: P. Sherman 42 Wallaby Way Sydney</p>
+        </div>
     </body>
 </html>

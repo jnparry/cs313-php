@@ -9,6 +9,18 @@
     <body>
         <?php require "nav.php" ?>
         
-        <p>Assign</p>
+        <div>
+            <h2>Assignments</h2>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+            <a href="">Coming soon...</a>
+        </div>
     </body>
 </html>

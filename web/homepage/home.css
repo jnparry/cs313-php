@@ -1,12 +1,25 @@
 body {
     color: white;
     background-color: #1D5257;
+    text-align: center;
 }
 
 nav {
     background-color: #001E20;
-    margin: auto;
+    margin: 20px;
     padding: 5px;
+}
+
+div {
+    background-color: #611530;
+    width: 80%;
+}
+
+a {
+/*    display: block;*/
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 a:hover:not(.active) {
@@ -19,7 +32,6 @@ a:hover.active {
 
 .active {
     background-color: #611530;
-    background-color: red;
 }
 
 img {
