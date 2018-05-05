@@ -13,6 +13,6 @@ function pictureChange() {
         currentImage.src = "https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/22137100_1531234166969672_8345964285248008713_o.jpg?_nc_cat=0&oh=d29774bad57f32295b56a8491bdb59a0&oe=5B9002EB"
     }
     else {
-        currentImage.src == "https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/22196364_1531234120303010_5342914097511881599_n.jpg?_nc_cat=0&oh=6294f300d8cbce483acf9510b3fc4cf9&oe=5B5649E6"
+        currentImage.src = "https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/22196364_1531234120303010_5342914097511881599_n.jpg?_nc_cat=0&oh=6294f300d8cbce483acf9510b3fc4cf9&oe=5B5649E6"
     }
 }
