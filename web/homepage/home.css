@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    color: darkgray;
+    color: gainsboro;
     background-color: #1D4D51;
 }
 
@@ -54,4 +54,12 @@ blockquote {
     color: darkgray;
     text-align: center;
     border: double;
+}
+
+p {
+    padding: 20px;
+}
+
+h2 {
+    margin-left: 20%;
 }
