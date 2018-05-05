@@ -20,7 +20,7 @@ div {
 }
 
 a {
-    color: dimgray;
+    color: lightgray;
     text-align: center;
     text-decoration: none;
     padding: 10px;
@@ -48,6 +48,7 @@ img {
 blockquote {
     width: 80%;
     margin: auto;
+    margin-top: 20px;
     background-color: #0f3f44;
     padding: 20px;
     color: darkgray;
