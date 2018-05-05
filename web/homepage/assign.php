@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Title Page</title>
+        <title>Assignments | Jordan Parry</title>
         <link rel="stylesheet" href="home.css">
         <script src="home.js"></script>
     </head>

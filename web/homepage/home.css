@@ -1,0 +1,28 @@
+body {
+    color: white;
+    background-color: #1D5257;
+}
+
+nav {
+    background-color: #001E20;
+    margin: auto;
+    padding: 5px;
+}
+
+a:hover:not(.active) {
+    background-color: #060002;
+}
+
+a:hover.active {
+    background-color: #4D0820;
+}
+
+.active {
+    background-color: #611530;
+    background-color: red;
+}
+
+img {
+    width: 60%;
+    margin: 50px;
+}
