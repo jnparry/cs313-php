@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    color: white;
+    color: darkgray;
     background-color: #1D4D51;
 }
 
@@ -9,11 +9,11 @@ nav {
     background-color: #002124;
     padding: 10px;
     margin-top: -5px;
-    margin-left: -5px;
+    margin-left: -10px;
 }
 
 div {
-    background-color: #611530;
+    background-color: #0f3f44;
     width: 80%;
     margin: auto;
     margin-top: 20px;
