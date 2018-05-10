@@ -8,6 +8,9 @@
     </head>
     
     <body>
+        <?php
+            echo "Yo";
+        ?>
         <p>You have visited this page times</p>
     </body>
 </html>
