@@ -15,9 +15,9 @@
                 $_SESSION["count"] = 0;
             }
             $_SESSION["count"]++;
-            echo "got to the end....";
         ?>
-        <p>You have visited this page times</p>
+        
+        <p>You have visited this page <?php echo "$_SESSION[/"count/"]"; ?>times</p>
     </body>
 </html>
     
