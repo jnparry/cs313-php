@@ -11,11 +11,11 @@
     
     <body>
         <?php
-            if (isset($_SESSION["count"])) {
-                echo "This is cool it's set";
+            if (!(isset($_SESSION["count"]))) {
+                echo "Used not isset";
             }
             else {
-                echo "Not set yet";
+                echo "Escaped not isset";
             }
         ?>
         <p>You have visited this page times</p>
