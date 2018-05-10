@@ -18,7 +18,7 @@
             }
             $_SESSION["count"]++;
         ?>
-        <p>You have visited this page <?php echo $_SESSION["count"] ?> times</p>
+        <p>You have visited this page times</p>
     </body>
 </html>
     
