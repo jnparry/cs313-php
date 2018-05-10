@@ -12,11 +12,10 @@
     <body>
         <?php
             if (!(isset($_SESSION["count"]))) {
-                echo "Used not isset";
+                $_SESSION["count"] = 0;
             }
-            else {
-                echo "Escaped not isset";
-            }
+            $_SESSION["count"]++;
+            echo "got to the end....";
         ?>
         <p>You have visited this page times</p>
     </body>
