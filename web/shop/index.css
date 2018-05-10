@@ -1,7 +1,24 @@
+body {
+    background-color: #ffffff;
+}
+
 nav {
     width: 100%;
-    background-color: #002124;
+    background-color: #ff9f1c;
     padding: 10px;
     margin-top: -5px;
     margin-left: -10px;
+}
+
+#header {
+    background-color: #ffbf69;
+}
+
+#browse {
+    background-color: #cbf3f0;
+    background-color: #BCF2EE;
+}
+
+#bottom {
+    background-color: #2ec4b6;
 }
