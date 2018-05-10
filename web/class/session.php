@@ -11,7 +11,12 @@
     
     <body>
         <?php
-            echo "Yo";
+            if (isset($_SESSION["count"])) {
+                echo "This is cool it's set";
+            }
+            else {
+                echo "Not set yet";
+            }
         ?>
         <p>You have visited this page times</p>
     </body>
