@@ -54,7 +54,7 @@
                             else if ($value === "Majora's Mask") {
                                 echo "<p>Majora's Mask</p>
                             <img id=\"pic\" src=\"https://pre00.deviantart.net/b9bb/th/pre/f/2012/036/0/1/majora__s_mask_by_blueamnesiac-d4osuud.png\" alt=\"Zelda Majora's Mask\">";
-                            
+                            }
                             echo "</td></tr>";
                         }
                     }
