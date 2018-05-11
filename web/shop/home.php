@@ -103,7 +103,7 @@
                         </td>
                         <td>
                             <p>$49.99</p>
-                            <button onClick="addItem('deiMask')">Add to cart</button>
+                            <button onClick="add('deiMask')">Add to cart</button>
                         </td>
                     </tr>
 
