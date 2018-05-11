@@ -57,5 +57,6 @@
                 }
             ?>
         </div>
+        <?php require "bottom.php"?>
     </body>
 </html>
