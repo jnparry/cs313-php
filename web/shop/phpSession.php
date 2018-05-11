@@ -8,7 +8,7 @@
     $item = $_POST['yourItem'];
  
     foreach ($_SESSION['cart'] as $value) {
-        if ($value != $item) {
+        if ($value !== $item) {
             echo "not equal";
             echo $value;
             echo $item;
