@@ -61,7 +61,7 @@
                     echo "<p id='total'>";
                     echo "Total: $" . $total;
                     echo "</p>";
-                    echo "<button id=\"browseBtn\" onclick=\"\">Return to browsing</button>";
+                    echo "<button id=\"browseBtn\" onclick=\"function() { location.href = \"www.yoursite.com\"; }\">Return to browsing</button>";
                     echo "<button id=\"checkoutBtn\" onclick=\"\">Continue to checkout</button>";
                 }
             ?>
