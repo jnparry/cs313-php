@@ -49,7 +49,7 @@
                             echo "<p>Kafei Mask</p><img id=\"resultPic\" src=\"https://pre00.deviantart.net/80e5/th/pre/f/2012/025/d/7/kafei__s_mask_by_blueamnesiac-d4nlgmh.png\" alt=\"Zelda Kafei Mask\"><p>$49.99</p><button onclick=\"remove('Kafei Mask')\" type=\"submit\">Remove from cart</button>";
                         }
                         else if ($value === "Goron Mask") {
-                            echo "<p>Goron Mask</p><img id=\"resultPic\" src=\"https://pre00.deviantart.net/4b94/th/pre/f/2012/031/3/5/goron_mask_by_blueamnesiac-d4o7875.png\" alt=\"Zelda Goron Mask\"><p>$49.99</p><button onclick=\"remove() { unset\" type=\"submit\">Remove from cart</button>";
+                            echo "<p>Goron Mask</p><img id=\"resultPic\" src=\"https://pre00.deviantart.net/4b94/th/pre/f/2012/031/3/5/goron_mask_by_blueamnesiac-d4o7875.png\" alt=\"Zelda Goron Mask\"><p>$49.99</p><button onclick=\"remove('Goron') { unset\" type=\"submit\">Remove from cart</button>";
                         }
                         else if ($value === "Majora's Mask") {
                             echo "<p>Majora's Mask</p><img id=\"resultPic\" src=\"https://pre00.deviantart.net/b9bb/th/pre/f/2012/036/0/1/majora__s_mask_by_blueamnesiac-d4osuud.png\" alt=\"Zelda Majora's Mask\"><p>$49.99</p><button onclick=\"remove('Majora\'s Mask')\" type=\"submit\">Remove from cart</button>";
@@ -60,6 +60,7 @@
                     $total = (49.99 * $num);
                     echo "<p id='total'>";
                     echo "Total: $" . $total;
+                    echo "<button id=\"browseBtn\" onclick=\"\">Return to browsing</button>";
                     echo "<button id=\"checkoutBtn\" onclick=\"\">Continue to checkout</button>";
                     echo "</p>";
                 }

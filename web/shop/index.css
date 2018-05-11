@@ -147,6 +147,7 @@ table, td:not(.total) {
 }
 
 #total {
+    display: block;
     font-weight: bold;
     text-align: right;
 }
