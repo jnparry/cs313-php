@@ -4,10 +4,7 @@
     if(isset($_SESSION['cart'])){
 
         $item = $_POST['yourItem'];
-
-//foreach($_SESSION as $key => $value) {
-//    unset($_SESSION[$key]);
-//}
+        echo $item;
 
         $key = array_search($_GET[$item],$_SESSION['cart']);
         if ($key!==false) {
