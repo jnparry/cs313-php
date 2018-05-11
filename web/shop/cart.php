@@ -24,7 +24,7 @@
                     echo $num;
                     echo "</h2>";
         
-                    if (num == 0) {
+                    if ($num == 0) {
                         echo "<p>You have no itmes in your cart.</p><a class=\"detail\" href=\"/shop/home.php\">Continue browsing?</a>";
                     }
                     else {
