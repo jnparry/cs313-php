@@ -11,10 +11,14 @@
         $_SESSION['cart'][] = $item;
     }
     else {
+        $add = true;
         foreach ($_SESSION['cart'] as $value) {
-            if ($value !== $item) {
-                $_SESSION['cart'][] = $item;
+            if ($value === $item) {
+                $add = false;
             }
+        }
+        if ($add) {
+            $_SESSION['cart'][] = $item;
         }
     }
 ?>
