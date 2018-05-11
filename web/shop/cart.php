@@ -21,11 +21,11 @@
             <h2>Items in your cart: 
                 <?php
                     $num = count($_SESSION['cart']);
-                    echo num;
+                    echo $num;
                     echo "</h2>";
         
                     if (num == 0) {
-                        echo "<p>You have no itmes in your cart. <a href=\"/shop/home.php\">Continue browsing?</a></p>";
+                        echo "<p>You have no itmes in your cart.</p><a href=\"/shop/home.php\">Continue browsing?</a>";
                     }
                     else {
                         foreach ($_SESSION['cart'] as $value) {
