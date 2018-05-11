@@ -12,6 +12,7 @@
         foreach ($_SESSION['cart'] as $value) {
             if ($value === $item) {
                 unset($_SESSION['cart'][$value]);
+                $_SESSION["cart"] = array_values($_SESSION["cart"]);
                 echo "unset";
                 echo $value;
                 echo $item;
