@@ -22,6 +22,13 @@
     </head>
     
     <body>
-        <p>so what happened?</p>
+        <p>so what happened?
+            <?php
+                foreach ($_SESSION['cart'] as $value) {
+                    echo $value;
+                    echo "whatt";
+                }
+            ?>
+        </p>
     </body>
 </html>
