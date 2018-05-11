@@ -46,3 +46,11 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function add(item){
+    $.post("phpSession.php",{
+        passedValue:item
+    },function(ret){
+        // maybe do something here...
+    });
+}

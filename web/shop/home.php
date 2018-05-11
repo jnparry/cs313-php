@@ -28,7 +28,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button onClick="add('dekMask')">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -42,7 +42,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button onClick="add('keaMask')">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -56,7 +56,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button onClick="add('kafMask')">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -70,7 +70,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button onClick="add('gorMask')">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -84,7 +84,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button onClick="add('majMask')">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -98,7 +98,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button onClick="add('deiMask')">Add to cart</button>
                     </td>
                 </tr>
                 
