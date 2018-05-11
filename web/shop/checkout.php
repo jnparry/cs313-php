@@ -23,7 +23,7 @@
                 <br><br>
                 <input type="text" id="street" name="address" placeholder="Street" pattern="\d+\w*\s*(?:[\-\/]?\s*)?\d*\s*\d+\/?\s*\d*\s*" title="Street address." required>
                 <br>
-                <input type="text" id="city" name="address" placeholder="City, State" title="City, State - ex: Rexburg, ID" pattern="[a-zA-Z]+,[ ][A-Z]{2}" required>
+                <input type="text" id="city" name="address" placeholder="City, State" title="City, State - ex: Rexburg, ID" pattern="[a-zA-Z]+[]?[a-zA-Z]+,[ ][A-Z]{2}" required>
                 <br>
                 <input type="text" id="zip" name="address" placeholder="Zipcode" pattern="[0-9]{5}" title="Zipcode - 5 numbers only." required>
                 <br><br>
