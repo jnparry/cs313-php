@@ -3,7 +3,7 @@
 //        $_SESSION['cart'] = array();
 //    }
 
-    $bar = isset($_POST['name']) ? $_POST['name'] : null;
+    $bar = isset($_POST["name"]) ? $_POST["name"] : null;
 
     var_dump($_SESSION);
     if (!(isset($bar))) {
