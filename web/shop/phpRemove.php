@@ -21,6 +21,10 @@
         }
         else {
             echo "equals false";
+            echo "key";
+            echo $key;
+            echo "item";
+            echo $item;
         }
 
         
