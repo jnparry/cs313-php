@@ -94,7 +94,7 @@ td {
     height: 15%;
 }
 
-table, td {
+table, td:not(#total) {
     border: 5px solid #ABDCD9;
     border-collapse: collapse;
 }
@@ -149,5 +149,4 @@ table, td {
 #total {
     font-weight: bold;
     text-align: right;
-    border: 0px;
 }
