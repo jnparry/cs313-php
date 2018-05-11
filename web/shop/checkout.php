@@ -25,7 +25,7 @@
                 <br>
                 <textarea id="city" rows="1" cols="50" name="address" placeholder="City, State" pattern="[A-Za-z]+,[ ]?[A-Za-z]+{2,}" required></textarea>
                 <br>
-                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="\d\d\d\d\d" required></textarea>
+                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[\d\d\d\d\d]*" required></textarea>
                 <br><br>
 
                 <button type="reset">Reset</button>
