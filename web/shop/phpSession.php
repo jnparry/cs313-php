@@ -7,13 +7,13 @@
 
     $item = $_POST['yourItem'];
  
-//    $_SESSION['cart'][] = $item;
-//    echo count($_SESSION['cart']);
-//    foreach ($_SESSION['cart'] as $value) {
-//        echo $value;
-//        echo "whatt";
-//        echo $value;
-//    }
+    $_SESSION['cart'][] = $item;
+    echo count($_SESSION['cart']);
+    foreach ($_SESSION['cart'] as $value) {
+        echo $value;
+        echo "whatt";
+        echo $value;
+    }
 ?>
 
 <!DOCTYPE html>
