@@ -21,7 +21,7 @@
                 <br><br>
                 <input type="text" name="lname" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" title="Last name - letters only." required>
                 <br><br>
-                <input type="text" id="street" name="street" placeholder="Street" pattern="\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*" title="Street address." required>
+                <input type="text" id="street" name="street" placeholder="Street" pattern="\w*" title="Street address." required>
                 <br>
                 <input type="text" id="city" name="city" placeholder="City, State" title="City, State - ex: Rexburg, ID" pattern="[a-zA-Z]+[ ]?[a-zA-Z]+,[ ][A-Z]{2}" required>
                 <br>
