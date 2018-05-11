@@ -56,11 +56,6 @@ h1, #header {
     background-color: #BCF2EE;
 }
 
-
-footer {
-  position: absolute;
-  right: 0;bottom:0;left:0;
-}
 #bottom {
     width: 100%;
     display: block;
@@ -69,7 +64,6 @@ footer {
     margin-left: -10px;
     margin-right: 10px;
     margin-bottom: -50px;
-*/
 }
 
 #info {
@@ -83,6 +77,10 @@ footer {
     max-width: 40%;
     margin: 10px;
     padding: 10px;
+}
+
+#resultPic {
+    max-width: 30%;
 }
 
 table {
