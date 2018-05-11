@@ -49,7 +49,7 @@
                             }
                             else if ($value === "Gorgon Mask") {
                                 echo "<p>Goron Mask</p>
-                            <img id=\"pic\" src=\"https://pre00.deviantart.net/4b94/th/pre/f/2012/031/3/5/goron_mask_by_blueamnesiac-d4o7875.png\" alt=\"Zelda Goron Mask\">"
+                            <img id=\"pic\" src=\"https://pre00.deviantart.net/4b94/th/pre/f/2012/031/3/5/goron_mask_by_blueamnesiac-d4o7875.png\" alt=\"Zelda Goron Mask\">";
                             }
                             else if ($value === "Majora's Mask") {
                                 echo "<p>Majora's Mask</p>
