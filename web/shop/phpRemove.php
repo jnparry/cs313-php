@@ -19,6 +19,9 @@
             unset($_SESSION['cart'][$key]);
             $_SESSION["name"] = array_values($_SESSION["name"]);
         }
+        else {
+            echo "equals false";
+        }
 
         
 //        foreach ($_SESSION['cart'] as $value) {
