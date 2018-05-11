@@ -28,7 +28,7 @@
                         echo "<p>You have no itmes in your cart.</p><a class=\"detail\" href=\"/shop/home.php\">Continue browsing?</a>";
                     }
                     else {
-                        echo "<table><tr>"
+                        echo "<table><tr>";
                         foreach ($_SESSION['cart'] as $value) {
                             echo "<td>";
                             if ($value === "Deku Mask") {
