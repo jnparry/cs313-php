@@ -5,11 +5,16 @@
     $city = $_POST["city"];
     $zip = $_POST["zip"];
 
-    echo $fname;
-    echo $lname;
-    echo $street;
-    echo $city;
-    echo $zip;
+    if ($fname) {
+        echo $fname;
+        echo $lname;
+        echo $street;
+        echo $city;
+        echo $zip;
+    }
+    else {
+        echo "nothing";
+    }
 ?>
 
 <!DOCTYPE html>
