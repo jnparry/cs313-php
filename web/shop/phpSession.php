@@ -4,16 +4,7 @@
 //    }
 
     $_SESSION['new_val'] = $_POST['name'];
-    $bar = isset($_POST["name"]) ? $_POST["name"] : null;
-
-    var_dump($_SESSION);
     echo $_SESSION['new_val'];
-    if (!(isset($bar))) {
-        echo "Not set.";
-    }
-    else {
-        echo $bar;
-    }
 ?>
 
 <!DOCTYPE html>
