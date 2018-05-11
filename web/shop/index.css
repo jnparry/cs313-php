@@ -143,5 +143,5 @@ table, th, td {
 }
 
 #browse.fullPage {
-    height: 200px;
+    min-height: 200px;
 }
