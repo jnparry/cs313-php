@@ -4,9 +4,8 @@
     if(isset($_SESSION['cart'])){
 
         $item = $_POST['yourItem'];
-        echo $item;
 
-        $key = array_search($_GET[$item],$_SESSION['cart']);
+        $key = array_search($item,$_SESSION['cart']);
         if ($key!==false) {
             echo "key";
             echo $key;
