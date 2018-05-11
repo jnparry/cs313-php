@@ -6,16 +6,7 @@
     }
 
     $item = $_POST['yourItem'];
-    if ($item) {
-        echo "okay";
-    }
-    else if ($item == 'deiMask') {
-        echo "this is dumb";
-    }
-    else {
-        echo "nothing in item??";
-        echo "name" . $_POST['name'];
-    }
+ 
     $_SESSION['cart'][] = $item;
     echo count($_SESSION['cart']);
     foreach ($_SESSION['cart'] as $value) {
