@@ -58,8 +58,8 @@
             ?>
         </div>
         
-        <?php
-            require "bottom.php";
-        ?>
+        <div id="bottom">
+            <p id="info">Shop | Jordan Parry</p>
+        </div>
     </body>
 </html>
