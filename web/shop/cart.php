@@ -64,7 +64,8 @@
                     echo "</p>";
                 }
             ?>
+            </form>
         </div>
-        
     </body>
+    <script src="home.js"></script>
 </html>
