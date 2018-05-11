@@ -25,6 +25,7 @@
     <body>
         <p>so what happened?
             <?php
+                echo count($_SESSION['cart']);
                 foreach ($_SESSION['cart'] as $value) {
                     echo $value;
                     if ($value) {
