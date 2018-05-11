@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if (count($_SESSION['cart']) == 0) {
+        alert("Nothing in cart. Please select an item before checking out.");
+        header("Location: https://stormy-cove-35722.herokuapp.com/shop/home.php"); /* Redirect browser */
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
