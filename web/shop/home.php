@@ -86,7 +86,7 @@
                         </td>
                         <td>
                             <p>$49.99</p>
-                            <button onclick="setItem('Majora's Mask')" type="submit">Add to cart</button>
+                            <button onclick="setItem('Majora\'s Mask')" type="submit">Add to cart</button>
                         </td>
                     </tr>
 
@@ -100,7 +100,7 @@
                         </td>
                         <td>
                             <p>$49.99</p>
-                            <button onclick="setItem('Diety Mask')" type="submit">Add to cart</button>
+                            <button onclick="setItem('Deity Mask')" type="submit">Add to cart</button>
                         </td>
                     </tr>
                 </table>
