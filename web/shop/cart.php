@@ -18,7 +18,7 @@
             <?php
                 echo count($_SESSION['cart']);
                 foreach ($_SESSION['cart'] as $value) {
-                    echo "<p>A ";
+                    echo "<p>";
                     echo $value;
                     echo "</p>";
                 }
