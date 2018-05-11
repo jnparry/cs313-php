@@ -3,14 +3,15 @@
 //        $_SESSION['cart'] = array();
 //    }
 
-    $var = $_POST["passedValue"];
+    $bar = isset($_POST['name']) ? $_POST['name'] : null;
 
     var_dump($_SESSION);
-    if (!(isset($var))) {
+    if (!(isset($bar))) {
         echo "Not set.";
     }
-    echo "cart is: ";
-    echo $_SESSION["cart"];
+    else {
+        echo $bar;
+    }
 ?>
 
 <!DOCTYPE html>
