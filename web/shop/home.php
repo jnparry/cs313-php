@@ -8,7 +8,6 @@
         <meta charset="utf-8">
         <title>Shop | Home</title>
         <link rel="stylesheet" href="index.css">
-        <script src="home.js"></script>
     </head>
     
     <body>
@@ -121,4 +120,6 @@
             <p id="info">Shop | Jordan Parry</p>
         </div>
     </body>
+    
+    <script src="home.js"></script>
 </html>
