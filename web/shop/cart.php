@@ -17,7 +17,7 @@
             <h1>Cart</h1>
         </div>
         
-        <div id="browse">
+        <div id="browse" class="fullPage">
             <h2>Items in your cart: 
                 <?php
                     $num = count($_SESSION['cart']);
