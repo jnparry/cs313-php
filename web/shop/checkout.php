@@ -19,13 +19,13 @@
                 <br>
                 <input type="text" name="form-info" id="fname" onload="setFocus()" placeholder="First Name" pattern="[a-zA-Z]*" required>
                 <br><br>
-                <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[0-9]{5}*" required>
+                <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" required>
                 <br><br>
                 <textarea id="street" rows="1" cols="50" name="address" placeholder="Street" required></textarea>
                 <br>
                 <textarea id="city" rows="1" cols="50" name="address" placeholder="City, State" pattern="[A-Za-z]+,[ ]?[A-Za-z]+{2,}" required></textarea>
                 <br>
-                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[0-9]{5}" required></textarea>
+                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="\d\d\d\d\d" required></textarea>
                 <br><br>
 
                 <button type="reset">Reset</button>
