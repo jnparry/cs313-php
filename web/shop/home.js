@@ -49,8 +49,8 @@ window.onclick = function(event) {
 
 function add(item) {
     alert(item);
-    $.get("/shop/phpSession.php",{
-        name:item
+    $.post("/shop/phpSession.php",{
+        name: item
     },
     function(data,status){
         alert("Data: " + data + "\nStatus: " + status);
