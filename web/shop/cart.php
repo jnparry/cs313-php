@@ -52,10 +52,10 @@
                         else if ($value === "Majora's Mask") {
                             echo "<p>Majora's Mask</p><img id=\"resultPic\" src=\"https://pre00.deviantart.net/b9bb/th/pre/f/2012/036/0/1/majora__s_mask_by_blueamnesiac-d4osuud.png\" alt=\"Zelda Majora's Mask\"><p>$49.99</p>";
                         }
-                        echo "</td>";
+                        echo "</td></tr>";
                     }
                     $total = (49.99 * $num);
-                    echo "<td>";
+                    echo "<tr><td>";
                     echo $total;
                     echo "</td></tr>";
                     echo "</table>";
