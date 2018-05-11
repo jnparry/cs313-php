@@ -25,11 +25,11 @@
                 <br>
                 <textarea id="city" rows="1" cols="50" name="address" placeholder="City, State" pattern="[A-Za-z]+,[ ]?[A-Za-z]+{2,}$" required></textarea>
                 <br>
-                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="^[0-9]{5}(?:-[0-9]{4})?$" required></textarea>
+                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[0-9]{5}(?:-[0-9]{4})?$" required></textarea>
                 <br><br>
 
                 <button type="reset">Reset</button>
-                <button type="button" onclick="return validate()">Submit</button>
+                <input type="submit">Submit</button>
             </form>
         </div>
         

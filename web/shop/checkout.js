@@ -12,14 +12,14 @@ function blurNumber() {
     }
 }
 
-function validate() {
-    document.getElementById("invalid"           ).innerHTML = ""; // reset the invalid notifications                   
-
-    var fname   = document.forms["myForm"]["fname" ].value;
-    var lname   = document.forms["myForm"]["lname" ].value;
-    var street  = document.forms["myForm"]["street"].value;
-    var city    = document.forms["myForm"]["city"  ].value
-    var zipcode = document.forms["myForm"]["zip"   ].value;
-
-
-}
+//function validate() {
+//    document.getElementById("invalid"           ).innerHTML = ""; // reset the invalid notifications                   
+//
+//    var fname   = document.forms["myForm"]["fname" ].value;
+//    var lname   = document.forms["myForm"]["lname" ].value;
+//    var street  = document.forms["myForm"]["street"].value;
+//    var city    = document.forms["myForm"]["city"  ].value
+//    var zipcode = document.forms["myForm"]["zip"   ].value;
+//
+//
+//}
