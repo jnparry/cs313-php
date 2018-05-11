@@ -3,6 +3,7 @@
         $_SESSION['cart'] = array();
     }
     $item = $_POST['name'];
+    echo $item;
     $_SESSION['cart'][] = $item;
     echo count($_SESSION['cart']);
     foreach ($_SESSION['cart'] as $value) {
