@@ -26,7 +26,12 @@
             <?php
                 foreach ($_SESSION['cart'] as $value) {
                     echo $value;
-                    echo "whatt";
+                    if ($value) {
+                        echo "whatt";
+                    }
+                    else {
+                        echo "Nothing???";
+                    }
                 }
             ?>
         </p>
