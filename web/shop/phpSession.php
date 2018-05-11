@@ -4,6 +4,7 @@
 //    }
 
     $_SESSION['cart'][] = $_POST['name'];
+    echo "heyheyhey";
     echo $_SESSION['cart'][0];
 ?>
 
