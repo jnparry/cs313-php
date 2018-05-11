@@ -12,6 +12,9 @@
         foreach ($_SESSION['cart'] as $value) {
             if ($value === $item) {
                 unset($_SESSION['cart'][$value]);
+                echo "unset";
+                echo $value;
+                echo $item;
             }
             else {
                 echo "not th same?";
