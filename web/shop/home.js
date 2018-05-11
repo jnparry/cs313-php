@@ -48,6 +48,7 @@ window.onclick = function(event) {
 }
 
 function add(item) {
+    alert(item);
     $.post("phpSession.php",{
         passedValue:item
     });
