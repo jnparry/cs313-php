@@ -49,6 +49,7 @@ window.onclick = function(event) {
 
 function setItem(name) {
     document.getElementById("selectedItem").value = name;
+    alert(name);
 }
 
 function add(item) {
