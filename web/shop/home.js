@@ -8,7 +8,7 @@ var btn1 = document.getElementById("dekMask");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
+btn1.onclick = function() {
     modal.style.display = "block";
 }
 
