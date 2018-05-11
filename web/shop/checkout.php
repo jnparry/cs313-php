@@ -25,7 +25,7 @@
                 <br>
                 <input type="text" id="city" name="address" placeholder="City, State" required>
                 <br>
-                <input type="number" id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[0-9]{5}" required>
+                <input type="text" id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[0-9]{5}" required>
                 <br><br>
 
                 <button type="reset">Reset</button>
