@@ -10,5 +10,6 @@
     <body>
         <?php require "navbar.php"?>
         <h1>Check Out</h1>
+        <?php require "bottom.php"?>
     </body>
 </html>

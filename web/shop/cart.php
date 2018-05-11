@@ -24,5 +24,6 @@
                 }
             ?>
         </p>
+        <?php require "bottom.php"?>
     </body>
 </html>
