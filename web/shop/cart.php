@@ -25,13 +25,17 @@
                     echo "</h2>";
         
                     if (num == 0) {
-                        echo "<p>You have no itmes in your cart.</p><a href=\"/shop/home.php\">Continue browsing?</a>";
+                        echo "<p>You have no itmes in your cart.</p><a class=\"detail\" href=\"/shop/home.php\">Continue browsing?</a>";
                     }
                     else {
+                        echo "<table><tr>"
                         foreach ($_SESSION['cart'] as $value) {
-                            echo "<p>";
-                            echo $value;
-                            echo "</p>";
+                            echo "<td>";
+                            if ($value === "Deku Mask") {
+                                echo "<p>Deku Mask</p>
+                                    <img id=\"pic\" src=\"https://pre00.deviantart.net/2677/th/pre/f/2012/030/0/6/deku_mask_by_blueamnesiac-d4o3mwf.png\" alt=\"Zelda Deku Mask\">";
+                            }
+                            echo "</td>";
                         }
                     }
                 ?>
