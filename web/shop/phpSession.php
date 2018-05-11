@@ -6,15 +6,7 @@
     }
 
     $item = $_POST['yourItem'];
-    echo "name" . $_POST['name'];
-
-    $_SESSION['cart'][] = $item;
-    echo count($_SESSION['cart']);
-    foreach ($_SESSION['cart'] as $value) {
-        echo $value;
-        echo "whatt";
-        echo $value;
-    }
+    echo $_POST['name'];
 ?>
 
 <!DOCTYPE html>
