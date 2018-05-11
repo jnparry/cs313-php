@@ -8,17 +8,17 @@
         <meta charset="utf-8">
         <title>Shop | Cart</title>
         <link rel="stylesheet" href="index.css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type=""></script>
     </head>
     
     <body>
         <?php require "navbar.php"?>
         <h1>Cart</h1>
-        <p>You ordered: 
+        <p>Items in your cart: 
             <?php
                 echo count($_SESSION['cart']);
                 foreach ($_SESSION['cart'] as $value) {
-                    echo "<p>";
+                    echo "<p>A ";
                     echo $value;
                     echo "</p>";
                 }

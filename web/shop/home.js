@@ -49,21 +49,4 @@ window.onclick = function(event) {
 
 function setItem(name) {
     document.getElementById("selectedItem").value = name;
-    alert(name);
 }
-
-function add(item) {
-    alert(item);
-    $.get("/shop/phpSession.php",{
-        name:item
-    },
-    function(data,status){
-        alert("Data: " + data + "\nStatus: " + status);
-    },
-    window.location="/shop/phpSession.php");
-}
-
-//
-//,function(ret){
-//        // maybe do something here...
-//    }
