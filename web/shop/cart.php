@@ -17,14 +17,14 @@
             <h1>Cart</h1>
         </div>
         
-        <div id="browse" class="fullPage">
-            <h2>Items in your cart: 
-                <?php
-                    $num = count($_SESSION['cart']);
-                    echo $num;
-                ?>
-            </h2>
+        <h2>Items in your cart: 
+            <?php
+                $num = count($_SESSION['cart']);
+                echo $num;
+            ?>
+        </h2>
             
+        <div id="browse" class="fullPage">
             <?php
 
                 if ($num == 0) {
@@ -52,6 +52,9 @@
                         else if ($value === "Majora's Mask") {
                             echo "<p>Majora's Mask</p><img id=\"resultPic\" src=\"https://pre00.deviantart.net/b9bb/th/pre/f/2012/036/0/1/majora__s_mask_by_blueamnesiac-d4osuud.png\" alt=\"Zelda Majora's Mask\"><p>$49.99</p>";
                         }
+                        echo "</td></tr><td><tr>";
+                        $total = (49.99 * $num);
+                        echo $total;
                         echo "</td></tr>";
                     }
                 }
