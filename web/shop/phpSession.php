@@ -7,7 +7,8 @@
     echo "heyheyhey";
     echo count($_SESSION['cart']);
     foreach ($_SESSION['cart'] as $value) {
-      echo $value;
+        echo $value;
+        echo "whatt"
     }
 ?>
 
