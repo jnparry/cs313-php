@@ -5,7 +5,7 @@
         $_SESSION['cart'] = array();
     }
 
-    $item = $_GET['name'];
+    $item = $_GET['yourItem'];
     if ($item) {
         echo "okay";
     }

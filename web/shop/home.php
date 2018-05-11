@@ -1,9 +1,5 @@
 <?php
     session_start();
-
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
-    }
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +18,8 @@
         </div>
         
         <div id="browse">
+            <form action="/shop/phpSession.php" method="post">
+                <input type="hidden" id="selectedItem" value="" name="yourItem">
                 <table>
                     <tr>
                         <td>
@@ -103,11 +101,11 @@
                         </td>
                         <td>
                             <p>$49.99</p>
-                            <button onClick="add('deiMask')">Add to cart</button>
+                            <button onclick="setItem('Diety Mask')" type="submit">Add to cart</button>
                         </td>
                     </tr>
-
                 </table>
+            </form>
         </div>
 
         <!-- Modal -->

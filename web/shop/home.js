@@ -47,6 +47,10 @@ window.onclick = function(event) {
     }
 }
 
+function setItem(name) {
+    document.getElementById("selectedItem").value = name;
+}
+
 function add(item) {
     alert(item);
     $.get("/shop/phpSession.php",{
