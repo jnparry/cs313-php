@@ -117,9 +117,7 @@
             </div>
         </div>
         
-        <div id="bottom">
-            <p id="info">Shop | Jordan Parry</p>
-        </div>
+        <?php require "bottom.php"?>
     </body>
     
     <script src="home.js"></script>
