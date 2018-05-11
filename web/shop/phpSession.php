@@ -8,12 +8,6 @@
     $item = $_POST['yourItem'];
  
     $_SESSION['cart'][] = $item;
-
-    foreach ($_SESSION['cart'] as $value) {
-        echo $value;
-        echo "whatt";
-        echo $value;
-    }
 ?>
 
 <!DOCTYPE html>
