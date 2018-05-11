@@ -17,7 +17,7 @@ document.getElementById("deiMask").onclick = function() {
 
 document.getElementById("gorMask").onclick = function() {
     modal.style.display = "block";
-    document.getElementById("description").innerHTML = "[Insert description for gorgon mask]"
+    document.getElementById("description").innerHTML = "[Insert description for goron mask]"
 }
 
 document.getElementById("majMask").onclick = function() {

@@ -72,7 +72,7 @@
                         </td>
                         <td>
                             <p>$49.99</p>
-                            <button onclick="setItem('Gorgon Mask')" type="submit">Add to cart</button>
+                            <button onclick="setItem('Goron Mask')" type="submit">Add to cart</button>
                         </td>
                     </tr>
 
