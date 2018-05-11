@@ -11,6 +11,11 @@
 
         $key = array_search($_GET[$item],$_SESSION['cart']);
         if ($key!==false) {
+            echo "key";
+            echo $key;
+            echo "item";
+            echo $item;
+
             unset($_SESSION['cart'][$key]);
             $_SESSION["name"] = array_values($_SESSION["name"]);
         }
