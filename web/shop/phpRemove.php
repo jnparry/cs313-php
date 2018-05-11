@@ -9,20 +9,27 @@
 //    unset($_SESSION[$key]);
 //}
 
-        foreach ($_SESSION['cart'] as $value) {
-            if ($value === $item) {
-                unset($_SESSION['cart'][$value]);
-                $_SESSION["cart"] = array_values($_SESSION["cart"]);
-                echo "unset";
-                echo $value;
-                echo $item;
-            }
-            else {
-                echo "not th same?";
-                echo $value;
-                echo $item;
-            }
+        $key = array_search($_GET[$item],$_SESSION['cart']);
+        if ($key!==false) {
+            unset($_SESSION['cart'][$key]);
+            $_SESSION["name"] = array_values($_SESSION["name"]);
         }
+
+        
+//        foreach ($_SESSION['cart'] as $value) {
+//            if ($value === $item) {
+//                unset($_SESSION['cart'][$value]);
+//                $_SESSION["cart"] = array_values($_SESSION["cart"]);
+//                echo "unset";
+//                echo $value;
+//                echo $item;
+//            }
+//            else {
+//                echo "not th same?";
+//                echo $value;
+//                echo $item;
+//            }
+//        }
 
         foreach ($_SESSION['cart'] as $value) {
             echo "Items are: ";
