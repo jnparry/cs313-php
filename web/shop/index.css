@@ -149,5 +149,5 @@ table, td {
 #total {
     font-weight: bold;
     text-align: right;
-    border: none;
+    border: 0px;
 }
