@@ -51,8 +51,8 @@ function add(item) {
     alert(item);
     $.post("/phpSession.php",{
         name: item
-    }
-   function(data,status){
+    },
+    function(data,status){
         alert("Data: " + data + "\nStatus: " + status);
     });
 }
