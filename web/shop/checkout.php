@@ -9,7 +9,9 @@
     
     <body>
         <?php require "navbar.php"?>
-        <h1>Check Out</h1>
+        <div id="header">
+            <h1>Check Out</h1>
+        </div>
         <?php require "bottom.php"?>
     </body>
 </html>
