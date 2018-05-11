@@ -29,7 +29,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button id="dekMask">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -43,7 +43,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button id="keaMask">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -57,7 +57,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button id="kafMask">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -71,7 +71,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button id="gorMask">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -85,7 +85,7 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button id="majMask">Add to cart</button>
                     </td>
                 </tr>
                 
@@ -99,11 +99,22 @@
                     </td>
                     <td>
                         <p>$49.99</p>
-                        <button>Add to cart</button>
+                        <button id="deiMask">Add to cart</button>
                     </td>
                 </tr>
                 
             </table>
+        </div>
+
+        <!-- Modal -->
+        <div id="add" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+
         </div>
         
         <div id="bottom">
