@@ -62,7 +62,7 @@
                     echo "Total: $" . $total;
                     echo "</p>";
                     echo "<input type='button' value='Return to browsing' id='browseBtn' onclick=\"document.location.href='https://stormy-cove-35722.herokuapp.com/shop/home.php';\">";
-                    echo "<button id=\"checkoutBtn\" onclick=\"\">Continue to checkout</button>";
+                    echo "<input type='button' value='Continue to checkout' id='checkoutBtn' onclick=\"document.location.href='https://stormy-cove-35722.herokuapp.com/shop/checkout.php';\">";
                 }
             ?>
             </form>
