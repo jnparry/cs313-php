@@ -2,9 +2,8 @@
     if(!isset($_SESSION['cart'])){
         $_SESSION['cart'] = array();
     }
-
-    $_SESSION['cart'][] = $_POST['name'];
-    echo "heyheyhey";
+    $item = $_POST['name'];
+    $_SESSION['cart'][] = $item;
     echo count($_SESSION['cart']);
     foreach ($_SESSION['cart'] as $value) {
         echo $value;
