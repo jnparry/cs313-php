@@ -6,6 +6,7 @@
     $_SESSION["cart"] = $_POST["passedValue"];
 
     var_dump($_SESSION);
+    echo $_POST["passedValue"];
     echo "cart is: ";
     echo $_SESSION["cart"];
 ?>
