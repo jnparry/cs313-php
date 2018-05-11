@@ -2,15 +2,14 @@
 var modal = document.getElementById('add');
 
 // Get the button that opens the modal
-var btn1 = document.getElementById("dekMask");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-btn1.onclick = function() {
+document.getElementById("dekMask").onclick = function() {
     modal.style.display = "block";
-    document.getElementById("description").innerHTML = "Button one!!"
+    document.getElementById("description").innerHTML = "[Insert description for deku mask]"
 }
 
 // When the user clicks on <span> (x), close the modal
