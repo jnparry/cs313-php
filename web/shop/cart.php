@@ -18,16 +18,23 @@
         </div>
         
         <div id="browse">
-            <p>Items in your cart: 
+            <h2>Items in your cart: 
                 <?php
-                    echo count($_SESSION['cart']);
-                    foreach ($_SESSION['cart'] as $value) {
-                        echo "<p>";
-                        echo $value;
-                        echo "</p>";
+                    $num = count($_SESSION['cart']);
+                    echo num;
+                    echo "</h2>";
+        
+                    if (num == 0) {
+                        echo "<p>You have no itmes in your cart. <a href=\"/shop/home.php\">Continue browsing?</a></p>";
+                    }
+                    else {
+                        foreach ($_SESSION['cart'] as $value) {
+                            echo "<p>";
+                            echo $value;
+                            echo "</p>";
+                        }
                     }
                 ?>
-            </p>
         </div>
         
         <?php require "bottom.php"?>
