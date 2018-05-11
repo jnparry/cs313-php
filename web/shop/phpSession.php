@@ -3,8 +3,8 @@
 //        $_SESSION['cart'] = array();
 //    }
 
-    $_SESSION['new_val'] = $_POST['name'];
-    echo $_SESSION['new_val'];
+    $_SESSION['cart'][] = $_POST['name'];
+    echo $_SESSION['cart'][0];
 ?>
 
 <!DOCTYPE html>
