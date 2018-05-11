@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <title>Shop | Cart</title>
         <link rel="stylesheet" href="index.css">
-        <script type=""></script>
+        <script type="index.css"></script>
     </head>
     
     <body>
