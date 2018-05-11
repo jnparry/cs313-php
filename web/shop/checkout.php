@@ -21,15 +21,15 @@
                 <br><br>
                 <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" required>
                 <br><br>
-                <textarea id="street" rows="1" cols="50" name="address" placeholder="Street" required></textarea>
+                <input type="text" id="street" name="address" placeholder="Street" required>
                 <br>
-                <textarea id="city" rows="1" cols="50" name="address" placeholder="City, State" pattern="[A-Za-z]+,[ ]?[A-Za-z]+{2,}" required></textarea>
+                <input type="text" id="city" name="address" placeholder="City, State" pattern="[A-Za-z]+,[ ]?[A-Za-z]+{2,}" required>
                 <br>
-                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[\d{5}]" required></textarea>
+                <input type="number" id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[\d{5}]" required>
                 <br><br>
 
                 <button type="reset">Reset</button>
-                <input type="submit">Submit</button>
+                <input type="submit">Submit
             </form>
         </div>
         
