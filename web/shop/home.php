@@ -18,7 +18,7 @@
         </div>
         
         <div id="browse">
-            <form action="/shop/phpSession.php" method="post">
+<!--            <form action="/shop/phpSession.php" method="post">-->
                 <table>
                     <tr>
                         <td>
@@ -105,7 +105,7 @@
                     </tr>
 
                 </table>
-            </form>
+<!--            </form>-->
         </div>
 
         <!-- Modal -->
