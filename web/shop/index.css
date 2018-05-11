@@ -51,6 +51,7 @@ h1, #header {
 }
 
 #browse {
+    display: block;
     background-color: #cbf3f0;
     background-color: #BCF2EE;
 }
@@ -61,17 +62,12 @@ footer {
   right: 0;bottom:0;left:0;
 }
 #bottom {
-/*    width: 100%;*/
+    width: 100%;
     display: block;
     background-color: #2ec4b6;
     height: 100px;
     margin-left: -10px;
     margin-right: 10px;
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-/*
     margin-bottom: -50px;
 */
 }
