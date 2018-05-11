@@ -17,6 +17,11 @@ a {
     padding: 10px;
 }
 
+.detail {
+    color: blue;
+    text-decoration: underline;
+}
+
 a:hover:not(.active):not(.detail) {
     background-color: #FFA730;
 }
