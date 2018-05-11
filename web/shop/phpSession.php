@@ -9,6 +9,7 @@
     foreach ($_SESSION['cart'] as $value) {
         echo $value;
         echo "whatt";
+        echo $value;
     }
 ?>
 
