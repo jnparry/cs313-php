@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
-        echo "<script type='text/javascript'>alert('Nothing in cart. Please select an item before checking out.'); location=\"https://stormy-cove-35722.herokuapp.com/shop/home.php\"</script>";
-    }
+//    if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
+//        echo "<script type='text/javascript'>alert('Nothing in cart. Please select an item before checking out.'); location=\"https://stormy-cove-35722.herokuapp.com/shop/home.php\"</script>";
+//    }
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +21,11 @@
         </div>
         
         <div id="browse">
+            <?php 
+                if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
+                    echo "<script type='text/javascript'>alert('Nothing in cart. Please select an item before checking out.'); location=\"https://stormy-cove-35722.herokuapp.com/shop/home.php\"</script>";
+                }
+            ?>
             <form id="myForm" action="confirm.php" method="post">
                 <p id="invalid"></p>
                 <h2>Customer Information</h2>
