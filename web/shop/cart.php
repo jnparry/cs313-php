@@ -57,9 +57,9 @@
                 }
             ?>
         </div>
+        
+        <?php
+            echo "<?php require \"bottom.php\"?>";
+        ?>
     </body>
-    
-    <footer>
-        <?php require "bottom.php"?>
-    </footer>
 </html>
