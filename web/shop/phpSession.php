@@ -5,7 +5,7 @@
 
     $_SESSION['cart'][] = $_POST['name'];
     echo "heyheyhey";
-    echo sizeof($_SESSION['cart'];
+    echo count($_SESSION['cart']);
 ?>
 
 <!DOCTYPE html>
