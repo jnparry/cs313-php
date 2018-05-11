@@ -20,11 +20,13 @@
     </head>
     
     <body>
-        <p>so what happened?
+        <p>You ordered: 
             <?php
                 echo count($_SESSION['cart']);
                 foreach ($_SESSION['cart'] as $value) {
+                    echo "<p>";
                     echo $value;
+                    echo "</p>";
                 }
             ?>
         </p>
