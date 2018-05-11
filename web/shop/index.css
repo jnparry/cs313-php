@@ -28,7 +28,7 @@ h1, #header {
     margin-top: 0;
 }
 
-h1 > #title {
+#title {
     font-size: 250%;
 }
 
