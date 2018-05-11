@@ -62,7 +62,7 @@ footer {
 }
 #bottom {
 /*    width: 100%;*/
-    
+    display: block;
     background-color: #2ec4b6;
     height: 100px;
     margin-left: -10px;
