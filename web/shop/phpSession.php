@@ -17,6 +17,6 @@
     </head>
     
     <body>
-        <p>so what happened?</p>
+        <p>so what happened? <?php echo $_SESSION['cart'][] ?></p>
     </body>
 </html>
