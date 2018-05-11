@@ -9,7 +9,9 @@
     if ($item) {
         echo "okay";
     }
-    else if ($item == )
+    else if ($item == 'deiMask') {
+        echo "this is dumb";
+    }
     else {
         echo "nothing in item??";
         echo "name" . $_POST['name'];
