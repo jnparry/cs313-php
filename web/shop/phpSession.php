@@ -1,10 +1,12 @@
-if(!isset($_SESSION['cart'])){
-    $_SESSION['cart'] = array();
-}
+<?php 
+    if(!isset($_SESSION['cart'])){
+        $_SESSION['cart'] = array();
+    }
 
-$_SESSION['cart'][] = $_POST['passedVal'];
+    $_SESSION['cart'][] = $_POST['passedVal'];
 
-var_dump($_SESSION);
+    var_dump($_SESSION);
+?>
 
 <!DOCTYPE html>
 <html>
