@@ -50,7 +50,7 @@ window.onclick = function(event) {
 function add(item) {
     alert(item);
     $.post("/shop/phpSession.php",{
-        name: item
+        name:item
     },
     function(data,status){
         alert("Data: " + data + "\nStatus: " + status);
