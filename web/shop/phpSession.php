@@ -9,6 +9,9 @@
     if ($item) {
         echo "okay";
     }
+    else if ($item == 'deiMask') {
+        echo "equal to dei mask";
+    }
     else {
         echo "nothing in item??";
         echo "name" . $_POST['name'];
@@ -37,12 +40,6 @@
                 echo count($_SESSION['cart']);
                 foreach ($_SESSION['cart'] as $value) {
                     echo $value;
-                    if ($value) {
-                        echo "whatt";
-                    }
-                    else {
-                        echo "Nothing???";
-                    }
                 }
             ?>
         </p>
