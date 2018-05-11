@@ -5,7 +5,6 @@
 
     $_SESSION['cart'][] = $_POST['name'];
     echo "heyheyhey";
-    echo sizeof($_SESSION['cart'];
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +17,6 @@
     </head>
     
     <body>
-        <p>so what happened? <?php echo $_SESSION['cart'][0] ?></p>
+        <p>so what happened?</p>
     </body>
 </html>
