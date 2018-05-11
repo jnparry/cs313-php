@@ -7,6 +7,10 @@
         unset($_SESSION['cart'][$item]);
     }
 
-    header("Location: https://stormy-cove-35722.herokuapp.com/shop/cart.php"); /* Redirect browser */
-    exit();
+    else {
+        echo "not set?";
+    }
+
+//    header("Location: https://stormy-cove-35722.herokuapp.com/shop/cart.php"); /* Redirect browser */
+//    exit();
 ?>
