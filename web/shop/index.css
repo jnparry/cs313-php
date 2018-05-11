@@ -83,6 +83,10 @@ h1, #header {
     max-width: 20%;
 }
 
+#confirmPic {
+    max-width: 10%;
+}
+
 table {
     padding: 10px;
     width: 100%;
