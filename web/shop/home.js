@@ -49,7 +49,7 @@ window.onclick = function(event) {
 
 function add(item) {
     alert(item);
-    $.post("/shop/phpSession.php",{
+    $.post("/phpSession.php",{
         name:item
     },
     function(data,status){
