@@ -151,3 +151,11 @@ table, td:not(.total) {
     font-weight: bold;
     text-align: right;
 }
+
+#browseBtn {
+    float: left;
+}
+
+#checkoutBtn {
+    float: right;
+}
