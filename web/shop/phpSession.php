@@ -16,7 +16,7 @@
         echo "nothing in item??";
         echo "name" . $_POST['name'];
     }
-    $_SESSION['cart'][] = $item;
+//    $_SESSION['cart'][] = $item;
     echo count($_SESSION['cart']);
     foreach ($_SESSION['cart'] as $value) {
         echo $value;
