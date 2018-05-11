@@ -25,6 +25,10 @@ a:hover:not(.active) {
     background-color: #E8911A;
 }
 
+.detail:hover {
+    background-color: red;
+}
+
 h1, #header {
     margin-top: 0;
 }
