@@ -17,7 +17,7 @@ a {
     padding: 10px;
 }
 
-a:hover:not(.active) {
+a:hover:not(.active):not(.detail) {
     background-color: #FFA730;
 }
 
