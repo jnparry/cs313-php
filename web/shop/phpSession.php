@@ -6,7 +6,11 @@
     }
 
     $item = $_POST['yourItem'];
- 
+
+    if (count($_SESSION['cart']) == 0) {
+        echo "nothing";
+    }
+
     foreach ($_SESSION['cart'] as $value) {
         if ($value !== $item) {
             $_SESSION['cart'][] = $item;
