@@ -6,6 +6,9 @@
     $_SESSION['cart'][] = $_POST['name'];
     echo "heyheyhey";
     echo count($_SESSION['cart']);
+    for ($i = 0; $i < count($_SESSION['cart'])) {
+        echo $_SESSION['cart'][$i];
+    }
 ?>
 
 <!DOCTYPE html>
