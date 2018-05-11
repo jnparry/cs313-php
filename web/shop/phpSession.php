@@ -21,6 +21,9 @@
             $_SESSION['cart'][] = $item;
         }
     }
+
+    header("Location: https://stormy-cove-35722.herokuapp.com/shop/home.php"); /* Redirect browser */
+    exit();
 ?>
 
 <!DOCTYPE html>
