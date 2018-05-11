@@ -5,7 +5,11 @@
     $city = $_POST["city"];
     $zip = $_POST["zip"];
 
-    print_r($_POST);
+    echo $fname;
+    echo $lname;
+    echo $street;
+    echo $city;
+    echo $zip;
 ?>
 
 <!DOCTYPE html>
