@@ -1,5 +1,5 @@
 <nav>
-    <h1>Masked Majora</h1>
+    <h1 id="title">Masked Majora</h1>
     <?php $uri = $_SERVER['REQUEST_URI']; ?>
     <a href="home.php" <?php if ($uri == "/shop/home.php") { echo "class='active'";} ?>>Masks</a>
     <a href="cart.php" <?php if ($uri == "/shop/cart.php") { echo "class='active'";} ?>>Cart</a>

@@ -28,6 +28,10 @@ h1, #header {
     margin-top: 0;
 }
 
+h1, #title {
+    font-size: 120%;
+}
+
 #header {
     margin: 0;
     margin-bottom: 10px;
@@ -44,7 +48,7 @@ h1, #header {
 #bottom {
     background-color: #2ec4b6;
     height: 100px;
-    margin-bottom: -6px;
+    margin-bottom: -10px;
     margin-left: -10px;
 }
 

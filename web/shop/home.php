@@ -10,7 +10,7 @@
     <body>
         <?php require "navbar.php"?>
         <div id="header">
-            <h1>Masks</h1>
+            <h3>Masks</h3>
         </div>
         
         <div id="browse">
