@@ -31,7 +31,7 @@
                         </td>
                         <td>
                             <p>$49.99</p>
-                            <button onclick="setItem('Deku Mask')" type="submit"">Add to cart</button>
+                            <button onclick="setItem('Deku Mask')" type="submit">Add to cart</button>
                         </td>
                     </tr>
 
