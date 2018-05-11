@@ -1,3 +1,13 @@
+<?php
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $street = $_POST["street"];
+    $city = $_POST["city"];
+    $zip = $_POST["zip"];
+
+    print_r($_POST);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

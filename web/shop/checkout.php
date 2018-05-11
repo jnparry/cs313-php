@@ -13,7 +13,7 @@
         </div>
         
         <div id="browse">
-            <form id="myForm">
+            <form id="myForm" action="confirm.php" method="post">
                 <p id="invalid"></p>
                 <h2>Customer Information</h2>
                 <br>
@@ -28,8 +28,9 @@
                 <input type="text" id="zip" name="address" placeholder="Zipcode" pattern="[0-9]{5}" title="Zipcode - 5 numbers only." required>
                 <br><br>
 
+                <input type="button" value="Return to cart" id="cartBtn" onclick="document.location.href='https://stormy-cove-35722.herokuapp.com/shop/cart.php';">
                 <button type="reset">Reset</button>
-                <input type="submit">Submit
+                <input type="submit" value="Complete purchase">
             </form>
         </div>
         
