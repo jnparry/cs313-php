@@ -6,7 +6,9 @@
     $_SESSION["cart"] = $_POST["passedValue"];
 
     var_dump($_SESSION);
-    echo $_POST["passedValue"];
+    if (!(isset($_POST["passedValue"];=))) {
+        echo "Not set.";
+    }
     echo "cart is: ";
     echo $_SESSION["cart"];
 ?>
