@@ -94,7 +94,7 @@ td {
     height: 15%;
 }
 
-table, th, td {
+table, td {
     border: 5px solid #ABDCD9;
     border-collapse: collapse;
 }
@@ -144,4 +144,8 @@ table, th, td {
 
 #browse.fullPage {
     min-height: 200px;
+}
+
+#total {
+    text-align: right;
 }

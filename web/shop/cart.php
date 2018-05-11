@@ -55,8 +55,8 @@
                         echo "</td></tr>";
                     }
                     $total = (49.99 * $num);
-                    echo "<tr><td>";
-                    echo $total;
+                    echo "<tr><td id='total'>";
+                    echo "Total:" . $total;
                     echo "</td></tr>";
                     echo "</table>";
                 }
