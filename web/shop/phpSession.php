@@ -4,9 +4,7 @@
     if(!isset($_SESSION['cart'])){
         $_SESSION['cart'] = array();
     }
-    else {
-        echo "session set";
-    }
+
     $item = $_POST['name'];
     if ($item) {
         echo "okay";
