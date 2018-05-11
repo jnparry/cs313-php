@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <title>Shop | Home</title>
         <link rel="stylesheet" href="index.css">
-        <script src=""></script>
+        <script src="home.js"></script>
     </head>
     
     <body>
