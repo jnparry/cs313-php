@@ -10,8 +10,15 @@ nav {
     margin-left: -10px;
 }
 
+h1, #header {
+    margin-top: 0;
+}
+
 #header {
+    margin: 0;
+    margin-bottom: 10px;
     background-color: #ffbf69;
+    padding-left: 50px;
 }
 
 #browse {
@@ -21,4 +28,39 @@ nav {
 
 #bottom {
     background-color: #2ec4b6;
+    height: 100px;
+}
+
+#info {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    color: darkslategray;
+}
+
+#pic {
+    max-width: 40%;
+    margin: 10px;
+    padding: 10px;
+}
+
+table {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+td {
+    width: 34%;
+    height: 15%;
+}
+
+table, th, td {
+    border: 5px solid #ABDCD9;
+    border-collapse: collapse;
+}
+
+#browse {
+    width: 70%;
+    margin: auto;
 }
