@@ -3,10 +3,10 @@
 //        $_SESSION['cart'] = array();
 //    }
 
-    $_SESSION["cart"] = $_POST["passedValue"];
+    $var = $_POST["passedValue"];
 
     var_dump($_SESSION);
-    if (!(isset($_POST["passedValue"];=))) {
+    if (!(isset($var))) {
         echo "Not set.";
     }
     echo "cart is: ";
