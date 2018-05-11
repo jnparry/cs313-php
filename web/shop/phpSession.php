@@ -11,7 +11,7 @@
     }
     else {
         echo "nothing in item??";
-        echo $_POST['name'];
+        echo "name" . $_POST['name'];
     }
     $_SESSION['cart'][] = $item;
     echo count($_SESSION['cart']);
