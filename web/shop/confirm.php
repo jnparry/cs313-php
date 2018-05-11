@@ -51,11 +51,14 @@
                 echo "</td></tr>";
                 }
                 echo "</table>";
-                $total = (49.99 * $num);
+                $total = (49.99 * count($_SESSION['cart']));
                 echo "<p id='total'>";
                 echo "Amount: $" . $total;
                 echo "</p>";
-                echo "<p id='ship'>Shipping to: " . $fname . " " . $lname . " " . $street. " " . $city . " " . zip . "</p>";
+                echo "<p id='ship'>Shipping to: " . "<br/>" . 
+                    $fname . " " . $lname . "<br/>" . 
+                    $street. "<br/>" .
+                    $city . ", " . zip . "</p>";
             ?>
         </div>
         
