@@ -54,11 +54,11 @@
                         }
                         echo "</td></tr>";
                     }
-                    $total = (49.99 * $num);
-                    echo "<tr><td id='total'>";
-                    echo "Total: $" . $total;
-                    echo "</td></tr>";
                     echo "</table>";
+                    $total = (49.99 * $num);
+                    echo "<p class='total'>";
+                    echo "Total: $" . $total;
+                    echo "</p>";
                 }
             ?>
         </div>

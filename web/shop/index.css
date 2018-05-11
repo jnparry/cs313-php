@@ -94,7 +94,7 @@ td {
     height: 15%;
 }
 
-table, td:not(#total) {
+table, td:not(.total) {
     border: 5px solid #ABDCD9;
     border-collapse: collapse;
 }
