@@ -50,3 +50,7 @@ window.onclick = function(event) {
 function setItem(name) {
     document.getElementById("selectedItem").value = name;
 }
+
+function remove(name) {
+    document.getElementById("selectedItem").value = name;
+}
