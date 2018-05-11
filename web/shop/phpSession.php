@@ -9,17 +9,9 @@
  
     foreach ($_SESSION['cart'] as $value) {
         if ($value !== $item) {
-            echo "not equal";
-            echo $value;
-            echo $item;
-        }
-        else {
-            echo "equal";
-            echo $value;
-            echo $item;
+            $_SESSION['cart'][] = $item;
         }
     }
-    $_SESSION['cart'][] = $item;
 ?>
 
 <!DOCTYPE html>
