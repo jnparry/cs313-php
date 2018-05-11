@@ -67,5 +67,5 @@
             </form>
         </div>
     </body>
-    <script src="home.js"></script>
+    <script src="cart.js"></script>
 </html>
