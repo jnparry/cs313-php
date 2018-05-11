@@ -19,7 +19,7 @@
                 <br>
                 <input type="text" name="form-info" id="fname" onload="setFocus()" placeholder="First Name" pattern="[a-zA-Z]*" required>
                 <br><br>
-                <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" required>
+                <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[0-9]{5}*" required>
                 <br><br>
                 <textarea id="street" rows="1" cols="50" name="address" placeholder="Street" required></textarea>
                 <br>
