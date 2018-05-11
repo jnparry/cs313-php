@@ -3,11 +3,11 @@
 //        $_SESSION['cart'] = array();
 //    }
 
-    $_SESSION['cart'] = $_POST['passedValue'];
+    $_SESSION["cart"] = $_POST["passedValue"];
 
     var_dump($_SESSION);
     echo "cart is: ";
-    echo $_SESSION['cart'];
+    echo $_SESSION["cart"];
 ?>
 
 <!DOCTYPE html>

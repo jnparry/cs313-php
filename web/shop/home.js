@@ -49,8 +49,11 @@ window.onclick = function(event) {
 
 function add(item) {
     $.post("phpSession.php",{
-        passedValue:item;
-    },function(ret){
-        // maybe do something here...
+        passedValue:item
     });
 }
+
+//
+//,function(ret){
+//        // maybe do something here...
+//    }
