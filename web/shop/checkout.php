@@ -14,39 +14,24 @@
         </div>
         
         <div id="browse">
-            <p id="invalid"></p>
-            <h2>Customer Information</h2>
-            <br>
-            First Name:
-            <input type="text" name="form-info" id="fname" onload="setFocus()">
-            <br><br>
-            Last Name:
-            <input type="text" name="form-info" id="lname">
-            <br><br>
-            Address:
-            <textarea id="address" rows="1" cols="50" name="address" placeholder="street, city, state, zip"></textarea>
-            <br><br>
-            Phone Number:
-            <input type="text" name="form-info" placeholder="xxx-xxx-xxxx" id="number" onblur="blurNumber()">
-            <p id="invalid-number"></p>
-            <br>
-            Credit Card Type: <br>
-            <div id="creditcard">
-              <input type="radio" name="card" value="visa"       id="visa">Visa<br>
-              <input type="radio" name="mc"   value="mastercard" id="mc">MasterCard<br>
-              <input type="radio" name="ae"   value="amex"       id="ae">AmericanExpress<br>
-            </div>
-            <br><br>
-            Card Number:
-            <input type="text" name="form-info" id="cardnumber" onblur="blurCard()">
-            <p id="invalid-cardnumber"></p>
-            <br>
-            Expiration Date:
-            <input type="text" name="form-info" placeholder="MM/YYYY" id="expiration" onblur="blurExp()">
-            <p id="invalid-expiration"></p>
-            <br>
-            <button type="reset">Reset</button>
-            <button type="button" onclick="return validate()">Submit</button>
+            <form id="myForm">
+                <p id="invalid"></p>
+                <h2>Customer Information</h2>
+                <br>
+                <input type="text" name="form-info" id="fname" onload="setFocus()" placeholder="First Name" pattern="[a-zA-Z]*" required>
+                <br><br>
+                <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" required>
+                <br><br>
+                <textarea id="street" rows="1" cols="50" name="address" placeholder="Street" required></textarea>
+                <br>
+                <textarea id="city" rows="1" cols="50" name="address" placeholder="City, State" pattern="[A-Za-z]+,[ ]?[A-Za-z]+{2,}$" required></textarea>
+                <br>
+                <textarea id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="^[0-9]{5}(?:-[0-9]{4})?$" required></textarea>
+                <br><br>
+
+                <button type="reset">Reset</button>
+                <button type="button" onclick="return validate()">Submit</button>
+            </form>
         </div>
         
         <?php require "bottom.php"?>
