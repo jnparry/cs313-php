@@ -59,7 +59,7 @@
         </div>
         
         <?php
-            echo "<?php require \"bottom.php\"?>";
+            require "bottom.php";
         ?>
     </body>
 </html>
