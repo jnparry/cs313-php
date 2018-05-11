@@ -1,11 +1,8 @@
 <?php
     session_start();
 
-    function addItem($item) {
-        if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = array();
-        }
-        $_SESSION['cart'][] = $item;
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
     }
 ?>
 
