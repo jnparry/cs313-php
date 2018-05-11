@@ -17,15 +17,15 @@
                 <p id="invalid"></p>
                 <h2>Customer Information</h2>
                 <br>
-                <input type="text" name="form-info" id="fname" onload="setFocus()" placeholder="First Name" pattern="[a-zA-Z]*" title="First name - letters only." required>
+                <input type="text" name="fname" id="fname" onload="setFocus()" placeholder="First Name" pattern="[a-zA-Z]*" title="First name - letters only." required>
                 <br><br>
-                <input type="text" name="form-info" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" title="Last name - letters only." required>
+                <input type="text" name="lname" id="lname" placeholder="Last Name" pattern="[a-zA-Z]*" title="Last name - letters only." required>
                 <br><br>
-                <input type="text" id="street" name="address" placeholder="Street" pattern="\s*\S+(?:\s+\S+){2}" title="Street address." required>
+                <input type="text" id="street" name="street" placeholder="Street" pattern="\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*" title="Street address." required>
                 <br>
-                <input type="text" id="city" name="address" placeholder="City, State" title="City, State - ex: Rexburg, ID" pattern="[a-zA-Z]+[ ]?[a-zA-Z]+,[ ][A-Z]{2}" required>
+                <input type="text" id="city" name="city" placeholder="City, State" title="City, State - ex: Rexburg, ID" pattern="[a-zA-Z]+[ ]?[a-zA-Z]+,[ ][A-Z]{2}" required>
                 <br>
-                <input type="text" id="zip" name="address" placeholder="Zipcode" pattern="[0-9]{5}" title="Zipcode - 5 numbers only." required>
+                <input type="text" id="zip" name="zip" placeholder="Zipcode" pattern="[0-9]{5}" title="Zipcode - 5 numbers only." required>
                 <br><br>
 
                 <input type="button" value="Return to cart" id="cartBtn" onclick="document.location.href='https://stormy-cove-35722.herokuapp.com/shop/cart.php';">
