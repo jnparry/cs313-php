@@ -1,5 +1,8 @@
 body {
     background-color: #ffffff;
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
 }
 
 nav {
@@ -52,12 +55,23 @@ h1, #header {
     background-color: #BCF2EE;
 }
 
+
+footer {
+  position: absolute;
+  right: 0;bottom:0;left:0;
+}
 #bottom {
-    width: 100%;
+/*    width: 100%;*/
     background-color: #2ec4b6;
     height: 100px;
+    position: absolutea;
+    right: 0;
+    bottom: 0;
+    left: 0;
+/*
     margin-bottom: -50px;
     margin-left: -10px;
+*/
 }
 
 #info {
