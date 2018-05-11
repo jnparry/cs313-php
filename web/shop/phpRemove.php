@@ -11,6 +11,11 @@
         echo "not set?";
     }
 
+    foreach ($_SESSION['cart'] as $value) {
+        echo "Items are: ";
+        echo $value;
+    }
+
 //    header("Location: https://stormy-cove-35722.herokuapp.com/shop/cart.php"); /* Redirect browser */
 //    exit();
 ?>
