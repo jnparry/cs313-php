@@ -23,7 +23,7 @@
                 <br><br>
                 <input type="text" id="street" name="address" placeholder="Street" required>
                 <br>
-                <input type="text" id="city" name="address" placeholder="City, State" pattern="[a-zA-Z]+(?:[\s-][a-zA-Z]+)*" required>
+                <input type="text" id="city" name="address" placeholder="City, State" pattern="[a-zA-Z]+,[ ][A-Z]{2}" required>
                 <br>
                 <input type="text" id="zip" rows="1" cols="50" name="address" placeholder="Zipcode" pattern="[0-9]{5}" required>
                 <br><br>
