@@ -34,7 +34,7 @@ catch (PDOException $ex){
     <body>
         <?php require "user.php"?>
         <h2>Current Cleaning Projects</h2>
-        <form action="clean/phpSession.php" method="post">
+        <form action="phpSession.php" method="post">
             <ul>
                 <?php
                     foreach ($db->query('SELECT * FROM projects') as $row)
