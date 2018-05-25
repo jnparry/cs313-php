@@ -34,10 +34,10 @@ catch (PDOException $ex){
         <h2>Current Cleaning Projects</h2>
         <ul>
             <?php
-                $query = "SELECT name FROM projects";
-        
-                $statement = $db->prepare($query);
-                $statement->bindValue("")
+//                $query = "SELECT name FROM projects";
+//        
+//                $statement = $db->prepare($query);
+//                $statement->bindValue("")
                 foreach ($db->query('SELECT name FROM projects') as $row)
                 {
                   echo 'Project: ' . $row['name'];
