@@ -8,7 +8,7 @@
     </head>
     
     <body>
-        <?php require ""?>
+        <?php require "user.php"?>
         <h2>Current Cleaning Projects</h2>
         <ul>
             <li>Spring Semester <button>edit</button></li>
