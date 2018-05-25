@@ -37,10 +37,10 @@ catch (PDOException $ex){
         <h2>
             <?php
                 foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
-                    echo $row['name'] . "- ";
+                    echo $row['name'] . " - ";
                 }
                 foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-                    echo $row['name'] . "- Full View";
+                    echo $row['name'];
                 }
             ?>
             Selected Project - Selected Room - Full View
