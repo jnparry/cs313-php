@@ -39,7 +39,6 @@ catch (PDOException $ex){
                     echo $row['name'];
                 }
             ?>
-            Selected Project
         </h2>
         <section>
             <button onclick="viewProjects()">Back to Projects</button>
