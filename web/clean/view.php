@@ -48,7 +48,7 @@ catch (PDOException $ex){
             ?>
         </h2>
 
-        <button onclick="viewHome()">Back to Home</button>
+        <button onclick="viewRoom()">Back to Room</button>
         <button type="button" onclick="soon()">Add Bookshelf</button>
 
         <section>

@@ -45,7 +45,7 @@ catch (PDOException $ex){
         </h2>
         
         <button onclick="viewProjects()">Back to Projects</button>
-        <button>Add Room</button>
+        <button type="button" onclick="soon()">Add Room</button>
         
         <form action="phpSession.php" method="post" name="rooms">
             <ul>
