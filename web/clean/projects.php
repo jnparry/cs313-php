@@ -36,7 +36,7 @@ catch (PDOException $ex){
             <?php
                 foreach ($db->query('SELECT name FROM projects') as $row)
                 {
-                  echo "<li>" . $row['name'] . "<input type='button' onclick=\"location.href='rooms.php';\" value='edit'></li>";
+                  echo "<li>" . $row['name'] . "<input type='button' onclick=\"location.href='rooms.php'\" value='edit'></li>";
                 }
             ?>
         </ul>
