@@ -41,6 +41,9 @@ catch (PDOException $ex){
                     if ($row['iscomplete'] && $row['date']) {
                         echo "<p>Cleaning completed " . $row['date'] . "</p>";
                     }
+                    else {
+                        echo "what";
+                    }
                     
                     echo "</li>";
                 }
