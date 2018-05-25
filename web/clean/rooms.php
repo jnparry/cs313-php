@@ -54,11 +54,11 @@ catch (PDOException $ex){
                     <?php
                     foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
                         echo "<li>";
-                        echo $row['name'];
+                        echo "<p class='first'>" . $row['name'] . "</p>";
                         
-                        echo "<button type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
+                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
                         
-                        echo "<button type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
+                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
                         
                         echo "</li>";
                     }
