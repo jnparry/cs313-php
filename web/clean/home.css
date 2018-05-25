@@ -7,6 +7,10 @@ body {
     background-color:;
 }
 
+nav {
+    background-color: blue;
+}
+
 #menu {
     position: fixed;
     top: 10px;
