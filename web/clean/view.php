@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
 
 try {
@@ -33,7 +34,17 @@ catch (PDOException $ex){
     </head>
     
     <body>
-        <h2>Selected Project - Selected Room - Full View</h2>
+        <h2>
+            <?php
+                foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
+                    echo $row['name'] . "- ";
+                }
+                foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
+                    echo $row['name'] . "- Full View";
+                }
+            ?>
+            Selected Project - Selected Room - Full View
+        </h2>
         <section>
             <button>Add Bookshelf</button>
         </section>

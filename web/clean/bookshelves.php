@@ -39,6 +39,9 @@ catch (PDOException $ex){
                 foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
                     echo $row['name'] . "- ";
                 }
+                foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
+                    echo $row['name'];
+                }
             ?>   
             
             Selected Project - Selected Room
