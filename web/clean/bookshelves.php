@@ -52,12 +52,6 @@ catch (PDOException $ex){
         </section>
         
         <section>
-            <?php
-                foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
-                    echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
-                }
-            ?>
-            
             Bookshelf image goes here
             <section>
                 <p>Number of shelves</p>
