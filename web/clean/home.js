@@ -1,4 +1,7 @@
-/* nothing yet. */
+function viewHome() {
+    location.href = "/clean/home.php";
+}
+
 function viewProjects() {
     location.href = "/clean/projects.php";
 }

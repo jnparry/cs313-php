@@ -35,21 +35,23 @@ catch (PDOException $ex){
     <body>
         <?php require "user.php"?>
         <h2>Current Cleaning Projects</h2>
+        <button onclick="viewHome()">Back to Home</button>
         <form action="phpSession.php" method="post" name="projects">
             <ul>
                 <?php
                     foreach ($db->query('SELECT * FROM projects') as $row) {
                         echo "<li>";
                         
-                        echo $row['name'];
-                        echo "<button type='submit' value='" . $row['id'] . "' name='projectId'>Edit</button>";
-
+                        echo "<p>" . $row['name'] . "</p>";
+                        
                         if ($row['iscomplete'] && $row['date']) {
                             echo "<p>Cleaning completed " . $row['date'] . "</p>";
                         }
                         else {
                             echo "<p>Cleaning incomplete.</p>";
                         }
+                        
+                        echo "<button type='submit' value='" . $row['id'] . "' name='projectId'>Edit</button>";
 
                         echo "</li>";
                     }
