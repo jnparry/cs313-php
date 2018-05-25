@@ -13,10 +13,11 @@ body {
 nav {
     background-color: #056cb6;
     padding: 1em 0;
+    color: white;
 }
 
 .logo {
-    max-width: 30px;
+    max-width: 10px;
     margin-top: -26px;
     margin-bottom: -26px;
     margin-left: -15px;
