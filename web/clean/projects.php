@@ -36,13 +36,13 @@ catch (PDOException $ex){
             <?php
                 foreach ($db->query('SELECT * FROM projects') as $row)
                 {
-                    echo "<li>" . $row['name'] . "<input type='button' value='edit'>";
+                    echo "<li>" . $row['name'] . "<input type='button' value='edit' onclick='loadRooms(" . $row['id'] . ")'>";
                         
                     if ($row['iscomplete'] && $row['date']) {
                         echo "<p>Cleaning completed " . $row['date'] . "</p>";
                     }
                     else {
-                        echo "what";
+                        echo "<p>Cleaning incomplete.</p>";
                     }
                     
                     echo "</li>";
