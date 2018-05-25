@@ -34,18 +34,11 @@ catch (PDOException $ex){
         <h2>Current Cleaning Projects</h2>
         <ul>
             <?php
-//                $query = "SELECT name FROM projects";
-//        
-//                $statement = $db->prepare($query);
-//                $statement->bindValue("")
                 foreach ($db->query('SELECT name FROM projects') as $row)
                 {
-                  echo 'Project: ' . $row['name'];
+                  echo '<li>' . $row['name'] . '<button>edit</button></li>';
                 }
             ?>
-            <li>Spring Semester <button>edit</button></li>
-            <li>Summer Semester <button>edit</button></li>
-            <li>Fall Semester <button>edit</button></li>
         </ul>
     </body>
 </html>
