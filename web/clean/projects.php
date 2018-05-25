@@ -2,6 +2,13 @@
 
 session_start();
 
+if (!isset($_POST['project'])) {
+    echo "Project not set.";
+}
+if (!isset($_POST['room'])) {
+    echo "Room not set.";
+}
+
 try {
     $dbUrl = getenv('HEROKU_POSTGRESQL_CRIMSON_URL');
     $dbopts = parse_url($dbUrl);

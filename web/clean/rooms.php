@@ -1,6 +1,14 @@
 <?php
 
 session_start();
+
+if (!isset($_POST['project'])) {
+    echo "Project not set.";
+}
+if (!isset($_POST['room'])) {
+    echo "Room not set.";
+}
+
 $projectId = $_SESSION['project'];
 
 try {
@@ -55,7 +63,7 @@ catch (PDOException $ex){
                         
                         echo "<button type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
                         
-                        echo "<button type='submit' value'" , $row['id'] . "' name='viewRoom'>View</button>";
+                        echo "<button type='submit' value'" . $row['id'] . "' name='viewRoom'>View</button>";
                         
                         echo "</li>";
                     }
