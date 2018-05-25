@@ -39,7 +39,10 @@ catch (PDOException $ex){
                 <?php
                     foreach ($db->query('SELECT * FROM projects') as $row)
                     {
-                        echo "<li>" . $row['name'] . "<input type='submit' value='" . $row['id'] . " name='roomId'>";
+                        echo "<li>";
+                        
+                        echo $row['name'];
+                        echo "<button type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
 
                         if ($row['iscomplete'] && $row['date']) {
                             echo "<p>Cleaning completed " . $row['date'] . "</p>";
