@@ -54,7 +54,8 @@ catch (PDOException $ex){
                     <?php
                     foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
                         echo "<li>";
-                        echo "<p class='first'>" . $row['name'] . "</p>";
+                        
+                        echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
                         
                         echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
                         
