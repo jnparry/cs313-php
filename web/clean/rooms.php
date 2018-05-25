@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$projectId = $_SESSION['project'];
 
 try {
     $dbUrl = getenv('HEROKU_POSTGRESQL_CRIMSON_URL');
@@ -38,11 +39,23 @@ catch (PDOException $ex){
         </section>
         
         <section>
-            <ul>
-                <li>3rd Floor<button>edit</button></li>
-                <li>West Wing<button>edit</button></li>
-                <li>East Wing<button>edit</button></li>
-            </ul>
+            <form action="phpSession.php" method="post" name="rooms">
+                <ul>
+                    <?php
+                    foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
+                        echo "<li>";
+                        echo $row['name'];
+                        
+                        echo "<button type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
+                        
+                        echo "</li>";
+                    }
+                    ?>
+                    <li>3rd Floor<button>edit</button></li>
+                    <li>West Wing<button>edit</button></li>
+                    <li>East Wing<button>edit</button></li>
+                </ul>
+            </form>
         </section>
     </body>
 </html>
