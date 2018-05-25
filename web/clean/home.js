@@ -6,3 +6,11 @@ function viewProjects() {
 function viewRooms() {
     location.href = "/clean/rooms.php";
 }
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
