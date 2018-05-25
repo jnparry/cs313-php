@@ -42,7 +42,7 @@ catch (PDOException $ex){
                     foreach ($db->query('SELECT * FROM projects') as $row) {
                         echo "<li>";
                         
-                        echo "<p>" . $row['name'] . "</p>";
+                        echo "<p class='first'>" . $row['name'] . "</p>";
                         
                         if ($row['iscomplete'] && $row['date']) {
                             echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
@@ -51,7 +51,7 @@ catch (PDOException $ex){
                             echo "<p class='middle'>Cleaning incomplete.</p>";
                         }
                         
-                        echo "<button type='submit' value='" . $row['id'] . "' name='projectId'>Edit</button>";
+                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='projectId'>Edit</button>";
 
                         echo "</li>";
                     }

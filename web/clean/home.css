@@ -47,8 +47,17 @@ ul li:last-child {
     border-bottom: none
 }
 
+.first {
+    text-align: left;
+}
+
 .middle {
-    display: inline-block;
+    display: inline;
+    text-align: center;
+}
+
+.last {
+    text-align: right;
 }
 
 .logo {
