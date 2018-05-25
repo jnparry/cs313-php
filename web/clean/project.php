@@ -24,7 +24,7 @@ catch {
         <meta charset="utf-8">
         <title>Cleaning Schedule | Project</title>
         <link rel="stylesheet" href="home.css">
-        <script src="project.js"></script>
+        <script src="home.js"></script>
     </head>
     
     <body>
