@@ -35,7 +35,7 @@ catch (PDOException $ex){
     <body>
         <h2>
             <?php
-                foreach ($db->query("SELECT name FROM projects WHERE projectsid = '$projectId'") as $row) {
+                foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
                     echo $row['name'];
                 }
             ?>
