@@ -16,7 +16,9 @@
     } elseif (isset($_POST['bookshelfId'])) {
         $_SESSION['bookshelf'] = $_POST['bookshelfId'];
         // Add bookshelves later
-    } elseif (isset($_POST['viewRoom'])) {
+    }
+
+    if (isset($_POST['viewRoom'])) {
         $_SESSION['room'] = $_POST['viewRoom'];
         
         /* Redirect browser */
