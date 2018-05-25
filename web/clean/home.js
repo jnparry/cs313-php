@@ -2,6 +2,6 @@
 function loadRooms(projectId) {
     location.href = "/clean/rooms.php";
     <?php
-        echo "This is my php inside of js...";
+        var trial = "This is my php inside of js...";
     ?>
 }
