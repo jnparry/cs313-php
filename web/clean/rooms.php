@@ -1,21 +1,25 @@
 <?php
 
+session_start();
+
 try {
-    $dbUrl = getenv('DATABASE_URL');
-
+    $dbUrl = getenv('HEROKU_POSTGRESQL_CRIMSON_URL');
     $dbopts = parse_url($dbUrl);
-
+    
     $dbHost = $dbopts["host"];
     $dbPort = $dbopts["port"];
     $dbUser = $dbopts["user"];
-    $dbPassword = $dpopts["pass"];
+    $dbPassword = $dbopts["pass"];
     $dbName = ltrim($dbopts["path"],'/');
-
-    $db = new PDO("pgsql:host=$dbHost:)
+    
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
 }
-catch {
-
+catch (PDOException $ex){
+  echo 'Error!: ' . $ex->getMessage();
+  die();
 }
+
 ?>
 
 <!DOCTYPE html>

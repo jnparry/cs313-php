@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 try {
     $dbUrl = getenv('HEROKU_POSTGRESQL_CRIMSON_URL');
     $dbopts = parse_url($dbUrl);
