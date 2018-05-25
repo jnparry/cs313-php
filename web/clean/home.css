@@ -24,6 +24,7 @@ nav {
 #heading {
     display: inline;
     padding: 10px;
+    height: auto;
 }
 
 #menu {
