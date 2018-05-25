@@ -34,9 +34,15 @@ catch (PDOException $ex){
         <h2>Current Cleaning Projects</h2>
         <ul>
             <?php
-                foreach ($db->query('SELECT name FROM projects') as $row)
+                foreach ($db->query('SELECT * FROM projects') as $row)
                 {
-                  echo "<li>" . $row['name'] . "<input type='button' onclick=\"location.href='rooms.php'\" value='edit'></li>";
+                    echo "<li>" . $row['name'] . "<input type='button' onclick='loadRooms($row[\'id\'])' value='edit'>";
+                        
+                    if ($row['iscomplete'] && $row['date']) {
+                        echo "<p>Cleaning completed " . $row['date'] . "</p>";
+                    }
+                    
+                    echo "</li>";
                 }
             ?>
         </ul>
