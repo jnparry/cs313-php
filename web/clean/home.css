@@ -13,19 +13,17 @@ body {
 
 nav {
     background-color: #056cb6;
-    padding: 1em;
+    padding: 1.5em;
     color: white;
 }
 
 .logo {
     max-width: 30px;
-    padding: 10px;
 }
 
 #heading {
     display: inline;
     padding: 10px;
-    height: auto;
 }
 
 #menu {
