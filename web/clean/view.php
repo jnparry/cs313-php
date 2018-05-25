@@ -33,7 +33,7 @@ catch (PDOException $ex){
     </head>
     
     <body>
-        <h1>Selected Project - Selected Room - Full View</h1>
+        <h2>Selected Project - Selected Room - Full View</h2>
         <section>
             <button>Add Bookshelf</button>
         </section>

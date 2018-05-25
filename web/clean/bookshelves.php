@@ -34,17 +34,15 @@ catch (PDOException $ex){
     </head>
     
     <body>
-        <h1>
+        <h2>
             <?php
                 foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
                     echo $row['name'] . "- ";
                 }
-                foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-                    echo $row['name'];
-                }
-            ?>
+            ?>   
+            
             Selected Project - Selected Room
-        </h1>
+        </h2>
         <section>
             <button onclick="viewProjects()">Back to Projects</button>
             <button onclick="viewRooms()">Back to Rooms</button>
