@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
 
@@ -33,13 +35,14 @@ catch (PDOException $ex){
     </head>
     
     <body>
+        <?php require "user.php"?>
         <h2>
             <?php
                 foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
                     echo $row['name'] . " - ";
                 }
                 foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-                    echo $row['name'];
+                    echo $row['name'] . " - Full View";
                 }
             ?>
         </h2>
@@ -47,7 +50,11 @@ catch (PDOException $ex){
             <button>Add Bookshelf</button>
         </section>
         <section>
-
+            <?php
+                foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
+                    echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
+                }
+            ?>
         </section>
     </body>
 </html>
