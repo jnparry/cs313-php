@@ -40,7 +40,7 @@ catch (PDOException $ex){
                     echo $row['name'] . " - ";
                 }
                 foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-                    echo $row['name'] . " - Full View";
+                    echo $row['name'];
                 }
             ?>
         </h2>

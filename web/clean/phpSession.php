@@ -18,7 +18,7 @@
         // Add bookshelves later
     }
 
-    // separate if statement because room id could already be set ^
+    // separate if statement because room id could already be set 
     if (isset($_POST['viewRoom'])) {
         $_SESSION['room'] = $_POST['viewRoom'];
         
