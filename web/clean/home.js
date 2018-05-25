@@ -1,4 +1,4 @@
 /* nothing yet. */
-function loadRooms(int projectId) {
+function loadRooms(projectId) {
     console.log("whatttt");
 }
