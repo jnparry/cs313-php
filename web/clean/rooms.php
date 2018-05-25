@@ -33,7 +33,14 @@ catch (PDOException $ex){
     </head>
     
     <body>
-        <h2>Selected Project</h2>
+        <h2>
+            <?php
+                foreach ($db->query("SELECT name FROM rooms WHERE projects id = '$projectId'") as $row) {
+                    echo $row['name'];
+                }
+            ?>
+            Selected Project
+        </h2>
         <section>
             <button onclick="viewProjects()">Back to Projects</button>
             <button>Add Room</button>
