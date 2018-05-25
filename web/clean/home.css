@@ -47,6 +47,10 @@ ul li:last-child {
     border-bottom: none
 }
 
+.middle {
+    display: inline-block;
+}
+
 .logo {
     max-width: 30px;
 }

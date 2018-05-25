@@ -45,10 +45,10 @@ catch (PDOException $ex){
                         echo "<p>" . $row['name'] . "</p>";
                         
                         if ($row['iscomplete'] && $row['date']) {
-                            echo "<p>Cleaning completed " . $row['date'] . "</p>";
+                            echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
                         }
                         else {
-                            echo "<p>Cleaning incomplete.</p>";
+                            echo "<p class='middle'>Cleaning incomplete.</p>";
                         }
                         
                         echo "<button type='submit' value='" . $row['id'] . "' name='projectId'>Edit</button>";
