@@ -1,5 +1,8 @@
 /* nothing yet. */
-function loadRooms(projectId) {
+function viewProjects() {
+    location.href = "/clean/projects.php";
+}
+
+function viewRooms() {
     location.href = "/clean/rooms.php";
-    var trial = "<?php This is my php inside of js... echo 'whuddddduppp'; ?>";
 }

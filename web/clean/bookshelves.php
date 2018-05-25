@@ -11,6 +11,7 @@
         <?php require ""?>
         <h1>Selected Project - Selected Room</h1>
         <section>
+            <button onClick="viewRooms()">Back to Rooms</button>
             <button>Add Bookshelf</button>
         </section>
         <section>

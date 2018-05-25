@@ -35,6 +35,7 @@ catch (PDOException $ex){
     <body>
         <h2>Selected Project</h2>
         <section>
+            <button onclick="viewProjects()">Back to Projects</button>
             <button>Add Room</button>
         </section>
         
@@ -51,9 +52,6 @@ catch (PDOException $ex){
                         echo "</li>";
                     }
                     ?>
-                    <li>3rd Floor<button>edit</button></li>
-                    <li>West Wing<button>edit</button></li>
-                    <li>East Wing<button>edit</button></li>
                 </ul>
             </form>
         </section>
