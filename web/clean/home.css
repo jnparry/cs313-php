@@ -36,6 +36,7 @@ ul {
     list-style-type: none;
     padding: 0;
     border: 1px solid #ddd;
+    text-align: center;
 }
 
 ul li {
@@ -48,16 +49,17 @@ ul li:last-child {
 }
 
 .first {
-    text-align: left;
+    float: left;
+    display: inline-block
 }
 
 .middle {
-    display: inline;
-    text-align: center;
+    display: inline-block;
 }
 
 .last {
-    text-align: right;
+    float: right;
+    display: inline-block;
 }
 
 .logo {
