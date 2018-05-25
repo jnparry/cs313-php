@@ -39,7 +39,6 @@ catch (PDOException $ex){
         
         <section>
             <ul>
-                
                 <li>3rd Floor<button>edit</button></li>
                 <li>West Wing<button>edit</button></li>
                 <li>East Wing<button>edit</button></li>
