@@ -35,7 +35,8 @@ catch (PDOException $ex){
     <body>
         <h1>Selected Project - Selected Room</h1>
         <section>
-            <button onClick="viewRooms()">Back to Rooms</button>
+            <button onclick="viewProjects()">Back to Projects</button>
+            <button onclick="viewRooms()">Back to Rooms</button>
         </section>
         
         <section>
