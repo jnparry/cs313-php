@@ -57,7 +57,7 @@ catch (PDOException $ex){
             <section>
                 <p>Number of shelves</p>
                 <input type="number" min="0" max="10">
-                <button>Add Bookshelf</button>
+                <button type="button" onclick="soon()">Add Bookshelf</button>
             </section>
         </section>
     </body>

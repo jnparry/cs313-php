@@ -47,9 +47,10 @@ catch (PDOException $ex){
                 }
             ?>
         </h2>
-        <section>
-            <button>Add Bookshelf</button>
-        </section>
+
+        <button onclick="viewHome()">Back to Home</button>
+        <button type="button" onclick="soon()">Add Bookshelf</button>
+
         <section>
             <?php
                 foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {

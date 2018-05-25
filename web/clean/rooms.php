@@ -55,9 +55,9 @@ catch (PDOException $ex){
 
                     echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
 
-                    echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
-
                     echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
+                    
+                    echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
 
                     echo "</li>";
                 }
