@@ -33,6 +33,7 @@ catch (PDOException $ex){
     </head>
     
     <body>
+        <?php require "user.php"?>
         <h2>
             <?php
                 foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
@@ -47,11 +48,7 @@ catch (PDOException $ex){
             <button>Add Bookshelf</button>
         </section>
         <section>
-            <?php
-                foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
-                    echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
-                }
-            ?>
+
         </section>
     </body>
 </html>
