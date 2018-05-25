@@ -7,6 +7,12 @@ body {
     background-color:;
 }
 
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
