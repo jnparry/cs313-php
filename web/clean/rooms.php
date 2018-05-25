@@ -10,7 +10,6 @@
     </head>
     
     <body>
-        <?php require ""?>
         <h2>Selected Project</h2>
         <section>
             <button>Add Room</button>
