@@ -9,11 +9,7 @@
     
     <body>
         <?php require "user.php"?>
-        <h2>Current Cleaning Projects</h2>
-        <ul>
-            <li>Spring Semester <button>edit</button></li>
-            <li>Summer Semester <button>edit</button></li>
-            <li>Fall Semester <button>edit</button></li>
-        </ul>
+        <h2>Recent Cleaning Projects</h2>
+        <p>insert into or pictures or something here.</p>
     </body>
 </html>

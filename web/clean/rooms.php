@@ -22,7 +22,7 @@ catch {
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Cleaning Schedule | Project</title>
+        <title>Cleaning Schedule | Room</title>
         <link rel="stylesheet" href="home.css">
         <script src="home.js"></script>
     </head>
