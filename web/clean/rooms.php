@@ -43,29 +43,26 @@ catch (PDOException $ex){
                 }
             ?>
         </h2>
-        <section>
-            <button onclick="viewProjects()">Back to Projects</button>
-            <button>Add Room</button>
-        </section>
         
-        <section>
-            <form action="phpSession.php" method="post" name="rooms">
-                <ul>
-                    <?php
-                    foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
-                        echo "<li>";
-                        
-                        echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
-                        
-                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
-                        
-                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
-                        
-                        echo "</li>";
-                    }
-                    ?>
-                </ul>
-            </form>
-        </section>
+        <button onclick="viewProjects()">Back to Projects</button>
+        <button>Add Room</button>
+        
+        <form action="phpSession.php" method="post" name="rooms">
+            <ul>
+                <?php
+                foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
+                    echo "<li>";
+
+                    echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
+
+                    echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
+
+                    echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
+
+                    echo "</li>";
+                }
+                ?>
+            </ul>
+        </form>
     </body>
 </html>
