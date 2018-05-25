@@ -18,11 +18,10 @@ nav {
 
 .logo {
     max-width: 30px;
-/*
-    margin-top: -26px;
-    margin-bottom: -26px;
-    margin-left: -15px;
-*/
+}
+
+#heading {
+    display: inline;
 }
 
 #menu {
