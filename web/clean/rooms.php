@@ -2,13 +2,6 @@
 
 session_start();
 
-if (!isset($_POST['project'])) {
-    echo "Project not set.";
-}
-if (!isset($_POST['room'])) {
-    echo "Room not set.";
-}
-
 $projectId = $_SESSION['project'];
 
 try {

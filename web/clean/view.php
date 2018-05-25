@@ -1,14 +1,5 @@
 <?php
 
-session_start();
-
-if (!isset($_POST['project'])) {
-    echo "Project not set.";
-}
-if (!isset($_POST['room'])) {
-    echo "Room not set.";
-}
-
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
 
@@ -48,16 +39,19 @@ catch (PDOException $ex){
                     echo $row['name'] . " - ";
                 }
                 foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-                    echo $row['name'];
+                    echo $row['name'] . " - Full View";
                 }
             ?>
-            Selected Project - Selected Room - Full View
         </h2>
         <section>
             <button>Add Bookshelf</button>
         </section>
         <section>
-            Bookshelves go here
+            <?php
+                foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
+                    echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
+                }
+            ?>
         </section>
     </body>
 </html>
