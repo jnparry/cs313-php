@@ -51,7 +51,9 @@ catch (PDOException $ex){
                             echo "<p class='middle'>Cleaning incomplete.</p>";
                         }
                         
-                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='projectId'>Edit</button>";
+                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='projectId'>View</button>";
+                        
+                        echo "<button class='last' onclick='soon()'>Edit</button>";
 
                         echo "</li>";
                     }
