@@ -54,6 +54,7 @@ catch (PDOException $ex){
         
         <section>
             Bookshelf image goes here
+            <h3>This data is coming soon.</h3>
             <section>
                 <p>Number of shelves</p>
                 <input type="number" min="0" max="10">

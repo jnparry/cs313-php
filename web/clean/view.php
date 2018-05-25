@@ -57,6 +57,7 @@ catch (PDOException $ex){
                     echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
                 }
             ?>
+            <h3>This data is coming soon.</h3>
         </section>
     </body>
 </html>
