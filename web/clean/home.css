@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-size: .5em;
+    font-size: .6em;
     height: 100%;
     position: fixed;
     top: 0;
@@ -67,6 +67,7 @@ ul li:last-child {
 }
 
 .sidenav {
+    font-size: .6em;
     height: 100%;
     width: 0;
     position: fixed;
