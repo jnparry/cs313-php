@@ -36,6 +36,8 @@ catch (PDOException $ex){
         <?php require "user.php"?>
         <h2>Current Cleaning Projects</h2>
         <button onclick="viewHome()">Back to Home</button>
+        <button type="button" onclick="soon()">Add Project</button>
+        
         <form action="phpSession.php" method="post" name="projects">
             <ul>
                 <?php

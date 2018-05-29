@@ -1,3 +1,19 @@
+@media only screen and (min-width: 768px) {
+    .first {
+        float: left;
+        display: inline-block
+    }
+
+    .middle {
+        display: inline-block;
+    }
+
+    .last {
+        float: right;
+        display: inline-block;
+    }
+}
+
 html {
     height: 100%;
 }
@@ -47,20 +63,6 @@ ul li {
 
 ul li:last-child {
     border-bottom: none
-}
-
-.first {
-    float: left;
-    display: inline-block
-}
-
-.middle {
-    display: inline-block;
-}
-
-.last {
-    float: right;
-    display: inline-block;
 }
 
 .logo {

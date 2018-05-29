@@ -54,6 +54,13 @@ catch (PDOException $ex){
                     echo "<li>";
 
                     echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
+                    
+                    if ($row['isclean'] && $row['date']) {
+                            echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
+                    }
+                    else {
+                        echo "<p class='middle'>Cleaning incomplete.</p>";
+                    }
 
                     echo "<p class='middle'></p>";
                     
