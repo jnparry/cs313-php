@@ -27,11 +27,11 @@ button {
     background-color: #0279ce; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 1em 2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: .6em;
     margin-left: 5px;
 }
 
@@ -139,5 +139,10 @@ ul li:last-child {
     
     #menu_button {
         font-size: 1em;
+    }
+    
+    button {
+        padding: 15px 32px;
+        font-size: .8em;
     }
 }

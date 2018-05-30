@@ -48,9 +48,6 @@ catch (PDOException $ex){
             ?>
         </h2>
 
-        <button onclick="viewRooms()">Back to Room</button>
-        <button type="button" onclick="soon()">Add Bookshelf</button>
-
         <section>
             <?php
                 foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
@@ -59,5 +56,8 @@ catch (PDOException $ex){
             ?>
             <h3>This data is coming soon.</h3>
         </section>
+        
+        <button onclick="viewRooms()">Back to Room</button>
+        <button type="button" onclick="soon()">Add Bookshelf</button>
     </body>
 </html>
