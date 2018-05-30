@@ -47,10 +47,6 @@ catch (PDOException $ex){
                 }
             ?>
         </h2>
-        <section>
-            <button onclick="viewProjects()">Back to Projects</button>
-            <button onclick="viewRooms()">Back to Rooms</button>
-        </section>
         
         <section>
             Bookshelf image goes here
@@ -60,6 +56,11 @@ catch (PDOException $ex){
                 <input type="number" min="0" max="10">
                 <button type="button" onclick="soon()">Add Bookshelf</button>
             </section>
+        </section>
+        
+        <section>
+            <button onclick="viewProjects()">&#10094; Back to Projects</button>
+            <button onclick="viewRooms()">&#10094; Back to Rooms</button>
         </section>
     </body>
 </html>

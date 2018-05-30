@@ -13,6 +13,6 @@
         <h2>Recent Cleaning Projects</h2>
         <p>insert into or pictures or something here.</p>
         <h3>This data is coming soon.</h3>
-        <button onclick="viewProjects()">View Projects</button>
+        <button onclick="viewProjects()">&#10094; View Projects</button>
     </body>
 </html>
