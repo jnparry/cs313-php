@@ -66,6 +66,11 @@ ul li:last-child {
     right: 30px;
 }
 
+#menu_button {
+    font-size: .6em;
+    display: inline;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -130,5 +135,9 @@ ul li:last-child {
     
     .sidenav .closebtn {
         font-size: 36px;
+    }
+    
+    #menu_button {
+        font-size: 1em;
     }
 }
