@@ -63,7 +63,7 @@ catch (PDOException $ex){
                     
                     echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
                     
-                    echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";
+                    echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
 
                     echo "</li>";
                 }

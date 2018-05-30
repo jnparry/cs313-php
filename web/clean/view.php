@@ -51,6 +51,7 @@ catch (PDOException $ex){
         <section>
             <?php
                 foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
+                    echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
                     echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
                 }
             ?>
@@ -58,6 +59,6 @@ catch (PDOException $ex){
         </section>
         
         <button onclick="viewRooms()">&#10094; Back to Room</button>
-        <button type="button" onclick="soon()">Add Bookshelf</button>
+<!--        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";-->
     </body>
 </html>

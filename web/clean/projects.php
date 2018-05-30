@@ -63,5 +63,14 @@ catch (PDOException $ex){
         
         <button onclick="viewHome()">&#10094; Back to Home</button>
         <button type="button" onclick="soon()">Add Project</button>
+        
+        <!-- Modal -->
+        <div id="add" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="description"></p>
+            </div>
+        </div>
     </body>
 </html>
