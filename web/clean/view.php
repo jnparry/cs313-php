@@ -49,13 +49,15 @@ catch (PDOException $ex){
         </h2>
 
         <section>
-            <?php
-                foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
-                    echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
-                    echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
-                }
-            ?>
-            <h3>This data is coming soon.</h3>
+            <form action="phpSession.php" method="post" name="rooms">
+                <?php
+                    foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
+                        echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
+                        echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
+                    }
+                ?>
+                <h3>This data is coming soon.</h3>
+            </form>
         </section>
         
         <button onclick="viewRooms()">&#10094; Back to Room</button>
