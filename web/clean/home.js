@@ -10,6 +10,10 @@ function viewRooms() {
     location.href = "/clean/rooms.php";
 }
 
+function viewViews() {
+    location.href = "/clean/view.php";
+}
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }

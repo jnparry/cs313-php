@@ -53,7 +53,16 @@ catch (PDOException $ex){
                 <?php
                     foreach ($db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'") as $row) {
                         echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
-                        echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ")."; 
+                        echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
+                        foreach($db->query("SELECT * FROM shelves WHERE bookshelvesid = '$row[\'id\']'") as $shelf) {
+                            echo "<p>This shelf ";
+                            if ($shelf['isclean'] && $row['date']) {
+                                echo "was cleaned " . $row['date'] . "</p>";
+                            }
+                            else {
+                                echo "is not clean</p>";
+                            }
+                        }
                     }
                 ?>
                 <h3>This data is coming soon.</h3>

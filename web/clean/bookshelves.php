@@ -59,7 +59,7 @@ catch (PDOException $ex){
         </section>
         
         <section>
-            <button onclick="viewProjects()">&#10094; Back to Projects</button>
+            <button onclick="viewViews()">&#10094; Back to Layout</button>
             <button onclick="viewRooms()">&#10094; Back to Rooms</button>
         </section>
     </body>
