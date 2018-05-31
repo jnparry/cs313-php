@@ -51,7 +51,7 @@ catch (PDOException $ex){
 
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
-                    <canvas id="myCanvas" onload="setUpCanvas()">
+                    <canvas id="myCanvas" onload="setUpCanvas()"></canvas>
                         <?php
                             foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
                                 echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
@@ -67,7 +67,6 @@ catch (PDOException $ex){
                             }
                         ?>
                         <h3>This data is coming soon.</h3>
-                    </canvas>
                 </form>
             </section>
 
