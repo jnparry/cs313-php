@@ -27,3 +27,8 @@ function closeNav() {
 function soon() {
     alert("Feature coming soon.");
 }
+
+function setUpCanvas() {
+    var canvas = document.getElementById("myCanvas");
+    canvas.width = window.innerWidth;
+}

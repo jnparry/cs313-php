@@ -51,21 +51,23 @@ catch (PDOException $ex){
 
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
-                    <?php
-                        foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
-                            echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
-                            echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
-                            echo "<p>This shelf ";
-                            if ($row['shelvesclean'] && $row['shelvesdate']) {
-                                echo "was cleaned " . $row['shelvesdate'] . "</p>";
-                            } else {
-                                echo "is not clean</p>";
-                            }
+                    <canvas id="myCanvas" onload="setUpCanvas()">
+                        <?php
+                            foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
+                                echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
+                                echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
+                                echo "<p>This shelf ";
+                                if ($row['shelvesclean'] && $row['shelvesdate']) {
+                                    echo "was cleaned " . $row['shelvesdate'] . "</p>";
+                                } else {
+                                    echo "is not clean</p>";
+                                }
 
-                            echo "<button type='button' style='background-color:blue; padding:300px 100px;'>";
-                        }
-                    ?>
-                    <h3>This data is coming soon.</h3>
+                                echo "<button type='button' style='background-color:blue; padding:300px 100px;'>";
+                            }
+                        ?>
+                        <h3>This data is coming soon.</h3>
+                    </canvas>
                 </form>
             </section>
 
