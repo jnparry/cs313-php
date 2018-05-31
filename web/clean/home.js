@@ -16,7 +16,7 @@ function viewViews() {
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "33%";
-    document.getElementById("mySidenav").style.minWidth = "315px";
+    document.getElementById("mySidenav").style.minWidth = "105px";
 }
 
 function closeNav() {
