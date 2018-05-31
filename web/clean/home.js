@@ -15,18 +15,9 @@ function viewViews() {
 }
 
 function openNav() {
-//    var navSize = document.getElementById("mySidenav").style.width;
-//    if (screen.width >= 768px) {
-//        navSize = 250px;
-//    } else {
-//        navSize = 
-//    }
     var navSize = document.getElementById("mySidenav");
-    if (screen.width < 315) {
-        navSize.style.width = "105px";
-    } else {
-        navSize.style.width = "33%";
-    }
+    navSize.style.width = "33%";
+    navSize.style.minWidth = "105px";
 }
 
 function closeNav() {
