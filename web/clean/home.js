@@ -15,13 +15,13 @@ function viewViews() {
 }
 
 function openNav() {
-    var navSize = document.getElementById("mySidenav");
-    navSize.style.width = "33%";
-    navSize.style.minWidth = "105px";
+    document.getElementById("mySidenav").style.width = "33%";
+    document.getElementById("mySidenav").style.minWidth = "315px";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.minWidth = "0";
 }
 
 function soon() {
