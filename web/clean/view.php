@@ -51,9 +51,9 @@ catch (PDOException $ex){
 
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
-                    <button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>
-                    <canvas id="myCanvas" onload="setUpCanvas()"></canvas>
-                        <?php
+                <?php
+                    echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>";
+                    echo "<canvas id='myCanvas' onload='setUpCanvas()'></canvas>";
                             foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
                                 echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
                                 echo "<p>This shelf ";
