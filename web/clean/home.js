@@ -30,5 +30,9 @@ function soon() {
 
 function setUpCanvas() {
     var canvas = document.getElementById("myCanvas");
-    canvas.width = window.innerWidth;
+//    canvas.width = window.innerWidth;
+    var ctx = canvas.getContext('2d');
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
 }
