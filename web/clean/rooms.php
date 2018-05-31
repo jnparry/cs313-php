@@ -36,42 +36,44 @@ catch (PDOException $ex){
     
     <body>
         <?php require "user.php"?>
-        <h2>
-            <?php
-                foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
-                    echo $row['name'];
-                }
-            ?>
-        </h2>
-        
-        <form action="phpSession.php" method="post" name="rooms">
-            <ul>
+        <section class="content">
+            <h2>
                 <?php
-                foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
-                    echo "<li>";
-
-                    echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
-                    
-                    if ($row['isclean'] && $row['date']) {
-                            echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
+                    foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
+                        echo $row['name'];
                     }
-                    else {
-                        echo "<p class='middle'>Cleaning incomplete.</p>";
-                    }
-
-                    echo "<p class='middle'></p>";
-                    
-                    echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
-                    
-                    echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
-
-                    echo "</li>";
-                }
                 ?>
-            </ul>
-        </form>
-        
-        <button onclick="viewProjects()">&#10094; Back to Projects</button>
-        <button type="button" onclick="soon()">Add Room</button>
+            </h2>
+
+            <form action="phpSession.php" method="post" name="rooms">
+                <ul>
+                    <?php
+                    foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
+                        echo "<li>";
+
+                        echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
+
+                        if ($row['isclean'] && $row['date']) {
+                                echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
+                        }
+                        else {
+                            echo "<p class='middle'>Cleaning incomplete.</p>";
+                        }
+
+                        echo "<p class='middle'></p>";
+
+                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
+
+                        echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
+
+                        echo "</li>";
+                    }
+                    ?>
+                </ul>
+            </form>
+
+            <button onclick="viewProjects()">&#10094; Back to Projects</button>
+            <button type="button" onclick="soon()">Add Room</button>
+        </section>
     </body>
 </html>

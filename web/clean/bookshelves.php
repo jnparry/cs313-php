@@ -37,30 +37,33 @@ catch (PDOException $ex){
     
     <body>
         <?php require "user.php"?>
-        <h2>
-            <?php
-                foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
-                    echo $row['name'] . " - ";
-                }
-                foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-                    echo $row['name'];
-                }
-            ?>
-        </h2>
         
-        <section>
-            Bookshelf image goes here
-            <h3>This data is coming soon.</h3>
+        <section class="content">
+            <h2>
+                <?php
+                    foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
+                        echo $row['name'] . " - ";
+                    }
+                    foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
+                        echo $row['name'];
+                    }
+                ?>
+            </h2>
+
             <section>
-                <p>Number of shelves</p>
-                <input type="number" min="0" max="10">
-                <button type="button" onclick="soon()">Add Bookshelf</button>
+                Bookshelf image goes here
+                <h3>This data is coming soon.</h3>
+                <section>
+                    <p>Number of shelves</p>
+                    <input type="number" min="0" max="10">
+                    <button type="button" onclick="soon()">Add Bookshelf</button>
+                </section>
             </section>
-        </section>
-        
-        <section>
-            <button onclick="viewViews()">&#10094; Back to Layout</button>
-            <button onclick="viewRooms()">&#10094; Back to Rooms</button>
+
+            <section>
+                <button onclick="viewViews()">&#10094; Back to Layout</button>
+                <button onclick="viewRooms()">&#10094; Back to Rooms</button>
+            </section>
         </section>
     </body>
 </html>

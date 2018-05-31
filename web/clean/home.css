@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    margin: 0;
     font-size: .6em;
     height: 100%;
     position: fixed;
@@ -56,17 +57,16 @@ ul li:last-child {
 }
 
 #topHeader {
-/*
-    height: 100%;
-    width: 0;
-*/
-    position: fixed;
-    top: 0;
+    
 }
 
 #heading {
     display: inline;
     padding: 10px;
+}
+
+.content {
+    margin: auto;
 }
 
 #menu {
