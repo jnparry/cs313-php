@@ -61,8 +61,6 @@ catch (PDOException $ex){
                         } else {
                             echo "is not clean</p>";
                         }
-
-                        echo "<button type='button' style='background-color:blue; padding:300px 100px;'>";
                     }
                 ?>
                 <h3>This data is coming soon.</h3>
