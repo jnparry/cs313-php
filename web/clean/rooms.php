@@ -72,8 +72,10 @@ catch (PDOException $ex){
                 </ul>
             </form>
 
-            <button onclick="viewProjects()">&#10094; Back to Projects</button>
-            <button type="button" onclick="soon()">Add Room</button>
+            <section class="bottomNav">
+                <button onclick="viewProjects()">&#10094; Back to Projects</button>
+                <button type="button" onclick="soon()">Add Room</button>
+            </section>
         </section>
     </body>
 </html>
