@@ -21,7 +21,12 @@ function openNav() {
 //    } else {
 //        navSize = 
 //    }
-    document.getElementById("mySidenav").style.width = "33%";
+    var navSize = document.getElementById("mySidenav").style.width;
+    if (screen.width < 315) {
+        navSize = 105px;
+    } else {
+        navSize = "33%";
+    }
 }
 
 function closeNav() {
