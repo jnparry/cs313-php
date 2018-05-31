@@ -60,15 +60,8 @@ catch (PDOException $ex){
                         } else {
                             echo "is not clean</p>";
                         }
-//                        foreach($db->query("SELECT * FROM shelves WHERE bookshelvesid = '$row[\'id\']'") as $shelf) {
-//                            echo "<p>This shelf ";
-//                            if ($shelf['isclean'] && $row['date']) {
-//                                echo "was cleaned " . $row['date'] . "</p>";
-//                            }
-//                            else {
-//                                echo "is not clean</p>";
-//                            }
-//                        }
+                        
+                        echo "<button style='background-color:blue; padding:300px 100px;'>"
                     }
                 ?>
                 <h3>This data is coming soon.</h3>
@@ -76,6 +69,5 @@ catch (PDOException $ex){
         </section>
         
         <button onclick="viewRooms()">&#10094; Back to Room</button>
-<!--        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='roomId'>Edit</button>";-->
     </body>
 </html>
