@@ -21,11 +21,11 @@ function openNav() {
 //    } else {
 //        navSize = 
 //    }
-    var navSize = document.getElementById("mySidenav").style.width;
+    var navSize = document.getElementById("mySidenav");
     if (screen.width < 315) {
-        navSize = 105px;
+        navSize.style.width = "105px";
     } else {
-        navSize = "33%";
+        navSize.style.width = "33%";
     }
 }
 
