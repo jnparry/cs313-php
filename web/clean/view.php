@@ -52,7 +52,7 @@ catch (PDOException $ex){
 
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
-                <canvas id='myCanvas'></canvas>
+                <div id='myCanvas'></div>
                 <?php
                     foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
                         echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
