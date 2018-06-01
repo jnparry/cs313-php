@@ -33,7 +33,7 @@ function setUpCanvas() {
     var height = window.innerHeight;
     
     var stage = new Konva.Stage({
-        container: 'container',
+        container: 'myCanvas',
         width: width,
         height: height
     });
