@@ -29,7 +29,6 @@ function soon() {
 }
 
 function setUpCanvas() {
-    var canvas = document.getElementById("myCanvas");
     var width = window.innerWidth;
     var height = window.innerHeight;
     

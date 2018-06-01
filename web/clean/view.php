@@ -35,7 +35,7 @@ catch (PDOException $ex){
         <script src="home.js"></script>
     </head>
     
-    <body>
+    <body onload="setUpCanvas()">
         <?php require "user.php"?>
         <section class="content">
             <h2>
@@ -51,7 +51,7 @@ catch (PDOException $ex){
 
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
-                <canvas id='myCanvas' onload='setUpCanvas()'></canvas>
+                <canvas id='myCanvas'></canvas>
                 <?php
                     foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
                         echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
