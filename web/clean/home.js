@@ -64,4 +64,6 @@ function setUpCanvas() {
     
     layer.add(box);
     stage.add(layer);
+    
+    alert("wuddupp");
 }
