@@ -33,6 +33,7 @@ catch (PDOException $ex){
         <title>Cleaning Schedule</title>
         <link rel="stylesheet" href="home.css">
         <script src="home.js"></script>
+        <script src="https://cdn.rawgit.com/konvajs/konva/2.1.3/konva.min.js"></script>
     </head>
     
     <body onload="setUpCanvas()">
