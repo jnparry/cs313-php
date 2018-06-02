@@ -36,7 +36,7 @@ catch (PDOException $ex){
         <script src="https://cdn.rawgit.com/konvajs/konva/2.1.3/konva.min.js"></script>
     </head>
     
-    <body onload="setUpCanvas()">
+    <body>
         <?php require "user.php"?>
         <section class="content">
             <h2>
