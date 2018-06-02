@@ -57,23 +57,12 @@ catch (PDOException $ex){
                     </div>
     
                     <?php
-                        $statement = $db->prepare("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid");
-                        $statement->execute();
-                    
-                        // Go through each result
-                        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<p>We have a BOOOOOKCASE. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
-                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase</button>";
-                            echo "<p>This shelf ";
-                            if ($row['shelvesclean'] && $row['shelvesdate']) {
-                                echo "was cleaned " . $row['shelvesdate'] . "</p>";
-                            } else {
-                                echo "is not clean</p>";
-                            }
-                        }
-                            
-//                        foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
-//                            echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
+//                        $statement = $db->prepare("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid");
+//                        $statement->execute();
+//                    
+//                        // Go through each result
+//                        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+//                            echo "<p>We have a BOOOOOKCASE. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
 //                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase</button>";
 //                            echo "<p>This shelf ";
 //                            if ($row['shelvesclean'] && $row['shelvesdate']) {
@@ -82,6 +71,28 @@ catch (PDOException $ex){
 //                                echo "is not clean</p>";
 //                            }
 //                        }
+                    
+                        $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
+                        $bstatement->execute();
+                    
+                        while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<p>We have a bookercase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").</p>";
+                            
+                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
+                            $sstatement->bindValue(':bsid', $row['id']);
+                            $sstatement->execute();
+                            
+                            // Go through each shelf in the bookcase
+                            while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
+                            {
+                                echo "<p>This shelf ";
+                                if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
+                                    echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
+                                } else {
+                                    echo "is not clean</p>";
+                                }
+                            }     
+                        }
                     ?>
                     <h3>This data is coming soon.</h3>
                 </section>
