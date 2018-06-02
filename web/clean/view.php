@@ -53,8 +53,8 @@ catch (PDOException $ex){
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
                     <div id="area">
-                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onclick="dragArea(this)">
-                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" id="ball2" onclick="dragArea(this)">
+                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="dragArea(this)">
+                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" id="ball2" onmousedown="dragArea(this)">
                     </div>
 <!--                <div id='myCanvas'></div>-->
                 <?php
