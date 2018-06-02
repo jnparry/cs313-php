@@ -1,7 +1,7 @@
 <?php
 
     if (isset($_POST['txtTitle'])) {    
-        $title = $_POST['projectId'];
+        $title = $_POST['txtTitle'];
         echo "In if";
         echo $title;
     }
