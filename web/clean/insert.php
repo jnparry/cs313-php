@@ -1,7 +1,7 @@
 <?php
 
-    if (isset($_POST['txtTitle'])) {    
-        $title = $_POST['txtTitle'];
+    if (isset($_POST['title'])) {    
+        $title = $_POST['title'];
         echo "In if";
         echo "$title";
     }
@@ -10,7 +10,7 @@
     echo "out of if ";
     echo "$title";
 
-    $newtitle = $_POST['txtTitle'];
+    $newtitle = $_POST['title'];
     echo "new title: ";
     echo "$newtitle";
 
