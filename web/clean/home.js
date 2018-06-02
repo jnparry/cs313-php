@@ -61,11 +61,11 @@ function mouse(item, event) { // (1) start the process
         var xc = event.pageX;
         var yc = event.pageY;
         
-        if (xc >= (screen.width * 0.7)) {
-            xc = (screen.width * 0.7);
+        if (xc >= (window.innerWidth * 0.7)) {
+            xc = (window.innerWidth * 0.7);
         }
-        if (xc <= (screen.width - (screen.width * 0.7))) {
-            xc = (screen.width - (screen.width * 0.7));
+        if (xc <= (window.innerWidth - (window.innerWidth * 0.7))) {
+            xc = (window.innerWidth - (window.innerWidth * 0.7));
         }
         
         moveAt(xc, yc);
