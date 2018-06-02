@@ -94,6 +94,7 @@ ul li:last-child {
     height: 70vh;
     margin:auto;
     padding: 10px;
+    display: none;
 }
 
 .sidenav {
