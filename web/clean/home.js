@@ -58,7 +58,17 @@ function mouse(item, event) { // (1) start the process
     }
 
     function onMouseMove(event) {
-        moveAt(event.pageX, event.pageY);
+        var xc = event.pageX;
+        var yc = event.pageY;
+        
+        if (xc >= (screen.width * 0.7)) {
+            xc = (screen.width * 0.7);
+        }
+        if (xc <= (screen.width - (screen.width * 0.7))) {
+            xc = (screen.width - (screen.width * 0.7));
+        }
+        
+        moveAt(xc, yc);
     }
 
     // (3) move the ball on mousemove
@@ -66,7 +76,6 @@ function mouse(item, event) { // (1) start the process
 
     // (4) drop the ball, remove unneeded handlers
     item.onmouseup = function() {
-        alert("fudgeee");
         document.removeEventListener('mousemove', onMouseMove);
         item.onmouseup = null;
     };
