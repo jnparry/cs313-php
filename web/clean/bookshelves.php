@@ -43,14 +43,38 @@
             </h2>
 
             <section>
-                Bookshelf image goes here
-                <h3>This data is coming soon.</h3>
-                
+                <?php
+                $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                $bstatement->bindValue(':roomId', $roomId);
+                $bstatement->execute();
+
+                while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase' onmousedown='(this, event)'></button>";
+
+                    $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
+                    $sstatement->bindValue(':bsid', $row['id']);
+                    $sstatement->execute();
+
+                    // Go through each shelf in the bookcase
+                    while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
+                    {
+                        echo "<p>This shelf ";
+                        if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
+                            echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
+                        } else {
+                            echo "is not clean</p>";
+                        }
+                    }     
+                }
+                ?>
+            
+<!--
                 <div id="area">
                     <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="mouse(this, event)">
                     <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="mouse(this, event)">
                     <button type="button" onmousedown="mouse(this, event)" ontouchstart="touch(this, event)">Testerrr</button>
                 </div>
+-->
                 
                 <section>
                     <p>Number of shelves</p>
