@@ -41,23 +41,13 @@
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
-                    <?php
-                        $tryStmt = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
-                        $tryStmt->execute();
-                        $results = $tryStmt->num_rows;
-                        echo "Num rooms: $results";
-                    
-                        $result = $db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
-                        echo "NUMBER OF ROWS: ";
-                        echo $result->num_rows;
-                    
-                        if($result->num_rows != 0) {
-                            echo "<section id='container'>";
+                    <section id='container'">
+                        <?php
 
                             $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
                             $bstatement->bindValue(':roomId', $roomId);
                             $bstatement->execute();
-
+                        
                             while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
 
@@ -76,9 +66,8 @@
                                     }
                                 }     
                             }
-                            echo "</section>";
-                        }
-                    ?>
+                        ?>
+                    </section>
                 </section>
 
                 <section class="bottomNav">
