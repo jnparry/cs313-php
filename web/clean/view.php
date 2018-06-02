@@ -43,18 +43,22 @@
                 <section>
                     <section id='container'>
                         <?php
-
-                            $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
-                            $bstatement->bindValue(':roomId', $roomId);
-                            $bstatement->execute();
+                        
+                            $statement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                            $statement->bindValue(':roomId', $roomId);
+                            $statement->execute();
                             
-                            if ($bstatement->fetch(PDO::FETCH_ASSOC)) {
+                            if ($statement->fetch(PDO::FETCH_ASSOC)) {
                                 echo '<style type="text/css">
                                     #container {
                                         display: block;
                                     }
                                     </style>';
                             }
+
+                            $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                            $bstatement->bindValue(':roomId', $roomId);
+                            $bstatement->execute();
                         
                             while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
