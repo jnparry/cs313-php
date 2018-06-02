@@ -58,10 +58,11 @@ function mouse(item, event) { // (1) start the process
     }
 
     function onMouseMove(event) {
-        var isOnDiv = false;
-        $("area").mouseenter(function(){isOnDiv=true;});
-        $("area").mouseleave(function(){isOnDiv=false;});
-        if (isOnDiv) {
+        var isOnDiv = true;
+        while (isOnDiv) {
+            $("area").mouseenter(function(){isOnDiv=true;});
+            $("area").mouseleave(function(){isOnDiv=false;});
+            
             var xc = event.pageX;
             var yc = event.pageY;
 
