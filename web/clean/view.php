@@ -43,7 +43,8 @@
                 <section>    
                     <section id="container">
                     <?php
-                        $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
+                        $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                        $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
                     
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {

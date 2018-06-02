@@ -34,9 +34,8 @@
                     <?php
                     foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
                         echo "<li>";
-
                         echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
-
+                        
                         if ($row['isclean'] && $row['date']) {
                                 echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
                         }
@@ -45,11 +44,8 @@
                         }
 
                         echo "<p class='middle'></p>";
-
                         echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
-
                         echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
-
                         echo "</li>";
                     }
                     ?>

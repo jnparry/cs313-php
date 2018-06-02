@@ -22,7 +22,10 @@
         <form action="phpSession.php" method="post" name="projects">
             <ul>
                 <?php
-                    foreach ($db->query('SELECT * FROM projects') as $row) {
+                    $statement = $db->prepare("SELECT * FROM projects");
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         echo "<li>";
                         echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
                         
