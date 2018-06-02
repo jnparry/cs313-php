@@ -58,12 +58,17 @@ function mouse(item, event) { // (1) start the process
     }
 
     function onMouseMove(event) {
-        document.getElementById("area").onmouseover = function() {overArea()};
-//        document.getElementById("area").onmouseout = function() {leaveArea()};
-
-        function overArea() {
+        document.addEventListener('mousemove', moving);
+        
+        function moving(event) {
             moveAt(event.pageX, event.pageY);
         }
+//        document.getElementById("area").onmouseover = function() {overArea()};
+//        document.getElementById("area").onmouseout = function() {leaveArea()};
+//
+//        function overArea() {
+//            moveAt(event.pageX, event.pageY);
+//        }
 
 //        function leaveArea() {
 //        document.getElementById("demo").style.color = "black";
@@ -84,7 +89,8 @@ function mouse(item, event) { // (1) start the process
     }
 
     // (3) move the ball on mousemove
-    document.addEventListener('mousemove', onMouseMove);
+//    document.addEventListener('mousemove', onMouseMove);
+    document.getElementById("area").addEventListener('mouseover', onMouseMove);
 
     // (4) drop the ball, remove unneeded handlers
     item.onmouseup = function() {
