@@ -62,12 +62,12 @@ function mouse(item, event) { // (1) start the process
     }
 
     // (3) move the ball on mousemove
-    document.getElementById("area").addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mousemove', onMouseMove);
 
     // (4) drop the ball, remove unneeded handlers
     item.onmouseup = function() {
         alert("fudgeee");
-        document.getElementById("area").removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mousemove', onMouseMove);
         item.onmouseup = null;
     };
 
