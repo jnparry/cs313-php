@@ -1,7 +1,7 @@
 <?php
 /**********************************************************
 * File: dbConnect.php
-* Author: Br. Burton
+* Author: Br. Burton, Jordan Parry
 * 
 * Description: Contains a function to connect to a DB at
 * Heroku using the information from the environment variable.
@@ -9,11 +9,11 @@
 function get_db() {
 	$db = NULL;
 	try {
-		// default Heroku Postgres configuration URL
-		$dbUrl = getenv('DATABASE_URL');
+        // DATABASE_URL is the default
+		$dbUrl = getenv('HEROKU_POSERGRESQL_CRIMSON_URL');
+        $dbOpts = parse_url($dbUrl);
         
 		// Get the various parts of the DB Connection from the URL
-		$dbOpts = parse_url($dbUrl);
 		$dbHost = $dbOpts["host"];
 		$dbPort = $dbOpts["port"];
 		$dbUser = $dbOpts["user"];
@@ -27,11 +27,11 @@ function get_db() {
 		$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	}
 	catch (PDOException $ex) {
-		// If this were in production, you would not want to echo
-		// the details of the exception.
+		// echo the details of the exception.
 		echo "Error connecting to DB. Details: $ex";
 		die();
 	}
 	return $db;
 }
+
 ?>
