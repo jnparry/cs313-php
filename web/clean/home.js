@@ -27,6 +27,15 @@ function closeNav() {
 function soon() {
     alert("Feature coming soon.");
 }
+
+function showForm(divName) {
+    var x = document.getElementById(divName);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
      
 // for desktop w/ mouse click events
 function mouse(item, event) { // (1) start the process
