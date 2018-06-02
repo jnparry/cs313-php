@@ -43,10 +43,11 @@ function mouse(item, event) { // (1) start the process
 
     // (2) prepare to moving: make absolute and on top by z-index
     item.style.position = 'absolute';
+    item.style.maxHeight = "10px;"
     item.style.zIndex = 1000;
     // move it out of any current parents directly into body
     // to make it positioned relative to the body
-    document.getElementById("area").append(item);
+    document.body.append(item);
     // ...and put that absolutely positioned ball under the cursor
 
     moveAt(event.pageX, event.pageY);
@@ -62,11 +63,11 @@ function mouse(item, event) { // (1) start the process
     }
 
     // (3) move the ball on mousemove
-    document.getElementById("area").addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mousemove', onMouseMove);
 
     // (4) drop the ball, remove unneeded handlers
     item.onmouseup = function() {
-    document.getElementById("area").removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mousemove', onMouseMove);
     item.onmouseup = null;
     };
 
