@@ -44,7 +44,7 @@
                     <?php
                         $tryStmt = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         $tryStmt->execute();
-                        $results = $tryStmt->num_rooms;
+                        $results = $tryStmt->num_rows;
                         echo "Num rooms: $results";
                     
                         $result = $db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
