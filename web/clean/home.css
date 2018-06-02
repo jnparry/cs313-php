@@ -97,6 +97,15 @@ ul li:last-child {
     display: none;
 }
 
+#area {
+    position: relative;
+    border: 1px solid #000;
+    width: 70%;
+    height: 70vh;
+    margin:auto;
+    padding: 10px;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
