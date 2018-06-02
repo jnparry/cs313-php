@@ -36,7 +36,7 @@ catch (PDOException $ex){
 <!--        <script src="https://cdn.rawgit.com/konvajs/konva/2.1.3/konva.min.js"></script>-->
     </head>
     
-    <body onload="dragArea()">
+    <body>
         <?php require "user.php"?>
         <section class="content">
             <h2>
@@ -53,8 +53,8 @@ catch (PDOException $ex){
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
                     <div id="area">
-                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="dragArea(this)">
-                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" id="ball2" onmousedown="dragArea(this)">
+                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this)">
+                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" id="ball2" onmousedown="myFunction(this)">
                     </div>
 <!--                <div id='myCanvas'></div>-->
                 <?php
