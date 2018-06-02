@@ -58,39 +58,11 @@ function mouse(item, event) { // (1) start the process
     }
 
     function onMouseMove(event) {
-        document.addEventListener('mousemove', moving);
-        
-        function moving(event) {
-            moveAt(event.pageX, event.pageY);
-        }
-//        document.getElementById("area").onmouseover = function() {overArea()};
-//        document.getElementById("area").onmouseout = function() {leaveArea()};
-//
-//        function overArea() {
-//            moveAt(event.pageX, event.pageY);
-//        }
-
-//        function leaveArea() {
-//        document.getElementById("demo").style.color = "black";
-//        }
-        
-//        var xc = event.pageX;
-//        var yc = event.pageY;
-//        var divWidth = document.getElementById("area").style.width;
-//        
-//        if (xc - divWidth >= divWidth) {
-//            xc = divWidth;
-//        }
-//        if (xc <= divWidth) {
-//            xc = divWidth;
-//        }
-//        
-//        moveAt(xc, yc);
+        moveAt(event.pageX, event.pageY);
     }
 
     // (3) move the ball on mousemove
-//    document.addEventListener('mousemove', onMouseMove);
-    document.getElementById("area").addEventListener('mouseover', onMouseMove);
+    document.addEventListener('mousemove', onMouseMove);
 
     // (4) drop the ball, remove unneeded handlers
     item.onmouseup = function() {
