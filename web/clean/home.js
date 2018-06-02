@@ -43,7 +43,7 @@ function mouse(item, event) { // (1) start the process
 
     // (2) prepare to moving: make absolute and on top by z-index
     item.style.position = 'absolute';
-    item.style.zIndex = 1000;
+//    item.style.zIndex = 1000;
     // move it out of any current parents directly into body
     // to make it positioned relative to the body
     document.body.append(item);
