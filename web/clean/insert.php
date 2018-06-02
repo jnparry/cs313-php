@@ -10,6 +10,13 @@
     echo "out of if ";
     echo "$title";
 
+    $newtitle = $_POST['txtTitle'];
+    echo "new title: ";
+    echo "$newtitle";
+
+    echo "new title no quotes: ";
+    echo $newtitle;
+    
     require("dbConnect.php");
     $db = get_db();
 
