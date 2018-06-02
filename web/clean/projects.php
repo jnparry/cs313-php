@@ -51,7 +51,7 @@
             <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
                 <br/><br/><br/>
                 <label for="txtTitle">Project Name: </label>	
-                <input type="text" id="txtTitle" name="title">
+                <input type="text" id="txtTitle" name="pTitle">
                 <br/><br/>
                 <button type="submit">Submit</button>
             </form>
