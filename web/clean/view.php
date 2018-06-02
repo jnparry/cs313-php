@@ -57,9 +57,13 @@ catch (PDOException $ex){
                     </div>
     
                     <?php
-                        foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
+                        $statement = $db->prepare("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid");
+                        $statement->execute();
+                    
+                        // Go through each result
+                        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                             echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
-                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "; top: " . $row['y'] . ";'>This is my bookcase</button>";
+                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase</button>";
                             echo "<p>This shelf ";
                             if ($row['shelvesclean'] && $row['shelvesdate']) {
                                 echo "was cleaned " . $row['shelvesdate'] . "</p>";
@@ -67,6 +71,17 @@ catch (PDOException $ex){
                                 echo "is not clean</p>";
                             }
                         }
+                            
+//                        foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
+//                            echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
+//                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase</button>";
+//                            echo "<p>This shelf ";
+//                            if ($row['shelvesclean'] && $row['shelvesdate']) {
+//                                echo "was cleaned " . $row['shelvesdate'] . "</p>";
+//                            } else {
+//                                echo "is not clean</p>";
+//                            }
+//                        }
                     ?>
                     <h3>This data is coming soon.</h3>
                 </section>
