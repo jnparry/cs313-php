@@ -81,6 +81,10 @@ ul li:last-child {
     display: inline;
 }
 
+#container {
+    position: relative;
+}
+
 .sidenav {
     height: 100%;
     width: 0;

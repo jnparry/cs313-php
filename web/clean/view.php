@@ -51,13 +51,14 @@ catch (PDOException $ex){
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>    
+                    <div id="container">
                     <?php
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         $bstatement->execute();
                     
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
 //                            echo "<p>We have a bookercase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").</p>";
-                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase x: " . $row['x'] . " y: " . $row['y'] . "</button>";
+                            echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;'>This is my bookcase x: " . $row['x'] . " y: " . $row['y'] . "</button>";
                             
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                             $sstatement->bindValue(':bsid', $row['id']);
@@ -75,6 +76,7 @@ catch (PDOException $ex){
                             }     
                         }
                     ?>
+                    </div>
                     <h3>This data is coming soon.</h3>
                 </section>
 
