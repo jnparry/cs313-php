@@ -51,7 +51,7 @@ catch (PDOException $ex){
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>    
-                    <div id="container">
+                    <section id="container">
                     <?php
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         $bstatement->execute();
@@ -76,7 +76,7 @@ catch (PDOException $ex){
                             }     
                         }
                     ?>
-                    </div>
+                    </section>
                     <h3>This data is coming soon.</h3>
                 </section>
 
