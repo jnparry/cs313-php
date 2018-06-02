@@ -58,17 +58,13 @@ function mouse(item, event) { // (1) start the process
     }
 
     function onMouseMove(event) {
-        $( "#area" ).mouseover(function() {
-            var xc = event.pageX;
-            var yc = event.pageY;
-
-            moveAt(xc, yc);
-        });
+        var xc = event.pageX;
+        var yc = event.pageY;
+        
+        moveAt(xc, yc);
     }
 
     // (3) move the ball on mousemove
-//    if (onmouseover
-//        document.getElementById("area"))
     document.addEventListener('mousemove', onMouseMove);
 
     // (4) drop the ball, remove unneeded handlers
