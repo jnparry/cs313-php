@@ -24,24 +24,19 @@
         <section class="content">
             <h2>
                 <?php
-                    $pstatement = $db->prepare("SELECT name FROM projects WHERE id = '$projectId'");
+                    $pstatement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
+                    $pstatement->bindValue(':pId', $projectId);
                     $pstatement->execute();
                     while ($project = $pstatement->fetch(PDO::FETCH_ASSOC)) {
                         echo $project['name'] . " - ";
                     }
         
-                    $rstatement = $db->prepare("SELECT name FROM rooms WHERE id = '$roomId'");
+                    $rstatement = $db->prepare("SELECT name FROM rooms WHERE id = :rId");
+                    $rstatement->bindValue(':rId', $roomId);
                     $rstatement->execute();
                     while ($room = $rstatement->fetch(PDO::FETCH_ASSOC)) {
                         echo $room['name'] . " - Full View";
                     }
-        
-//                    foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
-//                        echo $row['name'] . " - ";
-//                    }
-//                    foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
-//                        echo $row['name'] . " - Full View";
-//                    }
                 ?>
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
