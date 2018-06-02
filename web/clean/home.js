@@ -29,6 +29,8 @@ function soon() {
 }
 
 function dragArea() {
+    alert("yoyoyo");
+    
     ball.onmousedown = function(event) { // (1) start the process
 
         // (2) prepare to moving: make absolute and on top by z-index
