@@ -44,7 +44,7 @@
                     <section id='container'>
                         <?php
                         
-                            $style = $db->prepare("SELET id FROM bookshelves WHERE roomsid = :rId");
+                            $style = $db->prepare("SELET * FROM bookshelves WHERE roomsid = :rId");
                             $style->bindValue(':rId', $roomId);
                             $style->execute();
                         
