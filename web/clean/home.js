@@ -30,7 +30,7 @@ function soon() {
 
 function showForm(divName) {
     var x = document.getElementById(divName);
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
