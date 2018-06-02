@@ -61,7 +61,7 @@
                             $bstatement->execute();
                             
                         
-                            while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {\
+                            while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
 
                                 $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
