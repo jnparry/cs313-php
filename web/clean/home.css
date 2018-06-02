@@ -83,6 +83,7 @@ ul li:last-child {
 
 #container {
     position: relative;
+    border: 1px solid #000;
 }
 
 .sidenav {
