@@ -42,7 +42,7 @@
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
                     <?php
-                        $result = $db->query("SELECT name FROM bookshelves WHERE roomsid = '$roomId'");
+                        $result = $db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         if($result->num_rows != 0) {
                             echo "<section id='container'>";
 
