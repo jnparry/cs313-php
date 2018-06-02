@@ -41,12 +41,16 @@
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
-                    <section id='container'>
+                    <section id='container' style='display: none;'>
                         <?php
 
                             $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
                             $bstatement->bindValue(':roomId', $roomId);
                             $bstatement->execute();
+                            
+                            if ($bstatement->fetch(PDO::FETCH_ASSOC)) {
+                                echo "TRUIE";
+                            }
                         
                             while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
