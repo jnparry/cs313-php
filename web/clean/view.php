@@ -51,12 +51,11 @@ catch (PDOException $ex){
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
-    <!--
-                        <div id="area">
-                            <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this, event)">
-                            <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="myFunction(this, event)">
-                        </div>
-    -->
+                    <div id="area">
+                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this, event)">
+                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="myFunction(this, event)">
+                    </div>
+    
                     <?php
                         foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
                             echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
@@ -72,7 +71,7 @@ catch (PDOException $ex){
                 </section>
 
                 <section class="bottomNav">
-                    <button type="submit">&#10094; Back to Room</button>
+                    <button onclick="viewRooms()">&#10094; Back to Room</button>
                     <?php echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>"; ?>
                 </section>
             </form>
