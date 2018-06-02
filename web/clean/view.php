@@ -44,7 +44,7 @@
                     <?php
                         $result = $db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         echo "NUMBER OF ROWS: ";
-                        echo "$result->num_rooms";
+                        echo $result->num_rooms;
                     
                         if($result->num_rows != 0) {
                             echo "<section id='container'>";
