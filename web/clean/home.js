@@ -46,7 +46,7 @@ function mouse(item, event) { // (1) start the process
     item.style.zIndex = 1000;
     // move it out of any current parents directly into body
     // to make it positioned relative to the body
-    document.getElementById("area").append(item);
+//    document.getElementById("area").append(item);
     // ...and put that absolutely positioned ball under the cursor
 
     moveAt(event.pageX, event.pageY);
