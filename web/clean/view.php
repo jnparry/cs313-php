@@ -42,9 +42,10 @@
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
                     <?php
-//                        $tryStmt = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
-//                        $tryStmt->execute();
-//                        $result = $tryStmt->num_rooms;
+                        $tryStmt = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
+                        $tryStmt->execute();
+                        $results = $tryStmt->num_rooms;
+                        echo "Num rooms: $results";
                     
                         $result = $db->query("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         echo "NUMBER OF ROWS: ";
