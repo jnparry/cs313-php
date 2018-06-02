@@ -23,7 +23,11 @@
         <section class="content">
             <h2>
                 <?php
-                    foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
+                    $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
+                    $statement->bindValue(':pId', $projectId);
+                    $statement->execute();
+                    
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         echo $row['name'];
                     }
                 ?>
@@ -32,19 +36,23 @@
             <form action="phpSession.php" method="post" name="rooms">
                 <ul>
                     <?php
-                    foreach ($db->query("SELECT * FROM rooms WHERE projectsid = '$projectId'") as $row) {
+                    $bstatement = $db->prepare("SELECT * FROM rooms WHERE projectsid = :projectId");
+                    $bstatement->bindValue(':projectId', $projectId);
+                    $bstatement->execute();
+
+                    while ($bRow = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                         echo "<li>";
-                        echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
+                        echo "<p class='first'><strong>" . $bRow['name'] . "</strong></p>";
                         
-                        if ($row['isclean'] && $row['date']) {
-                                echo "<p class='middle'>Cleaning completed " . $row['date'] . "</p>";
+                        if ($bRow['isclean'] && $bRow['date']) {
+                                echo "<p class='middle'>Cleaning completed " . $bRow['date'] . "</p>";
                         }
                         else {
                             echo "<p class='middle'>Cleaning incomplete.</p>";
                         }
 
                         echo "<p class='middle'></p>";
-                        echo "<button class='last' type='submit' value='" . $row['id'] . "' name='viewRoom'>View</button>";
+                        echo "<button class='last' type='submit' value='" . $bRow['id'] . "' name='viewRoom'>View</button>";
                         echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
                         echo "</li>";
                     }
