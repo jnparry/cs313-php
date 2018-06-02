@@ -60,12 +60,13 @@ function mouse(item, event) { // (1) start the process
     function onMouseMove(event) {
         var xc = event.pageX;
         var yc = event.pageY;
+        var divWidth = document.getElementById("area").style.width;
         
-        if (xc >= (window.innerWidth * 0.7)) {
-            xc = (window.innerWidth * 0.7);
+        if (xc >= divWidth) {
+            xc = divWidth;
         }
-        if (xc <= (window.innerWidth - (window.innerWidth * 0.7))) {
-            xc = (window.innerWidth - (window.innerWidth * 0.7));
+        if (xc <= divWidth) {
+            xc = divWidth;
         }
         
         moveAt(xc, yc);
