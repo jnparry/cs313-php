@@ -62,7 +62,7 @@ catch (PDOException $ex){
                     
                         // Go through each result
                         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
+                            echo "<p>We have a BOOOOOKCASE. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
                             echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase</button>";
                             echo "<p>This shelf ";
                             if ($row['shelvesclean'] && $row['shelvesdate']) {
