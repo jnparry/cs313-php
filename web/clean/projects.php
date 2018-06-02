@@ -46,9 +46,9 @@
         
         <section class="bottomNav">
                 <button onclick="viewHome()">&#10094; Back to Home</button>
-                <button type="button" onclick="showForm('projectInsert')">Add Project</button>
+                <button type="button" onclick="showForm('hiddenForm')">Add Project</button>
             
-            <form action="insert.php" method="post" name="add" class="hiddenForm" id="projectInsert">
+            <form action="insert.php" method="post" name="add" id="hiddenForm">
                 <br/><br/><br/>
                 <label for="txtTitle">Name: </label>	
                 <input type="text" id="txtTitle" name="title">

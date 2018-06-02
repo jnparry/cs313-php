@@ -28,9 +28,10 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function showForm(divName) {
+function showForm(divName, className) {
     var x = document.getElementById(divName);
-    if (x.style.display == "none") {
+
+    if (x.style.display === "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
