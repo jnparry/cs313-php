@@ -48,10 +48,11 @@
                 <button onclick="viewHome()">&#10094; Back to Home</button>
                 <button type="button" onclick="showForm('projectInsert')">Add Project</button>
             
-            <form action="" method="post" name="add" class="hiddenForm" id="projectInsert">
+            <form action="insert.php" method="post" name="add" class="hiddenForm" id="projectInsert">
+                <br/><br/><br/>
                 <label for="txtTitle">Name: </label>	
                 <input type="text" id="txtTitle" name="title">
-                <br/>
+                <br/><br/>
                 <button type="submit" style="">Submit</button>
             </form>
             
