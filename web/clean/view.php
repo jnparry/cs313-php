@@ -49,29 +49,28 @@ catch (PDOException $ex){
                     }
                 ?>
             </h2>
-
-            <section>
-                <form action="phpSession.php" method="post" name="rooms">
-<!--
-                    <div id="area">
-                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this, event)">
-                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="myFunction(this, event)">
-                    </div>
--->
-                <?php
-                    foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
-                        echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
-                        echo "<p>This shelf ";
-                        if ($row['shelvesclean'] && $row['shelvesdate']) {
-                            echo "was cleaned " . $row['shelvesdate'] . "</p>";
-                        } else {
-                            echo "is not clean</p>";
+            <form action="phpSession.php" method="post" name="rooms">
+                <section>
+    <!--
+                        <div id="area">
+                            <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this, event)">
+                            <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="myFunction(this, event)">
+                        </div>
+    -->
+                    <?php
+                        foreach ($db->query("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid") as $row) {
+                            echo "<p>We have a bookcase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
+                            echo "<p>This shelf ";
+                            if ($row['shelvesclean'] && $row['shelvesdate']) {
+                                echo "was cleaned " . $row['shelvesdate'] . "</p>";
+                            } else {
+                                echo "is not clean</p>";
+                            }
                         }
-                    }
-                ?>
-                <h3>This data is coming soon.</h3>
-                </form>
-            </section>
+                    ?>
+                    <h3>This data is coming soon.</h3>
+                </section>
+            </form>
 
             <section class="bottomNav">
                 <button type="submit">&#10094; Back to Room</button>
