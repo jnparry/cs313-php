@@ -58,7 +58,15 @@ function mouse(item, event) { // (1) start the process
     }
 
     function onMouseMove(event) {
-        moveAt(event.pageX, event.pageY);
+        var isOnDiv = false;
+        $("area").mouseenter(function(){isOnDiv=true;});
+        $("area").mouseleave(function(){isOnDiv=false;});
+        if (isOnDiv) {
+            var xc = event.pageX;
+            var yc = event.pageY;
+
+            moveAt(xc, yc);
+        }
     }
 
     // (3) move the ball on mousemove
