@@ -48,7 +48,7 @@
                 <button onclick="viewHome()">&#10094; Back to Home</button>
                 <button type="button" onclick="showForm('hiddenForm')">Add Project</button>
             
-            <form action="insert.php" method="post" name="add" id="hiddenForm">
+            <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
                 <br/><br/><br/>
                 <label for="txtTitle">Name: </label>	
                 <input type="text" id="txtTitle" name="title">
