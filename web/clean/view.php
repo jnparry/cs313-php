@@ -53,7 +53,7 @@
                                     #container {
                                         display: block;
                                     }
-                                    </style>'
+                                    </style>';
                             }
                         
                             while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
