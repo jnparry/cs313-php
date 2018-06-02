@@ -41,7 +41,7 @@
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
-                    <section id='container'>
+                    <section id='container' style="display: none;">
                         <?php
 
                             $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
@@ -49,10 +49,11 @@
                             $bstatement->execute();
                             
                             if ($bstatement->fetch(PDO::FETCH_ASSOC)) {
-                                echo "TRUIE";
-                            }
-                            else {
-                                echo "WFT";
+                                echo '<style type="text/css">
+                                    #container {
+                                        display: block;
+                                    }
+                                    </style>'
                             }
                         
                             while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
