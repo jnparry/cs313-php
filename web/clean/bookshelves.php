@@ -49,7 +49,7 @@
                 $bstatement->execute();
 
                 while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase' onmousedown='(this, event)'></button>";
+                    echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase' onmousedown='mouse(this, event)'></button>";
 
                     $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                     $sstatement->bindValue(':bsid', $row['id']);
