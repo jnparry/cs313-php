@@ -57,6 +57,10 @@ ul li:last-child {
     display: none;
 }
 
+.hiddenForm button {
+    background-color: #4CAF50; 
+}
+
 #heading {
     display: inline;
     padding: 10px;

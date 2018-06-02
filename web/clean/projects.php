@@ -49,9 +49,10 @@
                 <button type="button" onclick="showForm('projectInsert')">Add Project</button>
             
             <form action="" method="post" name="add" class="hiddenForm" id="projectInsert">
-                	<input type="text" id="txtTitle" name="title">
-                    <label for="txtTitle">Name</label>
-                    <button type="submit">Submit</button>
+                <label for="txtTitle">Name: </label>	
+                <input type="text" id="txtTitle" name="title">
+                <br/>
+                <button type="submit" style="">Submit</button>
             </form>
             
         </section>
