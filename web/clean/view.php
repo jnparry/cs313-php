@@ -53,7 +53,7 @@ catch (PDOException $ex){
             <section>
                 <form action="phpSession.php" method="post" name="rooms">
                     <div id="area">
-                        <img alt="temp" src="https://js.cx/clipart/ball.svg">
+                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball">
                     </div>
 <!--                <div id='myCanvas'></div>-->
                 <?php
