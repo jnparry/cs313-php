@@ -41,7 +41,7 @@
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
                 <section>
-                    <section id='container'">
+                    <section id='container'>
                         <?php
 
                             $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
