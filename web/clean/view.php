@@ -48,13 +48,13 @@
                             $bstatement->bindValue(':roomId', $roomId);
                             $bstatement->execute();
                             
-                            if ($bstatement->fetch(PDO::FETCH_ASSOC)) {
-                                echo '<style type="text/css">
-                                    #container {
-                                        display: block;
-                                    }
-                                    </style>';
-                            }
+//                            if ($bstatement->fetch(PDO::FETCH_ASSOC)) {
+//                                echo '<style type="text/css">
+//                                    #container {
+//                                        display: block;
+//                                    }
+//                                    </style>';
+//                            }
                         
                             while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
