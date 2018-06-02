@@ -28,25 +28,23 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function dragArea() {
-    alert("yoyoyo");
-    
-    ball.onmousedown = function(event) { // (1) start the process
+function dragArea(item) {
+    item.onmousedown = function(event) { // (1) start the process
 
         // (2) prepare to moving: make absolute and on top by z-index
-        ball.style.position = 'absolute';
-        ball.style.zIndex = 1000;
+        item.style.position = 'absolute';
+        item.style.zIndex = 1000;
         // move it out of any current parents directly into body
         // to make it positioned relative to the body
-        document.body.append(ball);
+        document.body.append(item);
         // ...and put that absolutely positioned ball under the cursor
 
         moveAt(event.pageX, event.pageY);
 
         // centers the ball at (pageX, pageY) coordinates
         function moveAt(pageX, pageY) {
-        ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
-        ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
+        item.style.left = pageX - item.offsetWidth / 2 + 'px';
+        item.style.top = pageY - item.offsetHeight / 2 + 'px';
         }
 
         function onMouseMove(event) {
@@ -57,12 +55,12 @@ function dragArea() {
         document.addEventListener('mousemove', onMouseMove);
 
         // (4) drop the ball, remove unneeded handlers
-        ball.onmouseup = function() {
+        item.onmouseup = function() {
         document.removeEventListener('mousemove', onMouseMove);
-        ball.onmouseup = null;
+        item.onmouseup = null;
         };
 
-        ball.ondragstart = function() {
+        item.ondragstart = function() {
             return false;
         };
     }
