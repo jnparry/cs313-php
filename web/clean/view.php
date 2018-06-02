@@ -71,7 +71,7 @@ catch (PDOException $ex){
                 </section>
 
                 <section class="bottomNav">
-                    <button onclick="viewRooms()">&#10094; Back to Room</button>
+                    <button type="button" onclick="viewRooms()">&#10094; Back to Room</button>
                     <?php echo "<button type='submit' value='$roomId' name='roomId'>Add Bookshelf</button>"; ?>
                 </section>
             </form>
