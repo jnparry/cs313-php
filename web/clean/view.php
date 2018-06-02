@@ -48,7 +48,7 @@
                             $bstatement->bindValue(':roomId', $roomId);
                             $bstatement->execute();
                             
-                            if ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
+                            if ($bstatement->fetch(PDO::FETCH_ASSOC)) {
                                 echo "TRUIE";
                             }
                             else {
