@@ -24,10 +24,19 @@
         <section class="content">
             <h2>
                 <?php
-                    foreach ($db->query("SELECT name FROM projects WHERE id = '$projectId'") as $row) {
+                    $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
+                    $statement->bindValue(':pId', $projectId);
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         echo $row['name'] . " - ";
                     }
-                    foreach ($db->query("SELECT name FROM rooms WHERE id = '$roomId'") as $row) {
+        
+                    $statement = $db->prepare("SELECT name FROM rooms WHERE id = :roomId");
+                    $statement->bindValue(':roomId', $roomId);
+                    $statement->execute();
+
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         echo $row['name'];
                     }
                 ?>
