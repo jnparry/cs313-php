@@ -24,7 +24,6 @@
                 <?php
                     foreach ($db->query('SELECT * FROM projects') as $row) {
                         echo "<li>";
-                        
                         echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
                         
                         if ($row['iscomplete'] && $row['date']) {
@@ -35,9 +34,7 @@
                         }
                         
                         echo "<button class='last' type='submit' value='" . $row['id'] . "' name='projectId'>View</button>";
-                        
                         echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
-
                         echo "</li>";
                     }
                 ?>
@@ -50,7 +47,7 @@
             
             <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
                 <br/><br/><br/>
-                <label for="txtTitle">Name: </label>	
+                <label for="txtTitle">Project Name: </label>	
                 <input type="text" id="txtTitle" name="title">
                 <br/><br/>
                 <button type="submit" style="">Submit</button>
