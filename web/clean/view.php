@@ -26,7 +26,7 @@
                 <?php
                     $pstatement = $db->prepare("SELECT name FROM projects WHERE id = '$projectId'");
                     $pstatement->execute();
-                    while ($project = $nstatement->fetch(PDO::FETCH_ASSOC)) {
+                    while ($project = $pstatement->fetch(PDO::FETCH_ASSOC)) {
                         echo $project['name'] . " - ";
                     }
         
