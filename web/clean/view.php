@@ -50,33 +50,14 @@ catch (PDOException $ex){
                 ?>
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
-                <section>
-                    <div id="area">
-                        <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this, event)">
-                        <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="myFunction(this, event)">
-                    </div>
-    
+                <section>    
                     <?php
-//                        $statement = $db->prepare("SELECT * FROM bookshelves b, shelves s WHERE roomsid = '$roomId' AND b.id = s.bookshelvesid");
-//                        $statement->execute();
-//                    
-//                        // Go through each result
-//                        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-//                            echo "<p>We have a BOOOOOKCASE. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").";
-//                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase</button>";
-//                            echo "<p>This shelf ";
-//                            if ($row['shelvesclean'] && $row['shelvesdate']) {
-//                                echo "was cleaned " . $row['shelvesdate'] . "</p>";
-//                            } else {
-//                                echo "is not clean</p>";
-//                            }
-//                        }
-                    
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = '$roomId'");
                         $bstatement->execute();
                     
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<p>We have a bookercase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").</p>";
+//                            echo "<p>We have a bookercase. Its coordinates are (" . $row['x'] . ", " . $row['y'] . ").</p>";
+                            echo "<button type='button' style='position: relative; right: " . $row['x'] . "px; top: " . $row['y'] . "px;'>This is my bookcase $row['id']</button>";
                             
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                             $sstatement->bindValue(':bsid', $row['id']);

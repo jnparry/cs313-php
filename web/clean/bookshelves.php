@@ -53,11 +53,18 @@ catch (PDOException $ex){
             <section>
                 Bookshelf image goes here
                 <h3>This data is coming soon.</h3>
+                
+                <div id="area">
+                    <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="myFunction(this, event)">
+                    <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="myFunction(this, event)">
+                </div>
+                
                 <section>
                     <p>Number of shelves</p>
                     <input type="number" min="0" max="10">
                     <button type="button" onclick="soon()">Add Bookshelf</button>
                 </section>
+                
             </section>
 
             <section class="bottomNav">
