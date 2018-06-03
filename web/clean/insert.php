@@ -2,7 +2,14 @@
 
 session_start();
 $projectId = $_SESSION['project'];
-$submitType = $_POST['submit'];
+
+if ($_POST['rename']) {
+    $submitType = $_POST['rename'];
+}
+
+if ($_POST['add']) {
+    $submitType = $_POST['add'];
+}
 
 if ($submitType) {
     echo "Submission type: " . $submitType;

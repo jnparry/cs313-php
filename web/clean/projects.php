@@ -53,7 +53,7 @@
                 <label for="txtTitle">Project Name: </label>	
                 <input type="text" id="txtTitle" name="pTitle">
                 <br/><br/>
-                <button type="submit" name="submit" id="submit">Submit</button>
+                <button type="submit" id="submit">Submit</button>
             </form>
             
         </section>
