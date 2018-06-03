@@ -36,6 +36,7 @@
                             echo "<p class='middle'>Cleaning incomplete.</p>";
                         }
                         
+                        // will it change to line 30?
                         echo "<button class='last' type='submit' value='" . $row['id'] . "' name='projectId'>View</button>";
                         echo "<button class='last' type='button' onclick=\"showForm('hiddenForm', 'txtTitle', " . $row['name'] . ")\">Edit</button>";
                         echo "</li>";
