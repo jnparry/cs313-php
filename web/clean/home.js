@@ -54,7 +54,7 @@ function showForm(divName, editName, val) {
     else {
         document.getElementById(editName).value = val;
         document.getElementById("submit").name = "rename";
-        document.getElementById("submit").value = "add";
+        document.getElementById("submit").value = "rename";
     }
 }
 
