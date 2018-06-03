@@ -32,26 +32,26 @@ function showForm(divName, editName, val) {
     var x = document.getElementById(divName);
     
     // if this is a new button press, reveal the form
-    if (val != x.class) {
-        x.class = val;
-        x.style.display = "block";
-    }
-    else {
+//    if (val != x.class) {
+//        x.class = val;
+//        x.style.display = "block";
+//    }
+//    else {
         if (x.style.display === "none") {
             x.style.display = "block";
         }
         else {
             x.style.display = "none";
         }
-    }
+//    }
     
     // if it's the add button, there should be no automatic text to edit
-    if (val == 'add') {
-        document.getElementById(editName).value = "";
-    }
-    else {
-        document.getElementById(editName).value = val;
-    }
+//    if (val == 'add') {
+//        document.getElementById(editName).value = "";
+//    }
+//    else {
+//        document.getElementById(editName).value = val;
+//    }
 }
 
 function positt(idName) {
