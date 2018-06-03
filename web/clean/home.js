@@ -49,10 +49,12 @@ function showForm(divName, editName, val) {
     if (val == 'add') {
         document.getElementById(editName).value = "";
         document.getElementById(submit).name = "add";
+        document.getElementById(submit).value = "add";
     }
     else {
         document.getElementById(editName).value = val;
         document.getElementById(subimt).name = "rename";
+        document.getElementById(submit).value = "add";
     }
 }
 
