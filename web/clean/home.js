@@ -76,17 +76,17 @@ function mouse(item, event) { // (1) start the process
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
-        if (xc <= left) {
+        if (xc - (item.offsetWidth / 2) <= left) {
             xc = left;
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;  
         }
-        if (yc >= bottom) {
+        if (yc + (item.offsetHeight / 2) >= bottom) {
             yc = bottom;
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
-        if (yc <= top) {
+        if (yc - (item.offsetHeight / 2) <= top) {
             yc = top;
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
