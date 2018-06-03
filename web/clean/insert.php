@@ -10,9 +10,9 @@ if ($_POST['rename']) {
 if ($_POST['add']) {
     $submitType = $_POST['add'];
 }
-
+$title = $_POST['pTitle'];
 if ($submitType) {
-    echo "Submission type: " . $submitType;
+    echo "Submission type: " . $submitType; . $title;
 } else {
     echo "Null";
 }
