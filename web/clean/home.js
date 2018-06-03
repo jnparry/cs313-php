@@ -53,7 +53,7 @@ function showForm(divName, editName, val) {
     }
     else {
         document.getElementById(editName).value = val;
-        document.getElementById(subimt).name = "rename";
+        document.getElementById(submit).name = "rename";
         document.getElementById(submit).value = "add";
     }
 }
