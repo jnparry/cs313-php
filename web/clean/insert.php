@@ -5,22 +5,20 @@ $projectId = $_SESSION['project'];
 
 if ($_POST['rename']) {
     $submitType = $_POST['rename'];
+    if ($submitType == 'rename')
+        echo "equal equal s q rename";
 }
-
 if ($_POST['add']) {
     $submitType = $_POST['add'];
-}
-$title = $_POST['pTitle'];
-if ($submitType) {
-    echo "Submission type: " . $submitType . $title;
-} else {
-    echo "Null";
+    if ($submitType == "add")
+        echo "equal euqal db q add";
 }
 
 //require("dbConnect.php");
 //$db = get_db();
 //
 //if (isset($_POST['pTitle'])) { 
+//    if ($submitType )
 //    try {
 //        $title = $_POST['pTitle'];
 //        $query = "INSERT INTO projects(name, iscomplete, date) VALUES(:name, FALSE, NULL)";
