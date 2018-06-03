@@ -2,26 +2,29 @@
 
 session_start();
 $projectId = $_SESSION['project'];
+$submitType = $_POST['submit'];
+
+echo "Submission type: " . $submitType;
 
 require("dbConnect.php");
 $db = get_db();
 
-if (isset($_POST['pTitle'])) { 
-    try {
-        $title = $_POST['pTitle'];
-        $query = "INSERT INTO projects(name, iscomplete, date) VALUES(:name, FALSE, NULL)";
-
-        $statement = $db->prepare($query);
-        $statement->bindValue(':name', $title);
-        $statement->execute();
-    } catch (Exception $ex) {
-        echo "Error with DB. Details: $ex";
-        die();
-    }
-    
-    header("Location: /clean/projects.php");
-    die();
-}
+//if (isset($_POST['pTitle'])) { 
+//    try {
+//        $title = $_POST['pTitle'];
+//        $query = "INSERT INTO projects(name, iscomplete, date) VALUES(:name, FALSE, NULL)";
+//
+//        $statement = $db->prepare($query);
+//        $statement->bindValue(':name', $title);
+//        $statement->execute();
+//    } catch (Exception $ex) {
+//        echo "Error with DB. Details: $ex";
+//        die();
+//    }
+//    
+//    header("Location: /clean/projects.php");
+//    die();
+//}
 else if (isset($_POST['rTitle'])) {
     try {
         $title = $_POST['rTitle'];
