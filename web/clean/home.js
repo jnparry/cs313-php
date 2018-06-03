@@ -28,13 +28,20 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function showForm(divName, className) {
-    var x = document.getElementById(divName);
-
+function showForm(divName) {
+    var x = document.getElementById(divName, edit, val = null);
+    
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
+    }
+    
+    if (edit && val) {
+        document.getElementById(edit).value = val;
+    }
+    else {
+        document.getElementById(edit).value = "";
     }
 }
 
@@ -43,7 +50,6 @@ function positt(idName) {
         var x = $(idName).position();
         alert("t: " + x.top + " L: " + x.left + " r: " + x.right + "b: " + x.bottom);
     });
-//    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
 }
      
 // for desktop w/ mouse click events
@@ -74,21 +80,28 @@ function mouse(item, event) { // (1) start the process
         var top = area.getBoundingClientRect().top;
         var bottom = area.getBoundingClientRect().bottom;
         
+        // if too far to the right
         if (xc + (item.offsetWidth / 2 ) >= right) {
             xc = right - (item.offsetWidth);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
+        
+        // if too far to the left
         if (xc - (item.offsetWidth / 2) <= left) {
             xc = left + (item.offsetWidth);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;  
         }
+        
+        // if too far up
         if (yc + (item.offsetHeight / 2) >= bottom) {
             yc = bottom - (item.offsetHeight);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
+        
+        // if too far down
         if (yc - (item.offsetHeight / 2) <= top) {
             yc = top + (item.offsetHeight);
             document.removeEventListener('mousemove', onMouseMove);
