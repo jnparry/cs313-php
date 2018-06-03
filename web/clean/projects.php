@@ -24,8 +24,7 @@
                 <?php
                     $statement = $db->prepare("SELECT * FROM projects");
                     $statement->execute();
-// will it change to line 30?
-        
+     
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         echo "<li>";
                         echo "<p class='first'><strong>" . $row['name'] . "</strong></p>";
