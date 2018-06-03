@@ -26,8 +26,8 @@ if (isset($_POST['pTitle'])) {
             $query = "UPDATE projects SET name = ':name' WHERE id = ':pId'";
 
             $statement = $db->prepare($query);
-            $statement->bindValue(':name', $title);
-            $statement->bindValue(':pId', $projectId);
+            $statement->bindValue(':name', $title, PDO::PARAM_STR);
+            $statement->bindValue(':pId', $projectId, PDO::PARAM_INT);
             $statement->execute();
         }
     } catch (Exception $ex) {
