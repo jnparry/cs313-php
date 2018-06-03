@@ -38,13 +38,10 @@ function showForm(divName, className) {
     }
 }
 
-function posit() {
-    var left = area.getBoundingClientRect().left;
-    var right = area.getBoundingClientRect().right;
-    var top = area.getBoundingClientRect().top;
-    var bottom = area.getBoundingClientRect().bottom;
-    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
-}
+//function posit() {
+//    
+//    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
+//}
      
 // for desktop w/ mouse click events
 function mouse(item, event) { // (1) start the process
@@ -68,6 +65,20 @@ function mouse(item, event) { // (1) start the process
     function onMouseMove(event) {
         var xc = event.pageX;
         var yc = event.pageY;
+        
+        var left = area.getBoundingClientRect().left;
+        var right = area.getBoundingClientRect().right;
+        var top = area.getBoundingClientRect().top;
+        var bottom = area.getBoundingClientRect().bottom;
+        
+        if (xc >= right)
+            xc = right;
+        if (xc <= left)
+            xc = left;
+        if (yc >= bottom)
+            yc = bottom;
+        if (yc <= top)
+            yc = top;
         
         moveAt(xc, yc);
     }
