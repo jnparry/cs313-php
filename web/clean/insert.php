@@ -25,20 +25,22 @@ $db = get_db();
 //    header("Location: /clean/projects.php");
 //    die();
 //}
-else if (isset($_POST['rTitle'])) {
-    try {
-        $title = $_POST['rTitle'];
-        $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
+//else if (isset($_POST['rTitle'])) {
+//    try {
+//        $title = $_POST['rTitle'];
+//        $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
+//
+//        $statement = $db->prepare($query);
+//        $statement->bindValue(':name', $title);
+//        $statement->bindValue(':pId', $projectId);
+//        $statement->execute();
+//    } catch (Exception $ex) {
+//        echo "Error with DB. Details: $ex";
+//        die();
+//    }
+//    
+//    header("Location: /clean/rooms.php");
+//    die();
+//}
 
-        $statement = $db->prepare($query);
-        $statement->bindValue(':name', $title);
-        $statement->bindValue(':pId', $projectId);
-        $statement->execute();
-    } catch (Exception $ex) {
-        echo "Error with DB. Details: $ex";
-        die();
-    }
-    
-    header("Location: /clean/rooms.php");
-    die();
-}
+?>
