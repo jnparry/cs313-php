@@ -39,7 +39,7 @@ function showForm(divName, className) {
 }
 
 function posit() {
-    alert(area.position());
+    alert(area.getBoundingClientRect().left);
 }
      
 // for desktop w/ mouse click events
