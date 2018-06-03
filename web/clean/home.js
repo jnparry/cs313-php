@@ -71,14 +71,26 @@ function mouse(item, event) { // (1) start the process
         var top = area.getBoundingClientRect().top;
         var bottom = area.getBoundingClientRect().bottom;
         
-        if (xc >= right)
-            xc = right;
-        if (xc <= left)
+        if (xc + (item.offsetWidth / 2 ) >= right) {
+            xc = right - (item.offsetWidth / 2);
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
+        if (xc <= left) {
             xc = left;
-        if (yc >= bottom)
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;  
+        }
+        if (yc >= bottom) {
             yc = bottom;
-        if (yc <= top)
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
+        if (yc <= top) {
             yc = top;
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
         
         moveAt(xc, yc);
     }
