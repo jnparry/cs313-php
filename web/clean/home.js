@@ -77,17 +77,17 @@ function mouse(item, event) { // (1) start the process
             item.onmouseup = null;
         }
         if (xc - (item.offsetWidth / 2) <= left) {
-            xc = left;
+            xc = left + (item.offsetWidth / 2);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;  
         }
         if (yc + (item.offsetHeight / 2) >= bottom) {
-            yc = bottom;
+            yc = bottom - (item.offsetHeight / 2);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
         if (yc - (item.offsetHeight / 2) <= top) {
-            yc = top;
+            yc = top + (item.offsetHeight / 2);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
