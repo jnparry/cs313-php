@@ -48,13 +48,13 @@ function showForm(divName, editName, val) {
     // if it's the add button, there should be no automatic text to edit
     if (val == 'add') {
         document.getElementById(editName).value = "";
-        document.getElementById(submit).name = "add";
-        document.getElementById(submit).value = "add";
+        document.getElementById("submit").name = "add";
+        document.getElementById("submit").value = "add";
     }
     else {
         document.getElementById(editName).value = val;
-        document.getElementById(submit).name = "rename";
-        document.getElementById(submit).value = "add";
+        document.getElementById("submit").name = "rename";
+        document.getElementById("submit").value = "add";
     }
 }
 
