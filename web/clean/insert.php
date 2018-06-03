@@ -4,11 +4,15 @@ session_start();
 $projectId = $_SESSION['project'];
 $submitType = $_POST['submit'];
 
-echo "Submission type: " . $submitType;
+if ($submitType) {
+    echo "Submission type: " . $submitType;
+} else {
+    echo "Null";
+}
 
-require("dbConnect.php");
-$db = get_db();
-
+//require("dbConnect.php");
+//$db = get_db();
+//
 //if (isset($_POST['pTitle'])) { 
 //    try {
 //        $title = $_POST['pTitle'];
