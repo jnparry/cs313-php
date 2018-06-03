@@ -83,8 +83,8 @@ function mouse(item, event) { // (1) start the process
         }
         if (yc + (item.offsetHeight / 2) >= bottom) {
             yc = bottom - (item.offsetHeight);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
         }
         if (yc - (item.offsetHeight / 2) <= top) {
             yc = top + (item.offsetHeight);
