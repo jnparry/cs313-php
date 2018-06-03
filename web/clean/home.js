@@ -39,9 +39,7 @@ function showForm(divName, className) {
 }
 
 function posit() {
-    var pos = $('area').position();
-    alert(pos);
-    alert("Whudduppp");
+    area.position();
 }
      
 // for desktop w/ mouse click events
