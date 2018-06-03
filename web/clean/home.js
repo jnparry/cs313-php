@@ -39,7 +39,8 @@ function showForm(divName, className) {
 }
 
 function posit() {
-    alert($('area').position());
+    var pos = $('area').position();
+    alert(pos);
     alert("Whudduppp");
 }
      
