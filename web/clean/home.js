@@ -37,7 +37,12 @@ function showForm(divName, editName, val) {
         x.style.display = "block";
     }
     else {
-        x.style.display = "none";
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        }
+        else {
+            x.style.display = "none";
+        }
     }
     
     // if it's the add button, there should be no automatic text to edit
