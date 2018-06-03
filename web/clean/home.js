@@ -38,11 +38,12 @@ function showForm(divName, className) {
     }
 }
 
-function posit() {
+function posit(idName) {
     $(document).ready(function() {
-        $("")
-    })
-    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
+        var x = $(idName).position();
+        alert("t: " + x.top + " L: " + x.left + " r: " + x.right + "b: " + x.bottom);
+    });
+//    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
 }
      
 // for desktop w/ mouse click events
