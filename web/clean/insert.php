@@ -23,10 +23,10 @@ if (isset($_POST['pTitle'])) {
             $statement->execute();
         }
         else if ($submitType == "rename") {
-            $query = "UPDATE projects SET name = $title WHERE id = ':pId'";
+            $query = "UPDATE projects SET name = ':name' WHERE id = ':pId'";
 
             $statement = $db->prepare($query);
-//            $statement->bindValue(':name', $title);
+            $statement->bindValue(':name', $title);
             $statement->bindValue(':pId', $projectId);
             $statement->execute();
         }
