@@ -38,10 +38,10 @@ function showForm(divName, editName, val = null) {
     }
     
     if (editName && val) {
-        document.getElementById(edit).value = val;
+        document.getElementById(editName).value = val;
     }
     else {
-        document.getElementById(edit).value = "";
+        document.getElementById(editName).value = "";
     }
 }
 
