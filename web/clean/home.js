@@ -28,8 +28,8 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function showForm(divName) {
-    var x = document.getElementById(divName, edit, val = null);
+function showForm(divName, editName, val = null) {
+    var x = document.getElementById(divName);
     
     if (x.style.display === "none") {
         x.style.display = "block";
@@ -37,7 +37,7 @@ function showForm(divName) {
         x.style.display = "none";
     }
     
-    if (edit && val) {
+    if (editName && val) {
         document.getElementById(edit).value = val;
     }
     else {
