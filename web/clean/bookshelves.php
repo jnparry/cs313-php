@@ -43,7 +43,7 @@
             </h2>
 
             <section>
-                <div id="area">
+                <div id="area" onload="posit()">
                     <?php
                     $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
                     $bstatement->bindValue(':roomId', $roomId);

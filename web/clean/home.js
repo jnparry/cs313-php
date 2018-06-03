@@ -37,6 +37,10 @@ function showForm(divName, className) {
         x.style.display = "none";
     }
 }
+
+function posit() {
+    alert($('area').position());
+}
      
 // for desktop w/ mouse click events
 function mouse(item, event) { // (1) start the process
