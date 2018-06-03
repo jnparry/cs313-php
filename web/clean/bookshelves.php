@@ -58,7 +58,7 @@
                                 }
                             </style>';
 
-                        echo "<button style='max-height: 10px;' type='button' id='bookcase" . $row['id'] . "' onmousedown='mouse(this, event)'></button>";
+                        echo "<button style='max-height: 10px;' type='button' id='bookcase" . $row['id'] . "' onmousedown='mouse(this, event)' onclick=\"posit('bookcase" . $row['id'] . "')\"></button>";
 
                         $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                         $sstatement->bindValue(':bsid', $row['id']);
@@ -77,14 +77,6 @@
                     }
                     ?>
                 </div>
-            
-<!--
-                <div id="area">
-                    <img alt="temp" src="https://js.cx/clipart/ball.svg" id="ball" onmousedown="mouse(this, event)">
-                    <img alt="temp" src="https://images.vexels.com/media/users/3/137269/isolated/preview/56079bda3325d326dc4307a9cc8aed63-fire-cartoon-silhouette-by-vexels.png" onmousedown="mouse(this, event)">
-                    <button type="button" onmousedown="mouse(this, event)" ontouchstart="touch(this, event)">Testerrr</button>
-                </div>
--->
                 
                 <section>
                     <p>Number of shelves</p>

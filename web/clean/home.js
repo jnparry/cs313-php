@@ -38,10 +38,12 @@ function showForm(divName, className) {
     }
 }
 
-//function posit() {
-//    
-//    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
-//}
+function posit() {
+    $(document).ready(function() {
+        $("")
+    })
+    alert("Left: " + left + ", Right: " + right + ", Top: " + top + ", Bottom: " + bottom);
+}
      
 // for desktop w/ mouse click events
 function mouse(item, event) { // (1) start the process

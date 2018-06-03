@@ -40,46 +40,45 @@
                 ?>
             </h2>
             <form action="phpSession.php" method="post" name="rooms">
-                <section>
-                    <section id='container'>
-                        <?php
-                        
-                            $statement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
-                            $statement->bindValue(':roomId', $roomId);
-                            $statement->execute();
-                            
-                            if ($statement->fetch(PDO::FETCH_ASSOC)) {
-                                echo '<style type="text/css">
-                                    #container {
-                                        display: block;
-                                    }
-                                    </style>';
-                            }
 
-                            $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
-                            $bstatement->bindValue(':roomId', $roomId);
-                            $bstatement->execute();
-                        
-                            while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                                echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
+                <section id='container'>
+                    <?php
 
-                                $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
-                                $sstatement->bindValue(':bsid', $row['id']);
-                                $sstatement->execute();
+                        $statement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                        $statement->bindValue(':roomId', $roomId);
+                        $statement->execute();
 
-                                // Go through each shelf in the bookcase
-                                while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
-                                {
-                                    echo "<p>This shelf ";
-                                    if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                        echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
-                                    } else {
-                                        echo "is not clean</p>";
-                                    }
-                                }     
-                            }
-                        ?>
-                    </section>
+                        if ($statement->fetch(PDO::FETCH_ASSOC)) {
+                            echo '<style type="text/css">
+                                #container {
+                                    display: block;
+                                }
+                                </style>';
+                        }
+
+                        $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                        $bstatement->bindValue(':roomId', $roomId);
+                        $bstatement->execute();
+
+                        while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
+
+                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
+                            $sstatement->bindValue(':bsid', $row['id']);
+                            $sstatement->execute();
+
+                            // Go through each shelf in the bookcase
+                            while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
+                            {
+                                echo "<p>This shelf ";
+                                if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
+                                    echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
+                                } else {
+                                    echo "is not clean</p>";
+                                }
+                            }     
+                        }
+                    ?>
                 </section>
 
                 <section class="bottomNav">
