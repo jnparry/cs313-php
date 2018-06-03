@@ -12,7 +12,7 @@ if ($_POST['add']) {
 }
 $title = $_POST['pTitle'];
 if ($submitType) {
-    echo "Submission type: " . $submitType; . $title;
+    echo "Submission type: " . $submitType . $title;
 } else {
     echo "Null";
 }
