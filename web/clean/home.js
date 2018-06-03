@@ -72,12 +72,12 @@ function mouse(item, event) { // (1) start the process
         var bottom = area.getBoundingClientRect().bottom;
         
         if (xc + (item.offsetWidth / 2 ) >= right) {
-            xc = right - (item.offsetWidth / 2);
+            xc = right - (item.offsetWidth);
             document.removeEventListener('mousemove', onMouseMove);
             item.onmouseup = null;
         }
         if (xc - (item.offsetWidth / 2) <= left) {
-            xc = left + (item.offsetWidth / 2);
+            xc = left + (item.offsetWidth);
 //            document.removeEventListener('mousemove', onMouseMove);
 //            item.onmouseup = null;  
         }
