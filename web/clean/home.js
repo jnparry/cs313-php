@@ -78,18 +78,18 @@ function mouse(item, event) { // (1) start the process
         }
         if (xc - (item.offsetWidth / 2) <= left) {
             xc = left + (item.offsetWidth / 2);
-            document.removeEventListener('mousemove', onMouseMove);
-            item.onmouseup = null;  
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;  
         }
         if (yc + (item.offsetHeight / 2) >= bottom) {
             yc = bottom - (item.offsetHeight / 2);
-            document.removeEventListener('mousemove', onMouseMove);
-            item.onmouseup = null;
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
         }
         if (yc - (item.offsetHeight / 2) <= top) {
             yc = top + (item.offsetHeight / 2);
-            document.removeEventListener('mousemove', onMouseMove);
-            item.onmouseup = null;
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
         }
         
         moveAt(xc, yc);
