@@ -43,7 +43,7 @@
             </h2>
 
             <section>
-                <div id="area" onload="posit()">
+                <div id="area">
                     <?php
                     $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
                     $bstatement->bindValue(':roomId', $roomId);
@@ -89,7 +89,7 @@
                 <section>
                     <p>Number of shelves</p>
                     <input type="number" min="0" max="10">
-                    <button type="button" onclick="soon()">Add Bookshelf</button>
+                    <button type="button" onclick="posit()">Add Bookshelf</button>
                 </section>
                 
             </section>
