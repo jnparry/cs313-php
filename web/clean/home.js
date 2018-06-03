@@ -38,7 +38,7 @@ function showForm(divName, className) {
     }
 }
 
-function posit(idName) {
+function positt(idName) {
     $(document).ready(function() {
         var x = $(idName).position();
         alert("t: " + x.top + " L: " + x.left + " r: " + x.right + "b: " + x.bottom);
