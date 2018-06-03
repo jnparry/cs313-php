@@ -40,6 +40,7 @@ function showForm(divName, className) {
 
 function posit() {
     alert($('area').position());
+    alert("Whudduppp");
 }
      
 // for desktop w/ mouse click events
