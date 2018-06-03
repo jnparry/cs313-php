@@ -28,20 +28,24 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function showForm(divName, editName, val = null) {
+function showForm(divName, editName, val) {
     var x = document.getElementById(divName);
     
-    if (x.style.display === "none") {
+    // if this is a new button press, reveal the form
+    if (val != x.class) {
+        x.class = val;
         x.style.display = "block";
-    } else {
+    }
+    else {
         x.style.display = "none";
     }
     
-    if (editName && val) {
-        document.getElementById(editName).value = val;
+    // if it's the add button, there should be no automatic text to edit
+    if (val == "add") {
+        document.getElementById(editName).value = "";
     }
     else {
-        document.getElementById(editName).value = "";
+        document.getElementById(editName).value = val;
     }
 }
 

@@ -38,7 +38,7 @@
                         
                         echo "<button class='last' type='submit' value='" . $row['id'] . "' name='projectId'>View</button>";
                         echo "<button class='last' type='button' 
-                            onclick=\"showForm('hiddenForm', 'txtTitle', " . $row['id'] . ")\">Edit</button>";
+                            onclick=\"showForm('hiddenForm', 'txtTitle', " . $row['name'] . ")\">Edit</button>";
                         echo "</li>";
                     }
                 ?>
@@ -47,7 +47,7 @@
         
         <section class="bottomNav">
                 <button onclick="viewHome()">&#10094; Back to Home</button>
-                <button type="button" onclick="showForm('hiddenForm', 'txtTitle')">Add Project</button>
+                <button type="button" onclick="showForm('hiddenForm', 'txtTitle', 'add')">Add Project</button>
             
             <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
                 <br/><br/><br/>
