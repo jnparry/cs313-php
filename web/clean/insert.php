@@ -22,7 +22,7 @@ if (isset($_POST['pTitle'])) {
             $statement->bindValue(':name', $title);
             $statement->execute();
         }
-        else if (!(isNaN($submitType))) {
+        else if (is_numeric($submitType)) {
             $query = "UPDATE projects SET name = '" . $title . "' WHERE id = ':pId'";
 
             $statement = $db->prepare($query);
