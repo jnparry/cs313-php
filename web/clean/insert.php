@@ -38,22 +38,33 @@ if (isset($_POST['pTitle'])) {
     header("Location: /clean/projects.php");
     die();
 }
-//else if (isset($_POST['rTitle'])) {
-//    try {
-//        $title = $_POST['rTitle'];
-//        $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
-//
-//        $statement = $db->prepare($query);
-//        $statement->bindValue(':name', $title);
-//        $statement->bindValue(':pId', $projectId);
-//        $statement->execute();
-//    } catch (Exception $ex) {
-//        echo "Error with DB. Details: $ex";
-//        die();
-//    }
-//    
-//    header("Location: /clean/rooms.php");
-//    die();
-//}
+else if (isset($_POST['rTitle'])) {
+    $title = $_POST['rTitle'];
+    
+    try {
+        if ($submitType == "add") {
+            $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':name', $title);
+            $statement->bindValue(':pId', $projectId);
+            $statement->execute();
+        }
+        else if (is_numeric($submitType)) {
+            $query = "UPDATE rooms SET name = :name WHERE id = :pId";
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':name', $title);
+            $statement->bindValue(':pId', $projectId);
+            $statement->execute();
+        }
+    } catch (Exception $ex) {
+        echo "Error with DB. Details: $ex";
+        die();
+    }
+    
+    header("Location: /clean/rooms.php");
+    die();
+}
 
 ?>

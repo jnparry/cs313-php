@@ -53,7 +53,7 @@
 
                         echo "<p class='middle'></p>";
                         echo "<button class='last' type='submit' value='" . $bRow['id'] . "' name='viewRoom'>View</button>";
-                        echo "<button class='last' type='button' onclick='soon()'>Edit</button>";
+                        echo "<button class='last' type='button' onclick=\"showForm('hiddenForm', 'txtTitle', '" . $brow['name'] . ", '" . $brow['id'] . "')\">Edit</button>";
                         echo "</li>";
                     }
                     ?>
@@ -62,14 +62,14 @@
 
             <section class="bottomNav">
                 <button onclick="viewProjects()">&#10094; Back to Projects</button>
-                <button type="button" onclick="showForm('hiddenForm')">Add Room</button>
+                <button type="button" onclick="showForm('hiddenForm', 'txtTitle', 'add')">Add Room</button>
             
                 <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
                     <br/><br/><br/>
                     <label for="txtTitle">Room Name: </label>	
                     <input type="text" id="txtTitle" name="rTitle">
                     <br/><br/>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit">Submit</button>
                 </form>
             </section>
         </section>
