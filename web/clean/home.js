@@ -28,7 +28,7 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function showForm(divName, editName, val) {
+function showForm(divName, editName, val, pId = null) {
     var x = document.getElementById(divName);
     
     // if this is a new button press, reveal the form
@@ -54,7 +54,7 @@ function showForm(divName, editName, val) {
     else {
         document.getElementById(editName).value = val;
         document.getElementById("submit").name = "rename";
-        document.getElementById("submit").value = "rename";
+        document.getElementById("submit").value = pId;
     }
 }
 

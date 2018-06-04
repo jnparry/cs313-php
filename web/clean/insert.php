@@ -3,9 +3,9 @@
 session_start();
 $projectId = $_SESSION['project'];
 
-if ($_POST['rename'])
+if (isset($_POST['rename']))
     $submitType = $_POST['rename'];
-if ($_POST['add'])
+if (isset($_POST['add']))
     $submitType = $_POST['add'];
 
 require("dbConnect.php");
@@ -22,12 +22,12 @@ if (isset($_POST['pTitle'])) {
             $statement->bindValue(':name', $title);
             $statement->execute();
         }
-        else if ($submitType == "rename") {
+        else if (!(isNaN($submitType))) {
             $query = "UPDATE projects SET name = '" . $title . "' WHERE id = ':pId'";
 
             $statement = $db->prepare($query);
 //            $statement->bindValue(':name', $title);
-            $statement->bindValue(':pId', $projectId);
+            $statement->bindValue(':pId', $submitType);
             $statement->execute();
         }
     } catch (Exception $ex) {
