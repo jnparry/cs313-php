@@ -53,7 +53,7 @@
 
                         echo "<p class='middle'></p>";
                         echo "<button class='last' type='submit' value='" . $bRow['id'] . "' name='viewRoom'>View</button>";
-                        echo "<button class='last' type='button' onclick=\"showForm('hiddenForm', 'txtTitle', '" . $brow['name'] . "', '" . $brow['id'] . "')\">Edit</button>";
+                        echo "<button class='last' type='button' onclick=\"showForm('hiddenForm', 'txtTitle', '" . $bRow['name'] . "', '" . $bRow['id'] . "')\">Edit</button>";
                         echo "</li>";
                     }
                     ?>
