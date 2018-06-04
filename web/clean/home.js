@@ -30,7 +30,7 @@ function soon() {
 
 function showForm(divName, editName, val, pId = null) {
     var x = document.getElementById(divName);
-    
+    alert(divName + editName + val + pId);
     // if this is a new button press, reveal the form
     if (val != x.class) {
         x.class = val;
