@@ -23,10 +23,10 @@ if (isset($_POST['pTitle'])) {
             $statement->execute();
         }
         else if (is_numeric($submitType)) {
-            $query = "UPDATE projects SET name = '" . $title . "' WHERE id = ':pId'";
+            $query = "UPDATE projects SET name = '\':title\'' WHERE id = ':pId'";
 
             $statement = $db->prepare($query);
-//            $statement->bindValue(':name', $title);
+            $statement->bindValue(':title', $title);
             $statement->bindValue(':pId', $submitType);
             $statement->execute();
         }
