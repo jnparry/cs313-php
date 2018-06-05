@@ -23,7 +23,7 @@ if (isset($_SESSION["pMatch"])) {
         <h1>Sign-up</h1>
         
         <?php 
-            if (!$pMatch) {
+            if ($pMatch === false) {
                 echo "<p class='red'>Passwords do not match.</p>";
             }
         ?>
@@ -34,7 +34,7 @@ if (isset($_SESSION["pMatch"])) {
             
             <label for="password">Password: 
                 <?php 
-                if (!$pMatch) {
+                if ($pMatch === false) {
                     echo "<span class='red'>*</span>";
                 }
                 ?>
@@ -43,7 +43,7 @@ if (isset($_SESSION["pMatch"])) {
             
             <label for="cpassword">Confirm Password: 
                 <?php 
-                if (!$pMatch) {
+                if ($pMatch === false) {
                     echo "<span class='red'>*</span>";
                 }
                 ?>
