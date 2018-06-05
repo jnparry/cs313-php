@@ -9,6 +9,15 @@ $db = get_db();
 
 $username = $_POST["username"];
 $password = $_POST["password"];
+$cpassword = $_POST["cpassword"];
+
+if ($password !== $cpassword) {
+    $_SESSION["pMatch"] = false;
+    header("Location: /ta07/sup.php");
+    die();
+} else {
+    $_SESSION["pMatch"] = true;
+}
 
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 

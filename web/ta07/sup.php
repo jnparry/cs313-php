@@ -2,6 +2,12 @@
 
 <?php
 
+session_start();
+
+if (isset($_SESSION["pMatch"])) {
+    $pMatch = $_SESSION["pMatch"];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +22,34 @@
     <body>
         <h1>Sign-up</h1>
         
+        <?php 
+            if (!$pMatch) {
+                echo "<p class='red'>Passwords do not match.</p>";
+            }
+        ?>
+        
         <form action="create.php" method="post">
             <label for="username">Username: </label>
             <input type="text" id="username" name="username">
-            <label for="password">Password: </label>
+            
+            <label for="password">Password: 
+                <?php 
+                if (!$pMatch) {
+                    echo "<span class='red'>*</span>";
+                }
+                ?>
+            </label>
             <input type="password" id="password" name="password">
+            
+            <label for="cpassword">Confirm Password: 
+                <?php 
+                if (!$pMatch) {
+                    echo "<span class='red'>*</span>";
+                }
+                ?>
+            </label>
+            <input type="cpassword" id="cpassword" name="cpassword">
+            
             <button type="submit">Sign-up</button>
         </form>
     </body>
