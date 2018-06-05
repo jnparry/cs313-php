@@ -4,6 +4,13 @@
 
 session_start();
 
+if (isset($_SESSION['username'])) {
+    $user = $_SESSION['username'];
+} else {
+    header("Location: /ta07/sin.php");
+    die();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +23,7 @@ session_start();
     </head>
     
     <body>
-        <h1>Homepage</h1>
+        <h1>Welcome <?php echo $user; ?></h1>
+        
     </body>
 </html>
