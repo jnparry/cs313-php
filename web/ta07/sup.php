@@ -16,11 +16,12 @@
     <body>
         <h1>Sign-up</h1>
         
-        <form action="" method="post">
+        <form action="create.php" method="post">
             <label for="username">Username: </label>
             <input type="text" id="username" name="username">
             <label for="password">Password: </label>
             <input type="password" id="password" name="password">
+            <button type="submit">Sign-up</button>
         </form>
     </body>
 </html>
