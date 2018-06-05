@@ -48,7 +48,7 @@ if (isset($_SESSION["pMatch"])) {
                 }
                 ?>
             </label>
-            <input type="cpassword" id="cpassword" name="cpassword">
+            <input type="password" id="cpassword" name="cpassword">
             
             <button type="submit">Sign-up</button>
         </form>
