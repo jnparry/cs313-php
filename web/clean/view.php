@@ -1,6 +1,12 @@
 <?php
 
     session_start();
+
+    if (!isset($_SESSION['project'])) {
+        header("Location: /clean/home.php");
+        die();
+    }
+
     $projectId = $_SESSION['project'];
     $roomId = $_SESSION['room'];
 
@@ -83,7 +89,7 @@
 
                 <section class="bottomNav">
                     <button type="button" onclick="viewRooms()">&#10094; Back to Room</button>
-                    <?php echo "<button type='submit' value='$roomId' name='roomId'>Add Edit</button>"; ?>
+                    <?php echo "<button type='submit' value='$roomId' name='roomId'>Edit</button>"; ?>
                 </section>
             </form>
         </section>

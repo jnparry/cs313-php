@@ -1,6 +1,11 @@
 <?php 
     session_start();
 
+    if (!isset($_SESSION['project'])) {
+        header("Location: /clean/home.php");
+        die();
+    }
+
     if (isset($_POST['projectId'])) {
         
         $_SESSION['project'] = $_POST['projectId'];
