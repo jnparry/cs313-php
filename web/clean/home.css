@@ -126,9 +126,9 @@ ul li:last-child {
     text-decoration: none;
     display: inline-block;
     margin: 0;
+}
     
-/*    position: relative;*/
-/*    display: inline-block;*/
+.popup {
     cursor: pointer;
     user-select: none;
 }
