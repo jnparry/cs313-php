@@ -84,11 +84,14 @@
                                     echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
                                 } else {
                                     echo "is not clean</p>";
+                                    $notClean = True;
                                 }
                             }                            
                                         
-                            echo "</span>
-                            </button>";    
+                            echo "</span>";
+                            if (!$notClean)
+                                echo "Cleaned";
+                            echo"</button>";    
                         }
                     ?>
                 </section>
