@@ -72,14 +72,14 @@
                             id='bookcase'>
                                 <span class='popuptext' id='myPopup" . $row['id'] . "'>";
 
-                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
+                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY shelvesnum');
                             $sstatement->bindValue(':bsid', $row['id']);
                             $sstatement->execute();
 
                             // Go through each shelf in the bookcase
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
-                                echo "<p>This shelf ";
+                                echo "<p>This shelf's number is " . $sRow['shelvesnum'] . "and ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
                                     echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
                                 } else {
