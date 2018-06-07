@@ -72,6 +72,10 @@
                             id='bookcase'>
                                 <span class='popuptext' id='myPopup" . $row['id'] . "'>";
 
+                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
+                            $sstatement->bindValue(':bsid', $row['id']);
+                            $sstatement->execute();
+
                             // Go through each shelf in the bookcase
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
@@ -81,14 +85,10 @@
                                 } else {
                                     echo "is not clean</p>";
                                 }
-                            }
+                            }                            
                                         
                             echo "</span>
-                            </button>";
-
-                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
-                            $sstatement->bindValue(':bsid', $row['id']);
-                            $sstatement->execute();   
+                            </button>";    
                         }
                     ?>
                 </section>
