@@ -29,7 +29,6 @@ function soon() {
 }
 
 function soonClick() {
-    alert("Feature coming soon.");
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
