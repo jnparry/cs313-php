@@ -72,5 +72,23 @@ else if (isset($_POST['rTitle'])) {
     header("Location: /clean/rooms.php");
     die();
 }
+else if (isset($_POST['shelfnum'])) {
+    $roomId = $_SESSION['room'];
+    $num = $_POST['shelfnum'];
+    
+    try {
+        $query = "INSERT INTO bookshelves(roomsid, isclean, date, x, y) VALUES(:rId, FALSE, NULL, 0, 0)";
+
+        $statement = $db->prepare($query);
+        $statement->bindValue(':rId', $roomId);
+        $statement->execute();
+    } catch (Exception $ex) {
+        echo "Error with DB. Details: $ex";
+        die();
+    }
+    
+    header("Location: /clean/bookshelves.php");
+    die();
+}
 
 ?>

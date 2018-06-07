@@ -28,6 +28,10 @@ function soon() {
     alert("Feature coming soon.");
 }
 
+function test() {
+    alert("Clicked");
+}
+
 function showForm(divName, editName, val, pId = null) {
     var x = document.getElementById(divName);
 

@@ -85,9 +85,10 @@
                 </div>
                 
                 <section>
+                    <form action=""
                     <p>Number of shelves</p>
-                    <input type="number" min="0" max="10">
-                    <button type="button" onclick="posit()">Add Bookshelf</button>
+                    <input type="number" min="0" max="10" required>
+                    <button type="submit" onclick="generateBC()" id="shelfnum" name="shelfnum">Add Bookshelf</button>
                 </section>
                 
             </section>

@@ -67,7 +67,7 @@
                         $bstatement->execute();
 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<button type='button' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
+                            echo "<button type='button' onclick='test()' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'></button>";
 
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                             $sstatement->bindValue(':bsid', $row['id']);
@@ -88,6 +88,7 @@
                 </section>
 
                 <section class="bottomNav">
+                    <br/>
                     <button type="button" onclick="viewRooms()">&#10094; Back to Room</button>
                     <?php echo "<button type='submit' value='$roomId' name='roomId'>Edit</button>"; ?>
                 </section>
