@@ -42,7 +42,7 @@
             <form action="phpSession.php" method="post" name="rooms">
                 <ul>
                     <?php
-                    $bstatement = $db->prepare("SELECT * FROM rooms WHERE projectsid = :projectId");
+                    $bstatement = $db->prepare("SELECT * FROM rooms WHERE projectsid = :projectId ORDER BY id");
                     $bstatement->bindValue(':projectId', $projectId);
                     $bstatement->execute();
 

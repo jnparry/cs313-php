@@ -22,7 +22,7 @@
         <form action="phpSession.php" method="post" name="projects">
             <ul>
                 <?php
-                    $statement = $db->prepare("SELECT * FROM projects");
+                    $statement = $db->prepare("SELECT * FROM projects ORDER BY id");
                     $statement->execute();
      
                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
