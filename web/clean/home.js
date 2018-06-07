@@ -73,7 +73,10 @@ function positt(idName) {
 }
      
 // for desktop w/ mouse click events
-function mouse(item, event) { // (1) start the process
+function mouse(item, event) {
+    var clickIsValid = true;
+    var delay = 220; // milliseconds before click doesn't count
+    cancelClick = setTimeout( notAClick, delay );
 
     // (2) prepare to moving: make absolute and on top by z-index
     item.style.position = 'absolute';
@@ -130,12 +133,17 @@ function mouse(item, event) { // (1) start the process
         
         moveAt(xc, yc);
     }
+    
+    var notAClick = function() {
+        clickIsValid = false;
+    }
 
     // (3) move the ball on mousemove
     document.addEventListener('mousemove', onMouseMove);
 
     // (4) drop the ball, remove unneeded handlers
     item.onmouseup = function() {
+        clearTimeout( cancelClick );
         document.removeEventListener('mousemove', onMouseMove);
         item.onmouseup = null;
     };
@@ -143,6 +151,13 @@ function mouse(item, event) { // (1) start the process
     item.ondragstart = function() {
         return false;
     };
+    
+    if (clickIsValid) {
+        alert("THat was a click?");
+    }
+    
+    // reset click to true.
+    clickIsValid = true;
 }
 
 // for phone w/ touch events
