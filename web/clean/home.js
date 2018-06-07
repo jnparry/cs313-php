@@ -146,15 +146,14 @@ function mouse(item, event) {
         clearTimeout( cancelClick );
         document.removeEventListener('mousemove', onMouseMove);
         item.onmouseup = null;
+        if (clickIsValid) {
+            alert("THat was a click?");
+    }
     };
 
     item.ondragstart = function() {
         return false;
     };
-    
-    if (clickIsValid) {
-        alert("THat was a click?");
-    }
     
     // reset click to true.
     clickIsValid = true;
