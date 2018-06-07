@@ -68,7 +68,7 @@
 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                             echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' 
-                            style='max-height: 10px; max-width: 100px; position: absolute; 
+                            style='max-height: 10px; max-width: 100px; color: black; position: absolute; 
                             left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'>
                                 <span class='popuptext' id='myPopup" . $row['id'] . "'>";
 
@@ -90,7 +90,7 @@
                                         
                             echo "</span>";
                             if (!$notClean)
-                                echo "<p>Clean</p>";
+                                echo "Clean";
                             echo"</button>";    
                         }
                     ?>
