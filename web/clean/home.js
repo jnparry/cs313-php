@@ -28,8 +28,8 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function popUp() {
-    var popup = document.getElementById("myPopup");
+function popUp(num) {
+    var popup = document.getElementById("myPopup" + num);
     popup.classList.toggle("show");
 }
 

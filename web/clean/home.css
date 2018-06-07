@@ -57,12 +57,6 @@ ul li:last-child {
     max-width: 30px;
 }
 
-/*
-#hiddenForm {
-    display: none;
-}
-*/
-
 #hiddenForm button {
     background-color: #4CAF50; 
 }
