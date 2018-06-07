@@ -2,11 +2,6 @@
 
 session_start();
 
-if (!isset($_SESSION['project'])) {
-    header("Location: /clean/home.php");
-    die();
-}
-
 $projectId = $_SESSION['project'];
 
 if (isset($_POST['rename']))
