@@ -40,10 +40,12 @@ function showForm(divName, editName, val, pId = null) {
     if (val != x.class) {
         x.class = val;
         x.style.display = "block";
+        location.href = "#anchor";
     }
     else {
         if (x.style.display === "none") {
             x.style.display = "block";
+            location.href = "#anchor";
         }
         else {
             x.style.display = "none";

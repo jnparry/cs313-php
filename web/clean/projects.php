@@ -50,7 +50,7 @@
             
             <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
                 <br/><br/><br/>
-                <label for="txtTitle">Project Name: </label>	
+                <label id="anchor" for="txtTitle">Project Name: </label>	
                 <input type="text" id="txtTitle" name="pTitle">
                 <br/><br/>
                 <button type="submit" id="submit">Submit</button>
