@@ -28,8 +28,8 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function test() {
-    alert("Clicked");
+function soonClick() {
+    alert("Feature coming soon.");
 }
 
 function showForm(divName, editName, val, pId = null) {
