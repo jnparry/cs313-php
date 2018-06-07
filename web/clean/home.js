@@ -75,7 +75,7 @@ function positt(idName) {
 // for desktop w/ mouse click events
 function mouse(item, event) {
     var clickIsValid = true;
-    var delay = 220; // milliseconds before click doesn't count
+    var delay = 200; // milliseconds before click doesn't count
     
     var notAClick = function() {
         clickIsValid = false;
@@ -148,7 +148,7 @@ function mouse(item, event) {
         document.removeEventListener('mousemove', onMouseMove);
         item.onmouseup = null;
         if (clickIsValid) {
-            alert("THat was a click?");
+            alert("That was a click?");
     }
     };
 
