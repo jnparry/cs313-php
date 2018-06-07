@@ -67,7 +67,11 @@
                         $bstatement->execute();
 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'><span class='popuptext' id='myPopup" . $row['id'] . "'>A Simple Popup!</span></button>";
+                            echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' 
+                            style='position: absolute; left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' 
+                            id='bookcase'>
+                                <span class='popuptext' id='myPopup" . $row['id'] . "'>A Simple Popup!</span>
+                            </button>";
 
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                             $sstatement->bindValue(':bsid', $row['id']);
