@@ -76,6 +76,11 @@ function positt(idName) {
 function mouse(item, event) {
     var clickIsValid = true;
     var delay = 220; // milliseconds before click doesn't count
+    
+    var notAClick = function() {
+        clickIsValid = false;
+    }
+    
     cancelClick = setTimeout( notAClick, delay );
 
     // (2) prepare to moving: make absolute and on top by z-index
@@ -132,10 +137,6 @@ function mouse(item, event) {
         }
         
         moveAt(xc, yc);
-    }
-    
-    var notAClick = function() {
-        clickIsValid = false;
     }
 
     // (3) move the ball on mousemove
