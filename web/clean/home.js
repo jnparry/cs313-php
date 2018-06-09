@@ -67,7 +67,7 @@ function showForm(divName, editName, val, pId = null) {
 
 function positt(idName) {
 //    $(document).ready(function() {
-        var x = idName.position;
+        var x = document.getElementById(idName).position;
         alert("t: " + x.top + " L: " + x.left + " r: " + x.right + "b: " + x.bottom);
 //    });
 }
