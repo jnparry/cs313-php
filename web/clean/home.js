@@ -68,8 +68,8 @@ function showForm(divName, editName, val, pId = null) {
 function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
-        var pos = x[1].style;
-        alert("Top: " . pos.top);
+//        var pos = x[1].style;
+        alert("Top: " . x[i].style.top);
     }
 }
      
