@@ -65,12 +65,12 @@ function showForm(divName, editName, val, pId = null) {
     }
 }
 
-function saveChanges() {
-    var x = document.getElementsByClassName("cases");
-    for (var i = 0; i < x.length; i++) {
-        alert("Top: " . x[i].top . "Bottom: " . x[i].bottom . "Left: " . x[i].left . "Right: " . x[i].right);
-    }
-}
+//function saveChanges() {
+//    var x = document.getElementsByClassName("cases");
+//    for (var i = 0; i < x.length; i++) {
+//        alert("Top: " . x[i].top . "Bottom: " . x[i].bottom . "Left: " . x[i].left . "Right: " . x[i].right);
+//    }
+//}
      
 // for desktop w/ mouse click events
 function mouse(item, event) {
