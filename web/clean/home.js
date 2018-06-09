@@ -66,10 +66,10 @@ function showForm(divName, editName, val, pId = null) {
 }
 
 function positt(idName) {
-    $(document).ready(function() {
-        var x = $(idName).position();
+//    $(document).ready(function() {
+        var x = idName.position();
         alert("t: " + x.top + " L: " + x.left + " r: " + x.right + "b: " + x.bottom);
-    });
+//    });
 }
      
 // for desktop w/ mouse click events
