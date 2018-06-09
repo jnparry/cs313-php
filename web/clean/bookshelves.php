@@ -64,7 +64,7 @@
                                 }
                             </style>';
 
-                        echo "<button style='max-height: 10px;' type='button' id='bookcase" . $row['id'] . "' onmousedown='mouse(this, event)'></button>";
+                        echo "<button style='max-height: 10px;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown='mouse(this, event)'></button>";
 
                         $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                         $sstatement->bindValue(':bsid', $row['id']);
@@ -95,8 +95,8 @@
             </section>
 
             <section class="bottomNav">
-                <button onclick="viewViews()">&#10094; Back to Layout</button>
                 <button onclick="viewRooms()">&#10094; Back to Rooms</button>
+                <button onclick="saveChanges()">Save Changes</button>
             </section>
         </section>
     </body>
