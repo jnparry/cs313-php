@@ -149,6 +149,7 @@ function mouse(item, event) {
         item.onmouseup = null;
         if (clickIsValid) {
             alert("That was a click?");
+            positt(item);
     }
     };
 
@@ -158,41 +159,4 @@ function mouse(item, event) {
     
     // reset click to true.
     clickIsValid = true;
-}
-
-// for phone w/ touch events
-function touch(item, event) { // (1) start the process
-
-    // (2) prepare to moving: make absolute and on top by z-index
-    item.style.position = 'absolute';
-    item.style.zIndex = 1000;
-    // move it out of any current parents directly into body
-    // to make it positioned relative to the body
-    document.body.append(item);
-    // ...and put that absolutely positioned ball under the cursor
-
-    moveAt(event.pageX, event.pageY);
-
-    // centers the ball at (pageX, pageY) coordinates
-    function moveAt(pageX, pageY) {
-    item.style.left = pageX - item.offsetWidth / 2 + 'px';
-    item.style.top = pageY - item.offsetHeight / 2 + 'px';
-    }
-
-    function onMouseMove(event) {
-    moveAt(event.pageX, event.pageY);
-    }
-
-    // (3) move the ball on mousemove
-    document.addEventListener('mousemove', onMouseMove);
-
-    // (4) drop the ball, remove unneeded handlers
-    item.ontouchend = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    item.ontouchend = null;
-    };
-
-    item.ondragstart = function() {
-        return false;
-    };
 }
