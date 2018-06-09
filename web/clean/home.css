@@ -127,6 +127,7 @@ ul li:last-child {
 }
     
 .popup {
+    padding: 0;
     cursor: pointer;
     user-select: none;
 }
