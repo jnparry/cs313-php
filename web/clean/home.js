@@ -149,7 +149,7 @@ function mouse(item, event) {
         item.onmouseup = null;
         if (clickIsValid) {
             alert("That was a click?");
-            positt(item);
+            positt(item.id);
     }
     };
 
