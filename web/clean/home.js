@@ -69,7 +69,7 @@ function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
         var top = x[i].style.top;
-        alert("What?" . top);
+        alert("What?" + top);
     }
 }
      
