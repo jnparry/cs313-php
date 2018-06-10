@@ -35,6 +35,7 @@ function popUp(num) {
 
 function deleteThis() {
 	document.getElementById("sub").name = "delete";
+    document.getElementById("delete").name = "delete";
     document.getElementById("hiddenForm").submit();
 }
 
@@ -68,6 +69,7 @@ function showForm(divName, editName, val, pId = null) {
         document.getElementById(editName).value = val;
         document.getElementById("sub").name = "rename";
         document.getElementById("sub").value = pId;
+        document.getElementById("delete").value = pId;
         document.getElementById("delete").style.display = "block";
     }
 }
