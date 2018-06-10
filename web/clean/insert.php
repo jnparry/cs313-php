@@ -8,6 +8,11 @@ if (isset($_POST['rename']))
     $submitType = $_POST['rename'];
 if (isset($_POST['add']))
     $submitType = $_POST['add'];
+if (isset($_POST['remove'])) {
+    $_SESSION["deleteId"] = $_POST['remove'];
+    header("Location: /clean/remove.php");
+    die();
+}
 
 require("dbConnect.php");
 $db = get_db();

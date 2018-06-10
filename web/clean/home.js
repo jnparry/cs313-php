@@ -49,7 +49,8 @@ function showForm(divName, editName, val, pId = null) {
         document.getElementById(editName).value = val;
         document.getElementById("submit").name = "rename";
         document.getElementById("submit").value = pId;
-        document.getElementById("remove").style.display = "block";
+        document.getElementById("remove").value = pId;
+        document.getElementById("remove").style.display = "initial";
         add = false;
     }
 
