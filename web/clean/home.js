@@ -163,4 +163,5 @@ function mouse(item, event) {
     
     // reset click to true.
     clickIsValid = true;
+    document.body.removeChild(item);
 }
