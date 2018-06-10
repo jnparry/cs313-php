@@ -54,10 +54,7 @@ else if (isset($_POST['rTitle'])) {
     $title = $_POST['rTitle'];
     
     try {
-        if ($submitType == "add") {
-            header("Location: /clean/view.php");
-            die();
-            
+        if ($submitType == "add") {            
             $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
 
             $statement = $db->prepare($query);
@@ -73,7 +70,7 @@ else if (isset($_POST['rTitle'])) {
 
             $statement = $db->prepare($query);
             $statement->bindValue(':name', $title);
-            $statement->bindValue(':pId', $projectId);
+            $statement->bindValue(':pId', $submitType);
             $statement->execute();
         }
     } catch (Exception $ex) {
