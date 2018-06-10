@@ -60,7 +60,7 @@
                                 #bookcase' . $row['id'] . ' {
                                     position: absolute;
                                     left: ' . $row['x'] . 'px;
-                                    bottom: ' . $row['y'] . 'px;
+                                    top: ' . $row['y'] . 'px;
                                 }
                             </style>';
 
