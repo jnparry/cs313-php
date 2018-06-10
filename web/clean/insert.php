@@ -4,8 +4,10 @@ session_start();
 
 $projectId = $_SESSION['project'];
 
-if (isset($_POST['rename']))
+if (isset($_POST['rename'])) {
+    echo "Fire 0";
     $submitType = $_POST['rename'];
+}
 if (isset($_POST['add']))
     $submitType = $_POST['add'];
 if (isset($_POST['removeP'])) {
@@ -62,6 +64,7 @@ else if (isset($_POST['rTitle'])) {
             $statement->execute();
         }
         else if (is_numeric($submitType)) {
+            echo "Fire1";
             $query = "UPDATE rooms SET name = :name WHERE id = :pId";
 
             $statement = $db->prepare($query);
