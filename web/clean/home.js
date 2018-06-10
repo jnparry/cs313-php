@@ -40,12 +40,12 @@ function showForm(divName, editName, val, pId = null) {
     if (val != x.class) {
         x.class = val;
         x.style.display = "block";
-        location.href = "#submit";
+        location.href = "#remove";
     }
     else {
         if (x.style.display === "none") {
             x.style.display = "block";
-            location.href = "#anchor";
+            location.href = "#remove";
         }
         else {
             x.style.display = "none";
