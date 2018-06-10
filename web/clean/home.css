@@ -104,7 +104,7 @@ ul li:last-child {
     padding: 10px;
 }
 
-#remove {
+#hiddenForm #remove {
     background-color: red;
 }
 
