@@ -89,7 +89,7 @@ function mouse(item, event) {
     cancelClick = setTimeout( notAClick, delay );
 
     // (2) prepare to moving: make absolute and on top by z-index
-//    item.style.position = 'absolute';
+    item.style.position = 'relative';
     item.style.zIndex = 1000;
     
     // move it out of any current parents directly into body
@@ -101,8 +101,8 @@ function mouse(item, event) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = pageX - area.offset.left - item.offsetWidth / 2 + 'px';
-        item.style.top = pageY - area.offset.top - item.offsetHeight / 2 + 'px';
+        item.style.left = pageX - item.offsetWidth / 2 + 'px';
+        item.style.top = pageY - item.offsetHeight / 2 + 'px';
     }
 
     function onMouseMove(event) {
