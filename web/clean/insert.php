@@ -5,7 +5,8 @@ session_start();
 $projectId = $_SESSION['project'];
 
 if (isset($_POST['rename'])) {
-    echo "Fire 0";
+    header("Location: /clean/view.php");
+    die();
     $submitType = $_POST['rename'];
 }
 if (isset($_POST['add']))
@@ -16,9 +17,11 @@ if (isset($_POST['removeP'])) {
     die();
 }
 if (isset($_POST['removeRoom'])) {
-//    $_SESSION["deleteId"] = $_POST['removeRoom'];
-//    header("Location: /clean/removeRoom.php");
-//    die();
+    header("Location: /clean/bookshelves.php");
+    die();
+    $_SESSION["deleteId"] = $_POST['removeRoom'];
+    header("Location: /clean/removeRoom.php");
+    die();
 }
 
 require("dbConnect.php");
