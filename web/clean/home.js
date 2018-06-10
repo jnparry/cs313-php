@@ -89,13 +89,14 @@ function mouse(item, event) {
     cancelClick = setTimeout( notAClick, delay );
 
     // (2) prepare to moving: make absolute and on top by z-index
-    item.style.position = 'absolute';
+//    item.style.position = 'absolute';
     item.style.zIndex = 1000;
+    
     // move it out of any current parents directly into body
     // to make it positioned relative to the body
-    document.body.append(item);
+//    document.body.append(item);
+    
     // ...and put that absolutely positioned ball under the cursor
-
     moveAt(event.pageX, event.pageY);
 
     // centers the ball at (pageX, pageY) coordinates
@@ -163,6 +164,6 @@ function mouse(item, event) {
     
     // reset click to true.
     clickIsValid = true;
-    document.getElementById(area).append(item);
-    document.body.removeChild(item);
+//    document.getElementById(area).append(item);
+//    document.body.removeChild(item);
 }
