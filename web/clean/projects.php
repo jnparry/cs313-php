@@ -54,6 +54,7 @@
                 <input type="text" id="txtTitle" name="pTitle">
                 <br/><br/>
                 <button type="submit" id="submit">Submit</button>
+                <button type="submit" id="remove" style="display: none;">Delete</button>
             </form>
             
         </section>
