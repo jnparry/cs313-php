@@ -104,6 +104,10 @@ ul li:last-child {
     padding: 10px;
 }
 
+#remove {
+    background-color: red;
+}
+
 .sidenav {
     height: 100%;
     width: 0;

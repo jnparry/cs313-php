@@ -34,6 +34,20 @@ function popUp(num) {
 }
 
 function showForm(divName, editName, val, pId = null) {
+    // if it's the add button, there should be no automatic text to edit
+    if (val == 'add') {
+        document.getElementById(editName).value = "";
+        document.getElementById("submit").name = "add";
+        document.getElementById("submit").value = "add";
+        document.getElementById("remove").style.display = "none";
+    }
+    else {
+        document.getElementById(editName).value = val;
+        document.getElementById("submit").name = "rename";
+        document.getElementById("submit").value = pId;
+        document.getElementById("remove").style.display = "block";
+    }
+    
     var x = document.getElementById(divName);
 
     // if this is a new button press, reveal the form
@@ -50,20 +64,6 @@ function showForm(divName, editName, val, pId = null) {
         else {
             x.style.display = "none";
         }
-    }
-    
-    // if it's the add button, there should be no automatic text to edit
-    if (val == 'add') {
-        document.getElementById(editName).value = "";
-        document.getElementById("submit").name = "add";
-        document.getElementById("submit").value = "add";
-        document.getElementById("remove").style.display = "none";
-    }
-    else {
-        document.getElementById(editName).value = val;
-        document.getElementById("submit").name = "rename";
-        document.getElementById("submit").value = pId;
-        document.getElementById("remove").style.display = "block";
     }
 }
 
