@@ -57,14 +57,11 @@ function showForm(divName, editName, val, pId = null) {
         document.getElementById(editName).value = "";
         document.getElementById("submit").name = "add";
         document.getElementById("submit").value = "add";
-        document.getElementById("deleteForm").style.display = "none";
     }
     else {
         document.getElementById(editName).value = val;
         document.getElementById("submit").name = "rename";
         document.getElementById("submit").value = pId;
-        document.getElementById("deleteForm").value = pId;
-        document.getElementById("deleteForm").style.display = "block";
     }
 }
 

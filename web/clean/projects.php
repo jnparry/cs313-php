@@ -56,10 +56,6 @@
                 <button type="submit" id="submit">Submit</button>
             </form>
             
-            <form action="" method="post" id="deleteForm" style="display: none;">
-                <button type="submit" id="del"></button>
-            </form>
-            
         </section>
     </body>
 </html>

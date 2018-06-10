@@ -75,7 +75,7 @@
                     <label id="anchor" for="txtTitle">Room Name: </label>	
                     <input type="text" id="txtTitle" name="rTitle">
                     <br/><br/>
-                    <button type="submit" id="sub">Submit</button>
+                    <button type="submit" id="submit">Submit</button>
                 </form>
             </section>
         </section>
