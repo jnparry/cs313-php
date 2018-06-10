@@ -8,9 +8,14 @@ if (isset($_POST['rename']))
     $submitType = $_POST['rename'];
 if (isset($_POST['add']))
     $submitType = $_POST['add'];
-if (isset($_POST['remove'])) {
-    $_SESSION["deleteId"] = $_POST['remove'];
+if (isset($_POST['removeP'])) {
+    $_SESSION["deleteId"] = $_POST['removeP'];
     header("Location: /clean/remove.php");
+    die();
+}
+if (isset($_POST['removeRoom'])) {
+    $_SESSION["deleteId"] = $_POST['removeRoom'];
+    header("Location: /clean/removeRoom.php");
     die();
 }
 

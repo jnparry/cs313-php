@@ -76,6 +76,7 @@
                     <input type="text" id="txtTitle" name="rTitle">
                     <br/><br/>
                     <button type="submit" id="submit">Submit</button>
+                    <button type="submit" id="remove" name="removeRoom" style="display: none;">Delete</button>
                 </form>
             </section>
         </section>
