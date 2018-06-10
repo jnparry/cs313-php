@@ -99,7 +99,7 @@ function mouse(item, event) {
     // ...and put that absolutely positioned ball under the cursor
     moveAt(event.pageX, event.pageY);
     
-    alert(event.pageX, event.pageY);
+    alert(event.pageX + ", " + event.pageY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
