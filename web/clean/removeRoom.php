@@ -2,7 +2,7 @@
 
 session_start();
 
-$projectId = $_SESSION['project']
+$projectId = $_SESSION['project'];
 $roomId = $_SESSION['deleteId'];
 
 //if (!isset($projectId)) {
