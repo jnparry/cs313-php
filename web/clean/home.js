@@ -73,11 +73,13 @@ function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
         var myId = x[i].id;
-        var left = myId.getBoundingClientRect().left;
-        var right = myId.getBoundingClientRect().right;
-        var top = myId.getBoundingClientRect().top;
-        var bottom = myId.getBoundingClientRect().bottom;
-        alert("L: " + left);
+        alert("TOP: " + document.getElementById(x[i].id).style.position.top);
+        
+//        var left = myId.getBoundingClientRect().left;
+//        var right = myId.getBoundingClientRect().right;
+//        var top = myId.getBoundingClientRect().top;
+//        var bottom = myId.getBoundingClientRect().bottom;
+//        alert("L: " + left);
     }
 }
      
