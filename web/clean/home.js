@@ -163,6 +163,6 @@ function mouse(item, event) {
     
     // reset click to true.
     clickIsValid = true;
-    document.body.removeChild(item);
     document.getElementById(area).append(item);
+    document.body.removeChild(item);
 }
