@@ -23,10 +23,7 @@ if (isset($_POST['removeRoom'])) {
 require("dbConnect.php");
 $db = get_db();
 
-if (isset($_POST['pTitle'])) {
-    header("Location: /clean/view.php");
-    die();
-    
+if (isset($_POST['pTitle'])) {    
     $title = $_POST['pTitle'];
     
     try {
@@ -53,14 +50,14 @@ if (isset($_POST['pTitle'])) {
     header("Location: /clean/projects.php");
     die();
 }
-else if (isset($_POST['rTitle'])) {
-    header("Location: /clean/projects.php");
-    die();
-    
+else if (isset($_POST['rTitle'])) {    
     $title = $_POST['rTitle'];
     
     try {
         if ($submitType == "add") {
+            header("Location: /clean/view.php");
+            die();
+            
             $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
 
             $statement = $db->prepare($query);
@@ -69,7 +66,9 @@ else if (isset($_POST['rTitle'])) {
             $statement->execute();
         }
         else if (is_numeric($submitType)) {
-            echo "Fire1";
+            header("Location: /clean/projects.php");
+            die();
+
             $query = "UPDATE rooms SET name = :name WHERE id = :pId";
 
             $statement = $db->prepare($query);
