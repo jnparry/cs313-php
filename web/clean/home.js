@@ -72,8 +72,8 @@ function saveChanges() {
     
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
-        var myId = x[i].id;
-        alert("TOP: " + document.getElementById(x[i].id).style.top);
+        var myId = document.getElementById(x[i].id).style;
+        alert("TOP: " + myId.top + ", LEFT: " + myId.left + ", BOTTOM: " + myId.bottom + ", RIGHT: " + myId.right);
     }
 }
      
