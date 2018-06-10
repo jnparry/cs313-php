@@ -73,7 +73,7 @@ function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
         var myId = x[i].id;
-        alert("TOP: " + document.getElementById(x[i].id).style.position.top);
+        alert("TOP: " + document.getElementById(x[i].id).top);
         
 //        var left = myId.getBoundingClientRect().left;
 //        var right = myId.getBoundingClientRect().right;
