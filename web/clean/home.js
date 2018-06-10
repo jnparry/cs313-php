@@ -72,7 +72,7 @@ function saveChanges() {
     
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
-        alert(document.getElementsByClassName('myClassName')[i].id);
+        alert(x[i].id);
     }
 }
      
