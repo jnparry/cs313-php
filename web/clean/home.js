@@ -101,8 +101,8 @@ function mouse(item, event) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = pageX - item.offsetWidth / 2 + 'px';
-        item.style.top = pageY - item.offsetHeight / 2 + 'px';
+        item.style.left = pageX + 'px';
+        item.style.top = pageY + 'px';
     }
 
     function onMouseMove(event) {
