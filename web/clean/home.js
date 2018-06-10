@@ -72,14 +72,9 @@ function saveChanges() {
     
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
+        document.getElementById("area").append(x[i]);
         var myId = x[i].id;
         alert("TOP: " + document.getElementById(x[i].id).style.top);
-        
-//        var left = myId.getBoundingClientRect().left;
-//        var right = myId.getBoundingClientRect().right;
-//        var top = myId.getBoundingClientRect().top;
-//        var bottom = myId.getBoundingClientRect().bottom;
-//        alert("L: " + left);
     }
 }
      
