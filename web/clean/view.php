@@ -69,7 +69,7 @@
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                             echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' 
                             style='height: 32px; width: 64px; color: black; position: absolute; 
-                            left: " . $row['x'] . "px; bottom: " . $row['y'] . "px;' id='bookcase'>
+                            left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>
                                 <span class='popuptext' id='myPopup" . $row['id'] . "'>";
 
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY shelvesnum');

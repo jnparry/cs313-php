@@ -33,6 +33,12 @@ function popUp(num) {
     popup.classList.toggle("show");
 }
 
+function deleteThis() {
+	document.getElementById("submit").name = "delete!";
+    document.getElementById("submit").value = "delete!";
+    document.getElementById("hiddenForm").submit();
+}
+
 function showForm(divName, editName, val, pId = null) {
     var x = document.getElementById(divName);
 
@@ -57,11 +63,13 @@ function showForm(divName, editName, val, pId = null) {
         document.getElementById(editName).value = "";
         document.getElementById("submit").name = "add";
         document.getElementById("submit").value = "add";
+        document.getElementById("delete").style.display = "none";
     }
     else {
         document.getElementById(editName).value = val;
         document.getElementById("submit").name = "rename";
         document.getElementById("submit").value = pId;
+        document.getElementById("delete").style.display = "block";
     }
 }
 
