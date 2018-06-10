@@ -34,6 +34,7 @@ function popUp(num) {
 }
 
 function deleteThis() {
+    alert("FUUuuuuUUU");
 	document.getElementById("sub").name = "delete";
     document.getElementById("delete").name = "delete";
     document.getElementById("hiddenForm").submit();
