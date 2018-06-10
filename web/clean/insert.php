@@ -5,8 +5,6 @@ session_start();
 $projectId = $_SESSION['project'];
 
 if (isset($_POST['rename'])) {
-    header("Location: /clean/view.php");
-    die();
     $submitType = $_POST['rename'];
 }
 if (isset($_POST['add']))
@@ -17,8 +15,6 @@ if (isset($_POST['removeP'])) {
     die();
 }
 if (isset($_POST['removeRoom'])) {
-    header("Location: /clean/bookshelves.php");
-    die();
     $_SESSION["deleteId"] = $_POST['removeRoom'];
     header("Location: /clean/removeRoom.php");
     die();
@@ -28,6 +24,9 @@ require("dbConnect.php");
 $db = get_db();
 
 if (isset($_POST['pTitle'])) {
+    header("Location: /clean/view.php");
+    die();
+    
     $title = $_POST['pTitle'];
     
     try {
@@ -55,6 +54,9 @@ if (isset($_POST['pTitle'])) {
     die();
 }
 else if (isset($_POST['rTitle'])) {
+    header("Location: /clean/projects.php");
+    die();
+    
     $title = $_POST['rTitle'];
     
     try {
