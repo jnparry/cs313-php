@@ -23,5 +23,5 @@ try {
     die();
 } 
 
-header("Location: /clean/projects.php");
-die();
+//header("Location: /clean/projects.php");
+//die();
