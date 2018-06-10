@@ -72,7 +72,12 @@ function saveChanges() {
     
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
-        alert(x[i].id);
+        var myId = x[i].id;
+        var left = myId.getBoundingClientRect().left;
+        var right = myId.getBoundingClientRect().right;
+        var top = myId.getBoundingClientRect().top;
+        var bottom = myId.getBoundingClientRect().bottom;
+        alert("L: " + left ", R: " + right + ", T: " + top + ", B: " + bottom);
     }
 }
      
