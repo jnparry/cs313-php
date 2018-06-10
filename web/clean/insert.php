@@ -4,18 +4,15 @@ session_start();
 
 $projectId = $_SESSION['project'];
 
+if (isset($_POST['delete'])) {
+    $_SESSION['deleteId'] = $_POST['delete'];
+    header("Location: /clean/remove.php");
+    die();
+}
 if (isset($_POST['rename']))
     $submitType = $_POST['rename'];
 if (isset($_POST['add']))
     $submitType = $_POST['add'];
-if (isset($_POST['delete'])) {
-//    $_SESSION['deleteId'] = $_POST['delete'];
-//    header("Location: /clean/remove.php");
-//    die();
-    echo "HULLABALOO";
-}
-else
-    echo "NOTHING";
 
 require("dbConnect.php");
 $db = get_db();
