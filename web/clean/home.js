@@ -72,7 +72,6 @@ function saveChanges() {
     
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
-        document.getElementById("area").append(x[i]);
         var myId = x[i].id;
         alert("TOP: " + document.getElementById(x[i].id).style.top);
     }
@@ -94,74 +93,74 @@ function mouse(item, event) {
     item.style.zIndex = 1000;
     // move it out of any current parents directly into body
     // to make it positioned relative to the body
-//    document.body.append(item);
+    document.body.append(item);
     // ...and put that absolutely positioned ball under the cursor
 
-    moveAt(event.clientX, event.clientY);
+    moveAt(event.pageX, event.pageY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
         item.style.left = pageX - item.offsetWidth / 2 + 'px';
         item.style.top = pageY - item.offsetHeight / 2 + 'px';
     }
-//
-//    function onMouseMove(event) {
-//        var xc = event.pageX;
-//        var yc = event.pageY;
-//        
-//        var left = area.getBoundingClientRect().left;
-//        var right = area.getBoundingClientRect().right;
-//        var top = area.getBoundingClientRect().top;
-//        var bottom = area.getBoundingClientRect().bottom;
-//        
-//        // if too far to the right
-//        if (xc + (item.offsetWidth / 2 ) >= right) {
-//            xc = right - (item.offsetWidth);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
-//        }
-//        
-//        // if too far to the left
-//        if (xc - (item.offsetWidth / 2) <= left) {
-//            xc = left + (item.offsetWidth);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;  
-//        }
-//        
-//        // if too far up
-//        if (yc + (item.offsetHeight / 2) >= bottom) {
-//            yc = bottom - (item.offsetHeight);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
-//        }
-//        
-//        // if too far down
-//        if (yc - (item.offsetHeight / 2) <= top) {
-//            yc = top + (item.offsetHeight);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
-//        }
-//        
-//        moveAt(xc, yc);
-//    }
-//
-//    // (3) move the ball on mousemove
-//    document.addEventListener('mousemove', onMouseMove);
-//
-//    // (4) drop the ball, remove unneeded handlers
-//    item.onmouseup = function() {
-//        clearTimeout( cancelClick );
-//        document.removeEventListener('mousemove', onMouseMove);
-//        item.onmouseup = null;
-//        if (clickIsValid) {
-//            alert("That was a click?");
-//        }
-//    };
-//
-//    item.ondragstart = function() {
-//        return false;
-//    };
-//    
-//    // reset click to true.
-//    clickIsValid = true;
+
+    function onMouseMove(event) {
+        var xc = event.pageX;
+        var yc = event.pageY;
+        
+        var left = area.getBoundingClientRect().left;
+        var right = area.getBoundingClientRect().right;
+        var top = area.getBoundingClientRect().top;
+        var bottom = area.getBoundingClientRect().bottom;
+        
+        // if too far to the right
+        if (xc + (item.offsetWidth / 2 ) >= right) {
+            xc = right - (item.offsetWidth);
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
+        
+        // if too far to the left
+        if (xc - (item.offsetWidth / 2) <= left) {
+            xc = left + (item.offsetWidth);
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;  
+        }
+        
+        // if too far up
+        if (yc + (item.offsetHeight / 2) >= bottom) {
+            yc = bottom - (item.offsetHeight);
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
+        
+        // if too far down
+        if (yc - (item.offsetHeight / 2) <= top) {
+            yc = top + (item.offsetHeight);
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
+        
+        moveAt(xc, yc);
+    }
+
+    // (3) move the ball on mousemove
+    document.addEventListener('mousemove', onMouseMove);
+
+    // (4) drop the ball, remove unneeded handlers
+    item.onmouseup = function() {
+        clearTimeout( cancelClick );
+        document.removeEventListener('mousemove', onMouseMove);
+        item.onmouseup = null;
+        if (clickIsValid) {
+            alert("That was a click?");
+        }
+    };
+
+    item.ondragstart = function() {
+        return false;
+    };
+    
+    // reset click to true.
+    clickIsValid = true;
 }
