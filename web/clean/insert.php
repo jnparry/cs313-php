@@ -4,9 +4,8 @@ session_start();
 
 $projectId = $_SESSION['project'];
 
-if (isset($_POST['rename'])) {
+if (isset($_POST['rename']))
     $submitType = $_POST['rename'];
-}
 if (isset($_POST['add']))
     $submitType = $_POST['add'];
 if (isset($_POST['removeP'])) {
@@ -23,7 +22,7 @@ if (isset($_POST['removeRoom'])) {
 require("dbConnect.php");
 $db = get_db();
 
-if (isset($_POST['pTitle'])) {    
+if (isset($_POST['pTitle'])) {
     $title = $_POST['pTitle'];
     
     try {
@@ -50,22 +49,19 @@ if (isset($_POST['pTitle'])) {
     header("Location: /clean/projects.php");
     die();
 }
-else if (isset($_POST['rTitle'])) {    
+else if (isset($_POST['rTitle'])) {
     $title = $_POST['rTitle'];
     
     try {
-        if ($submitType == "add") {            
+        if ($submitType == "add") {
             $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
 
             $statement = $db->prepare($query);
             $statement->bindValue(':name', $title);
-            $statement->bindValue(':pId', $projectId);
+            $statement->bindValue(':pId', $submitType);
             $statement->execute();
         }
         else if (is_numeric($submitType)) {
-            header("Location: /clean/projects.php");
-            die();
-
             $query = "UPDATE rooms SET name = :name WHERE id = :pId";
 
             $statement = $db->prepare($query);
@@ -98,9 +94,6 @@ else if (isset($_POST['shelfnum'])) {
     
     header("Location: /clean/bookshelves.php");
     die();
-}
-else {
-    echo "WWWWWW";
 }
 
 ?>
