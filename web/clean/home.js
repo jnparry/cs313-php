@@ -97,12 +97,12 @@ function mouse(item, event) {
 //    document.body.append(item);
     // ...and put that absolutely positioned ball under the cursor
 
-    moveAt(event.pageX, event.pageY);
+    moveAt(event.clientX, event.clientY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = pageX + 'px';
-        item.style.top = pageY + 'px';
+        item.style.left = pageX - item.offsetWidth / 2 + 'px';
+        item.style.top = pageY - item.offsetHeight / 2 + 'px';
     }
 //
 //    function onMouseMove(event) {
