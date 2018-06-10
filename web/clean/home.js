@@ -66,10 +66,13 @@ function showForm(divName, editName, val, pId = null) {
 }
 
 function saveChanges() {
+//    var div = document.getElementById("yourDiv");
+//    var rect = div.getBoundingClientRect();
+//    alert("Coordinates: " + rect.left + "px, " + rect.top + "px");
+    
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
-        var top = x[i].style.top;
-        alert("What?" + top);
+        alert(document.getElementsByClassName('myClassName')[0].id);
     }
 }
      
