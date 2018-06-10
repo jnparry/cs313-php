@@ -98,5 +98,8 @@ else if (isset($_POST['shelfnum'])) {
     header("Location: /clean/bookshelves.php");
     die();
 }
+else {
+    echo "WWWWWW";
+}
 
 ?>
