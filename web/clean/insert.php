@@ -9,9 +9,10 @@ if (isset($_POST['rename']))
 if (isset($_POST['add']))
     $submitType = $_POST['add'];
 if (isset($_POST['delete'])) {
-    $_SESSION['deleteId'] = $_POST['delete'];
-    header("Location: /clean/remove.php");
-    die();
+//    $_SESSION['deleteId'] = $_POST['delete'];
+//    header("Location: /clean/remove.php");
+//    die();
+    echo "HULLABALOO";
 }
 
 require("dbConnect.php");
