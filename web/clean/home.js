@@ -34,8 +34,8 @@ function popUp(num) {
 }
 
 function deleteThis() {
-	document.getElementById("submit").name = "delete!";
-    document.getElementById("submit").value = "delete!";
+	document.getElementById("sub").name = "delete!";
+    document.getElementById("sub").value = "delete!";
     document.getElementById("hiddenForm").submit();
 }
 
@@ -61,14 +61,14 @@ function showForm(divName, editName, val, pId = null) {
     // if it's the add button, there should be no automatic text to edit
     if (val == 'add') {
         document.getElementById(editName).value = "";
-        document.getElementById("submit").name = "add";
-        document.getElementById("submit").value = "add";
+        document.getElementById("sub").name = "add";
+        document.getElementById("sub").value = "add";
         document.getElementById("delete").style.display = "none";
     }
     else {
         document.getElementById(editName).value = val;
-        document.getElementById("submit").name = "rename";
-        document.getElementById("submit").value = pId;
+        document.getElementById("sub").name = "rename";
+        document.getElementById("sub").value = pId;
         document.getElementById("delete").style.display = "block";
     }
 }

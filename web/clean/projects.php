@@ -53,7 +53,7 @@
                 <label id="anchor" for="txtTitle">Project Name: </label>	
                 <input type="text" id="txtTitle" name="pTitle">
                 <br/><br/>
-                <button type="submit" id="submit">Submit</button>
+                <button type="submit" id="sub">Submit</button>
                 <button type="button" onclick="deleteThis()" id="delete" style="display: none;">Delete</button>
             </form>
             
