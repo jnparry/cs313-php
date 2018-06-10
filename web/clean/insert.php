@@ -3,6 +3,8 @@
 session_start();
 
 $projectId = $_SESSION['project'];
+if (!isset($projectId))
+    echo "not set";
 
 if (isset($_POST['rename']))
     $submitType = $_POST['rename'];
