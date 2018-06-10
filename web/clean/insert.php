@@ -58,7 +58,7 @@ else if (isset($_POST['rTitle'])) {
 
             $statement = $db->prepare($query);
             $statement->bindValue(':name', $title);
-            $statement->bindValue(':pId', $submitType);
+            $statement->bindValue(':pId', $projectId);
             $statement->execute();
         }
         else if (is_numeric($submitType)) {
