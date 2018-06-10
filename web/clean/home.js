@@ -34,32 +34,41 @@ function popUp(num) {
 }
 
 function showForm(divName, editName, val, pId = null) {
+    var add = false;    
+    var x = document.getElementById(divName);
+    
     // if it's the add button, there should be no automatic text to edit
     if (val == 'add') {
         document.getElementById(editName).value = "";
         document.getElementById("submit").name = "add";
         document.getElementById("submit").value = "add";
         document.getElementById("remove").style.display = "none";
+        add = true;
     }
     else {
         document.getElementById(editName).value = val;
         document.getElementById("submit").name = "rename";
         document.getElementById("submit").value = pId;
         document.getElementById("remove").style.display = "block";
+        add = false;
     }
-    
-    var x = document.getElementById(divName);
 
     // if this is a new button press, reveal the form
     if (val != x.class) {
         x.class = val;
         x.style.display = "block";
-        location.href = "#remove";
+        if (add)
+            location.href = "#submit";
+        else
+            location.href = "#remove";
     }
     else {
         if (x.style.display === "none") {
             x.style.display = "block";
-            location.href = "#remove";
+            if (add)
+                location.href = "#submit";
+            else
+                location.href = "#remove";
         }
         else {
             x.style.display = "none";
