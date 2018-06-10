@@ -2,7 +2,7 @@
 
 session_start();
 
-$projectId = $_SESSION['project'];
+$projectId = $_SESSION['deleteId'];
 
 if (!isset($projectId)) {
     header("Location: /clean/projects.php");
