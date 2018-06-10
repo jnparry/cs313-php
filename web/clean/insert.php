@@ -14,6 +14,8 @@ if (isset($_POST['delete'])) {
 //    die();
     echo "HULLABALOO";
 }
+else
+    echo "NOTHING";
 
 require("dbConnect.php");
 $db = get_db();
