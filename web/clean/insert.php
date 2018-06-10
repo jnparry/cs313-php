@@ -14,9 +14,9 @@ if (isset($_POST['removeP'])) {
     die();
 }
 if (isset($_POST['removeRoom'])) {
-    $_SESSION["deleteId"] = $_POST['removeRoom'];
-    header("Location: /clean/removeRoom.php");
-    die();
+//    $_SESSION["deleteId"] = $_POST['removeRoom'];
+//    header("Location: /clean/removeRoom.php");
+//    die();
 }
 
 require("dbConnect.php");
