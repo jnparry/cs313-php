@@ -31,7 +31,7 @@ try {
         die();
 } 
 
-$last_id = db->lastInsertId();
+$last_id = $db->lastInsertId();
 for ($i = 1; $i <= $numShelves; $i++) {
     try {
         $query = "INSERT INTO shelves (shelvesclean, shelvesdate, bookshelvesid, shelvesnum) VALUES(FALSE, NULL, :lastId, :i)";
