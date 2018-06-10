@@ -77,7 +77,7 @@ function saveChanges() {
         var right = myId.getBoundingClientRect().right;
         var top = myId.getBoundingClientRect().top;
         var bottom = myId.getBoundingClientRect().bottom;
-//        alert("L: " + left ", R: " + right + ", T: " + top + ", B: " + bottom);
+        alert("L: " + left);
     }
 }
      
