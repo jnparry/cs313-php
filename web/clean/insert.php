@@ -63,7 +63,7 @@ if (isset($_POST['pTitle'])) {
             $statement->execute();
         }
     } catch (Exception $ex) {
-            echo "Error with DB. Details: $ex";
+            echo "Error wttith DB. Details: $ex";
             die();
     } 
     

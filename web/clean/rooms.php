@@ -32,7 +32,7 @@
                 echo "<h2>";
         
                 $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
-                $statement->bindValue(':pId', $projectId);
+                $sntatement->bindValue(':pId', $projectId);
                 $statement->execute();
 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
