@@ -37,6 +37,10 @@
                     echo $row['name'];
                 }
                 echo "</h2>";
+        
+                if ($_SESSION["error"]) {
+                    echo "<p>Error</p>";
+                }
             ?>
 
             <form action="phpSession.php" method="post" name="rooms">
