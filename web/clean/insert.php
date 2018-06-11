@@ -77,12 +77,11 @@ else if (isset($_POST['rTitle'])) {
     
     // CHECK TO SEE IF WE ALREADY HAVE THIS NAME OF PROJECT
     try {
-        $statement = $db->prepare("SELECT name FROM rooms");
+        $statement = $db->prepare("SELECT * FROM rooms");
         $statement->execute();
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo $row;
-            if ($row == $title) {
+            if ($row["name"] == $title) {
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
                 header("Location: /clean/home.php");
