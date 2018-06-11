@@ -18,6 +18,11 @@
     <body>
         <?php require "user.php"?>
         <h2>Current Cleaning Projects</h2>
+        <?php
+            if ($_SESSION["error"]) {
+                echo "<p>Error</p>";
+            }
+        ?>
         
         <form action="phpSession.php" method="post" name="projects">
             <ul>
