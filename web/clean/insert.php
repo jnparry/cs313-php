@@ -33,10 +33,10 @@ if (isset($_POST['pTitle'])) {
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             if ($row == $title) {
-                echo "$row";
+                echo $row;
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Project '$pTitle' already exists. Please use another name.";
-                header("Location: /clean/projects.php");
+                header("Location: /clean/home.php");
                 die();
             }
         }
@@ -82,9 +82,10 @@ else if (isset($_POST['rTitle'])) {
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             if ($row == $title) {
+                echo $row;
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
-                header("Location: /clean/rooms.php");
+                header("Location: /clean/home.php");
                 die();
             }
         }
