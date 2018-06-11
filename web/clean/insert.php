@@ -36,7 +36,7 @@ if (isset($_POST['pTitle'])) {
             if ($row == $title) {
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Project '$pTitle' already exists. Please use another name.";
-                header("Location: /clean/home.php");
+                header("Location: /clean/projects.php");
                 die();
             }
         }
@@ -84,11 +84,9 @@ else if (isset($_POST['rTitle'])) {
             if ($row["name"] == $title) {
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
-                header("Location: /clean/projects.php");
+                header("Location: /clean/rooms.php");
                 die();
             }
-//            else 
-//                header("Location: /clean/projects.php");
         }
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";

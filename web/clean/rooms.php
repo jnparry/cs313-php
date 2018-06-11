@@ -39,7 +39,7 @@
                 echo "</h2>";
         
                 if ($_SESSION["error"]) {
-                    echo "<p>Error</p>";
+                    echo "<p style='color: red;'>Error: " . $_SESSION["msg"] . "</p>";
                 }
             ?>
 
