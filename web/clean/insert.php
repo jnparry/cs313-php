@@ -32,10 +32,9 @@ if (isset($_POST['pTitle'])) {
         $statement->execute();
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo $row;
             if ($row == $title) {
                 $_SESSION["error"] = true;
-                $_SESSION["msg"] = "Project '$title' already exists. Please use another name.";
+                $_SESSION["msg"] = "Project '" . $title . "' already exists. Please use another name.";
                 header("Location: /clean/projects.php");
                 die();
             }

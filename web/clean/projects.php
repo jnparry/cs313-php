@@ -20,7 +20,8 @@
         <h2>Current Cleaning Projects</h2>
         <?php
             if ($_SESSION["error"]) {
-                echo "<p>Error</p>";
+                echo "<p style='color: red;'>*Error: " . $_SESSION["msg"] . "</p>";
+                $_SESSION["error"] = false;
             }
         ?>
         
