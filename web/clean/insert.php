@@ -22,9 +22,29 @@ if (isset($_POST['removeRoom'])) {
 require("dbConnect.php");
 $db = get_db();
 
+// PROJECTS
 if (isset($_POST['pTitle'])) {
     $title = $_POST['pTitle'];
     
+    // CHECK TO SEE IF WE ALREADY HAVE THIS NAME OF PROJECT
+    try {
+        $statement = $db->prepare("SELECT name FROM projects");
+        $statement->execute();
+        $_SESSION["error"] = false;
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            if ($row == $title) {
+                $_SESSION["error"] = true;
+                $_SESSION["msg"] = "Project '$pTitle' already exists. Please use another name.";
+                header("Location: /clean/projects.php");
+                die();
+            }
+        }
+    } catch (Exception $ex) {
+        echo "Error with DB. Details: $ex";
+        die();
+    } 
+    
+    // EITHER ADD OR UPDATE IF THE NAME ISN'T ALREADY USED
     try {
         if ($submitType == "add") {
             $query = "INSERT INTO projects(name, iscomplete, date) VALUES(:name, FALSE, NULL)";
@@ -49,9 +69,30 @@ if (isset($_POST['pTitle'])) {
     header("Location: /clean/projects.php");
     die();
 }
+
+// ROOMS
 else if (isset($_POST['rTitle'])) {
     $title = $_POST['rTitle'];
     
+    // CHECK TO SEE IF WE ALREADY HAVE THIS NAME OF PROJECT
+    try {
+        $statement = $db->prepare("SELECT name FROM rooms");
+        $statement->execute();
+        $_SESSION["error"] = false;
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            if ($row == $title) {
+                $_SESSION["error"] = true;
+                $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
+                header("Location: /clean/rooms.php");
+                die();
+            }
+        }
+    } catch (Exception $ex) {
+        echo "Error with DB. Details: $ex";
+        die();
+    }
+    
+    // EITHER ADD OR UPDATE IF NAME HASN'T ALREADY BEEN USED
     try {
         if ($submitType == "add") {
             $query = "INSERT INTO rooms(name, projectsid, isclean, date) VALUES(:name, :pId, FALSE, NULL)";
@@ -77,6 +118,8 @@ else if (isset($_POST['rTitle'])) {
     header("Location: /clean/rooms.php");
     die();
 }
+
+// SHELVES
 else if (isset($_POST['shelfnum'])) {
     $roomId = $_SESSION['room'];
     $num = $_POST['shelfnum'];
