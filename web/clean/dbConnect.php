@@ -28,7 +28,6 @@ function get_db() {
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	}
 	catch (PDOException $ex) {
-        var state = $db->getsqlstate();
 		// echo the details of the exception.
 		echo "Error connecting to DB. Details: " . $ex->getMessage();
 		die();
