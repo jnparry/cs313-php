@@ -107,7 +107,7 @@ function mouse(item, event, id) {
 
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        elmnt.onmousedown = dragMouseDown;
+//        elmnt.onmousedown = dragMouseDown;
 
 //        function dragMouseDown(e) {
             e = event || window.event;
