@@ -28,11 +28,11 @@ if (isset($_POST['pTitle'])) {
     
     // CHECK TO SEE IF WE ALREADY HAVE THIS NAME OF PROJECT
     try {
-        $statement = $db->prepare("SELECT name FROM projects");
+        $statement = $db->prepare("SELECT * FROM projects");
         $statement->execute();
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            if ($row == $title) {
+            if ($row["name"] == $title) {
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Project '" . $title . "' already exists. Please use another name.";
                 header("Location: /clean/projects.php");
