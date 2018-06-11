@@ -31,18 +31,19 @@
             <?php
                 echo "<h2>";
         
-                $statement = $db->prepare("SELECT name FROM rooms");
+                $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
+                $sntatement->bindValue(':pId', $projectId);
                 $statement->execute();
 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo $row;
+                    echo $row['name'];
                 }
         
                 echo "</h2>";
-                if (isset($_SESSION["error"])) {
-                    echo "<p style='color: red;'>" . $_SESSION["msg"] . "</p>";
-                    
-                }
+//                if (isset($_SESSION["error"])) {
+//                    echo "<p style='color: red;'>" . $_SESSION["msg"] . "</p>";
+//                    
+//                }
             ?>
 
             <form action="phpSession.php" method="post" name="rooms">
