@@ -31,12 +31,11 @@
             <?php
                 echo "<h2>";
         
-                $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
-                $sntatement->bindValue(':pId', $projectId);
+                $statement = $db->prepare("SELECT name FROM rooms");
                 $statement->execute();
 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo $row['name'];
+                    echo $row;
                 }
         
                 echo "</h2>";
