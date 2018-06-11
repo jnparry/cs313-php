@@ -84,12 +84,12 @@ else if (isset($_POST['rTitle'])) {
             if ($row["name"] == $title) {
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
-                header("Location: /clean/view.php");
+                header("Location: /clean/projects.php");
                 die();
             }
-            else 
-                header("Location: /clean/projects.php");
-        }
+//            else 
+//                header("Location: /clean/projects.php");
+//        }
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
         die();
