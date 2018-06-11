@@ -87,6 +87,8 @@ else if (isset($_POST['rTitle'])) {
                 header("Location: /clean/home.php");
                 die();
             }
+            else 
+                header("Location: /clean/projects.php");
         }
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
