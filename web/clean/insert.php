@@ -89,7 +89,7 @@ else if (isset($_POST['rTitle'])) {
             }
 //            else 
 //                header("Location: /clean/projects.php");
-//        }
+        }
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
         die();
