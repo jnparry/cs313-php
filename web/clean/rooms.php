@@ -40,7 +40,7 @@
                 }
         
                 echo "</h2>";
-                if ((isset($_SESSION["error"])) {
+                if (isset($_SESSION["error"])) {
                     echo "<p style='color: red;'>" . $_SESSION["msg"] . "</p>";
                     
                 }
