@@ -8,7 +8,6 @@
     }
 
     $projectId = $_SESSION['project'];
-    
 
     require("dbConnect.php");
     $db = get_db();
@@ -29,23 +28,15 @@
         <?php require "user.php"?>
         <section class="content">
             <h2>
-            <?php
-//                echo "<h2>";
-        
-                $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
-                $sntatement->bindValue(':pId', $projectId);
-                $statement->execute();
-
-                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo $row['name'];
-                }
-        
-//                echo "</h2>";
-//                if (isset($_SESSION["error"])) {
-//                    echo "<p style='color: red;'>" . $_SESSION["msg"] . "</p>";
-//                    
-//                }
-            ?>
+                <?php
+                    $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
+                    $statement->bindValue(':pId', $projectId);
+                    $statement->execute();
+                    
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        echo $row['name'];
+                    }
+                ?>
             </h2>
 
             <form action="phpSession.php" method="post" name="rooms">
