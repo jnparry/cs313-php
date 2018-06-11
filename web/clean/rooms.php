@@ -40,8 +40,10 @@
                 }
         
                 echo "</h2>";
-                if ($_SESSION["error"])
+                if ((isset($_SESSION["error"])) {
                     echo "<p style='color: red;'>" . $_SESSION["msg"] . "</p>";
+                    
+                }
             ?>
 
             <form action="phpSession.php" method="post" name="rooms">
