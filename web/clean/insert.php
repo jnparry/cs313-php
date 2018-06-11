@@ -32,8 +32,8 @@ if (isset($_POST['pTitle'])) {
         $statement->execute();
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            echo $row;
             if ($row == $title) {
-                echo $row;
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Project '$pTitle' already exists. Please use another name.";
                 header("Location: /clean/home.php");
@@ -81,8 +81,8 @@ else if (isset($_POST['rTitle'])) {
         $statement->execute();
         $_SESSION["error"] = false;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            echo $row;
             if ($row == $title) {
-                echo $row;
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
                 header("Location: /clean/home.php");
