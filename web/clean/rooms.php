@@ -28,8 +28,9 @@
     <body>
         <?php require "user.php"?>
         <section class="content">
+            <h2>
             <?php
-                echo "<h2>";
+//                echo "<h2>";
         
                 $statement = $db->prepare("SELECT name FROM projects WHERE id = :pId");
                 $sntatement->bindValue(':pId', $projectId);
@@ -39,12 +40,13 @@
                     echo $row['name'];
                 }
         
-                echo "</h2>";
+//                echo "</h2>";
 //                if (isset($_SESSION["error"])) {
 //                    echo "<p style='color: red;'>" . $_SESSION["msg"] . "</p>";
 //                    
 //                }
             ?>
+            </h2>
 
             <form action="phpSession.php" method="post" name="rooms">
                 <ul>
