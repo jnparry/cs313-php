@@ -84,7 +84,7 @@ else if (isset($_POST['rTitle'])) {
             if ($row["name"] == $title) {
                 $_SESSION["error"] = true;
                 $_SESSION["msg"] = "Room '$pTitle' already exists. Please use another name.";
-                header("Location: /clean/home.php");
+                header("Location: /clean/view.php");
                 die();
             }
             else 
