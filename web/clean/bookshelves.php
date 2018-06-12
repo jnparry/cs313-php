@@ -84,7 +84,7 @@
                     ?>
                 </div>
                 
-                <section>
+                <section onload="setUp()">
                     <form action="insertBC.php" method="post">
                         <p>Number of shelves</p>
                         <input type="number" min="0" max="10" required>

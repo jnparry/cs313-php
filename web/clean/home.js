@@ -85,47 +85,53 @@ function saveChanges() {
     }
 }
 
-function setUp(item) {
-    alert("setup");
-    var xc = item.style.left;
-    var yc = item.style.top;
+function setUp() {
+    var x = document.getElementsByClassName("cases");
+    for (var i = 0; i < x.length; i++) {
+        var item = document.getElementById(x[i].id)
+    
+        var xc = item.style.left;
+        var yc = item.style.top;
 
-    var left = area.getBoundingClientRect().left;
-    var right = area.getBoundingClientRect().right;
-    var top = area.getBoundingClientRect().top;
-    var bottom = area.getBoundingClientRect().bottom;
+        var left = area.getBoundingClientRect().left;
+//        var right = area.getBoundingClientRect().right;
+        var top = area.getBoundingClientRect().top;
+//        var bottom = area.getBoundingClientRect().bottom;
 
-    // if too far to the right
-    if (xc + (item.offsetWidth / 2 ) >= right) {
-        xc = right - (item.offsetWidth);
-        document.removeEventListener('mousemove', onMouseMove);
-        item.onmouseup = null;
+        item.style.left = xc - (left - xc) + "px";
+        item.style.top = yc - (top - yc) + "px";
+//        // if too far to the right
+//        if (xc + (item.offsetWidth / 2 ) >= right) {
+//            xc = right - (item.offsetWidth);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
+//        }
+//
+//        // if too far to the left
+//        if (xc - (item.offsetWidth / 2) <= left) {
+//            xc = left + (item.offsetWidth);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;  
+//        }
+//
+//        // if too far up
+//        if (yc + (item.offsetHeight / 2) >= bottom) {
+//            yc = bottom - (item.offsetHeight);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
+//        }
+//
+//        // if too far down
+//        if (yc - (item.offsetHeight / 2) <= top) {
+//            yc = top + (item.offsetHeight);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
+//        }
+
+    //    moveAt(xc, yc);
+//        item.style.left = xc - item.offsetWidth / 2 + 'px';
+//        item.style.top = yc - item.offsetHeight / 2 + 'px';
     }
-
-    // if too far to the left
-    if (xc - (item.offsetWidth / 2) <= left) {
-        xc = left + (item.offsetWidth);
-        document.removeEventListener('mousemove', onMouseMove);
-        item.onmouseup = null;  
-    }
-
-    // if too far up
-    if (yc + (item.offsetHeight / 2) >= bottom) {
-        yc = bottom - (item.offsetHeight);
-        document.removeEventListener('mousemove', onMouseMove);
-        item.onmouseup = null;
-    }
-
-    // if too far down
-    if (yc - (item.offsetHeight / 2) <= top) {
-        yc = top + (item.offsetHeight);
-        document.removeEventListener('mousemove', onMouseMove);
-        item.onmouseup = null;
-    }
-
-//    moveAt(xc, yc);
-    item.style.left = xc - item.offsetWidth / 2 + 'px';
-    item.style.top = yc - item.offsetHeight / 2 + 'px';
 }
      
 // for desktop w/ mouse click events
