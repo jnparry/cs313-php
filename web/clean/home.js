@@ -77,15 +77,11 @@ function showForm(divName, editName, val, pId = null) {
     }
 }
 
-function saveChanges() {
-//    var div = document.getElementById("yourDiv");
-//    var rect = div.getBoundingClientRect();
-//    alert("Coordinates: " + rect.left + "px, " + rect.top + "px");
-    
+function saveChanges() {  
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
         var myId = document.getElementById(x[i].id).style;
-        alert("TOP: " + myId.top + ", LEFT: " + myId.left + ", BOTTOM: " + myId.bottom + ", RIGHT: " + myId.right);
+        alert("TOP: " + myId.top + ", LEFT: " + myId.left);
     }
 }
      
