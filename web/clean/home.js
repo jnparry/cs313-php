@@ -96,8 +96,8 @@ function setUp() {
         var left = area.getBoundingClientRect().left;
         var top = area.getBoundingClientRect().top;
 
-        item.style.left = left + "px";
-        item.style.top = top + "px";
+        item.style.left = left - xc + "px";
+        item.style.top = top - yc + "px";
     }
 }
      
