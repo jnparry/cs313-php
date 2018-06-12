@@ -91,41 +91,40 @@ function saveChanges() {
      
 // for desktop w/ mouse click events
 function mouse(item, event, id) {
-    //Make the DIV element draggagle:
-    dragElement(document.getElementById((id)));
-
-    function dragElement(elmnt) {
-        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-//        elmnt.onmousedown = dragMouseDown;
-
-//        function dragMouseDown(e) {
-        e = event || window.event;
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        alert("Mouse: " + pos3 + ", " + pos4 + " This box: " + elmnt.style.left + ", " + elmnt.style.top);
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-//        }
-
-        function elementDrag(e) {
-            e = e || window.event;
-            // calculate the new cursor position:
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            // set the element's new position:
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-        }
-
-        function closeDragElement() {
-            /* stop moving when mouse button is released:*/
-            document.onmouseup = null;
-            document.onmousemove = null;
-        }
+    var clickIsValid = true;
+    var delay = 200; // milliseconds before click doesn't count
+    var notAClick = function() {
+        clickIsValid = false;
     }
-}
+    cancelClick = setTimeout( notAClick, delay );
+
+    // make absolute and on top
+    item.style.position = 'fixed';
+    item.style.zIndex = 1000;
+
+    moveAt(event.pageX, event.pageY);
+
+    // centers the ball at (pageX, pageY) coordinates
+    function moveAt(pageX, pageY) {
+        item.style.left = pageX - item.offsetWidth / 2 + 'px';
+        item.style.top = pageY - item.offsetHeight / 2 + 'px';
+    }
+
+    function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+    }
+
+    // (3) move the ball on mousemove
+    document.addEventListener('mousemove', onMouseMove);
+
+    // (4) drop the ball, remove unneeded handlers
+    item.onmouseup = function() {
+        clearTimeout( cancelClick );
+        if (clickIsValid) {
+            alert("That was a click?");
+        }
+        document.removeEventListener('mousemove', onMouseMove);
+        item.onmouseup = null;
+    };
+    clickIsValid = true;
+};
