@@ -107,9 +107,9 @@ function mouse(item, event, id) {
 
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//        elmnt.onmousedown = dragMouseDown;
+        elmnt.onmousedown = dragMouseDown;
 
-//        function dragMouseDown(e) {
+        function dragMouseDown(e) {
             e = event || window.event;
             // get the mouse cursor position at startup:
         
@@ -118,7 +118,7 @@ function mouse(item, event, id) {
             document.onmouseup = closeDragElement;
             // call a function whenever the cursor moves:
             document.onmousemove = elementDrag;
-//        }
+        }
 
         function elementDrag(e) {
             e = event || window.event;
