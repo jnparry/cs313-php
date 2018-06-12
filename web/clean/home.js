@@ -91,28 +91,17 @@ function saveChanges() {
      
 // for desktop w/ mouse click events
 function mouse(item, event, id) {
-    var clickIsValid = true;
-    var delay = 200; // milliseconds before click doesn't count
-    var notAClick = function() {
-        clickIsValid = false;
-    }
-    cancelClick = setTimeout( notAClick, delay );
-
-    // make absolute and on top
-    item.style.position = 'absolute';
-    item.style.zIndex = 1000;
-
-    // make it draggable
+    //Make the DIV element draggagle:
     dragElement(document.getElementById((id)));
 
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
         elmnt.onmousedown = dragMouseDown;
 
         function dragMouseDown(e) {
-            e = event || window.event;
+            e = e || window.event;
             // get the mouse cursor position at startup:
-            alert(pos1 + ", " + pos2 + ", " + pos3 + ", " + pos4);
             pos3 = e.clientX;
             pos4 = e.clientY;
             document.onmouseup = closeDragElement;
@@ -121,26 +110,21 @@ function mouse(item, event, id) {
         }
 
         function elementDrag(e) {
-            e = event || window.event;
+            e = e || window.event;
             // calculate the new cursor position:
             pos1 = pos3 - e.clientX;
             pos2 = pos4 - e.clientY;
             pos3 = e.clientX;
             pos4 = e.clientY;
             // set the element's new position:
-            elmnt.style.top = (elmnt.offsetTop - pos1) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos2) + "px";
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
         }
 
         function closeDragElement() {
             /* stop moving when mouse button is released:*/
-            clearTimeout( cancelClick );
-            if (clickIsValid) {
-                alert("That was a click?");
-            }
             document.onmouseup = null;
             document.onmousemove = null;
         }
-    }  
-    clickIsValid = true;
+    }
 }
