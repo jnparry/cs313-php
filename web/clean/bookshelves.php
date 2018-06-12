@@ -71,15 +71,15 @@
                         $sstatement->execute();
 
                         // Go through each shelf in the bookcase
-                        while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
-                        {
-                            echo "<p>This shelf ";
-                            if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
-                            } else {
-                                echo "is not clean</p>";
-                            }
-                        }     
+//                        while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
+//                        {
+//                            echo "<p>This shelf ";
+//                            if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
+//                                echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
+//                            } else {
+//                                echo "is not clean</p>";
+//                            }
+//                        }     
                     }
                     ?>
                 </div>
