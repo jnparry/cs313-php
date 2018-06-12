@@ -112,15 +112,15 @@ function mouse(item, event, id) {
         function elementDrag(e) {
             e = e || window.event;
             // calculate the new cursor position:
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
+//            pos1 = pos3 - e.clientX;
+//            pos2 = pos4 - e.clientY;
             pos3 = e.clientX;
             pos4 = e.clientY;
             // set the element's new position:
 //            ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
 //            ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
-            elmnt.style.top = (pos2 - elmnt.offsetTop) + "px";
-            elmnt.style.left = (pos1 - elmnt.offsetLeft) + "px";
+            elmnt.style.top = (pos3 - elmnt.offsetHeight / 2) + "px";
+            elmnt.style.left = (pos4 - elmnt.offsetWidth / 2) + "px";
         }
 
         function closeDragElement() {
