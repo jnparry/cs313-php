@@ -64,7 +64,7 @@
                                 }
                             </style>';
 
-                        echo "<button style='max-height: 10px;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" onload='setUp(this)'></button>";
+                        echo "<button style='max-height: 10px;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" onload='setUp()'></button>";
 
                         $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                         $sstatement->bindValue(':bsid', $row['id']);
@@ -84,7 +84,7 @@
                     ?>
                 </div>
                 
-                <section onload="setUp()">
+                <section>
                     <form action="insertBC.php" method="post">
                         <p>Number of shelves</p>
                         <input type="number" min="0" max="10" required>
