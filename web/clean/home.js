@@ -104,6 +104,8 @@ function mouse(item, event, id) {
             // get the mouse cursor position at startup:
             pos3 = e.clientX;
             pos4 = e.clientY;
+            elmnt.style.top = pos3 + "px";
+            elmnt.style.left = pos4 + "px";
             document.onmouseup = closeDragElement;
             // call a function whenever the cursor moves:
             document.onmousemove = elementDrag;
