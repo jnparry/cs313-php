@@ -119,8 +119,8 @@ function mouse(item, event, id) {
             // set the element's new position:
 //            ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
 //            ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
-            elmnt.style.top = (elmnt.offsetTop + pos3) + "px";
-            elmnt.style.left = (elmnt.offsetLeft + pos4) + "px";
+            elmnt.style.top = (elmnt.offsetTop - pos3) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos4) + "px";
         }
 
         function closeDragElement() {
