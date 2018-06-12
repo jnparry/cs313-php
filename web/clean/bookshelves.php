@@ -82,7 +82,9 @@
                         }     
                     }
                     ?>
-                    <input type="image" onload="setUp()">
+                    <script>
+                        setUp();
+                    </script>
                 </div>
                 
                 <section>
