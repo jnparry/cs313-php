@@ -104,8 +104,8 @@ function mouse(item, event, id) {
             // get the mouse cursor position at startup:
             pos3 = e.clientX;
             pos4 = e.clientY;
-            elmnt.style.top = pos3 + "px";
-            elmnt.style.left = pos4 + "px";
+//            elmnt.style.top = pos3 + "px";
+//            elmnt.style.left = pos4 + "px";
             document.onmouseup = closeDragElement;
             // call a function whenever the cursor moves:
             document.onmousemove = elementDrag;
@@ -121,8 +121,8 @@ function mouse(item, event, id) {
             // set the element's new position:
 //            ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
 //            ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
-            elmnt.style.top = (elmnt.offsetTop + pos3) + "px";
-            elmnt.style.left = (elmnt.offsetLeft + pos4) + "px";
+            elmnt.style.top = (elmnt.offsetTop + pos4) + "px";
+            elmnt.style.left = (elmnt.offsetLeft + pos3) + "px";
         }
 
         function closeDragElement() {
