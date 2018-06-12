@@ -100,7 +100,7 @@ function mouse(item, event, id) {
 //        elmnt.onmousedown = dragMouseDown;
 
 //        function dragMouseDown(e) {
-            e = e || window.event;
+            e = event || window.event;
             // get the mouse cursor position at startup:
             pos3 = e.clientX;
             pos4 = e.clientY;
