@@ -82,9 +82,6 @@
                         }     
                     }
                     ?>
-                    <script>
-                        setUp();
-                    </script>
                 </div>
                 
                 <section>
@@ -104,3 +101,7 @@
         </section>
     </body>
 </html>
+
+<script>
+    setUp();
+</script>
