@@ -103,7 +103,7 @@
 </html>
 
 <script>
-    $(window).bind("load", function() {
-        setUp();
-    });
+   $( document ).ready(function() {
+       setUp();
+   }); 
 </script>
