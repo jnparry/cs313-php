@@ -86,6 +86,7 @@ function saveChanges() {
 }
 
 function setUp(item) {
+    alert("setup");
     var xc = item.style.left;
     var yc = item.style.top;
 
