@@ -101,9 +101,3 @@
         </section>
     </body>
 </html>
-
-<script>
-   $( document ).ready(function() {
-       setUp();
-   }); 
-</script>

@@ -178,3 +178,7 @@ function mouse(item, event, id) {
     };
     clickIsValid = true;
 };
+
+$( document ).ready(function() {
+       setUp();
+   });
