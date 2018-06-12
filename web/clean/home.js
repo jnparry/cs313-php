@@ -93,7 +93,7 @@ function setUp() {
         var xc = item.style.left;
         var yc = item.style.top;
 
-        alert(xc + ", " + yc);
+//        alert(xc + ", " + yc);
         var left = area.getBoundingClientRect().left;
         var top = area.getBoundingClientRect().top;
 
