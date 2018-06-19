@@ -112,7 +112,7 @@ function mouse(item, event, id) {
     cancelClick = setTimeout( notAClick, delay );
 
     // make absolute and on top
-    item.style.position = 'fixed';
+//    item.style.position = 'fixed';
     item.style.zIndex = 1000;
 
     moveAt(event.pageX, event.pageY);
@@ -161,7 +161,6 @@ function mouse(item, event, id) {
         }
         
         moveAt(xc, yc);
-//        moveAt(event.pageX, event.pageY);
     }
 
     // (3) move the ball on mousemove
@@ -178,7 +177,3 @@ function mouse(item, event, id) {
     };
     clickIsValid = true;
 };
-//
-//$( document ).ready(function() {
-//       setUp();
-//   });
