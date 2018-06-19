@@ -1,3 +1,7 @@
+var publicX;
+var publicY;
+document.getElementById("container").addEventListener("mousedown", savePos);
+
 function viewHome() {
     location.href = "/clean/home.php";
 }
@@ -101,7 +105,12 @@ function setUp() {
         item.style.top = top + yc + item.offsetHeight + "px";
     }
 }
-     
+  
+funciton savePos() {
+    publicX = event.pageX;
+    publicY = event.pageY;
+}
+
 // for desktop w/ mouse click events
 function mouse(item, event, id) {
     var clickIsValid = true;
@@ -112,16 +121,14 @@ function mouse(item, event, id) {
     cancelClick = setTimeout( notAClick, delay );
 
     // make absolute and on top
-//    item.style.position = 'fixed';
     item.style.zIndex = 1000;
 
     moveAt(event.pageX, event.pageY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.position = 'fixed'
-        item.style.left = pageX - item.offsetWidth / 2 + 'px';
-        item.style.top = pageY - item.offsetHeight / 2 + 'px';
+        item.style.left = publicX - item.offsetWidth / 2 + 'px';
+        item.style.top = publicY - item.offsetHeight / 2 + 'px';
     }
 
     function onMouseMove(event) {
