@@ -16,7 +16,7 @@
     </head>
     
     <body>
-        <section class="content">
+        <section class="">
             <?php require "user.php"?>
             <h2>Current Cleaning Projects</h2>
             <?php
