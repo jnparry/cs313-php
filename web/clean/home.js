@@ -1,7 +1,5 @@
 var publicX;
 var publicY;
-var x;
-var y;
 
 function viewHome() {
     location.href = "/clean/home.php";
@@ -109,12 +107,9 @@ function setUp() {
   
 function savePos(item, event) {
     alert("FIRE");
-    var offsetL = document.getElementById("area");
-    var offsetT = document.getElementById("area");
-    publicX = (event.pageX - offsetL.offsetLeft);
-    publicY = (event.pageY - offsetT.offsetTop);
-//    var relativeX = (e.pageX - offset.left);
-//    var relativeY = (e.pageY - offset.top);
+    publicX = event.pageX;
+    publicY = event.pageY;
+    alert(publicX + ", " + publicY);
 }
 
 // for desktop w/ mouse click events
