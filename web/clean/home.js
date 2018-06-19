@@ -110,7 +110,7 @@ function savePos(item, event) {
     publicX = event.pageX;
     publicY = event.pageY;
     alert(publicX + ", " + publicY);
-    alert(item.style.width);
+    alert(item.offsetLeft);
 }
 
 // for desktop w/ mouse click events
