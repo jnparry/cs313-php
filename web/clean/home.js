@@ -107,7 +107,7 @@ function setUp() {
   
 function savePos(item, event) {
     alert("FIRE");
-    publicX = event.screenX;
+    publicX = event.pageX;
     publicY = event.pageY;
     alert(publicX + ", " + publicY);
     alert(item.offsetWidth / 2);
