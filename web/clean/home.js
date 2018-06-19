@@ -109,8 +109,8 @@ function savePos() {
     alert("FIRE");
     publicX = event.;
     publicY = event.pageY;
-    screenSX = event.screenX;
-    screenSY = event.screenY;
+    var screenSX = event.screenX;
+    var screenSY = event.screenY;
     alert(publicX + ", " + publicY + " SX: " + screenSX + ", SY: " + screenSY);
 }
 
