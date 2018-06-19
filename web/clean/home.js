@@ -106,7 +106,7 @@ function setUp() {
     }
 }
   
-function savePos() {
+function setPos() {
     alert("FIRE");
 //    publicX = event.pageX;
 //    publicY = event.pageY;
