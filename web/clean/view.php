@@ -68,7 +68,7 @@
 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                             echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' 
-                            style='height: 2em; width: 4em; color: black; position: relative; 
+                            style='padding: 1em; height: 2em; width: 4em; color: black; position: fixed; 
                             left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>
                                 <span class='popuptext' id='myPopup" . $row['id'] . "'>";
 

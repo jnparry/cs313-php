@@ -16,8 +16,8 @@
     </head>
     
     <body>
-        <section class="">
-            <?php require "user.php"?>
+        <?php require "user.php"?>
+        <section class="content">
             <h2>Current Cleaning Projects</h2>
             <?php
                 if ($_SESSION["error"]) {
