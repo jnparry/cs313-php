@@ -107,9 +107,11 @@ function setUp() {
   
 function savePos() {
     alert("FIRE");
-    publicX = event.pageX;
+    publicX = event.;
     publicY = event.pageY;
-    alert(publicX + ", " + publicY);
+    screenSX = event.screenX;
+    screenSY = event.screenY;
+    alert(publicX + ", " + publicY + " SX: " + screenSX + ", SY: " + screenSY);
 }
 
 // for desktop w/ mouse click events
