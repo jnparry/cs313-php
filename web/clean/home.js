@@ -106,11 +106,11 @@ function setUp() {
 }
   
 function savePos(item, event) {
-    alert("FIRE");
-    publicX = event.pageX;
-    publicY = event.pageY;
-    alert(publicX + ", " + publicY);
-    alert(item.offsetLeft + ", " + item.offsetHeight);
+//    alert("FIRE");
+//    publicX = event.pageX;
+//    publicY = event.pageY;
+//    alert(publicX + ", " + publicY);
+//    alert(item.offsetLeft + ", " + item.offsetHeight);
 }
 
 // for desktop w/ mouse click events
@@ -136,6 +136,7 @@ function mouse(item, event, id) {
     function onMouseMove(event) {
         var xc = event.pageX;
         var yc = event.pageY;
+        alert(xc + ", " + yc);
         
         var left = area.getBoundingClientRect().left;
         var right = area.getBoundingClientRect().right;
