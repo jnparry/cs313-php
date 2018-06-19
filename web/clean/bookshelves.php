@@ -64,7 +64,7 @@
                                 }
                             </style>';
 
-                        echo "<button style='max-height: 10px;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\"></button>";
+                        echo "<button style='max-height: 10px;' type='button' class='cases' id='bookcase" . $row['id'] . "')\"></button>";
 
                         $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
                         $sstatement->bindValue(':bsid', $row['id']);
