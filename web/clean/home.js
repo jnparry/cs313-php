@@ -107,10 +107,11 @@ function setUp() {
   
 function savePos(item, event) {
 //    alert("FIRE");
-//    publicX = event.pageX;
-//    publicY = event.pageY;
-//    alert(publicX + ", " + publicY);
-//    alert(item.offsetLeft + ", " + item.offsetHeight);
+    publicX = event.pageX;
+    publicY = event.pageY;
+    alert(publicX + ", " + publicY);
+    alert(item.offsetLeft + ", " + item.offsetHeight);
+    alert(document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetHeight)
 }
 
 // for desktop w/ mouse click events
