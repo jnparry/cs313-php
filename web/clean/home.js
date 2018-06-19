@@ -107,7 +107,7 @@ function setUp() {
   
 function savePos() {
     alert("FIRE");
-    publicX = event.;
+    publicX = event.pageX;
     publicY = event.pageY;
     var screenSX = event.screenX;
     var screenSY = event.screenY;
