@@ -107,15 +107,16 @@ function setUp() {
   
 function savePos(item, event) {
 //    alert("FIRE");
-    publicX = event.pageX;
-    publicY = event.pageY;
-    alert(publicX + ", " + publicY);
-    alert(item.offsetLeft + ", " + item.offsetTop);
-    alert(document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
+//    publicX = event.pageX;
+//    publicY = event.pageY;
+//    alert(publicX + ", " + publicY);
+//    alert(item.offsetLeft + ", " + item.offsetTop);
+//    alert(document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
 }
 
 // for desktop w/ mouse click events
 function mouse(item, event, id) {
+    var myOffset = document.getElementById("area");
     var clickIsValid = true;
     var delay = 200; // milliseconds before click doesn't count
     var notAClick = function() {
@@ -130,8 +131,8 @@ function mouse(item, event, id) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = (pageX - item.offsetLeft) + 'px';
-        item.style.top = (pageY - item.offsetTop) + 'px';
+        item.style.left = (pageX - myOffset.offsetLeft) + 'px';
+        item.style.top = (pageY - myOffset.offsetTop) + 'px';
     }
 
     function onMouseMove(event) {
