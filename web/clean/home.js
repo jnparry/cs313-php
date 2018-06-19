@@ -1,6 +1,5 @@
-//var publicX;
-//var publicY;
-document.getElementById("area").addEventListener("mouseover", savePos);
+var publicX;
+var publicY;
 
 function viewHome() {
     location.href = "/clean/home.php";
@@ -108,8 +107,9 @@ function setUp() {
   
 function savePos() {
     alert("FIRE");
-//    publicX = event.pageX;
-//    publicY = event.pageY;
+    publicX = event.pageX;
+    publicY = event.pageY;
+    alert(publicX + ", " + publicY);
 }
 
 // for desktop w/ mouse click events
