@@ -107,13 +107,12 @@ function setUp() {
     }
 }
   
-function savePos(event) {
+function savePos(item, event) {
     alert("FIRE");
-    publicX = event.clientX;
-    publicY = event.clientY;
-    x = event.screenX;
-    y = event.screenY;
-    alert(publicX + ", " + publicY + " SX: " + x + ", SY: " + y);
+    publicX = (event.pageX - this.offset.left);
+    publicY = (event.pageY - this.offset.top);
+//    var relativeX = (e.pageX - offset.left);
+//    var relativeY = (e.pageY - offset.top);
 }
 
 // for desktop w/ mouse click events
