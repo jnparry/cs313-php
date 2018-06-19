@@ -126,11 +126,13 @@ function mouse(item, event, id) {
 
     // make absolute and on top
     item.style.zIndex = 1000;
+//    item.style.position = fixed;
 
     moveAt(event.pageX, event.pageY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
+        alert((pageX - myOffset.offsetLeft) + ", " + (pageY - myOffset.offsetTop));
         item.style.left = (pageX - myOffset.offsetLeft) + 'px';
         item.style.top = (pageY - myOffset.offsetTop) + 'px';
     }
