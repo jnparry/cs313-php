@@ -1,6 +1,6 @@
 var publicX;
 var publicY;
-//document.getElementById("container").addEventListener("mousedown", savePos);
+document.getElementById("container").addEventListener("mousedown", savePos);
 
 function viewHome() {
     location.href = "/clean/home.php";
@@ -106,7 +106,7 @@ function setUp() {
     }
 }
   
-funciton savePos() {
+function savePos() {
     publicX = event.pageX;
     publicY = event.pageY;
 }
