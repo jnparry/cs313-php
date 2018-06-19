@@ -49,7 +49,7 @@
             </h2>
 
             <section>
-                <div id="area" onmousedown="savePos()">
+                <div id="area" onmousedown="savePos(event)">
                     <?php
                     $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
                     $bstatement->bindValue(':roomId', $roomId);

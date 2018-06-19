@@ -1,5 +1,7 @@
 var publicX;
 var publicY;
+var x;
+var y;
 
 function viewHome() {
     location.href = "/clean/home.php";
@@ -105,13 +107,13 @@ function setUp() {
     }
 }
   
-function savePos() {
+function savePos(event) {
     alert("FIRE");
     publicX = event.pageX;
     publicY = event.pageY;
-    var screenSX = event.screenX;
-    var screenSY = event.screenY;
-    alert(publicX + ", " + publicY + " SX: " + screenSX + ", SY: " + screenSY);
+    x = event.screenX;
+    y = event.screenY;
+    alert(publicX + ", " + publicY + " SX: " + x + ", SY: " + y);
 }
 
 // for desktop w/ mouse click events
