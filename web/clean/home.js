@@ -109,8 +109,10 @@ function setUp() {
   
 function savePos(item, event) {
     alert("FIRE");
-    publicX = (event.pageX - item.offset.left);
-    publicY = (event.pageY - item.offset.top);
+    var offsetL = document.getElementById("area").offsetLeft;
+    var offsetT = document.getElementById("area").offsetTop;
+    publicX = (event.pageX - offsetL);
+    publicY = (event.pageY - offsetT);
 //    var relativeX = (e.pageX - offset.left);
 //    var relativeY = (e.pageY - offset.top);
 }
