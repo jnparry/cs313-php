@@ -1,6 +1,6 @@
 //var publicX;
 //var publicY;
-//document.getElementById("area").addEventListener("mousedown", savePos);
+document.getElementById("area").addEventListener("mouseover", savePos);
 
 function viewHome() {
     location.href = "/clean/home.php";
