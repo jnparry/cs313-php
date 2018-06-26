@@ -145,12 +145,12 @@ function mouse(item, event, id) {
         var top = area.getBoundingClientRect().top;
         var bottom = area.getBoundingClientRect().bottom;
         
-//        // if too far to the right
-//        if (xc + (item.offsetWidth / 2 ) >= right) {
-//            xc = right - (item.offsetWidth);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
-//        }
+        // if too far to the right
+        if (xc + (item.offsetWidth / 2 ) >= right) {
+            xc = right - (item.offsetWidth);
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+        }
 //        
 //        // if too far to the left
 //        if (xc - (item.offsetWidth / 2) <= left) {
