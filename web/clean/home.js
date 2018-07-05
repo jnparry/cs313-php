@@ -262,7 +262,7 @@ function touch(item, event, id) {
         if (clickIsValid) {
             alert("That was a click?");
         }
-        document.removeEventListener('touchmove', onMouseMove);
+        document.removeEventListener('touchmove', onFingerMove);
         item.ontouchend = null;
     };
     
@@ -272,8 +272,8 @@ function touch(item, event, id) {
         if (clickIsValid) {
             alert("That was a click?");
         }
-        document.removeEventListener('touchmove', onMouseMove);
-        item.ontouchend = null;
+        document.removeEventListener('touchmove', onFingerMove);
+        item.ontouchcancel = null;
     };
     clickIsValid = true;
 };
