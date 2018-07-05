@@ -128,7 +128,7 @@ function mouse(item, event, id) {
     item.style.zIndex = 1000;
 //    item.style.position = fixed;
 
-    moveAt(event.pageX, event.pageY);
+//    moveAt(event.pageX, event.pageY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
