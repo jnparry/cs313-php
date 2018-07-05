@@ -117,6 +117,11 @@ function savePos(item, event) {
 // for desktop w/ mouse click events
 function mouse(item, event, id) {
     var myOffset = document.getElementById("area");
+    var left = area.getBoundingClientRect().left;
+    var right = area.getBoundingClientRect().right;
+    var top = area.getBoundingClientRect().top;
+    var bottom = area.getBoundingClientRect().bottom;
+    
     var clickIsValid = true;
     var delay = 200; // milliseconds before click doesn't count
     var notAClick = function() {
@@ -132,18 +137,13 @@ function mouse(item, event, id) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = (pageX - myOffset.offsetLeft) + 'px';
-        item.style.top = (pageY - myOffset.offsetTop) + 'px';
+        item.style.left = (pageX - left) + 'px';
+        item.style.top = (pageY - top) + 'px';
     }
 
     function onMouseMove(event) {
         var xc = event.pageX;
         var yc = event.pageY;
-        
-        var left = area.getBoundingClientRect().left;
-        var right = area.getBoundingClientRect().right;
-        var top = area.getBoundingClientRect().top;
-        var bottom = area.getBoundingClientRect().bottom;
         
         // if too far to the right
         if (xc + (item.offsetWidth / 2 ) >= right) {
