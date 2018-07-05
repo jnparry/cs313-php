@@ -85,7 +85,7 @@
                 </div>
                 
                 <section>
-                    <form action="insertBC.php" method="post">
+                    <form action="insertBC.php" method="post" id="addBC">
                         <p>Number of shelves</p>
                         <input type="number" min="0" max="10" required>
                         <button type="submit" id="shelfnum" name="shelfnum">Add Bookshelf</button>
