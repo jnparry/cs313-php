@@ -190,3 +190,90 @@ function mouse(item, event, id) {
     };
     clickIsValid = true;
 };
+
+// for mobile w/ touch events
+function touch(item, event, id) {
+//    var myOffset = document.getElementById("area");
+//    var left = area.getBoundingClientRect().left;
+//    var right = area.getBoundingClientRect().right;
+//    var top = area.getBoundingClientRect().top;
+//    var bottom = area.getBoundingClientRect().bottom;
+//    
+    var clickIsValid = true;
+    var delay = 200; // milliseconds before click doesn't count
+    var notAClick = function() {
+        clickIsValid = false;
+    }
+    cancelClick = setTimeout( notAClick, delay );
+
+    // make absolute and on top
+    item.style.zIndex = 1000;
+//    item.style.position = fixed;
+
+//    moveAt(event.pageX, event.pageY);
+
+    // centers the ball at (pageX, pageY) coordinates
+    function moveAt(pageX, pageY) {
+        item.style.left = event.touches[0].clientX; + 'px';
+        item.style.top = event.touches[0].clientY; + 'px';
+    }
+
+    function onFingerMove(event) {
+//        var xc = event.touches[0].clientX;
+//        var yc = event.touches[0].clientY;
+//        
+//        // if too far to the right
+//        if (xc + (item.offsetWidth / 2 ) >= right) {
+//            xc = right - (item.offsetWidth);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
+//        }
+//        
+//        // if too far to the left
+//        if (xc - (item.offsetWidth / 2) <= left) {
+//            xc = left + (item.offsetWidth);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;  
+//        }
+//        
+//        // if too far up
+//        if (yc + (item.offsetHeight / 2) >= bottom) {
+//            yc = bottom - (item.offsetHeight);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
+//        }
+//        
+//        // if too far down
+//        if (yc - (item.offsetHeight / 2) <= top) {
+//            yc = top + (item.offsetHeight);
+//            document.removeEventListener('mousemove', onMouseMove);
+//            item.onmouseup = null;
+//        }
+        
+//        moveAt(xc, yc);
+    }
+
+    // (3) move the ball on mousemove
+    document.addEventListener('mousemove', onFingerMove);
+
+    // (4) drop the ball, remove unneeded handlers
+    item.ontouchend = function() {
+        clearTimeout( cancelClick );
+        if (clickIsValid) {
+            alert("That was a click?");
+        }
+        document.removeEventListener('touchmove', onMouseMove);
+        item.ontouchend = null;
+    };
+    
+    // (4) drop the ball, remove unneeded handlers
+    item.ontouchcancel = function() {
+        clearTimeout( cancelClick );
+        if (clickIsValid) {
+            alert("That was a click?");
+        }
+        document.removeEventListener('touchmove', onMouseMove);
+        item.ontouchend = null;
+    };
+    clickIsValid = true;
+};
