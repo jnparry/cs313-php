@@ -132,13 +132,18 @@ ul li:last-child {
 }
 
 #addBC {
-    margin: auto;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 #addBC p {
     font-size: .6em;
 }
-    
+   
+input {
+    border-color: #056cb6; 
+}
+
 .popup {
     cursor: pointer;
     user-select: none;
