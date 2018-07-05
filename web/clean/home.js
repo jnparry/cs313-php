@@ -137,8 +137,8 @@ function mouse(item, event, id) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = 40 + 'px';
-        item.style.top = 40 + 'px';
+        item.style.left = (pageX - left - item.offsetWidth) + 'px';
+        item.style.top = (pageY - top - item.offsetHeight) + 'px';
     }
 
     function onMouseMove(event) {
@@ -214,8 +214,8 @@ function touch(item, event, id) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = event.touches[0].clientX; + 'px';
-        item.style.top = event.touches[0].clientY; + 'px';
+        item.style.left = 40 + 'px';
+        item.style.top = 40 + 'px';
     }
 
     function onFingerMove(event) {
