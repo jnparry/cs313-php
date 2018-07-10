@@ -81,7 +81,7 @@ function showForm(divName, editName, val, pId = null) {
 }
 
 function saveChanges() {  
-    var theForm, newInput1, newInput2;
+    var theForm;
     // Start by creating a <form>
     theForm = document.createElement('form');
     theForm.action = 'saveLocation.php';
@@ -90,13 +90,29 @@ function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
         var myId = document.getElementById(x[i].id).style;
+        if (!myId.top)
+            myId.top = 0;
+        if (!myId.left)
+            myId.left = 0;
+        
         alert("TOP: " + myId.top + ", LEFT: " + myId.left);
         
-        var myName = ("input" + i);
+        var myName = ("left" + i);
         newCoord = document.createElement('input');
         newCoord.type = 'hidden';
+        newCoord.name = myName;
+        newCoord.value = myId.left;
+        var myName2 = ("top" + i);
+        newCoord2 = document.createElement('input');
+        newCoord2.type = 'hidden';
+        newCoord2.name = myName2;
+        newCoord2.value = myId.top;
+        theForm.appendChild(newCoord2);
+        
         alert(myName);
     }
+    document.getElementById('hidden_form_container').appendChild(theForm);
+    theForm.submit();
     
     // Next create the <input>s in the form and give them names and values
 //    newInput1 = document.createElement('input');

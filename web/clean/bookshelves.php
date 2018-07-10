@@ -84,6 +84,8 @@
                     ?>
                 </div>
                 
+                <div id="hidden_form_container" style="display:none;"></div>
+                
                 <section>
                     <form action="insertBC.php" method="post" id="addBC">
                         <p>Number of shelves</p>
