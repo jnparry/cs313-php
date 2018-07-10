@@ -216,16 +216,16 @@ function touch(item, event, id) {
     
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetLeft)) + 'px';
-        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetTop)) + 'px';
+        item.style.left = (pageX - document.getElementById("area").offsetLeft - item.offsetLeft) + 'px';
+        item.style.top = (pageY - document.getElementById("area").offsetTop - item.offsetTop) + 'px';
         console.log(pageX + ", " + pageY);
         console.log("Offest: " + document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
         console.log("Item: " + item.style.left + ", " + item.style.top);
     }
 
     function onFingerMove(event) {
-        var xc = event.touches[0].clientX;
-        var yc = event.touches[0].clientY;
+        var xc = event.touches[0].pageX;
+        var yc = event.touches[0].pageY;
         console.log("FINGERMOVE: " + event.changedTouches[0].pageX + ", " + event.changedTouches[0].pageY); 
 //        // if too far to the right
 //        if (xc + (item.offsetWidth / 2 ) >= right) {
