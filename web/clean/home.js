@@ -220,6 +220,7 @@ function touch(item, event, id) {
     }
 
     function onFingerMove(event) {
+        console.log(event.touches[0].clientX + ", " + event.touches[0].clientY);
 //        var xc = event.touches[0].clientX;
 //        var yc = event.touches[0].clientY;
 //        
