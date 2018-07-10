@@ -50,7 +50,7 @@
                 <section id='container'>
                     <?php
 
-                        $statement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                        $statement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                         $statement->bindValue(':roomId', $roomId);
                         $statement->execute();
 
@@ -62,7 +62,7 @@
                                 </style>';
                         }
 
-                        $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                        $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                         $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
 

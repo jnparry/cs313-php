@@ -18,7 +18,13 @@ $db = get_db();
 
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
+$num_items = $_POST['num'];
 
+for ($i = 0; $i < $num_items; $i++) {
+    if ($_POST['left' . $i]) {
+        echo 'something';
+    }
+} 
 var_dump($_REQUEST);
 
 //

@@ -51,7 +51,7 @@
             <section>
                 <div id="area" onmousedown="savePos(this, event)">
                     <?php
-                    $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId");
+                    $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                     $bstatement->bindValue(':roomId', $roomId);
                     $bstatement->execute();
 
@@ -66,7 +66,7 @@
 
                         echo "<button style='max-height: 10px;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, 'bookcase" . $row['id'] . "')\" onload='setUp(this)'></button>";
 
-                        $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid');
+                        $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY id');
                         $sstatement->bindValue(':bsid', $row['id']);
                         $sstatement->execute();
 
