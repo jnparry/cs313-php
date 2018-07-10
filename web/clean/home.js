@@ -213,11 +213,11 @@ function touch(item, event, id) {
     console.log("Before");
     moveAt(event.touches[0].pageX, event.touches[0].pageY);
     console.log("after");
-    
+
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.width / 2)) + 'px';
-        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.height / 2)) + 'px';
+        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.getBoundingClientRect().left) + 'px';
+        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.getBoundingClientRect().top) + 'px';
         console.log(pageX + ", " + pageY);
         console.log("Offest: " + document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
         console.log("IO: " + item.offsetLeft + ", " + item.offsetTop);
