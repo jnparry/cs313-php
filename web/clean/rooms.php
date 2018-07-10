@@ -14,6 +14,7 @@
     $db = get_db();
     
     echo $projectId;
+echo $name;
 
 ?>
 
