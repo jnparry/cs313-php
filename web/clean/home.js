@@ -91,10 +91,10 @@ function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (i; i < x.length; i++) {
         var myId = document.getElementById(x[i].id).style;
-        if (!myId.top)
-            myId.top = 0;
-        if (!myId.left)
-            myId.left = 0;
+//        if (!myId.top)
+//            myId.top = 0;
+//        if (!myId.left)
+//            myId.left = 0;
         
         alert("TOP: " + myId.top + ", LEFT: " + myId.left);
         
@@ -122,24 +122,6 @@ function saveChanges() {
     
     document.getElementById('hidden_form_container').appendChild(theForm);
     theForm.submit();
-    
-    // Next create the <input>s in the form and give them names and values
-//    newInput1 = document.createElement('input');
-//    newInput1.type = 'hidden';
-//    newInput1.name = 'input_1';
-//    newInput1.value = 'value 1';
-//    newInput2 = document.createElement('input');
-//    newInput2.type = 'hidden';
-//    newInput2.name = 'input_2';
-//    newInput2.value = 'value 2';
-//    // Now put everything together...
-//    theForm.appendChild(newInput1);
-//    theForm.appendChild(newInput2);
-//    // ...and it to the DOM...
-//    document.getElementById('hidden_form_container').appendChild(theForm);
-//    // ...and submit it
-//    theForm.submit();
-
 }
 
 function setUp() {
