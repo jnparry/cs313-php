@@ -219,13 +219,13 @@ function touch(item, event, id) {
         item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
         item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
         console.log(pageX + ", " + pageY);
-        console.log("Offest: " + item.offsetWidth + ", " + item.offsetHeight);
+        console.log("Item: " + item.left + ", " + item.top);
     }
 
     function onFingerMove(event) {
         var xc = event.changedTouches[0].pageX;
         var yc = event.changedTouches[0].pageY;
-        console.log("FINGERMOVE: " + event.changedTouches[0].pageX + ", " + event.changedTouches[0].pageY); 
+
         // if too far to the right
         if (xc + (item.offsetWidth / 2 ) >= right) {
             xc = right - (item.offsetWidth);
