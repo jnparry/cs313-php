@@ -7,10 +7,12 @@
         die();
     }
 
-    $projectId = $_SESSION['project'];
+    $projectId = $_SESSION['pro' + 'ject'];
 
     require("dbConnect.php");
     $db = get_db();
+    
+    echo $projectId;
 
 ?>
 
