@@ -25,9 +25,8 @@ for ($i = 0; $i < $num_items; $i++) {
         $n = $_POST['left' . $i];
         $whole = floor($n);
         $fraction = $n - $whole;
-        echo $whole;
-        echo " ";
-        echo $fraction;
+        $id = substr($fraction, 2);
+        echo $id;
 //        try {
 //            $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 //
