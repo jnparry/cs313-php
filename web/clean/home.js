@@ -224,7 +224,7 @@ function touch(item, event, id) {
     function onFingerMove(event) {
         var xc = event.touches[0].clientX;
         var yc = event.touches[0].clientY;
-        console.log(event.changedTouches[0].pageX + ", " + event.changedTouches[0].pageY); 
+        console.log("FINGERMOVE: " + event.changedTouches[0].pageX + ", " + event.changedTouches[0].pageY); 
 //        // if too far to the right
 //        if (xc + (item.offsetWidth / 2 ) >= right) {
 //            xc = right - (item.offsetWidth);

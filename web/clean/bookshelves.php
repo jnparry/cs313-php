@@ -58,7 +58,7 @@
                     while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                         echo '<style type="text/css">
                                 #bookcase' . $row['id'] . ' {
-                                    position: fixed;
+                                    position: absolute;
                                     left: ' . $row['x'] . 'px;
                                     top: ' . $row['y'] . 'px;
                                 }
