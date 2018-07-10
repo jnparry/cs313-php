@@ -86,9 +86,10 @@ function saveChanges() {
     theForm = document.createElement('form');
     theForm.action = 'saveLocation.php';
     theForm.method = 'post';
-
+    
+    var i = 0;
     var x = document.getElementsByClassName("cases");
-    for (var i = 0; i < x.length; i++) {
+    for (i; i < x.length; i++) {
         var myId = document.getElementById(x[i].id).style;
         if (!myId.top)
             myId.top = 0;
@@ -102,6 +103,8 @@ function saveChanges() {
         newCoord.type = 'hidden';
         newCoord.name = myName;
         newCoord.value = myId.left;
+        theForm.appendChild(newCoord1);
+        
         var myName2 = ("top" + i);
         newCoord2 = document.createElement('input');
         newCoord2.type = 'hidden';
@@ -111,6 +114,12 @@ function saveChanges() {
         
         alert(myName);
     }
+    items = document.createElement('input');
+    items.type = 'hidden';
+    items.name = 'num';
+    items.value = i;
+    theForm.appendChild(items);
+    
     document.getElementById('hidden_form_container').appendChild(theForm);
     theForm.submit();
     
