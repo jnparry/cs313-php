@@ -22,9 +22,37 @@ $num_items = $_POST['num'];
 
 for ($i = 0; $i < $num_items; $i++) {
     if ($_POST['left' . $i]) {
-        echo 'something';
+        try {
+            $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':left', S_POST['left' . $i]);
+            $statement->bindValue(':bId', $i);
+            $statement->execute();
+        } catch (Exception $ex) {
+                echo "Error wttith DB. Details: $ex";
+                die();
+        } 
+    }
+    
+    if ($_POST['top' . $i]) {
+        try {
+            $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':top', S_POST['top' . $i]);
+            $statement->bindValue(':bId', $i);
+            $statement->execute();
+        } catch (Exception $ex) {
+                echo "Error wttith DB. Details: $ex";
+                die();
+        } 
     }
 } 
+
+header("Location: /clean/projects.php");
+die();
+
 var_dump($_REQUEST);
 
 //
