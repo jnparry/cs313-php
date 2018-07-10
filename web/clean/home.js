@@ -96,7 +96,7 @@ function saveChanges() {
         if (strTop)
             strTop = (parseInt(strTop.slice(0, -2))) + "." + x[i].id;
         if (strLeft)
-            strLeft = (parseInt(strLeft.slice(0, -2))) + "." + x[i].id;
+            strLeft = (parseInt(strLeft.slice(0, -2))) + "." + ((x[i].id).substr(8));
         
         alert("TOP: " + strTop + ", LEFT: " + strLeft);
         
