@@ -41,7 +41,7 @@ for ($i = 0; $i < $num_items; $i++) {
     }
     
     if ($_POST['top' . $i]) {
-        echo "Moved"
+        echo "Moved";
 //        try {
 //            $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 //
