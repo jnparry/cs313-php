@@ -214,8 +214,8 @@ function touch(item, event, id) {
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth)) + 'px';
-        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight)) + 'px';
+        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetLeft)) + 'px';
+        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetTop)) + 'px';
         console.log(pageX + ", " + pageY);
         console.log("Offest: " + document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
         console.log("Item: " + item.style.left + ", " + item.style.top);
