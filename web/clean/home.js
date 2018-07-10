@@ -91,25 +91,25 @@ function saveChanges() {
     var x = document.getElementsByClassName("cases");
     for (i; i < x.length; i++) {
         var myId = document.getElementById(x[i].id).style;
-//        if (!myId.top)
-//            myId.top = 0;
-//        if (!myId.left)
-//            myId.left = 0;
+        var strTop = myId.top;
+        var strLeft = myId.left;
+        strTop = strTop.slice(0, -2);
+        strLeft = strLeft.slice(0, -2);
         
-        alert("TOP: " + myId.top + ", LEFT: " + myId.left);
+        alert("TOP: " + strTop + ", LEFT: " + strLeft);
         
         var myName = ("left" + i);
         newCoord = document.createElement('input');
         newCoord.type = 'hidden';
         newCoord.name = myName;
-        newCoord.value = myId.left;
+        newCoord.value = strLeft;
         theForm.appendChild(newCoord);
         
         var myName2 = ("top" + i);
         newCoord2 = document.createElement('input');
         newCoord2.type = 'hidden';
         newCoord2.name = myName2;
-        newCoord2.value = myId.top;
+        newCoord2.value = strTop;
         theForm.appendChild(newCoord2);
         
         alert(myName);
