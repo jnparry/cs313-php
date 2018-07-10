@@ -219,9 +219,7 @@ function touch(item, event, id) {
         item.style.left = (pageX - document.getElementById("area").offsetLeft) + 'px';
         item.style.top = (pageY - document.getElementById("area").offsetTop) + 'px';
         console.log(pageX + ", " + pageY);
-        console.log("Offest: " + document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
-        console.log("BC: " + item.getBoundingClientRect().left + ", " + item.getBoundingClientRect().top);
-        console.log("Item: " + item.style.left + ", " + item.style.top);
+        console.log("Offest: " + item.offsetWidth + ", " + item.offsetHeight);
     }
 
     function onFingerMove(event) {
