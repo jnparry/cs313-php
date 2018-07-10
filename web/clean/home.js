@@ -93,8 +93,8 @@ function saveChanges() {
         var myId = document.getElementById(x[i].id).style;
         var strTop = myId.top;
         var strLeft = myId.left;
-        strTop = strTop.slice(0, -2);
-        strLeft = strLeft.slice(0, -2);
+        strTop = parseInt(strTop.slice(0, -2));
+        strLeft = parseInt(strLeft.slice(0, -2));
         
         alert("TOP: " + strTop + ", LEFT: " + strLeft);
         
