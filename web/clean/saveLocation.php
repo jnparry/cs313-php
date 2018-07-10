@@ -26,7 +26,7 @@ for ($i = 0; $i < $num_items; $i++) {
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 
             $statement = $db->prepare($query);
-            $statement->bindValue(':left', S_POST['left' . $i]);
+            $statement->bindValue(':left', $_POST['left' . $i]);
             $statement->bindValue(':bId', $i);
             $statement->execute();
         } catch (Exception $ex) {
@@ -40,7 +40,7 @@ for ($i = 0; $i < $num_items; $i++) {
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
             $statement = $db->prepare($query);
-            $statement->bindValue(':top', S_POST['top' . $i]);
+            $statement->bindValue(':top', $_POST['top' . $i]);
             $statement->bindValue(':bId', $i);
             $statement->execute();
         } catch (Exception $ex) {
@@ -50,7 +50,7 @@ for ($i = 0; $i < $num_items; $i++) {
     }
 } 
 
-header("Location: /clean/projects.php");
+header("Location: /clean/rooms.php");
 die();
 
 var_dump($_REQUEST);
