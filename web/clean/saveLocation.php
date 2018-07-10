@@ -26,33 +26,37 @@ for ($i = 0; $i < $num_items; $i++) {
         $whole = floor($n);
         $fraction = $n - $whole;
         $id = substr($fraction, 2);
-        echo $id;
-//        try {
-//            $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
-//
-//            $statement = $db->prepare($query);
-//            $statement->bindValue(':left', $_POST['left' . $i]);
-//            $statement->bindValue(':bId', $i);
-//            $statement->execute();
-//        } catch (Exception $ex) {
-//                echo "Error wttith DB. Details: $ex";
-//                die();
-//        } 
+
+        try {
+            $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':left', $_POST['left' . $i]);
+            $statement->bindValue(':bId', $id);
+            $statement->execute();
+        } catch (Exception $ex) {
+                echo "Error wttith DB. Details: $ex";
+                die();
+        } 
     }
     
     if ($_POST['top' . $i]) {
-        echo "Moved";
-//        try {
-//            $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
-//
-//            $statement = $db->prepare($query);
-//            $statement->bindValue(':top', $_POST['top' . $i]);
-//            $statement->bindValue(':bId', $i);
-//            $statement->execute();
-//        } catch (Exception $ex) {
-//                echo "Error wttith DB. Details: $ex";
-//                die();
-//        } 
+        $n = $_POST['top' . $i];
+        $whole = floor($n);
+        $fraction = $n - $whole;
+        $id = substr($fraction, 2);
+
+        try {
+            $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':top', $_POST['top' . $i]);
+            $statement->bindValue(':bId', $id);
+            $statement->execute();
+        } catch (Exception $ex) {
+                echo "Error wttith DB. Details: $ex";
+                die();
+        } 
     }
 } 
 
