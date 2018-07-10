@@ -7,7 +7,7 @@
         die();
     }
 
-    $name = ('pro' + 'ject');
+    $name = ('pro' . 'ject');
     $projectId = $_SESSION[$name];
 
     require("dbConnect.php");
