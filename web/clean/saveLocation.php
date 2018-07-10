@@ -22,35 +22,36 @@ $num_items = $_POST['num'];
 
 for ($i = 0; $i < $num_items; $i++) {
     if ($_POST['left' . $i]) {
-        try {
-            $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
-
-            $statement = $db->prepare($query);
-            $statement->bindValue(':left', $_POST['left' . $i]);
-            $statement->bindValue(':bId', $i);
-            $statement->execute();
-        } catch (Exception $ex) {
-                echo "Error wttith DB. Details: $ex";
-                die();
-        } 
+//        try {
+//            $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
+//
+//            $statement = $db->prepare($query);
+//            $statement->bindValue(':left', $_POST['left' . $i]);
+//            $statement->bindValue(':bId', $i);
+//            $statement->execute();
+//        } catch (Exception $ex) {
+//                echo "Error wttith DB. Details: $ex";
+//                die();
+//        } 
     }
     
     if ($_POST['top' . $i]) {
-        try {
-            $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
-
-            $statement = $db->prepare($query);
-            $statement->bindValue(':top', $_POST['top' . $i]);
-            $statement->bindValue(':bId', $i);
-            $statement->execute();
-        } catch (Exception $ex) {
-                echo "Error wttith DB. Details: $ex";
-                die();
-        } 
+        echo "Moved"
+//        try {
+//            $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
+//
+//            $statement = $db->prepare($query);
+//            $statement->bindValue(':top', $_POST['top' . $i]);
+//            $statement->bindValue(':bId', $i);
+//            $statement->execute();
+//        } catch (Exception $ex) {
+//                echo "Error wttith DB. Details: $ex";
+//                die();
+//        } 
     }
 } 
 
-header("Location: /clean/rooms.php");
+header("Location: /clean/bookshelves.php");
 die();
 
 var_dump($_REQUEST);

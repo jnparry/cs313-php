@@ -90,13 +90,13 @@ function saveChanges() {
     var i = 0;
     var x = document.getElementsByClassName("cases");
     for (i; i < x.length; i++) {
-        var myId = document.getElementById(x[i].id).style;
-        var strTop = myId.top;
-        var strLeft = myId.left;
+        var myId = document.getElementById(x[i].id);
+        var strTop = myId.style.top;
+        var strLeft = myId.style.left;
         if (strTop)
-            strTop = parseInt(strTop.slice(0, -2));
+            strTop = (parseInt(strTop.slice(0, -2))) + "." + myId;
         if (strLeft)
-            strLeft = parseInt(strLeft.slice(0, -2));
+            strLeft = (parseInt(strLeft.slice(0, -2))) + "." + myId;
         
         alert("TOP: " + strTop + ", LEFT: " + strLeft);
         
