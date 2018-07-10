@@ -210,17 +210,15 @@ function touch(item, event, id) {
     item.style.zIndex = 1000;
 //    item.style.position = fixed;
 
-    console.log(event.touches[0].clientX + ", " + event.touches[0].clientY);
-//    moveAt(event.touches[0].clientX, event.touches[0].clientY);
+    moveAt(event.touches[0].clientX, event.touches[0].clientY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = 40 + 'px';
-        item.style.top = 40 + 'px';
+        item.style.left = (pageX - area.offsetLeft) + 'px';
+        item.style.top = (pageY - area.offsetTop) + 'px';
     }
 
     function onFingerMove(event) {
-        console.log(event.touches[0].clientX + ", " + event.touches[0].clientY);
 //        var xc = event.touches[0].clientX;
 //        var yc = event.touches[0].clientY;
 //        
