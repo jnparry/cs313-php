@@ -210,7 +210,8 @@ function touch(item, event, id) {
     item.style.zIndex = 1000;
 //    item.style.position = fixed;
 
-    moveAt(event.touches[0].clientX, event.touches[0].clientY);
+    console.log(event.touches[0].clientX + ", " + event.touches[0].clientY);
+//    moveAt(event.touches[0].clientX, event.touches[0].clientY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
