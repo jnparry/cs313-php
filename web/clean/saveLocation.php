@@ -31,7 +31,7 @@ for ($i = 0; $i < $num_items; $i++) {
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 
             $statement = $db->prepare($query);
-            $statement->bindValue(':left', $_POST['left' . $i]);
+            $statement->bindValue(':left', $whole);
             $statement->bindValue(':bId', $id);
             $statement->execute();
         } catch (Exception $ex) {
@@ -50,7 +50,7 @@ for ($i = 0; $i < $num_items; $i++) {
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
             $statement = $db->prepare($query);
-            $statement->bindValue(':top', $_POST['top' . $i]);
+            $statement->bindValue(':top', $whole);
             $statement->bindValue(':bId', $id);
             $statement->execute();
         } catch (Exception $ex) {
