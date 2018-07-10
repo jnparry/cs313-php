@@ -103,7 +103,7 @@ function saveChanges() {
         newCoord.type = 'hidden';
         newCoord.name = myName;
         newCoord.value = myId.left;
-        theForm.appendChild(newCoord1);
+        theForm.appendChild(newCoord);
         
         var myName2 = ("top" + i);
         newCoord2 = document.createElement('input');
