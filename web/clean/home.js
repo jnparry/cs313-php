@@ -220,7 +220,7 @@ function touch(item, event, id) {
         item.style.top = (pageY - document.getElementById("area").offsetTop - (item.getBoundingClientRect().top)) + 'px';
         console.log(pageX + ", " + pageY);
         console.log("Offest: " + document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
-        console.log("IO: " + item.offsetLeft + ", " + item.offsetTop);
+        console.log("BC: " + item.getBoundingClientRect().left + ", " + item.getBoundingClientRect().top);
         console.log("Item: " + item.style.left + ", " + item.style.top);
     }
 
