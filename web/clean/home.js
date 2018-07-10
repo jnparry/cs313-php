@@ -94,7 +94,7 @@ function saveChanges() {
         var strTop = myId.top;
         var strLeft = myId.left;
         if (strTop)
-            strTop = (parseInt(strTop.slice(0, -2))) + "." + x[i].id;
+            strTop = (parseInt(strTop.slice(0, -2))) + "." + ((x[i].id).substr(8));
         if (strLeft)
             strLeft = (parseInt(strLeft.slice(0, -2))) + "." + ((x[i].id).substr(8));
         
