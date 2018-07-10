@@ -80,16 +80,42 @@ function showForm(divName, editName, val, pId = null) {
     }
 }
 
-//function saveChanges() {  
-//    $.get('saveLocation.php', { key: 'value1', key2: 'value2' }).done(function(data) {
-//        alert(data);
-//    });
-////    var x = document.getElementsByClassName("cases");
-////    for (var i = 0; i < x.length; i++) {
-////        var myId = document.getElementById(x[i].id).style;
-////        alert("TOP: " + myId.top + ", LEFT: " + myId.left);
-////    }
-//}
+function saveChanges() {  
+    var theForm, newInput1, newInput2;
+    // Start by creating a <form>
+    theForm = document.createElement('form');
+    theForm.action = 'saveLocation.php';
+    theForm.method = 'post';
+
+    var x = document.getElementsByClassName("cases");
+    for (var i = 0; i < x.length; i++) {
+        var myId = document.getElementById(x[i].id).style;
+        alert("TOP: " + myId.top + ", LEFT: " + myId.left);
+        
+        var myName = ("input" + i);
+        newCoord = document.createElement('input');
+        newCoord.type = 'hidden';
+        alert(myName);
+    }
+    
+    // Next create the <input>s in the form and give them names and values
+//    newInput1 = document.createElement('input');
+//    newInput1.type = 'hidden';
+//    newInput1.name = 'input_1';
+//    newInput1.value = 'value 1';
+//    newInput2 = document.createElement('input');
+//    newInput2.type = 'hidden';
+//    newInput2.name = 'input_2';
+//    newInput2.value = 'value 2';
+//    // Now put everything together...
+//    theForm.appendChild(newInput1);
+//    theForm.appendChild(newInput2);
+//    // ...and it to the DOM...
+//    document.getElementById('hidden_form_container').appendChild(theForm);
+//    // ...and submit it
+//    theForm.submit();
+
+}
 
 function setUp() {
     var x = document.getElementsByClassName("cases");

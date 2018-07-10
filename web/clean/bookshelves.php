@@ -22,7 +22,6 @@
         <title>Cleaning Schedule</title>
         <link rel="stylesheet" href="home.css">
         <script src="home.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     </head>
     
     <body>
@@ -101,5 +100,4 @@
             </section>
         </section>
     </body>
-    <script src="temp.js"></script>
 </html>
