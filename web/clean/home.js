@@ -210,13 +210,12 @@ function touch(item, event, id) {
     item.style.zIndex = 1000;
 //    item.style.position = fixed;
 
-    moveAt((event.touches[0].pageX - document.getElementById("area").offsetLeft - (item.offsetLeft)), 
-           (event.touches[0].pageY - document.getElementById("area").offsetTop - (item.offsetTop)));
+    moveAt(event.touches[0].pageX, event.touches[0].pageY);
 
     // centers the ball at (pageX, pageY) coordinates
     function moveAt(pageX, pageY) {
-        item.style.left = (pageX) + 'px';
-        item.style.top = (pageY) + 'px';
+        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetLeft)) + 'px';
+        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetTop)) + 'px';
         console.log(pageX + ", " + pageY);
         console.log("Offest: " + document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
         console.log("Item: " + item.style.left + ", " + item.style.top);
