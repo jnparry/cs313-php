@@ -164,6 +164,10 @@ function savePos(item, event) {
 //    alert(document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
 }
 
+function mouse(item, event, id) {
+    // this no longer contains anything.
+}
+
 // for desktop w/ mouse click events
 //function mouse(item, event, id) {
 //    var myOffset = document.getElementById("area");
