@@ -70,8 +70,12 @@
                             </style>';
 
                         echo "<button style='max-height: 10px; margin
-                        : 0;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, 'bookcase" . $row['id'] . "')\" onload='setUp(this)'></button>";
-
+                        : 0;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, 'bookcase" . $row['id'] . "')\" onload='setUp(this)'>
+                            <span class='popuptext' id='myPopup" . $row['id'] . "'>
+                                <button onclick='deleteBookcase(" . $row['id'] . ")'>Delete</button>
+                            </span>
+                        </button>";                            
+                        
 //                        $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY id');
 //                        $sstatement->bindValue(':bsid', $row['id']);
 //                        $sstatement->execute();

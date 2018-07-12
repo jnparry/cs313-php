@@ -35,6 +35,10 @@ function redirectToSignUp() {
     location.href = "/clean/signup.php";
 }
 
+function deleteBookcase(id) {
+    alert("Delete bookcase " + id);
+}
+
 function soon() {
     alert("Feature coming soon.");
 }
