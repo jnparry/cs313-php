@@ -28,7 +28,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = substr($fraction, 2);
 
         echo "Whole: " . $whole;
-        echo " Id: " . $id . "Then the error: ";
+        echo " Id: " . $id . " Then the error: ";
 
         try {
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
@@ -49,6 +49,9 @@ for ($i = 0; $i < $num_items; $i++) {
         $fraction = $n - $whole;
         $id = substr($fraction, 2);
 
+        echo "Whole2: " . $whole;
+        echo " Id2: " . $id . " Then the error: ";
+        
         try {
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
