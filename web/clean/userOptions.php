@@ -17,7 +17,7 @@
         echo "<a href='#'>Settings</a>";
         echo "<a href='#'>Logout</a>";
     } else {
-        echo "<a href='#'>Login</a>"
+        echo "<a href='#'>Login</a>";
     }
     ?>
 </div>
