@@ -250,6 +250,8 @@ function mouse(item, event, id) {
 //};
 
 // for mobile w/ touch events
+var open = false;
+
 function touch(item, event, id) {
 //    var myOffset = document.getElementById("area");
     var left = area.getBoundingClientRect().left;
@@ -268,55 +270,59 @@ function touch(item, event, id) {
     item.style.zIndex = 1000;
 //    item.style.position = fixed;
 
-    console.log("Before");
-    moveAt(event.touches[0].pageX, event.touches[0].pageY);
-    console.log("after");
+    if (!open) {
+        moveAt(event.touches[0].pageX, event.touches[0].pageY);
 
-    // centers the ball at (pageX, pageY) coordinates
-    function moveAt(pageX, pageY) {
-        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
-        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
-        console.log(pageX + ", " + pageY);
-        console.log("Item: " + item.style.left + ", " + item.style.top);
-    }
+        // centers the ball at (pageX, pageY) coordinates
+        function moveAt(pageX, pageY) {
+            item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
+            item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
+            console.log(pageX + ", " + pageY);
+            console.log("Item: " + item.style.left + ", " + item.style.top);
+        }
 
-    function onFingerMove(event) {
-        var xc = event.changedTouches[0].pageX;
-        var yc = event.changedTouches[0].pageY;
+        function onFingerMove(event) {
+            var xc = event.changedTouches[0].pageX;
+            var yc = event.changedTouches[0].pageY;
 
-        // if too far to the right
-        if (xc + (item.offsetWidth / 2 ) >= right) {
-            xc = right - (item.offsetWidth);
-            document.removeEventListener('touchmove', onFingerMove);
-            item.ontouchend = null;
-            item.ontouchcancel = null;
+            // if too far to the right
+            if (xc + (item.offsetWidth / 2 ) >= right) {
+                xc = right - (item.offsetWidth);
+                document.removeEventListener('touchmove', onFingerMove);
+                item.ontouchend = null;
+                item.ontouchcancel = null;
+            }
+
+            // if too far to the left
+            if (xc - (item.offsetWidth / 2) <= left) {
+                xc = left + (item.offsetWidth);
+                document.removeEventListener('touchmove', onFingerMove);
+                item.ontouchend = null;
+                item.ontouchcancel = null;
+            }
+
+            // if too far up
+            if (yc + (item.offsetHeight / 2) >= bottom) {
+                yc = bottom - (item.offsetHeight);
+                document.removeEventListener('touchmove', onFingerMove);
+                item.ontouchend = null;
+                item.ontouchcancel = null;
+            }
+
+            // if too far down
+            if (yc - (item.offsetHeight / 2) <= top) {
+                yc = top + (item.offsetHeight);
+                document.removeEventListener('touchmove', onFingerMove);
+                item.ontouchend = null;
+                item.ontouchcancel = null;
+            }
+
+            moveAt(xc, yc);
         }
-        
-        // if too far to the left
-        if (xc - (item.offsetWidth / 2) <= left) {
-            xc = left + (item.offsetWidth);
-            document.removeEventListener('touchmove', onFingerMove);
-            item.ontouchend = null;
-            item.ontouchcancel = null;
+    } else {
+        function onFingerMove(event) {
+            // nothing
         }
-        
-        // if too far up
-        if (yc + (item.offsetHeight / 2) >= bottom) {
-            yc = bottom - (item.offsetHeight);
-            document.removeEventListener('touchmove', onFingerMove);
-            item.ontouchend = null;
-            item.ontouchcancel = null;
-        }
-        
-        // if too far down
-        if (yc - (item.offsetHeight / 2) <= top) {
-            yc = top + (item.offsetHeight);
-            document.removeEventListener('touchmove', onFingerMove);
-            item.ontouchend = null;
-            item.ontouchcancel = null;
-        }
-        
-        moveAt(xc, yc);
     }
 
     // (3) move the ball on mousemove
@@ -327,6 +333,10 @@ function touch(item, event, id) {
         clearTimeout( cancelClick );
         if (clickIsValid) {
             popUp(id);
+            if (open)
+                open = false;
+            else
+                open = true;
         }
         document.removeEventListener('touchmove', onFingerMove);
         item.ontouchend = null;
@@ -337,6 +347,10 @@ function touch(item, event, id) {
         clearTimeout( cancelClick );
         if (clickIsValid) {
             popUp(id);
+            if (open)
+                open = false;
+            else
+                open = true;
 //            alert("That was a click?");
         }
         document.removeEventListener('touchmove', onFingerMove);
