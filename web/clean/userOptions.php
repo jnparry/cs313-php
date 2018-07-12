@@ -1,10 +1,5 @@
 <?
     session_start();
-
-    if (!isset($_SESSION['user'])) {
-        header("Location: /clean/signin.php");
-        die();
-    } 
 ?>
 
 <div id="mySidenav" class="sidenav">
