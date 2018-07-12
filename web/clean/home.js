@@ -120,6 +120,7 @@ function saveChanges() {
     items.type = 'hidden';
     items.name = 'num';
     items.value = i;
+    alert("I: " + i);
     theForm.appendChild(items);
     
     document.getElementById('hidden_form_container').appendChild(theForm);
