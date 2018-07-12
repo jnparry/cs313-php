@@ -22,33 +22,21 @@ if (isset($_POST['email']) && isset($_POST['password']))
 		$row = $statement->fetch();
 		$hashedPasswordFromDB = $row['password'];
         
-		// now check to see if the hashed password matches
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
-			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['user'] = $row['name'];
 			header("Location: home.php");
-			die(); // we always include a die after redirects.
+			die();
 		} else {
-            echo $email;
-            echo $row['email'];
-            echo $name;
-            echo $row['name'];
-            echo $password;
-            echo $row['password'];
-            
 			$badLogin = true;
-            echo "1";
 		}
 	}
 	else
 	{
-        echo "2";
 		$badLogin = true;
 	}
 }
-// If we get to this point without having redirected, then it means they
-// should just see the login form.
+
 ?>
 
 <!DOCTYPE html>

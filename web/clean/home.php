@@ -1,10 +1,10 @@
 <?php 
     session_start();
 
-    if (!isset($_SESSION['user'])) {
-        header("Location: /clean/signin.php");
-        die();
-    } 
+//    if (!isset($_SESSION['user'])) {
+//        header("Location: /clean/signin.php");
+//        die();
+//    } 
 ?>
 <!DOCTYPE html>
 <html>
