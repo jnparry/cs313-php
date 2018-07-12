@@ -72,7 +72,7 @@
                         echo "<button class='popup' style='max-height: 10px; margin: 0;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, " . $row['id'] . ")\" onload='setUp(this)'>
                             <span class='popuptext' id='myPopup" . $row['id'] . "'>";
                         
-                            echo "<button class='popuptext' onclick='deleteBookcase(" . $row['id'] . ")'>Delete</button>"; 
+                            echo "<button id='myPopup" . $row['id'] . "' onclick='deleteBookcase(" . $row['id'] . ")'>Delete</button>"; 
                             echo "</span>";
                             echo"</button>";
                         
