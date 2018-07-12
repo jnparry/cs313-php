@@ -18,8 +18,16 @@
             <h2>Recent Cleaning Projects</h2>
             <p>insert into or pictures or something here.</p>
             <h3>This data is coming soon.</h3>
+            
             <section class="bottomNav">
-                <button onclick="viewProjects()">View Projects</button>
+            <?
+            if (isset($_SESSION['user']))
+                echo "<button onclick='viewProjects()'>View Projects</button>";
+            else {
+                echo "<button onclick='redirectToSignIn()'>Sign In</button>";
+                echo "<button onclick='redirectToSignUp()'>Sign Up</button>";
+            }
+            ?>
             </section>
         </section>
     </body>

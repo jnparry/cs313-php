@@ -27,6 +27,14 @@ function closeNav() {
     document.getElementById("mySidenav").style.minWidth = "0";
 }
 
+function redirectToSignIn() {
+    location.href = "/clean/signin.php";
+}
+
+function redirectToSignUp() {
+    location.href = "/clean/signup.php";
+}
+
 function soon() {
     alert("Feature coming soon.");
 }
