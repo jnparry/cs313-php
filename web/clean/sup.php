@@ -30,7 +30,7 @@ $statement = $db->prepare($query);
 $statement->bindValue(':name', $name);
 $statement->bindValue(':email', $email);
 $statement->bindValue(':password', $password);
-$xstatement->execute();
+$statement->execute();
 
 // redirect to the sign in page
 header("Location: signin.php");
