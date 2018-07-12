@@ -29,7 +29,7 @@ $query = 'INSERT INTO users(name, email, password) VALUES(:name, :email, :passwo
 $statement = $db->prepare($query);
 $statement->bindValue(':name', $name);
 $statement->bindValue(':email', $email);
-$statement->bindValue(':password', $hashedPassword);
+$statement->bindValue(':password', $password);
 $xstatement->execute();
 
 // redirect to the sign in page
