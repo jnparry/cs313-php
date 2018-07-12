@@ -90,8 +90,9 @@
                                 }
                             }                            
                                  
-                            if (empty)
+                            if ($empty)
                                 echo "<p>No shelves here</p>";
+                            
                             echo "</span>";
                             if (!$notClean)
                                 echo "Clean";
