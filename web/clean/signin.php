@@ -36,6 +36,9 @@ if (isset($_POST['email']) && isset($_POST['password']))
             echo $row['email'];
             echo $name;
             echo $row['name'];
+            echo $password;
+            echo $row['password'];
+            
 			$badLogin = true;
             echo "1";
 		}
