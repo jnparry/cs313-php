@@ -25,6 +25,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $n = $_POST['left' . $i];
         $whole = floor($n);
         $fraction = $n - $whole;
+        echo "ID B4: " . $id;
         $id = substr($fraction, 2);
 
         echo "Whole: " . $whole;
