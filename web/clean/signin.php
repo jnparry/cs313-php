@@ -16,22 +16,20 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	$query = 'SELECT * FROM users WHERE email = :email';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':email', email);
-    
-	$row = $statement->execute();
-	if ($row)
-	{
+    $result = $statement->execute();
+
+    if ($result) {
 		$row = $statement->fetch();
+		$hashedPasswordFromDB = $row['password'];
+        
 		// now check to see if the hashed password matches
-		if (password_verify($password, $row['password']))
+		if (password_verify($password, $hashedPasswordFromDB))
 		{
-            $badLogin = false;
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['user'] = $row['name'];
 			header("Location: home.php");
 			die(); // we always include a die after redirects.
-		}
-		else
-		{
+		} else {
             echo $email;
             echo $row['email'];
             echo $name;
