@@ -27,6 +27,9 @@ for ($i = 0; $i < $num_items; $i++) {
         $fraction = $n - $whole;
         $id = substr($fraction, 2);
 
+        echo $whole;
+        echo $id;
+
         try {
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 
