@@ -32,10 +32,12 @@ if (isset($_POST['email']) && isset($_POST['password']))
 		else
 		{
 			$badLogin = true;
+            echo "1";
 		}
 	}
 	else
 	{
+        echo "2";
 		$badLogin = true;
 	}
 }
