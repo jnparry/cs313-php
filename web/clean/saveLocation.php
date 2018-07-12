@@ -27,6 +27,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $fraction = $n - $whole;
         echo "ID B4: " . $fraction;
         $id = substr($fraction, 2);
+        $id = substr($id, 0, 1);
 
         echo "Whole: " . $whole;
         echo " Id: " . $id . " Then the error: ";
