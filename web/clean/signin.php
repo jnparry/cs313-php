@@ -13,7 +13,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	require("dbConnect.php");
 	$db = get_db();
     
-	$query = 'SELECT password, name FROM users WHERE email = :email';
+	$query = 'SELECT password, name FROM users WHERE id = :email';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':email', email);
 	$result = $statement->execute();
