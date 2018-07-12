@@ -27,6 +27,8 @@
 
                 <input type="submit" value="Sign Up" />
             </form>
+            
+            Already have an account? <a href="signin.php">Sign in</a> here.
         </section>
     </body>
 </html>

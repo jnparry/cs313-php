@@ -72,7 +72,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
                 <input type="submit" value="Sign In" />
             </form>
             <br /><br />
-            Or <a href="signup.php">Sign up</a> for a new account.
+            Don't have an account? <a href="signup.php">Sign up</a> here.
         </section>
     </body>
 </html>
