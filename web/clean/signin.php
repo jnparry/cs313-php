@@ -16,8 +16,9 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	$query = 'SELECT password, name FROM users WHERE email = :email';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':email', email);
-	$result = $statement->execute();
-	if ($result)
+    
+	$row = $statement->execute();
+	if ($row)
 	{
 		$row = $statement->fetch();
 		// now check to see if the hashed password matches
