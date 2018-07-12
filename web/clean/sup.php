@@ -22,7 +22,7 @@ $db = get_db();
 
 $query = 'INSERT INTO users(name, email, password) VALUES(:name, :email, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(':name', name);
+$statement->bindValue(':name', $name);
 $statement->bindValue(':email', $email);
 $statement->bindValue(':password', $hashedPassword);
 $xstatement->execute();
