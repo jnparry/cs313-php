@@ -20,9 +20,8 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	if ($result)
 	{
 		$row = $statement->fetch();
-		$hashedPasswordFromDB = $row['password'];
 		// now check to see if the hashed password matches
-		if (password_verify($password, $hashedPasswordFromDB))
+		if (password_verify($password, $row['password']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['user'] = $row['name'];
