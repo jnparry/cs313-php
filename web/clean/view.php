@@ -77,10 +77,10 @@
                             $sstatement->execute();
 
                             // Go through each shelf in the bookcase
+                            if (!$sRow)
+                                echo "<p>Empty.</p>";
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
-                                if (!$sRow)
-                                    echo "Empty.";
                                 echo "<p>Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
                                     echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
