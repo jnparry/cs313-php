@@ -99,7 +99,7 @@
                     }
                     ?>
                     
-                    <div id='deleteArea' style='max-height: 10px; margin: 0; background-color: grey;'>
+                    <div id='deleteArea' style='height: 10px; margin: 0; background-color: grey;'>
                     </div>
                 </div>
                 
