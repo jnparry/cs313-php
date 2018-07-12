@@ -5,8 +5,7 @@ $name = $_POST['name'];
 $password = $_POST['password'];
 
 // ensure values are filled out
-if (!isset($name) || $name == "" || !isset($password) || $password == "" ||
-   !isset($email || $email == ""))
+if (!isset($name) || $name == "" || !isset($password) || $password == "" || !isset($email || $email == ""))
 {
 	header("Location: signup.php");
 	die();
