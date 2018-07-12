@@ -48,6 +48,10 @@ function popUp(num) {
     popup.classList.toggle("show");
 }
 
+function clickedMe() {
+    alert("clicked");
+}
+
 function showForm(divName, editName, val, pId = null) {
     var add = false;    
     var x = document.getElementById(divName);
@@ -347,6 +351,7 @@ function touch(item, event, id) {
         clearTimeout( cancelClick );
         if (clickIsValid) {
             popUp(id);
+            clickedMe();
             if (open)
                 open = false;
             else
