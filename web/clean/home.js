@@ -351,7 +351,6 @@ function touch(item, event, id) {
         clearTimeout( cancelClick );
         if (clickIsValid) {
             popUp(id);
-            clickedMe();
             if (open)
                 open = false;
             else

@@ -70,9 +70,9 @@
                             </style>';
 
                         echo "<button class='popup' style='max-height: 10px; margin: 0;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, " . $row['id'] . ")\" onload='setUp(this)'>
-                            <span onclick='clickedMe()' class='popuptext' id='myPopup" . $row['id'] . "'>";
+                            <span class='popuptext' id='myPopup" . $row['id'] . "'>";
                         
-                            echo "<p onclick='clickedMe()'>Delete bookcase</p>"; 
+                            echo "<p>Delete bookcase</p>"; 
                             echo "</span>";
                             echo"</button>";
                         
@@ -98,6 +98,9 @@
 //                        }     
                     }
                     ?>
+                    
+                    <div id='deleteArea' style='max-height: 10px; margin: 0; background-color: grey;'>
+                    </div>
                 </div>
                 
                 <div id="hidden_form_container" style="display:none;"></div>
