@@ -326,7 +326,7 @@ function touch(item, event, id) {
     item.ontouchend = function() {
         clearTimeout( cancelClick );
         if (clickIsValid) {
-            alert("That was a click?");
+            popUp(id);
         }
         document.removeEventListener('touchmove', onFingerMove);
         item.ontouchend = null;
