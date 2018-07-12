@@ -165,81 +165,81 @@ function savePos(item, event) {
 }
 
 // for desktop w/ mouse click events
-function mouse(item, event, id) {
-    var myOffset = document.getElementById("area");
-    var left = area.getBoundingClientRect().left;
-    var right = area.getBoundingClientRect().right;
-    var top = area.getBoundingClientRect().top;
-    var bottom = area.getBoundingClientRect().bottom;
-    
-    var clickIsValid = true;
-    var delay = 200; // milliseconds before click doesn't count
-    var notAClick = function() {
-        clickIsValid = false;
-    }
-    cancelClick = setTimeout( notAClick, delay );
-
-    // make absolute and on top
-    item.style.zIndex = 1000;
-//    item.style.position = fixed;
-
-//    moveAt(event.pageX, event.pageY);
-
-    // centers the ball at (pageX, pageY) coordinates
-    function moveAt(pageX, pageY) {
-        item.style.left = (pageX - left - item.offsetWidth) + 'px';
-        item.style.top = (pageY - top - item.offsetHeight) + 'px';
-    }
-
-    function onMouseMove(event) {
-        var xc = event.pageX;
-        var yc = event.pageY;
-        
-        // if too far to the right
-        if (xc + (item.offsetWidth / 2 ) >= right) {
-            xc = right - (item.offsetWidth);
-            document.removeEventListener('mousemove', onMouseMove);
-            item.onmouseup = null;
-        }
+//function mouse(item, event, id) {
+//    var myOffset = document.getElementById("area");
+//    var left = area.getBoundingClientRect().left;
+//    var right = area.getBoundingClientRect().right;
+//    var top = area.getBoundingClientRect().top;
+//    var bottom = area.getBoundingClientRect().bottom;
+//    
+//    var clickIsValid = true;
+//    var delay = 200; // milliseconds before click doesn't count
+//    var notAClick = function() {
+//        clickIsValid = false;
+//    }
+//    cancelClick = setTimeout( notAClick, delay );
+//
+//    // make absolute and on top
+//    item.style.zIndex = 1000;
+////    item.style.position = fixed;
+//
+////    moveAt(event.pageX, event.pageY);
+//
+//    // centers the ball at (pageX, pageY) coordinates
+//    function moveAt(pageX, pageY) {
+//        item.style.left = (pageX - left - item.offsetWidth) + 'px';
+//        item.style.top = (pageY - top - item.offsetHeight) + 'px';
+//    }
+//
+//    function onMouseMove(event) {
+//        var xc = event.pageX;
+//        var yc = event.pageY;
 //        
-//        // if too far to the left
-//        if (xc - (item.offsetWidth / 2) <= left) {
-//            xc = left + (item.offsetWidth);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;  
-//        }
-//        
-//        // if too far up
-//        if (yc + (item.offsetHeight / 2) >= bottom) {
-//            yc = bottom - (item.offsetHeight);
+//        // if too far to the right
+//        if (xc + (item.offsetWidth / 2 ) >= right) {
+//            xc = right - (item.offsetWidth);
 //            document.removeEventListener('mousemove', onMouseMove);
 //            item.onmouseup = null;
 //        }
+////        
+////        // if too far to the left
+////        if (xc - (item.offsetWidth / 2) <= left) {
+////            xc = left + (item.offsetWidth);
+////            document.removeEventListener('mousemove', onMouseMove);
+////            item.onmouseup = null;  
+////        }
+////        
+////        // if too far up
+////        if (yc + (item.offsetHeight / 2) >= bottom) {
+////            yc = bottom - (item.offsetHeight);
+////            document.removeEventListener('mousemove', onMouseMove);
+////            item.onmouseup = null;
+////        }
+////        
+////        // if too far down
+////        if (yc - (item.offsetHeight / 2) <= top) {
+////            yc = top + (item.offsetHeight);
+////            document.removeEventListener('mousemove', onMouseMove);
+////            item.onmouseup = null;
+////        }
 //        
-//        // if too far down
-//        if (yc - (item.offsetHeight / 2) <= top) {
-//            yc = top + (item.offsetHeight);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
+//        moveAt(xc, yc);
+//    }
+//
+//    // (3) move the ball on mousemove
+//    document.addEventListener('mousemove', onMouseMove);
+//
+//    // (4) drop the ball, remove unneeded handlers
+//    item.onmouseup = function() {
+//        clearTimeout( cancelClick );
+//        if (clickIsValid) {
+//            alert("That was a click?");
 //        }
-        
-        moveAt(xc, yc);
-    }
-
-    // (3) move the ball on mousemove
-    document.addEventListener('mousemove', onMouseMove);
-
-    // (4) drop the ball, remove unneeded handlers
-    item.onmouseup = function() {
-        clearTimeout( cancelClick );
-        if (clickIsValid) {
-            alert("That was a click?");
-        }
-        document.removeEventListener('mousemove', onMouseMove);
-        item.onmouseup = null;
-    };
-    clickIsValid = true;
-};
+//        document.removeEventListener('mousemove', onMouseMove);
+//        item.onmouseup = null;
+//    };
+//    clickIsValid = true;
+//};
 
 // for mobile w/ touch events
 function touch(item, event, id) {

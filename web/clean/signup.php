@@ -11,7 +11,7 @@
     <body>
         <?php require "user.php"?>
         <section class="content">
-            <h2>Sign Up</h2>
+            <h1>Sign Up</h1>
             <form id="signup" action="sup.php" method="post">
                 <input type="text" id="name" name="name" placeholder="Name">
                 <label for="user">Name</label>

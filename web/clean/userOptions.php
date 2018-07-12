@@ -10,9 +10,9 @@
     if (isset($_SESSION['user'])) {
         echo "<a href='/clean/projects.php'>View Projects</a>";
         echo "<a href='#'>Settings</a>";
-        echo "<a href='#'>Logout</a>";
+        echo "<a href='/clean/signout.php'>Sign Out</a>";
     } else {
-        echo "<a href='/clean/signout.php'>Login</a>";
+        echo "<a href='/clean/signin.php'>Sign In</a>";
     }
     ?>
 </div>
