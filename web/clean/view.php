@@ -77,7 +77,7 @@
                             $sstatement->execute();
 
                             // Go through each shelf in the bookcase
-                            if (!$sRow)
+                            if (!$sstatement->fetch(PDO::FETCH_ASSOC))
                                 echo "<p>Empty.</p>";
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
