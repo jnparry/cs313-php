@@ -69,11 +69,11 @@
                                 }
                             </style>';
 
-                        echo "<button style='max-height: 10px; margin: 0;' type='button' class='popup cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, " . $row['id'] . ")\" onload='setUp(this)'>
-                            <span class='popuptext' id='myPopup" . $row['id'] . "'>";
-                        
-                            echo "<p><a href='/clean/home.php'>Delete bookcase</a></p>"; 
-                            echo "</span>";
+                        echo "<button style='max-height: 10px; margin: 0;' type='button' class='popup cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, " . $row['id'] . ")\" onload='setUp(this)'>";
+//                            echo "<span class='popuptext' id='myPopup" . $row['id'] . "'>";
+//                        
+//                            echo "<p>Delete bookcase</p>"; 
+//                            echo "</span>";
                             echo"</button>";
                         
                         
@@ -107,9 +107,10 @@
                 
                 <section>
                     <form action="insertBC.php" method="post" id="addBC">
-                        <p>Number of shelves</p>
-                        <input type="number" min="0" max="10" required>
+                        <label for="shelves">Number of shelves:</label>
+                        <input type="number" min="0" max="10" required name="shelves">
                         <button type="submit" id="shelfnum" name="shelfnum">Add Bookshelf</button>
+<!--                        <button type="button" id="removeBC" onclick=-->
                     </form>
                 </section>
                 
