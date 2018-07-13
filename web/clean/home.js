@@ -256,7 +256,7 @@ function mouse(item, event, id) {
 // for mobile w/ touch events
 var open = false;
 
-function touch(item, event, id, idnum) {
+function touch(item, event, id) {
 //    var myOffset = document.getElementById("area");
     var left = area.getBoundingClientRect().left;
     var right = area.getBoundingClientRect().right;
@@ -336,7 +336,7 @@ function touch(item, event, id, idnum) {
     item.ontouchend = function() {
         clearTimeout( cancelClick );
         if (clickIsValid) {
-            popUp(idnum);
+            popUp(id);
             if (open)
                 open = false;
             else
@@ -350,7 +350,7 @@ function touch(item, event, id, idnum) {
     item.ontouchcancel = function() {
         clearTimeout( cancelClick );
         if (clickIsValid) {
-            popUp(idnum);
+            popUp(id);
             if (open)
                 open = false;
             else
