@@ -69,7 +69,7 @@
                                 }
                             </style>';
 
-                        echo "<button class='popup' style='max-height: 10px; margin: 0;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, " . $row['id'] . ")\" onload='setUp(this)'>
+                        echo "<button class='popup' style='max-height: 10px; margin: 0;' type='button' class='cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, 'bookcase" . $row['id'] . "', " . $row['id'] . ")\" onload='setUp(this)'>
                             <span class='popuptext' id='myPopup" . $row['id'] . "'>";
                         
                             echo "<p>Delete bookcase</p>"; 
