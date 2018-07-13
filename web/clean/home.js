@@ -355,7 +355,6 @@ function touch(item, event, id) {
                 open = false;
             else
                 open = true;
-//            alert("That was a click?");
         }
         document.removeEventListener('touchmove', onFingerMove);
         item.ontouchcancel = null;
