@@ -31,6 +31,8 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = substr($id, 0, 1);
 
         echo "Whole: " . $whole;
+        echo "N: " . $n;
+        echo "Fraction: " . $fraction;
         echo " Id: " . $id . " Then the error: ";
 
         try {
@@ -69,8 +71,8 @@ for ($i = 0; $i < $num_items; $i++) {
     }
 } 
 
-header("Location: /clean/bookshelves.php");
-die();
+//header("Location: /clean/bookshelves.php");
+//die();
 
 //var_dump($_REQUEST);
 

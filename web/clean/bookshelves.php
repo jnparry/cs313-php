@@ -70,32 +70,8 @@
                             </style>';
 
                         echo "<button style='max-height: 10px; margin: 0;' type='button' class='popup cases' id='bookcase" . $row['id'] . "' onmousedown=\"mouse(this, event, 'bookcase" . $row['id'] . "')\" ontouchstart=\"touch(this, event, " . $row['id'] . ")\" onload='setUp(this)'>";
-//                            echo "<span class='popuptext' id='myPopup" . $row['id'] . "'>";
-//                        
-//                            echo "<p>Delete bookcase</p>"; 
-//                            echo "</span>";
-                            echo"</button>";
-                        
-                        
-                        
-                        
-                        
-//                        <button onclick='deleteBookcase(" . $row['id'] . ")'>Delete</button>                            
-                        
-//                        $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY id');
-//                        $sstatement->bindValue(':bsid', $row['id']);
-//                        $sstatement->execute();
 
-                        // Go through each shelf in the bookcase
-//                        while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
-//                        {
-//                            echo "<p>This shelf ";
-//                            if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-//                                echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
-//                            } else {
-//                                echo "is not clean</p>";
-//                            }
-//                        }     
+                        echo"</button>";   
                     }
                     ?>
                     
