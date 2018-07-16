@@ -292,6 +292,8 @@ function touch(item, event, id) {
         function onFingerMove(event) {
             var xc = event.changedTouches[0].pageX;
             var yc = event.changedTouches[0].pageY;
+            var rect1 = document.getElementById(("bookcase" + id)).getBoundingClientRect();
+            var rect2 = trash.getBoundingClientRect();
             var overlap = null;
 
             // if too far to the right
@@ -326,12 +328,12 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < rect2.left || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
-                overlap = true;
-                console.log("Overlapping");
-            } else { // if no overlap; one or more is true
-                overlap = false;
-            }
+//            if ( !(rect1.right < rect2.left || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
+//                overlap = true;
+//                console.log("Overlapping");
+//            } else { // if no overlap; one or more is true
+//                overlap = false;
+//            }
 
             moveAt(xc, yc);
         }
