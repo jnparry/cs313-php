@@ -2,6 +2,7 @@
 
 $email = $_POST['email'];
 $name = $_POST['name'];
+$admin = $_POST['admin']; // only returns if admin checked. Value is 'admin'
 $password = $_POST['password'];
 
 // ensure values are filled out

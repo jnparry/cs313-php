@@ -21,9 +21,12 @@
                 <label for="user">Email</label>
                 <br /><br />
                 
-                <input type="password" id="password" name="password" placeholder="password">
+                <input type="password" id="password" name="password" placeholder="Password">
                 <label for="password">Password</label>
                 <br /><br />
+                
+                <input type="checkbox" name="admin" value="admin">
+                <label for="admin">Request admin privileges</label>
 
                 <input type="submit" value="Sign Up" />
             </form>
