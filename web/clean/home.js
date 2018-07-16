@@ -43,8 +43,12 @@ function soon() {
     alert("Feature coming soon.");
 }
 
-function popUp(num) {
-    var popup = document.getElementById("myPopup" + num);
+function popUp(num, bookcase = false) {
+    if (bookcase)
+        var popup = document.getElementById("bookcase" + num);
+    else
+        var popup = document.getElementById("myPopup" + num);
+
     popup.classList.toggle("show");
 }
 
@@ -336,7 +340,7 @@ function touch(item, event, id) {
     item.ontouchend = function() {
         clearTimeout( cancelClick );
         if (clickIsValid) {
-            popUp(id);
+            popUp(id, true);
             if (open)
                 open = false;
             else
@@ -350,7 +354,7 @@ function touch(item, event, id) {
     item.ontouchcancel = function() {
         clearTimeout( cancelClick );
         if (clickIsValid) {
-            popUp(id);
+            popUp(id, true);
             if (open)
                 open = false;
             else
