@@ -17,7 +17,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
     
 	$query = "SELECT * FROM users WHERE 'email' = :email";
 	$statement = $db->prepare($query);
-	$statement->bindValue(':email', email);
+	$statement->bindValue(':email', $email);
     $result = $statement->execute();
 
     if ($result) {
