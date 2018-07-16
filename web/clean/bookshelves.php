@@ -80,12 +80,11 @@
                     }
                     ?>
                     
-                    <div id='deleteArea' style='height: 30px; margin: 0; background-color: grey; position: absolute; bottom: 0;'>
-                    </div>
+                    <img id='trash' src="https://www.shareicon.net/download/2015/09/06/96799_trash_512x512.png" alt="Trash Icon">
                 </div>
                 
                 <div id="hidden_form_container" style="display:none;"></div>
-                
+                <br />
                 <section>
                     <form action="insertBC.php" method="post" id="addBC">
                         <label for="shelves">Number of shelves:</label>
