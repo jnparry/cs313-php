@@ -29,7 +29,9 @@ for ($i = 0; $i < $num_items; $i++) {
         
         // chop off the leading zero and the decimal, then everything after the 1st number
         $id = substr($fraction, 2);
+        echo "id1: " . $id;
         $id = round($id);
+        echo "id2: " . $id;
         $id = substr($id, 0, 1);
 
         echo "N: " . $n;
@@ -57,7 +59,9 @@ for ($i = 0; $i < $num_items; $i++) {
         
         // chop off the leading zero and the decimal, then everything after the 1st number
         $id = substr($fraction, 2);
+        echo "id1: " . $id;
         $id = round($id);
+        echo "id2: " . $id;
         $id = substr($id, 0, 1);
         
         echo "N: " . $n;
