@@ -8,7 +8,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	// they have submitted a username and password for us to check
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-    echo "POST PASS: " + $password;
+    echo "POST PASS: " . $password;
     
 	// Connect to the DB
 	require("dbConnect.php");
@@ -30,13 +30,13 @@ if (isset($_POST['email']) && isset($_POST['password']))
 			die();
 		} else {
 			$badLogin = true;
-            echo "BL1 - hash: " + $hashedPasswordFromDB + ", your pass: " + $password;
+            echo "BL1 - hash: " . $hashedPasswordFromDB . ", your pass: " . $password;
 		}
 	}
 	else
 	{
 		$badLogin = true;
-        echo "BL2 - hash: " + $hashedPasswordFromDB + ", your pass: " + $password;
+        echo "BL2 - hash: " . $hashedPasswordFromDB . ", your pass: " . $password;
 	}
 }
 
