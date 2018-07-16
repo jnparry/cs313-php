@@ -27,6 +27,7 @@
                 
                 <input type="checkbox" name="admin" value="admin">
                 <label for="admin">Request admin privileges</label>
+                <br /><br />
 
                 <input type="submit" value="Sign Up" />
             </form>

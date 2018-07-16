@@ -30,8 +30,8 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = substr($fraction, 2);
         $id = substr($id, 0, 1);
 
-        echo "Whole: " . $whole;
         echo "N: " . $n;
+        echo "Whole: " . $whole;
         echo "Fraction: " . $fraction;
         echo " Id: " . $id . " Then the error: ";
 
@@ -56,6 +56,11 @@ for ($i = 0; $i < $num_items; $i++) {
         // chop off the leading zero and the decimal, then everything after the 1st number
         $id = substr($fraction, 2);
         $id = substr($id, 0, 1);
+        
+        echo "N: " . $n;
+        echo "Whole: " . $whole;
+        echo "Fraction: " . $fraction;
+        echo " Id: " . $id . " Then the error: ";
 
         try {
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
