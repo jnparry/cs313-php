@@ -65,15 +65,23 @@
 
             <section class="bottomNav">
                     <button onclick="viewHome()">&#10094; Back to Home</button>
-                    <button type="button" onclick="showForm('hiddenForm', 'txtTitle', 'add')">Add Project</button>
+                    <?php
+                        if ($_SESSION['admin']) {
+                            echo "<button type='button' onclick='showForm(\'hiddenForm\', \'txtTitle\', \'add\')'>Add Project</button>";
+                        }
+                    ?>
 
                 <form action="insert.php" method="post" name="add" id="hiddenForm" style="display: none;">
-                    <br/><br/><br/>
-                    <label id="anchor" for="txtTitle">Project Name: </label>	
-                    <input type="text" id="txtTitle" name="pTitle">
-                    <br/><br/>
-                    <button type="submit" id="submit">Submit</button>
-                    <button type="submit" id="remove" name="removeP" style="display: none;">Delete</button>
+                    <?php
+                        if ($_SESSION['admin']) {
+                            echo "<br/><br/><br/>";
+                            echo "<label id='anchor' for='txtTitle'>Project Name: </label>	
+                            <input type='text' id='txtTitle' name='pTitle'>
+                            <br/><br/>
+                            <button type='submit' id='submit'>Submit</button>
+                            <button type='submit' id='remove' name='removeP' style='display: none;'>Delete</button>";
+                        }
+                    ?>
                 </form>
 
             </section>
