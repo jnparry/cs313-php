@@ -45,7 +45,7 @@ function soon() {
 
 function popUp(num, bookcase = false) {
     if (bookcase)
-        var popup = document.getElementById("bookcase" + num);
+        var popup = document.getElementById(num);
     else
         var popup = document.getElementById("myPopup" + num);
 
@@ -292,8 +292,8 @@ function touch(item, event, id) {
         function onFingerMove(event) {
             var xc = event.changedTouches[0].pageX;
             var yc = event.changedTouches[0].pageY;
-            var rect1 = document.getElementById(("bookcase" + id)).getBoundingClientRect();
-            var rect2 = trash.getBoundingClientRect();
+            var rect1 = document.getElementById(id).getBoundingClientRect();
+//            var rect2 = trash.getBoundingClientRect();
             var overlap = null;
 
             // if too far to the right
