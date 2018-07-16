@@ -16,13 +16,6 @@ $name = htmlspecialchars($name);
 
 // hashed the password
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-echo $password;
-echo $hashedPassword;
-
-//echo $name;
-//echo $email;
-//echo $password;
-//echo $hashedPassword;
 
 require("dbConnect.php");
 $db = get_db();

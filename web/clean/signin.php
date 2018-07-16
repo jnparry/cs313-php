@@ -8,8 +8,6 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	// they have submitted a username and password for us to check
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-    echo "POST PASS: " . $password;
-    echo "POST EMAL: " . $email;
     
 	// Connect to the DB
 	require("dbConnect.php");
@@ -32,14 +30,11 @@ if (isset($_POST['email']) && isset($_POST['password']))
 			die();
 		} else {
 			$badLogin = true;
-            echo "BL1 - hash: " . $hashedPasswordFromDB . ", your pass: " . $password;
-            echo "U: " . $row['name'] . "E: " . $row['email'];
 		}
 	}
 	else
 	{
 		$badLogin = true;
-        echo "BL2 - hash: " . $hashedPasswordFromDB . ", your pass: " . $password;
 	}
 }
 
@@ -60,7 +55,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
         <section class="content">
             <?php
                 if ($badLogin) {
-                    echo "Incorrect email or password!<br /><br />\n";
+                    echo "<p style='color: red;'>Incorrect email or password!</p><br /><br />\n";
                 }
             ?>
 
