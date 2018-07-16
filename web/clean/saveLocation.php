@@ -28,11 +28,11 @@ for ($i = 0; $i < $num_items; $i++) {
 //        $fraction = round($fraction);
         
         // chop off the leading zero and the decimal, then everything after the 1st number
-        $id = substr($fraction, 2);
+        $id = ($fraction * 10);
         echo "id1: " . $id;
         $id = round($id);
         echo "id2: " . $id;
-        $id = substr($id, 0, 1);
+//        $id = substr($id, 0, 1);
 
         echo "N: " . $n;
         echo "Whole: " . $whole;
@@ -58,11 +58,10 @@ for ($i = 0; $i < $num_items; $i++) {
         $fraction = $n - $whole;
         
         // chop off the leading zero and the decimal, then everything after the 1st number
-        $id = substr($fraction, 2);
+        $id = ($fraction * 10);
         echo "id1: " . $id;
         $id = round($id);
         echo "id2: " . $id;
-        $id = substr($id, 0, 1);
         
         echo "N: " . $n;
         echo "Whole: " . $whole;
