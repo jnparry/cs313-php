@@ -25,6 +25,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $n = $_POST['left' . $i];
         $whole = floor($n);
         $fraction = $n - $whole;
+        $fraction = Math.round($fraction);
         
         // chop off the leading zero and the decimal, then everything after the 1st number
         $id = substr($fraction, 2);
