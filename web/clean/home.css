@@ -105,7 +105,6 @@ ul li:last-child {
     width: 70%;
     height: 50vh;
     margin:auto;
-    padding: 10px;
 }
 
 #hiddenForm #remove {
@@ -249,9 +248,10 @@ input {
 }
 
 #trash {
-    width: 70%;
-    margin:auto;
-    padding: 10px;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
 }
 
 /* adjust  css for larger screens*/
