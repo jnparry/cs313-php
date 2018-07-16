@@ -328,7 +328,7 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < (rect2.left - 10px) || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
+            if ( !(rect1.right < (rect2.left - 10) || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
                 overlap = true;
                 console.log("Overlapping");
             } else { // if no overlap; one or more is true
