@@ -16,6 +16,8 @@ $name = htmlspecialchars($name);
 
 // hashed the password
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+echo $password;
+echo $hashedPassword;
 
 //echo $name;
 //echo $email;
