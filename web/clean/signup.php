@@ -13,15 +13,15 @@
         <section class="content">
             <h1>Sign Up</h1>
             <form id="signup" action="sup.php" method="post">
-                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="name" name="name" placeholder="Name" required autofocus>
                 <label for="user">Name</label>
                 <br /><br />
 
-                <input type="text" id="email" name="email" placeholder="Email">
+                <input type="text" id="email" name="email" placeholder="Email" required>
                 <label for="user">Email</label>
                 <br /><br />
                 
-                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <label for="password">Password</label>
                 <br /><br />
                 

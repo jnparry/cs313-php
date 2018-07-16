@@ -63,11 +63,11 @@ if (isset($_POST['email']) && isset($_POST['password']))
             <h1>Sign In</h1>
 
             <form id="signin" action="signin.php" method="post">
-                <input type="text" id="email" name="email" placeholder="Email">
+                <input type="text" id="email" name="email" placeholder="Email" required autofocus>
                 <label for="email">Email</label>
                 <br /><br />
 
-                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <label for="password">Password</label>
                 <br /><br />
 
