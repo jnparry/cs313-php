@@ -12,6 +12,11 @@
         die();
     }
 
+    if (!$_SESSION['admin']) {
+        header("Location: /clean/bookshelves.php");
+        die();
+    }
+
     $projectId = $_SESSION['project'];
     $roomId = $_SESSION['room'];
 

@@ -109,7 +109,11 @@
                 <section class="bottomNav">
                     <br/>
                     <button type="button" onclick="viewRooms()">&#10094; Back to Room</button>
-                    <?php echo "<button type='submit' value='$roomId' name='roomId'>Edit</button>"; ?>
+                    <?php 
+                    if ($_SESSION['admin']) {
+                        echo "<button type='submit' value='$roomId' name='roomId'>Edit</button>";
+                    }
+                    ?>
                 </section>
             </form>
         </section>

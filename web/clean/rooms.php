@@ -68,7 +68,9 @@
 
                         echo "<p class='middle'></p>";
                         echo "<button class='last' type='submit' value='" . $bRow['id'] . "' name='viewRoom'>View</button>";
-                        echo "<button class='last' type='button' onclick=\"showForm('hiddenForm', 'txtTitle', '" . $bRow['name'] . "', '" . $bRow['id'] . "')\">Edit</button>";
+                        if ($_SESSION['admin']) {
+                            echo "<button class='last' type='button' onclick=\"showForm('hiddenForm', 'txtTitle', '" . $bRow['name'] . "', '" . $bRow['id'] . "')\">Edit</button>";
+                        }
                         echo "</li>";
                     }
                     ?>

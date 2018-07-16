@@ -32,6 +32,7 @@
                 <input type="submit" value="Sign Up" />
             </form>
             
+            <br /><br />
             Already have an account? <a href="signin.php">Sign in</a> here.
         </section>
     </body>
