@@ -261,7 +261,7 @@ function mouse(item, event, id) {
 var open = false;
 
 function touch(item, event, id) {
-    console.log(document.getElementById("trash").paddingLeft);
+    console.log(document.getElementById("trash").padding);
 //    var myOffset = document.getElementById("area");
     var left = area.getBoundingClientRect().left;
     var right = area.getBoundingClientRect().right;
@@ -329,7 +329,7 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < (rect2.left - 10) || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
+            if ( !(rect1.right < (rect2.left) || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
                 overlap = true;
                 console.log("Overlapping");
             } else { // if no overlap; one or more is true
