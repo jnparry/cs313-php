@@ -114,14 +114,14 @@ function saveChanges() {
         var strTop = myId.top;
         var strLeft = myId.left;
         var cutId = (x[i].id).substr(8);
-        alert("cut id: " + cutId);
+//        alert("cut id: " + cutId);
         
         if (strTop)
             strTop = (parseInt(strTop.slice(0, -2))) + "." + (cutId);
         if (strLeft)
             strLeft = (parseInt(strLeft.slice(0, -2))) + "." + ((x[i].id).substr(8));
         
-        alert("TOP: " + strTop + ", LEFT: " + strLeft);
+//        alert("TOP: " + strTop + ", LEFT: " + strLeft);
         
         var myName = ("left" + i);
         newCoord = document.createElement('input');
@@ -137,13 +137,13 @@ function saveChanges() {
         newCoord2.value = strTop;
         theForm.appendChild(newCoord2);
         
-        alert(myName);
+//        alert(myName);
     }
     items = document.createElement('input');
     items.type = 'hidden';
     items.name = 'num';
     items.value = i;
-    alert("I: " + i);
+//    alert("I: " + i);
     theForm.appendChild(items);
     
     document.getElementById('hidden_form_container').appendChild(theForm);

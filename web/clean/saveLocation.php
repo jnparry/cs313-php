@@ -25,19 +25,10 @@ for ($i = 0; $i < $num_items; $i++) {
         $n = $_POST['left' . $i];
         $whole = floor($n);
         $fraction = $n - $whole;
-//        $fraction = round($fraction);
         
-        // chop off the leading zero and the decimal, then everything after the 1st number
+        // get the first number (which is the id), then round it so it's a whole number
         $id = ($fraction * 10);
-        echo "id1: " . $id;
         $id = round($id);
-        echo "id2: " . $id;
-//        $id = substr($id, 0, 1);
-
-        echo "N: " . $n;
-        echo "Whole: " . $whole;
-        echo "Fraction: " . $fraction;
-        echo " Id: " . $id . " Then the error: ";
 
         try {
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
