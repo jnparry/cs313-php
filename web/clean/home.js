@@ -261,7 +261,8 @@ function mouse(item, event, id) {
 var open = false;
 
 function touch(item, event, id) {
-    console.log(document.getElementById("trash").padding);
+    console.log(document.getElementById("trash").style.padding);
+    console.log(document.getElementById("trash").style.paddingLeft);
 //    var myOffset = document.getElementById("area");
     var left = area.getBoundingClientRect().left;
     var right = area.getBoundingClientRect().right;
