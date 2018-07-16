@@ -285,8 +285,8 @@ function touch(item, event, id) {
         function moveAt(pageX, pageY) {
             item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
             item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
-            console.log(pageX + ", " + pageY);
-            console.log("Item: " + item.style.left + ", " + item.style.top);
+//            console.log(pageX + ", " + pageY);
+//            console.log("Item: " + item.style.left + ", " + item.style.top);
         }
 
         function onFingerMove(event) {
