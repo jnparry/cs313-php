@@ -6,6 +6,11 @@
         die();
     }
 
+    if (!isset($_SESSION['userId'])) {
+        header("Location: /clean/signin.php");
+        die();
+    }
+
     require("dbConnect.php");
     $db = get_db();
 ?>

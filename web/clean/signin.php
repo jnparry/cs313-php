@@ -27,6 +27,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
 			$_SESSION['user'] = $row['name'];
+            $_SESSION['userId'] = $row['id'];
 			header("Location: home.php");
 			die();
 		} else {
