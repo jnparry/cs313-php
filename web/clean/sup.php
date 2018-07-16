@@ -35,7 +35,7 @@ $statement->bindValue(':password', $hashedPassword);
 $statement->execute();
 
 // redirect to the sign in page
-//header("Location: signin.php");
-//die();
+header("Location: signin.php");
+die();
 
 ?>
