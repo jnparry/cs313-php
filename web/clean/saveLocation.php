@@ -25,11 +25,12 @@ for ($i = 0; $i < $num_items; $i++) {
         $n = $_POST['left' . $i];
         $whole = floor($n);
         $fraction = $n - $whole;
-        $fraction = round($fraction);
+//        $fraction = round($fraction);
         
         // chop off the leading zero and the decimal, then everything after the 1st number
         $id = substr($fraction, 2);
-        $id = substr($id, 0, 1);
+        $id = round($id);
+//        $id = substr($id, 0, 1);
 
         echo "N: " . $n;
         echo "Whole: " . $whole;
