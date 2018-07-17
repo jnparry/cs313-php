@@ -340,6 +340,11 @@ function touch(item, event, id) {
                 document.removeEventListener('touchmove', onFingerMove);
                 item.ontouchend = null;
                 item.ontouchcancel = null;
+                if (confirm('Are you sure you want to save this thing into the database?')) {
+                    console.log("yes");
+                } else {
+                    console.log("no");
+                }
             } else { // if no overlap; one or more is true
                 overlap = false;
             }
