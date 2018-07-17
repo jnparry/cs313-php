@@ -64,7 +64,7 @@
             </h2>
 
             <section>
-                <div id="area" onmousedown="savePos(this, event)">
+                <div id="area">
                     <?php
                     $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                     $bstatement->bindValue(':roomId', $roomId);
@@ -96,7 +96,6 @@
                         <label for="shelves">Number of shelves:</label>
                         <input type="number" min="0" max="10" required name="shelves">
                         <button type="submit" id="shelfnum" name="shelfnum">Add Bookshelf</button>
-<!--                        <button type="button" id="removeBC" onclick=-->
                     </form>
                 </section>
                 
