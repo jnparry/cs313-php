@@ -67,6 +67,6 @@
 //header("Location: /clean/view.php");
 //die();
 
-
+var_dump($_REQUEST);
 
 ?>
