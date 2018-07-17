@@ -331,7 +331,7 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < (rect2.left - (window.getComputedStyle(trash, null).getPropertyValue('padding-right'))) || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
+            if ( !(rect1.right < (rect2.left - (window.getComputedStyle(trash, null).getPropertyValue('padding-right'))) || rect1.left > (rect2.right - (window.getComputedStyle(trash, null).getPropertyValue('padding-right'))) || rect1.bottom < (rect2.top - (window.getComputedStyle(trash, null).getPropertyValue('padding-right'))) || rect1.top > (rect2.bottom - (window.getComputedStyle(trash, null).getPropertyValue('padding-right'))))) {
                 overlap = true;
                 console.log("Overlapping");
             } else { // if no overlap; one or more is true
