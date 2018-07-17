@@ -332,7 +332,7 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < (rect2.offset.left + width / 2) || rect1.left > (rect2.offset.left + width / 2) || rect1.bottom < (rect2.offset.top + height / 2) || rect1.top > (rect2.offset.left + width / 2))) {
+            if ( !(rect1.right < (rect2.offsetWidth - width / 2) || rect1.left > (rect2.offsetWidth - width / 2) || rect1.bottom < (rect2.offsetHeight + height / 2) || rect1.top > (rect2.offsetHeight + height / 2))) {
                 overlap = true;
                 console.log("Overlapping");
             } else { // if no overlap; one or more is true
