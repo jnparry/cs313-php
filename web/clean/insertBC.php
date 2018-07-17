@@ -18,7 +18,7 @@ $roomId = $_SESSION['room'];
 require("dbConnect.php");
 $db = get_db();
 
-$numShelves = $_POST['shelfnum'];
+$numShelves = $_POST['shelves'];
 
 try {
         $query = "INSERT INTO bookshelves(roomsid, isclean, date, x, y) VALUES(:roomsid, FALSE, NULL, 0, 0)";
