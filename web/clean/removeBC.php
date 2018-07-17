@@ -1,34 +1,34 @@
 <?php
-//
-//session_start();
-//
-//if (!isset($_SESSION['user'])) {
-//    header("Location: /clean/signin.php");
-//    die();
-//}
-//
-//if (!isset($_SESSION['userId'])) {
-//    header("Location: /clean/signin.php");
-//    die();
-//}
-//
-//if (!isset($_SESSION['project'])) {
-//    header("Location: /clean/home.php");
-//    die();
-//}
-//
-//if (!isset($_SESSION['room'])) {
-//    header("Location: /clean/projects.php");
-//    die();
-//}
-//
-//$projectId = $_SESSION['project'];
-//$roomId = $_SESSION['room'];
-//$bcId = $_POST['bookcase'];
-//
-//require("dbConnect.php");
-//$db = get_db();
-//
+
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header("Location: /clean/signin.php");
+    die();
+}
+
+if (!isset($_SESSION['userId'])) {
+    header("Location: /clean/signin.php");
+    die();
+}
+
+if (!isset($_SESSION['project'])) {
+    header("Location: /clean/home.php");
+    die();
+}
+
+if (!isset($_SESSION['room'])) {
+    header("Location: /clean/projects.php");
+    die();
+}
+
+$projectId = $_SESSION['project'];
+$roomId = $_SESSION['room'];
+$bcId = $_POST['bookcase'];
+
+require("dbConnect.php");
+$db = get_db();
+
 //try {
 //        $query = "INSERT INTO bookshelves(roomsid, isclean, date, x, y) VALUES(:roomsid, FALSE, NULL, 0, 0)";
 //
