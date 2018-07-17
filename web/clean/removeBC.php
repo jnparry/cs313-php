@@ -29,40 +29,29 @@ $bcId = $_POST['bookcase'];
 require("dbConnect.php");
 $db = get_db();
 
-//try {
-//        $query = "INSERT INTO bookshelves(roomsid, isclean, date, x, y) VALUES(:roomsid, FALSE, NULL, 0, 0)";
-//
-//        $statement = $db->prepare($query);
-//        $statement->bindValue(':roomsid', $roomId);
-//        $statement->execute();
-//    } catch (Exception $ex) {
-//        echo "Error with DB. Details: $ex";
-//        die();
-//} 
-//
-//// CHECK IF THERE ARE ANY SHELVES REFERENCING THIS BOOKCASE, IF SO, DELETE
-//try {
-//    $query = "DELETE FROM shelves WHERE bookshelvesid = :id";
-//
-//    $statement = $db->prepare($query);
-//    $statement->bindValue(':id', $bcId);
-//    $statement->execute();
-//} catch (Exception $ex) {
-//    echo "Error with DB. Details: $ex";
-//    die();
-//} 
-//
-//// ONCE THERE ARE NO SHELVES REFERENCING THIS BOOKCASE, DELETE IT
-//try {
-//    $query = "DELETE FROM bookshelves WHERE id = :id";
-//
-//    $statement = $db->prepare($query);
-//    $statement->bindValue(':id', $bcId);
-//    $statement->execute();
-//} catch (Exception $ex) {
-//    echo "Error with DB. Details: $ex";
-//    die();
-//}
+// CHECK IF THERE ARE ANY SHELVES REFERENCING THIS BOOKCASE, IF SO, DELETE
+try {
+    $query = "DELETE FROM shelves WHERE bookshelvesid = :id";
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(':id', $bcId);
+    $statement->execute();
+} catch (Exception $ex) {
+    echo "Error with DB. Details: $ex";
+    die();
+} 
+
+// ONCE THERE ARE NO SHELVES REFERENCING THIS BOOKCASE, DELETE IT
+try {
+    $query = "DELETE FROM bookshelves WHERE id = :id";
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(':id', $bcId);
+    $statement->execute();
+} catch (Exception $ex) {
+    echo "Error with DB. Details: $ex";
+    die();
+}
 //
 //header("Location: /clean/view.php");
 //die();
