@@ -337,6 +337,9 @@ function touch(item, event, id) {
             if ( !(rect1.right < (rect2.left + widthHalf) || rect1.left > (rect2.right - widthHalf) || rect1.bottom < (rect2.top + heightHalf) || rect1.top > (rect2.bottom - heightHalf))) {
                 overlap = true;
                 console.log("Overlapping");
+                document.removeEventListener('touchmove', onFingerMove);
+                item.ontouchend = null;
+                item.ontouchcancel = null;
             } else { // if no overlap; one or more is true
                 overlap = false;
             }
