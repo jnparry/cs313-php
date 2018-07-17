@@ -150,6 +150,25 @@ function saveChanges() {
     theForm.submit();
 }
 
+function deleteBC(id) {
+    var theForm;
+    // Start by creating a <form>
+    
+    theForm = document.createElement('form');
+    theForm.action = 'removeBC.php';
+    theForm.method = 'post';
+    
+    newItem = document.createElement('input');
+    newItem.type = 'hidden';
+    newItem.name = "bookcase"
+    newItem.value = id;
+    theForm.appendChild(newItem);
+    
+    document.getElementById('hidden_form_container2').appendChild(theForm);
+    theForm.submit();
+}
+}
+
 function setUp() {
     var x = document.getElementsByClassName("cases");
     for (var i = 0; i < x.length; i++) {
@@ -344,8 +363,9 @@ function touch(item, event, id) {
                     item.ontouchend = null;
                     item.ontouchcancel = null;
 
-                    if (confirm('Are you sure you want to save this thing into the database?')) {
+                    if (confirm('Are you sure you want to delete this bookcase?')) {
                         console.log("yes");
+                        deleteBC(id);
                     } else {
                         console.log("no");
                         waitABit = true;

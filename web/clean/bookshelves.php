@@ -7,6 +7,11 @@
         die();
     }
 
+    if (!isset($_SESSION['userId'])) {
+        header("Location: /clean/signin.php");
+        die();
+    }
+
     if (!isset($_SESSION['project'])) {
         header("Location: /clean/home.php");
         die();
@@ -84,6 +89,7 @@
                 </div>
                 
                 <div id="hidden_form_container" style="display:none;"></div>
+                <div id="hidden_form_container2" style="display:none;"></div>
                 <br />
                 <section>
                     <form action="insertBC.php" method="post" id="addBC">

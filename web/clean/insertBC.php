@@ -48,3 +48,5 @@ for ($i = 1; $i <= $numShelves; $i++) {
 
 header("Location: /clean/view.php");
 die();
+
+?>
