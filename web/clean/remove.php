@@ -14,11 +14,6 @@ if (!isset($_SESSION['userId'])) {
 
 $projectId = $_SESSION['deleteId'];
 
-//if (!isset($projectId)) {
-//    header("Location: /clean/projects.php");
-//    die();
-//}
-
 require("dbConnect.php");
 $db = get_db();
  

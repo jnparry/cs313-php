@@ -52,10 +52,8 @@ try {
     echo "Error with DB. Details: $ex";
     die();
 }
-//
-//header("Location: /clean/view.php");
-//die();
 
-var_dump($_REQUEST);
+header("Location: /clean/view.php");
+die();
 
 ?>

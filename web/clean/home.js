@@ -35,25 +35,9 @@ function redirectToSignUp() {
     location.href = "/clean/signup.php";
 }
 
-function deleteBookcase(id) {
-    alert("Delete bookcase " + id);
-}
-
-function soon() {
-    alert("Feature coming soon.");
-}
-
-function popUp(num, bookcase = false) {
-    if (bookcase)
-        var popup = document.getElementById(num);
-    else
-        var popup = document.getElementById("myPopup" + num);
-
+function popUp(num) {
+    var popup = document.getElementById("myPopup" + num);
     popup.classList.toggle("show");
-}
-
-function clickedMe() {
-    alert("clicked");
 }
 
 function showForm(divName, editName, val, pId = null) {
@@ -168,220 +152,88 @@ function deleteBC(id) {
     theForm.submit();
 }
 
-function setUp() {
-    var x = document.getElementsByClassName("cases");
-    for (var i = 0; i < x.length; i++) {
-        var item = document.getElementById(x[i].id)
-    
-        var xc = item.style.left;
-        var yc = item.style.top;
-
-//        alert(xc + ", " + yc);
-        var left = area.getBoundingClientRect().left;
-        var top = area.getBoundingClientRect().top;
-
-        item.style.left = left + xc + item.offsetWidth + "px";
-        item.style.top = top + yc + item.offsetHeight + "px";
-    }
-}
-  
-function savePos(item, event) {
-//    alert("FIRE");
-//    publicX = event.pageX;
-//    publicY = event.pageY;
-//    alert(publicX + ", " + publicY);
-//    alert(item.offsetLeft + ", " + item.offsetTop);
-//    alert(document.getElementById("area").offsetLeft + ", " + document.getElementById("area").offsetTop);
-}
-
 function mouse(item, event, id) {
-    // this no longer contains anything.
+    // this no longer contains anything. Only for mobile now
 }
-
-// for desktop w/ mouse click events
-//function mouse(item, event, id) {
-//    var myOffset = document.getElementById("area");
-//    var left = area.getBoundingClientRect().left;
-//    var right = area.getBoundingClientRect().right;
-//    var top = area.getBoundingClientRect().top;
-//    var bottom = area.getBoundingClientRect().bottom;
-//    
-//    var clickIsValid = true;
-//    var delay = 200; // milliseconds before click doesn't count
-//    var notAClick = function() {
-//        clickIsValid = false;
-//    }
-//    cancelClick = setTimeout( notAClick, delay );
-//
-//    // make absolute and on top
-//    item.style.zIndex = 1000;
-////    item.style.position = fixed;
-//
-////    moveAt(event.pageX, event.pageY);
-//
-//    // centers the ball at (pageX, pageY) coordinates
-//    function moveAt(pageX, pageY) {
-//        item.style.left = (pageX - left - item.offsetWidth) + 'px';
-//        item.style.top = (pageY - top - item.offsetHeight) + 'px';
-//    }
-//
-//    function onMouseMove(event) {
-//        var xc = event.pageX;
-//        var yc = event.pageY;
-//        
-//        // if too far to the right
-//        if (xc + (item.offsetWidth / 2 ) >= right) {
-//            xc = right - (item.offsetWidth);
-//            document.removeEventListener('mousemove', onMouseMove);
-//            item.onmouseup = null;
-//        }
-////        
-////        // if too far to the left
-////        if (xc - (item.offsetWidth / 2) <= left) {
-////            xc = left + (item.offsetWidth);
-////            document.removeEventListener('mousemove', onMouseMove);
-////            item.onmouseup = null;  
-////        }
-////        
-////        // if too far up
-////        if (yc + (item.offsetHeight / 2) >= bottom) {
-////            yc = bottom - (item.offsetHeight);
-////            document.removeEventListener('mousemove', onMouseMove);
-////            item.onmouseup = null;
-////        }
-////        
-////        // if too far down
-////        if (yc - (item.offsetHeight / 2) <= top) {
-////            yc = top + (item.offsetHeight);
-////            document.removeEventListener('mousemove', onMouseMove);
-////            item.onmouseup = null;
-////        }
-//        
-//        moveAt(xc, yc);
-//    }
-//
-//    // (3) move the ball on mousemove
-//    document.addEventListener('mousemove', onMouseMove);
-//
-//    // (4) drop the ball, remove unneeded handlers
-//    item.onmouseup = function() {
-//        clearTimeout( cancelClick );
-//        if (clickIsValid) {
-//            alert("That was a click?");
-//        }
-//        document.removeEventListener('mousemove', onMouseMove);
-//        item.onmouseup = null;
-//    };
-//    clickIsValid = true;
-//};
 
 // for mobile w/ touch events
-var open = false;
 var waitABit = false;
 
 function touch(item, event, id, idnum) {
     console.log(window.getComputedStyle(trash, null).getPropertyValue('padding-left'));
-//    console.log(document.getElementById("trash").style.padding);
-//    console.log(document.getElementById("trash").style.paddingLeft);
-//    var myOffset = document.getElementById("area");
+
     var left = area.getBoundingClientRect().left;
     var right = area.getBoundingClientRect().right;
     var top = area.getBoundingClientRect().top;
     var bottom = area.getBoundingClientRect().bottom;
-  
-    var clickIsValid = true;
-    var delay = 200; // milliseconds before click doesn't count
-    var notAClick = function() {
-        clickIsValid = false;
-    }
-    cancelClick = setTimeout( notAClick, delay );
 
-    // make absolute and on top
+    // put on top
     item.style.zIndex = 1000;
-//    item.style.position = fixed;
 
-    if (!open) {
-        moveAt(event.touches[0].pageX, event.touches[0].pageY);
+    moveAt(event.touches[0].pageX, event.touches[0].pageY);
 
-        // centers the ball at (pageX, pageY) coordinates
-        function moveAt(pageX, pageY) {
-            item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
-            item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
-            
-//            console.log(pageX + ", " + pageY);
-//            console.log("Item: " + item.style.left + ", " + item.style.top);
+    // centers the ball at (pageX, pageY) coordinates
+    function moveAt(pageX, pageY) {
+        item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
+        item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
+    }
+
+    function onFingerMove(event) {
+        var xc = event.changedTouches[0].pageX;
+        var yc = event.changedTouches[0].pageY;
+        var rect1 = document.getElementById(id).getBoundingClientRect();
+        var rect2 = document.getElementById("trash").getBoundingClientRect();
+        var widthHalf = ((rect2.right - rect2.left) / 2);
+        var heightHalf = ((rect2.bottom - rect2.top) / 2)
+        var overlap = null;
+
+        // if too far to the right
+        if (xc + (item.offsetWidth / 2 ) >= right) {
+            xc = right - (item.offsetWidth);
+            document.removeEventListener('touchmove', onFingerMove);
+            item.ontouchend = null;
+            item.ontouchcancel = null;
         }
 
-        function onFingerMove(event) {
-            var xc = event.changedTouches[0].pageX;
-            var yc = event.changedTouches[0].pageY;
-            var rect1 = document.getElementById(id).getBoundingClientRect();
-            var rect2 = document.getElementById("trash").getBoundingClientRect();
-            var widthHalf = ((rect2.right - rect2.left) / 2);
-            var heightHalf = ((rect2.bottom - rect2.top) / 2)
-            var overlap = null;
-
-            // if too far to the right
-            if (xc + (item.offsetWidth / 2 ) >= right) {
-                xc = right - (item.offsetWidth);
-                document.removeEventListener('touchmove', onFingerMove);
-                item.ontouchend = null;
-                item.ontouchcancel = null;
-            }
-
-            // if too far to the left
-            if (xc - (item.offsetWidth / 2) <= left) {
-                xc = left + (item.offsetWidth);
-                document.removeEventListener('touchmove', onFingerMove);
-                item.ontouchend = null;
-                item.ontouchcancel = null;
-            }
-
-            // if too far up
-            if (yc + (item.offsetHeight / 2) >= bottom) {
-                yc = bottom - (item.offsetHeight);
-                document.removeEventListener('touchmove', onFingerMove);
-                item.ontouchend = null;
-                item.ontouchcancel = null;
-            }
-
-            // if too far down
-            if (yc - (item.offsetHeight / 2) <= top) {
-                yc = top + (item.offsetHeight);
-                document.removeEventListener('touchmove', onFingerMove);
-                item.ontouchend = null;
-                item.ontouchcancel = null;
-            }
-            
-            if ( !(rect1.right < (rect2.left + widthHalf) || rect1.left > (rect2.right - widthHalf) || rect1.bottom < (rect2.top + heightHalf) || rect1.top > (rect2.bottom - heightHalf))) {
-                overlap = true;
-                console.log("Overlapping");
-                
-                if (!waitABit) {
-                    document.removeEventListener('touchmove', onFingerMove);
-                    item.ontouchend = null;
-                    item.ontouchcancel = null;
-
-                    if (confirm('Are you sure you want to delete this bookcase?')) {
-                        console.log("yes");
-                        deleteBC(idnum);
-                    } else {
-                        console.log("no");
-                        waitABit = true;
-
-                    }
-                }
-            } else { // if no overlap; one or more is true
-                overlap = false;
-                waitABit = false;
-            }
-
-            moveAt(xc, yc);
+        // if too far to the left
+        if (xc - (item.offsetWidth / 2) <= left) {
+            xc = left + (item.offsetWidth);
+            document.removeEventListener('touchmove', onFingerMove);
+            item.ontouchend = null;
+            item.ontouchcancel = null;
         }
-    } else {
-        function onFingerMove(event) {
-            // nothing
+
+        // if too far up
+        if (yc + (item.offsetHeight / 2) >= bottom) {
+            yc = bottom - (item.offsetHeight);
+            document.removeEventListener('touchmove', onFingerMove);
+            item.ontouchend = null;
+            item.ontouchcancel = null;
         }
+
+        // if too far down
+        if (yc - (item.offsetHeight / 2) <= top) {
+            yc = top + (item.offsetHeight);
+            document.removeEventListener('touchmove', onFingerMove);
+            item.ontouchend = null;
+            item.ontouchcancel = null;
+        }
+
+        if ( !(rect1.right < (rect2.left + widthHalf) || rect1.left > (rect2.right - widthHalf) || rect1.bottom < (rect2.top + heightHalf) || rect1.top > (rect2.bottom - heightHalf))) {
+            if (!waitABit) {
+                document.removeEventListener('touchmove', onFingerMove);
+                item.ontouchend = null;
+                item.ontouchcancel = null;
+
+                if (confirm('Are you sure you want to delete this bookcase?'))
+                    deleteBC(idnum);
+                else
+                    waitABit = true;
+            }
+        } else // if no overlap; one or more is true
+            waitABit = false;
+
+        moveAt(xc, yc);
     }
 
     // (3) move the ball on mousemove
@@ -389,30 +241,13 @@ function touch(item, event, id, idnum) {
 
     // (4) drop the ball, remove unneeded handlers
     item.ontouchend = function() {
-        clearTimeout( cancelClick );
-        if (clickIsValid) {
-            popUp(id, true);
-            if (open)
-                open = false;
-            else
-                open = true;
-        }
         document.removeEventListener('touchmove', onFingerMove);
         item.ontouchend = null;
     };
     
     // (4) drop the ball, remove unneeded handlers
     item.ontouchcancel = function() {
-        clearTimeout( cancelClick );
-        if (clickIsValid) {
-            popUp(id, true);
-            if (open)
-                open = false;
-            else
-                open = true;
-        }
         document.removeEventListener('touchmove', onFingerMove);
         item.ontouchcancel = null;
     };
-    clickIsValid = true;
 };
