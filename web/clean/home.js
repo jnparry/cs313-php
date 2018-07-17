@@ -288,6 +288,7 @@ function touch(item, event, id) {
         function moveAt(pageX, pageY) {
             item.style.left = (pageX - document.getElementById("area").offsetLeft - (item.offsetWidth / 2)) + 'px';
             item.style.top = (pageY - document.getElementById("area").offsetTop - (item.offsetHeight / 2)) + 'px';
+            
 //            console.log(pageX + ", " + pageY);
 //            console.log("Item: " + item.style.left + ", " + item.style.top);
         }
@@ -331,7 +332,7 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < rect2.left || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
+            if ( !(rect1.right < (trash.offset.left + width / 2) || rect1.left > (trash.offset.left + width / 2) || rect1.bottom < (trash.offset.top + height / 2) || rect1.top > (trash.offset.left + width / 2))) {
                 overlap = true;
                 console.log("Overlapping");
             } else { // if no overlap; one or more is true
