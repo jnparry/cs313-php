@@ -167,7 +167,6 @@ function deleteBC(id) {
     document.getElementById('hidden_form_container2').appendChild(theForm);
     theForm.submit();
 }
-}
 
 function setUp() {
     var x = document.getElementsByClassName("cases");
