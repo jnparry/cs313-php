@@ -298,6 +298,12 @@ function touch(item, event, id) {
             var yc = event.changedTouches[0].pageY;
             var rect1 = document.getElementById(id).getBoundingClientRect();
             var rect2 = document.getElementById("trash");
+            var offset = rect2.offset();
+            var width = rect2.width();
+            var height = rect2.height();
+
+            var centerX = offset.left + width / 2;
+            var centerY = offset.top + height / 2;
             var overlap = null;
 
             // if too far to the right
@@ -332,7 +338,7 @@ function touch(item, event, id) {
                 item.ontouchcancel = null;
             }
             
-            if ( !(rect1.right < (rect2.offsetWidth - width / 2) || rect1.left > (rect2.offsetWidth - width / 2) || rect1.bottom < (rect2.offsetHeight + height / 2) || rect1.top > (rect2.offsetHeight + height / 2))) {
+            if ( !(rect1.right < centerX || rect1.left > centerX || rect1.bottom < centerY || rect1.top > centerY)) {
                 overlap = true;
                 console.log("Overlapping");
             } else { // if no overlap; one or more is true
