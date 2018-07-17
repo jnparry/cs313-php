@@ -279,7 +279,7 @@ function mouse(item, event, id) {
 var open = false;
 var waitABit = false;
 
-function touch(item, event, id) {
+function touch(item, event, id, idnum) {
     console.log(window.getComputedStyle(trash, null).getPropertyValue('padding-left'));
 //    console.log(document.getElementById("trash").style.padding);
 //    console.log(document.getElementById("trash").style.paddingLeft);
@@ -364,7 +364,7 @@ function touch(item, event, id) {
 
                     if (confirm('Are you sure you want to delete this bookcase?')) {
                         console.log("yes");
-                        deleteBC(id);
+                        deleteBC(idnum);
                     } else {
                         console.log("no");
                         waitABit = true;
