@@ -269,6 +269,7 @@ function touch(item, event, id) {
     var right = area.getBoundingClientRect().right;
     var top = area.getBoundingClientRect().top;
     var bottom = area.getBoundingClientRect().bottom;
+    var waitABit = false;
   
     var clickIsValid = true;
     var delay = 200; // milliseconds before click doesn't count
@@ -337,16 +338,22 @@ function touch(item, event, id) {
             if ( !(rect1.right < (rect2.left + widthHalf) || rect1.left > (rect2.right - widthHalf) || rect1.bottom < (rect2.top + heightHalf) || rect1.top > (rect2.bottom - heightHalf))) {
                 overlap = true;
                 console.log("Overlapping");
-                document.removeEventListener('touchmove', onFingerMove);
-                item.ontouchend = null;
-                item.ontouchcancel = null;
-                if (confirm('Are you sure you want to save this thing into the database?')) {
-                    console.log("yes");
-                } else {
-                    console.log("no");
+                
+                if (!waitABit) {
+                    document.removeEventListener('touchmove', onFingerMove);
+                    item.ontouchend = null;
+                    item.ontouchcancel = null;
+                    waitABit = true;
+                    if (confirm('Are you sure you want to save this thing into the database?')) {
+                        console.log("yes");
+                    } else {
+                        console.log("no");
+
+                    }
                 }
             } else { // if no overlap; one or more is true
                 overlap = false;
+                waitABit = false;
             }
 
             moveAt(xc, yc);
