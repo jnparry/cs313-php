@@ -298,12 +298,11 @@ function touch(item, event, id) {
             var yc = event.changedTouches[0].pageY;
             var rect1 = document.getElementById(id).getBoundingClientRect();
             var rect2 = document.getElementById("trash");
-            var offset = rect2.offset();
-            var width = rect2.width();
-            var height = rect2.height();
+            var width = rect2.offsetWidth;
+            var height = rect2.offsetHeight;
 
-            var centerX = offset.left + width / 2;
-            var centerY = offset.top + height / 2;
+            var centerX = rect2.offsetLeft + width / 2;
+            var centerY = rect2.offsetTop + height / 2;
             var overlap = null;
 
             // if too far to the right
