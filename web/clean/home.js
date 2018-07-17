@@ -259,6 +259,7 @@ function mouse(item, event, id) {
 
 // for mobile w/ touch events
 var open = false;
+var waitABit = false;
 
 function touch(item, event, id) {
     console.log(window.getComputedStyle(trash, null).getPropertyValue('padding-left'));
@@ -269,7 +270,6 @@ function touch(item, event, id) {
     var right = area.getBoundingClientRect().right;
     var top = area.getBoundingClientRect().top;
     var bottom = area.getBoundingClientRect().bottom;
-    var waitABit = false;
   
     var clickIsValid = true;
     var delay = 200; // milliseconds before click doesn't count
@@ -343,11 +343,12 @@ function touch(item, event, id) {
                     document.removeEventListener('touchmove', onFingerMove);
                     item.ontouchend = null;
                     item.ontouchcancel = null;
-                    waitABit = true;
+
                     if (confirm('Are you sure you want to save this thing into the database?')) {
                         console.log("yes");
                     } else {
                         console.log("no");
+                        waitABit = true;
 
                     }
                 }
