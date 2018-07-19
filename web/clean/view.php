@@ -78,6 +78,7 @@
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                         $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
+                    $myModalContent = "";
 
 //                    onclick='popUp(" . $row['id'] . ")' 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
@@ -94,17 +95,15 @@
 
                             // Go through each shelf in the bookcase
                             $empty = true;
-                            $myModalContent = "";
+                            
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
                                 $empty = false;
                                 $myModalContent = $myModalConent . "<p>Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
                                     $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . "</p>";
-                                    echo $myModalContent;
                                 } else {
                                     $myModalContent = $myModalContent . "is not clean</p>";
-                                    echo $myModalContent;
                                     $notClean = True;
                                 }
                             }                            
