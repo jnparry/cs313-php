@@ -41,6 +41,7 @@ function popUp(num) {
 }
 
 function setModalContent(content) {
+    alert("SetModalContent");
     document.getElementById("myModalContent").innerHTML = content;
 }
 
