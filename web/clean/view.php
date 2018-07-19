@@ -80,7 +80,7 @@
                         $bstatement->execute();
 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<button type='button' data-toggle='modal' data-target='#myModal' class='popup btn btn-info btn-lg' onclick='popUp(" . $row['id'] . ")' 
+                            echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' 
                             style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; 
                             left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>";
                             
@@ -95,31 +95,31 @@
                             
                             
                             
-//                            
-//                            echo "<span class='popuptext' id='myPopup" . $row['id'] . "'>";
-//
-//                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY shelvesnum');
-//                            $sstatement->bindValue(':bsid', $row['id']);
-//                            $sstatement->execute();
-//
-//                            // Go through each shelf in the bookcase
-//                            $empty = true;
-//                            while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
-//                            {
-//                                $empty = false;
-//                                echo "<p>Shelf #" . $sRow['shelvesnum'] . " ";
-//                                if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-//                                    echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
-//                                } else {
-//                                    echo "is not clean</p>";
-//                                    $notClean = True;
-//                                }
-//                            }                            
-//                                 
-//                            if ($empty)
-//                                echo "<p>No shelves here</p>";
-//                            
-//                            echo "</span>";
+                            
+                            echo "<span class='popuptext' id='myPopup" . $row['id'] . "'>";
+
+                            $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY shelvesnum');
+                            $sstatement->bindValue(':bsid', $row['id']);
+                            $sstatement->execute();
+
+                            // Go through each shelf in the bookcase
+                            $empty = true;
+                            while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
+                            {
+                                $empty = false;
+                                echo "<p>Shelf #" . $sRow['shelvesnum'] . " ";
+                                if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
+                                    echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
+                                } else {
+                                    echo "is not clean</p>";
+                                    $notClean = True;
+                                }
+                            }                            
+                                 
+                            if ($empty)
+                                echo "<p>No shelves here</p>";
+                            
+                            echo "</span>";
                             
                             
                             
@@ -139,6 +139,8 @@
                         }
                     ?>
                     
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -150,7 +152,7 @@
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       </div>
-                    </div>;
+                    </div>
                 </section>
 
                 <section class="bottomNav">
