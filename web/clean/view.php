@@ -94,15 +94,15 @@
                                 $empty = false;
                                 $myModalContent = $myModalContent . "Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'];
+                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . "<br>";
                                 } else {
-                                    $myModalContent = $myModalContent . "is not clean";
+                                    $myModalContent = $myModalContent . "is not clean<br>";
                                     $notClean = True;
                                 }
                             }                            
                                  
                             if ($empty)
-                                $myModalContent = $myModalContent . "No shelves here";
+                                $myModalContent = $myModalContent . "No shelves here<br>";
                             
                             
                             echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' onclick=\"setModalContent('" . $myModalContent . "')\" style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>"; 
