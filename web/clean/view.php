@@ -101,8 +101,10 @@
                                 $myModalContent += "<p>Shelf #" + $sRow['shelvesnum'] + " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
                                     $myModalContent += "was cleaned " + $sRow['shelvesdate'] + "</p>";
+                                    echo $myModalContent;
                                 } else {
                                     $myModalContent += "is not clean</p>";
+                                    echo $myModalContent;
                                     $notClean = True;
                                 }
                             }                            
