@@ -35,21 +35,21 @@ for ($i = 0; $i < $num_items; $i++) {
     if ($_POST['left' . $i]) {
         echo "Post left.<br>";
         
-        $n = $_POST['left' . $i];
-        $whole = floor($n);
-        $fraction = $n - $whole;
+        $whole = $_POST['left' . $i];
+//        $whole = floor($n);
+//        $fraction = $n - $whole;
         
         // get the first number (which is the id), then round it so it's a whole number
-        $id = ($fraction * 10);
-        $id = round($id);
+//        $id = ($fraction * 10);
+//        $id = round($id);
 
         try {
-            echo "query left. Post: " . $n . "Whole: " . $whole . " idnum: " . $idnum . "Id: " . $id . "<br>";
+            echo "query left. Whole: " . $whole . " idnum: " . $idnum . "<br>";
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 
             $statement = $db->prepare($query);
             $statement->bindValue(':left', $whole);
-            $statement->bindValue(':bId', $id);
+            $statement->bindValue(':bId', $idnum);
             $statement->execute();
         } catch (Exception $ex) {
                 echo "Error wttith DB. Details: $ex";
@@ -60,21 +60,21 @@ for ($i = 0; $i < $num_items; $i++) {
     if ($_POST['top' . $i]) {
         echo "Post top.<br>";
         
-        $n = $_POST['top' . $i];
-        $whole = floor($n);
-        $fraction = $n - $whole;
+        $whole = $_POST['top' . $i];
+//        $whole = floor($n);
+//        $fraction = $n - $whole;
         
         // get the first number (which is the id), then round it so it's a whole number
-        $id = ($fraction * 10);
-        $id = round($id);
+//        $id = ($fraction * 10);
+//        $id = round($id);
 
         try {
-            echo "query top. Post: " . $n . "Whole: " . $whole . " idnum: " . $idnum . "Id: " . $id . "<br>";
+            echo "query top. Whole: " . $whole . " idnum: " . $idnum . "<br>";
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
             $statement = $db->prepare($query);
             $statement->bindValue(':top', $whole);
-            $statement->bindValue(':bId', $id);
+            $statement->bindValue(':bId', $idnum);
             $statement->execute();
         } catch (Exception $ex) {
                 echo "Error wttith DB. Details: $ex";
