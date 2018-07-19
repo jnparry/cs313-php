@@ -79,8 +79,9 @@
                         $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
 
+//                    onclick='popUp(" . $row['id'] . ")' 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' onclick='popUp(" . $row['id'] . ")' style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>";
+                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>";
                             
                             
                             
