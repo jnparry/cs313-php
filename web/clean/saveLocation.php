@@ -68,7 +68,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = round($id);
 
         try {
-            echo "query top. Whole: " . $whole . " Id: " . $id . "<br>"";
+            echo "query top. Whole: " . $whole . " Id: " . $id . "<br>";
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
             $statement = $db->prepare($query);
