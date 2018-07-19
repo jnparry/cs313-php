@@ -82,13 +82,6 @@
 
 //                    onclick='popUp(" . $row['id'] . ")' 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>";
-                            
-                            
-                            
-                            
-                            echo "<span class='popuptext' id='myPopup" . $row['id'] . "'>";
-
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY shelvesnum');
                             $sstatement->bindValue(':bsid', $row['id']);
                             $sstatement->execute();
@@ -96,8 +89,7 @@
                             // Go through each shelf in the bookcase
                             $empty = true;
                             
-                            while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
-                            {
+                            while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC)) {
                                 $empty = false;
                                 $myModalContent = $myModalContent . "<p>Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
@@ -111,7 +103,8 @@
                             if ($empty)
                                 $myModalContent = $myModalContent . "<p>No shelves here</p>";
                             
-                            echo "</span>";
+                            
+                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' style='padding: 1em; height: 2em; width: 4em; onclick='setModalContent(" . $myModalContent . ")' color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>"; 
                             
                             
                             
@@ -138,7 +131,7 @@
                         <h4 class="modal-title">This is my modal.</h4>
                       </div>
                       <div class="modal-body">
-                        <p><?php echo $myModalContent; ?></p>
+                        <p id="myModalContent"></p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

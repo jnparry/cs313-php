@@ -40,6 +40,10 @@ function popUp(num) {
     popup.classList.toggle("show");
 }
 
+function setModalContent(content) {
+    document.getElementById("myModalContent").innerHTML = content;
+}
+
 function showForm(divName, editName, val, pId = null) {
     var add = false;    
     var x = document.getElementById(divName);
