@@ -28,7 +28,7 @@ $db = get_db();
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
 $num_items = $_POST['num'];
-$id = $_POST['id'];
+$idnum = $_POST['id'];
 echo "NUM ITEMS: " . $num_items;
 
 for ($i = 0; $i < $num_items; $i++) {
@@ -44,7 +44,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = round($id);
 
         try {
-            echo "query left. Post: " . $n . "Whole: " . $whole . " Fraction: " . $fraction . "Id: " . $id . "<br>";
+            echo "query left. Post: " . $n . "Whole: " . $whole . " idnum: " . $idnum . "Id: " . $id . "<br>";
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 
             $statement = $db->prepare($query);
@@ -69,7 +69,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = round($id);
 
         try {
-            echo "query top. Post: " . $n . "Whole: " . $whole . " Fraction: " . $fraction . "Id: " . $id . "<br>";
+            echo "query top. Post: " . $n . "Whole: " . $whole . " idnum: " . $idnum . "Id: " . $id . "<br>";
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
             $statement = $db->prepare($query);
