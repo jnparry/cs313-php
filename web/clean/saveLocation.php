@@ -43,7 +43,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = round($id);
 
         try {
-            echo "query left. Whole: " . $whole . " Id: " . $id . "<br>";
+            echo "query left. Post: " . $n . "Whole: " . $whole . " Fraction: " . $fraction . "Id: " . $id . "<br>";
             $query = "UPDATE bookshelves SET x = :left WHERE id = :bId";
 
             $statement = $db->prepare($query);
@@ -57,7 +57,7 @@ for ($i = 0; $i < $num_items; $i++) {
     }
     
     if ($_POST['top' . $i]) {
-        echo "Post top.";
+        echo "Post top.<br>";
         
         $n = $_POST['top' . $i];
         $whole = floor($n);
@@ -68,7 +68,7 @@ for ($i = 0; $i < $num_items; $i++) {
         $id = round($id);
 
         try {
-            echo "query top. Whole: " . $whole . " Id: " . $id . "<br>";
+            echo "query top. Post: " . $n . "Whole: " . $whole . " Fraction: " . $fraction . "Id: " . $id . "<br>";
             $query = "UPDATE bookshelves SET y = :top WHERE id = :bId";
 
             $statement = $db->prepare($query);
