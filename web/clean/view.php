@@ -86,15 +86,6 @@
                             
                             
                             
-//                            <!-- Trigger the modal with a button -->
-//                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-
-                            
-                            
-                            
-                            
-                            
                             
                             echo "<span class='popuptext' id='myPopup" . $row['id'] . "'>";
 
@@ -125,36 +116,36 @@
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             if (!$notClean)
                                 echo "Clean";
                             echo"</button>";    
                         }
                     ?>
-                    
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                </section>
 
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">This is my modal.</h4>
                       </div>
                       <div class="modal-body">
-                        <p>Its so easy when we use bootstrap!</p>
+                        <p>It's so easy when we use bootstrap!</p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       </div>
                     </div>
-                </section>
-
+                  </div>
+                </div>
+                
                 <section class="bottomNav">
                     <br/>
                     <button type="button" onclick="viewRooms()">&#10094; Back to Room</button>
