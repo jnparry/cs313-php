@@ -98,7 +98,7 @@
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
                                 $empty = false;
-                                $myModalContent += "<p>Shelf #" + $sRow['shelvesnum'] + " ";
+                                $myModalContent += "<p>Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
                                     $myModalContent += "was cleaned " + $sRow['shelvesdate'] + "</p>";
                                     echo $myModalContent;
