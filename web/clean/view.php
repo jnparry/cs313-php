@@ -94,20 +94,21 @@
 
                             // Go through each shelf in the bookcase
                             $empty = true;
+                            $myModalContent = "";
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
                                 $empty = false;
-                                echo "<p>Shelf #" . $sRow['shelvesnum'] . " ";
+                                $myModalContent += "<p>Shelf #" + $sRow['shelvesnum'] + " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                    echo "was cleaned " . $sRow['shelvesdate'] . "</p>";
+                                    $myModalContent += "was cleaned " + $sRow['shelvesdate'] + "</p>";
                                 } else {
-                                    echo "is not clean</p>";
+                                    $myModalContent += "is not clean</p>";
                                     $notClean = True;
                                 }
                             }                            
                                  
                             if ($empty)
-                                echo "<p>No shelves here</p>";
+                                $myModalContent += "<p>No shelves here</p>";
                             
                             echo "</span>";
                             
@@ -136,7 +137,7 @@
                         <h4 class="modal-title">This is my modal.</h4>
                       </div>
                       <div class="modal-body">
-                        <p>It's so easy when we use bootstrap!</p>
+                        <p><?php echo $myModalContent; ?></p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
