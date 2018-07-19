@@ -98,19 +98,19 @@
                             while ($sRow = $sstatement->fetch(PDO::FETCH_ASSOC))
                             {
                                 $empty = false;
-                                $myModalContent += "<p>Shelf #" . $sRow['shelvesnum'] . " ";
+                                $myModalContent = $myModalConent . "<p>Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                    $myModalContent += "was cleaned " + $sRow['shelvesdate'] + "</p>";
+                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . "</p>";
                                     echo $myModalContent;
                                 } else {
-                                    $myModalContent += "is not clean</p>";
+                                    $myModalContent = $myModalContent . "is not clean</p>";
                                     echo $myModalContent;
                                     $notClean = True;
                                 }
                             }                            
                                  
                             if ($empty)
-                                $myModalContent += "<p>No shelves here</p>";
+                                $myModalContent = $myModalContent . "<p>No shelves here</p>";
                             
                             echo "</span>";
                             
