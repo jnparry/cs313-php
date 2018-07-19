@@ -104,7 +104,7 @@
                                 $myModalContent = $myModalContent . "<p>No shelves here</p>";
                             
                             
-                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' style='padding: 1em; height: 2em; width: 4em; onclick='setModalContent(" . $myModalContent . ")' color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>"; 
+                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' style='padding: 1em; height: 2em; width: 4em; onclick='setModalContent(\'" . $myModalContent . "\')' color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>"; 
                             
                             
                             
