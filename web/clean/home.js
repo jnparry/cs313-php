@@ -101,9 +101,9 @@ function saveChanges() {
 //        alert("cut id: " + cutId);
         
         if (strTop)
-            strTop = (parseInt(strTop.slice(0, -2))) + "." + (cutId);
+            strTop = (parseInt(strTop.slice(0, -2)))/* + "." + (cutId)*/;
         if (strLeft)
-            strLeft = (parseInt(strLeft.slice(0, -2))) + "." + ((x[i].id).substr(8));
+            strLeft = (parseInt(strLeft.slice(0, -2)))/* + "." + ((x[i].id).substr(8))*/;
         
 //        alert("TOP: " + strTop + ", LEFT: " + strLeft);
         
@@ -123,11 +123,17 @@ function saveChanges() {
         
 //        alert(myName);
     }
+    
+    idNum = document.createElement('input');
+    idNum.type = 'hidden';
+    idNum.name = 'id';
+    idNum.value = cutId;
+    theForm.appendChild(idNum);
+    
     items = document.createElement('input');
     items.type = 'hidden';
     items.name = 'num';
     items.value = i;
-//    alert("I: " + i);
     theForm.appendChild(items);
     
     document.getElementById('hidden_form_container').appendChild(theForm);

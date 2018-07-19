@@ -28,6 +28,7 @@ $db = get_db();
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
 $num_items = $_POST['num'];
+$id = $_POST['id'];
 echo "NUM ITEMS: " . $num_items;
 
 for ($i = 0; $i < $num_items; $i++) {
