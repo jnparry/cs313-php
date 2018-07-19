@@ -36,12 +36,6 @@ for ($i = 0; $i < $num_items; $i++) {
         echo "Post left.<br>";
         
         $whole = $_POST['left' . $i];
-//        $whole = floor($n);
-//        $fraction = $n - $whole;
-        
-        // get the first number (which is the id), then round it so it's a whole number
-//        $id = ($fraction * 10);
-//        $id = round($id);
 
         try {
             echo "query left. Whole: " . $whole . " idnum: " . $idnum . "<br>";
@@ -61,12 +55,6 @@ for ($i = 0; $i < $num_items; $i++) {
         echo "Post top.<br>";
         
         $whole = $_POST['top' . $i];
-//        $whole = floor($n);
-//        $fraction = $n - $whole;
-        
-        // get the first number (which is the id), then round it so it's a whole number
-//        $id = ($fraction * 10);
-//        $id = round($id);
 
         try {
             echo "query top. Whole: " . $whole . " idnum: " . $idnum . "<br>";
@@ -83,7 +71,7 @@ for ($i = 0; $i < $num_items; $i++) {
     }
 } 
 
-//header("Location: /clean/bookshelves.php");
-//die();
+header("Location: /clean/bookshelves.php");
+die();
 
 ?>
