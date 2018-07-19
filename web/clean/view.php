@@ -80,9 +80,7 @@
                         $bstatement->execute();
 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<button type='button' class='popup' onclick='popUp(" . $row['id'] . ")' 
-                            style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; 
-                            left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>";
+                            echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' onclick='popUp(" . $row['id'] . ")' style='padding: 1em; height: 2em; width: 4em; color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>";
                             
                             
                             
@@ -124,7 +122,7 @@
                 </section>
 
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<!--                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
 
                 <!-- Modal -->
                 <div id="myModal" class="modal fade" role="dialog">
@@ -133,7 +131,7 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button style="font-size: 1em; padding: 0;" type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">This is my modal.</h4>
                       </div>
                       <div class="modal-body">
