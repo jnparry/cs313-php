@@ -78,13 +78,14 @@
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                         $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
-                        $myModalContent = "";
 
 //                    onclick='popUp(" . $row['id'] . ")' 
                         while ($row = $bstatement->fetch(PDO::FETCH_ASSOC)) {
                             $sstatement = $db->prepare('SELECT * FROM shelves WHERE bookshelvesid = :bsid ORDER BY shelvesnum');
                             $sstatement->bindValue(':bsid', $row['id']);
                             $sstatement->execute();
+                            
+                            $myModalContent = "";
 
                             // Go through each shelf in the bookcase
                             $empty = true;
@@ -93,15 +94,15 @@
                                 $empty = false;
                                 $myModalContent = $myModalContent . "Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'];
+                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . "/n";
                                 } else {
-                                    $myModalContent = $myModalContent . "is not clean";
+                                    $myModalContent = $myModalContent . "is not clean\n";
                                     $notClean = True;
                                 }
                             }                            
                                  
                             if ($empty)
-                                $myModalContent = $myModalContent . "No shelves here";
+                                $myModalContent = $myModalContent . "No shelves here\n";
                             
                             
                             echo "<button data-toggle='modal' data-target='#myModal' type='button' class='popup btn btn-info btn-lg' style='padding: 1em; height: 2em; width: 4em;' onclick=\"setModalContent('" . $myModalContent . "')\" color: black; position: absolute; left: " . $row['x'] . "px; top: " . $row['y'] . "px;' id='bookcase'>"; 
