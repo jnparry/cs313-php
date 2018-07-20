@@ -15,7 +15,7 @@
     <body>
         <?php require "user.php"?>
         <section class="content">
-            <img alt="David O. McKay Library" src="http://photo.byui.edu/img/s/v-3/p1706217686-3.jpg">
+            <img id="homepage" alt="David O. McKay Library" src="http://photo.byui.edu/img/s/v-3/p1706217686-3.jpg">
             
             <section class="bottomNav">
             <?
