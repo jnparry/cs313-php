@@ -255,8 +255,8 @@ input {
 }
 
 #homepage {
-    width: 60%;
-    margin: auto;
+    width: 70%;
+    text-align: center;
 }
 
 /* adjust  css for larger screens*/

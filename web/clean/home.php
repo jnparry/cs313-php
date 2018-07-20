@@ -19,9 +19,9 @@
             
             <?php
             if (isset($_SESSION['user']))
-                echo "Welcome " . $_SESSION['user'];
+                echo "<h3>Welcome " . $_SESSION['user'] . "</h3>";
             else {
-                echo "Weclome. Sign in or sign up below.";
+                echo "<h3>Weclome. Sign in or sign up below.</h3>";
             }
             ?>
             
