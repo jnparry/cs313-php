@@ -71,7 +71,7 @@ for ($i = 0; $i < $num_items; $i++) {
     }
 } 
 
-header("Location: /clean/bookshelves.php");
-die();
+//header("Location: /clean/bookshelves.php");
+//die();
 
 ?>
