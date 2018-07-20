@@ -75,6 +75,11 @@
                                 </style>';
                         }
 
+                    ?>
+                    
+                    <form method="post" action="">
+                    
+                    <?php
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                         $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
@@ -94,7 +99,8 @@
                                 $empty = false;
                                 $myModalContent = $myModalContent . "Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . "<br>";
+                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . 
+                                        "<button type='submit' onclick='updateDate(" . $sRow['id'] . ")'>Update</button><br>";
                                 } else {
                                     $myModalContent = $myModalContent . "is not clean<br>";
                                     $notClean = True;
@@ -116,6 +122,9 @@
                             echo"</button>";    
                         }
                     ?>
+                        
+                                            
+                    </form>
                 </section>
 
                 <!-- Trigger the modal with a button -->
