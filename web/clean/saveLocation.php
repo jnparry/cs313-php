@@ -28,7 +28,7 @@ $db = get_db();
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['room'];
 $num_items = $_POST['num'];
-$idnum = $_POST['id'];
+
 echo "NUM ITEMS: " . $num_items;
 
 for ($i = 0; $i < $num_items; $i++) {
@@ -36,6 +36,7 @@ for ($i = 0; $i < $num_items; $i++) {
         echo "Post left.<br>";
         
         $whole = $_POST['left' . $i];
+        $idnum = $_POST['id' . $i];
 
         try {
             echo "query left. Whole: " . $whole . " idnum: " . $idnum . "<br>";
@@ -55,6 +56,7 @@ for ($i = 0; $i < $num_items; $i++) {
         echo "Post top.<br>";
         
         $whole = $_POST['top' . $i];
+        $idnum = $_POST['id' . $i];
 
         try {
             echo "query top. Whole: " . $whole . " idnum: " . $idnum . "<br>";

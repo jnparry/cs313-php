@@ -124,15 +124,15 @@ function saveChanges() {
         newCoord2.name = myName2;
         newCoord2.value = strTop;
         theForm.appendChild(newCoord2);
-        
+     
+        var myName3 = ("id" + i);
+        idNum = document.createElement('input');
+        idNum.type = 'hidden';
+        idNum.name = myName3;
+        idNum.value = cutId;
+        theForm.appendChild(idNum);
 //        alert(myName);
     }
-    
-    idNum = document.createElement('input');
-    idNum.type = 'hidden';
-    idNum.name = 'id';
-    idNum.value = cutId;
-    theForm.appendChild(idNum);
     
     items = document.createElement('input');
     items.type = 'hidden';
