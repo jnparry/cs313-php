@@ -15,9 +15,7 @@
     <body>
         <?php require "user.php"?>
         <section class="content">
-            <h2>Recent Cleaning Projects</h2>
-            <p>insert into or pictures or something here.</p>
-            <h3>This data is coming soon.</h3>
+            <img alt="David O. McKay Library" src="http://photo.byui.edu/img/s/v-3/p1706217686-3.jpg">
             
             <section class="bottomNav">
             <?
