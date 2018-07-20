@@ -256,6 +256,12 @@ input {
 
 #homepage {
     width: 70%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+h3 {
     text-align: center;
 }
 
