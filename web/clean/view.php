@@ -1,3 +1,4 @@
+<!--this is my edit-->
 <?php
 
     session_start();
@@ -75,11 +76,6 @@
                                 </style>';
                         }
 
-                    ?>
-                    
-                    <form method="post" action="">
-                    
-                    <?php
                         $bstatement = $db->prepare("SELECT * FROM bookshelves WHERE roomsid = :roomId ORDER BY id");
                         $bstatement->bindValue(':roomId', $roomId);
                         $bstatement->execute();
@@ -99,8 +95,7 @@
                                 $empty = false;
                                 $myModalContent = $myModalContent . "Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
-                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . 
-                                        "<button type='submit' onclick='updateDate(" . $sRow['id'] . ")'>Update</button><br>";
+                                    $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . "<br>";
                                 } else {
                                     $myModalContent = $myModalContent . "is not clean<br>";
                                     $notClean = True;
@@ -122,8 +117,6 @@
                             echo"</button>";    
                         }
                     ?>
-                        
-                    </form>
                 </section>
 
                 <!-- Trigger the modal with a button -->
@@ -137,7 +130,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button style="font-size: 1em; padding: 0; background-color: transparent;" type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">This is my modal.</h4>
+                        <h4 class="modal-title">Status of Shelves</h4>
                       </div>
                       <div class="modal-body">
                         <p id="myModalContent"></p>
