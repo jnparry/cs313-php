@@ -100,7 +100,7 @@
                                 $myModalContent = $myModalContent . "Shelf #" . $sRow['shelvesnum'] . " ";
                                 if ($sRow['shelvesclean'] && $sRow['shelvesdate']) {
                                     $myModalContent = $myModalContent . "was cleaned " . $sRow['shelvesdate'] . 
-                                        "<br>";
+                                        "<button type='submit' onclick=\"updateDate(" . $sRow['id'] . ")\">Update</button><br>";
                                 } else {
                                     $myModalContent = $myModalContent . "is not clean<br>";
                                     $notClean = True;
@@ -123,7 +123,6 @@
                         }
                     ?>
                         
-                                            
                     </form>
                 </section>
 
