@@ -15,12 +15,20 @@
     <body>
         <?php require "user.php"?>
         <section class="content">
-            <div id="frame">
-                <img id="homepage" alt="David O. McKay Library" src="http://photo.byui.edu/img/s/v-3/p1706217686-3.jpg">
-            </div>
+            <h2>David O. McKay Library Cleaning</h2>
+            
+            <?php
+            if (isset($_SESSION['user']))
+                echo "Welcome " . $_SESSION['user'];
+            else {
+                echo "Weclome. Sign in or sign up below.";
+            }
+            ?>
+            
+            <img id="homepage" alt="David O. McKay Library" src="http://photo.byui.edu/img/s/v-3/p1706217686-3.jpg">
             
             <section class="bottomNav">
-            <?
+            <?php
             if (isset($_SESSION['user']))
                 echo "<button onclick='viewProjects()'>View Projects</button>";
             else {
