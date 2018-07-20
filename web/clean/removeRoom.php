@@ -20,11 +20,6 @@ if (!isset($_SESSION['project'])) {
 $projectId = $_SESSION['project'];
 $roomId = $_SESSION['deleteId'];
 
-//if (!isset($projectId)) {
-//    header("Location: /clean/projects.php");
-//    die();
-//}
-
 require("dbConnect.php");
 $db = get_db();
 

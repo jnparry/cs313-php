@@ -119,9 +119,6 @@
                     ?>
                 </section>
 
-                <!-- Trigger the modal with a button -->
-<!--                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-
                 <!-- Modal -->
                 <div id="myModal" class="modal fade" role="dialog">
                   <div class="modal-dialog">

@@ -102,14 +102,11 @@ function saveChanges() {
         var strTop = myId.top;
         var strLeft = myId.left;
         var cutId = (x[i].id).substr(8);
-//        alert("cut id: " + cutId);
         
         if (strTop)
-            strTop = (parseInt(strTop.slice(0, -2)))/* + "." + (cutId)*/;
+            strTop = (parseInt(strTop.slice(0, -2)));
         if (strLeft)
-            strLeft = (parseInt(strLeft.slice(0, -2)))/* + "." + ((x[i].id).substr(8))*/;
-        
-//        alert("TOP: " + strTop + ", LEFT: " + strLeft);
+            strLeft = (parseInt(strLeft.slice(0, -2)));
         
         var myName = ("left" + i);
         newCoord = document.createElement('input');
@@ -131,7 +128,6 @@ function saveChanges() {
         idNum.name = myName3;
         idNum.value = cutId;
         theForm.appendChild(idNum);
-//        alert(myName);
     }
     
     items = document.createElement('input');
@@ -146,8 +142,8 @@ function saveChanges() {
 
 function deleteBC(id) {
     var theForm;
-    // Start by creating a <form>
     
+    // Start by creating a <form>
     theForm = document.createElement('form');
     theForm.action = 'removeBC.php';
     theForm.method = 'post';
@@ -163,7 +159,7 @@ function deleteBC(id) {
 }
 
 function mouse(item, event, id) {
-    // this no longer contains anything. Only for mobile now
+    // this no longer contains anything. Has been adapted for mobile.
 }
 
 // for mobile w/ touch events

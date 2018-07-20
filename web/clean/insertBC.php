@@ -46,9 +46,9 @@ for ($i = 1; $i <= $numShelves; $i++) {
     }
 }
 
-//header("Location: /clean/view.php");
-//die();
+header("Location: /clean/view.php");
+die();
 
-var_dump($_REQUEST);
+//var_dump($_REQUEST);
 
 ?>
