@@ -128,7 +128,7 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
-                        <button style="font-size: 1em; padding: 0;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button style="font-size: 1em; padding: 0; background-color: transparent;" type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">This is my modal.</h4>
                       </div>
                       <div class="modal-body">
